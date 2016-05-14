@@ -12,7 +12,7 @@ return array(
     'columns' => array(
         'id',
         'name',
-        'productType' => array(
+        'ProductType' => array(
             'title' => 'Бүтээгэдхүүний төрөл',
             'relationship' => 'ProductType',//model
             'select' => '(:table).name',
