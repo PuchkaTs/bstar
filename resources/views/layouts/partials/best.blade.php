@@ -1,6 +1,8 @@
 <div class="subbanner">
 @inject('gallery', 'App\Gallery')
+@if($gallery->where('position',3)->first())
 <h1>{{$gallery->where('position',3)->first()->name}}</h1>
+@endif
     <div class="best-container swiper-container">
             <div class="swiper-wrapper left1px">
                 @foreach($gallery->getListForBest() as $product)
