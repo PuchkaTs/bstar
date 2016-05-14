@@ -21,6 +21,8 @@ class Banner extends Model
 
     	return $banners;
     }
+
+    // remove files 
 	public function removeFile(){
 	    
 	    $file_name = Self::where('id', $this->id)->first()->image;
