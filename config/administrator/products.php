@@ -12,9 +12,9 @@ return array(
     'columns' => array(
         'id',
         'name',
-        'ProductType' => array(
+        'producttype' => array(
             'title' => 'Бүтээгэдхүүний төрөл',
-            'relationship' => 'ProductType',//model
+            'relationship' => 'Producttype',//model
             'select' => '(:table).name',
         ),
         'gallery' => array(
@@ -41,7 +41,7 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
-        'productType' => array(
+        'ProductType' => array(
             'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
@@ -69,7 +69,7 @@ return array(
             'title' => 'Description:',
             'type' => 'wysiwyg',
         ),
-        'producttype' => array(
+        'ProductType' => array(
             'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
