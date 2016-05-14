@@ -10,12 +10,8 @@ return array(
      * The display columns
      */
     'columns'     => array(
-        'id',
         'name'     => array(
             'title' => 'Name',
-        ),
-        'slug'     => array(
-            'title' => 'Slug',
         ),
         'position'     => array(
             'title' => 'Position',
@@ -28,10 +24,6 @@ return array(
     'edit_fields' => array(
         'name'  => array(
             'title' => 'Name',
-            'type'  => 'text',
-        ),
-        'slug'     => array(
-            'title' => 'Slug',
             'type'  => 'text',
         ),
         'position' => array(
