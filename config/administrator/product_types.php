@@ -5,7 +5,7 @@
 return array(
     'title' => 'Бүтээгэдхүүний төрөл',
     'single' => 'Бүтээгэдхүүний төрөл',
-    'model' => 'App\ProductType',
+    'model' => 'App\Producttype',
     /**
      * The display columns
      */
