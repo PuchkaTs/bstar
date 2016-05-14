@@ -12,9 +12,9 @@ return array(
     'columns' => array(
         'id',
         'name',
-        'producttype' => array(
+        'productType' => array(
             'title' => 'Бүтээгэдхүүний төрөл',
-            'relationship' => 'producttype',
+            'relationship' => 'productType',
             'select' => '(:table).name',
         ),
         'gallery' => array(
