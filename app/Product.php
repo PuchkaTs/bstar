@@ -27,7 +27,7 @@ class Product extends Model {
     }
 
     public function productType(){
-        return $this->belongsTo('App\productType', 'productType_id');
+        return $this->belongsTo('App\ProductType', 'productType_id');
     }
 
     public function gallery()
