@@ -14,7 +14,7 @@ return array(
         'name',
         'productType' => array(
             'title' => 'Бүтээгэдхүүний төрөл',
-            'relationship' => 'productType',
+            'relationship' => 'ProductType',//model
             'select' => '(:table).name',
         ),
         'gallery' => array(
