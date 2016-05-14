@@ -41,7 +41,7 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
-        'producttype' => array(
+        'productType' => array(
             'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
