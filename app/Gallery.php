@@ -28,11 +28,17 @@ class Gallery extends Model
     public function getListForSpecial()
     {
         $list = Self::where('position', 2)->first();
-        return $list->products;
+        if($list){
+            return $list->products;
+        }
+        return false;
     }
     public function getListForBest()
     {
         $list = Self::where('position', 3)->first();
-        return $list->products;
+        if($list){
+            return $list->products;
+        }
+        return false;
     }
 }
