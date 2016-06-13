@@ -17,7 +17,7 @@ return array(
             'relationship' => 'productmenu',
             'select' => '(:table).name',
         ),
-        'product_number',
+        'subtype_number',
     ),
     /**
      * The filter set
@@ -50,7 +50,7 @@ return array(
             'title' => 'In menu',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
-        'product_number' => array(
+        'subtype_number' => array(
             'title' => 'how many companies to show',
             'type' => 'number',
         ),

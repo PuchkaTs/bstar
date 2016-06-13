@@ -39,10 +39,13 @@ $factory->define(App\CompanyType::class, function (Faker\Generator $faker) {
 $factory->define(App\Company::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
+        'url' => $faker->word,        
         'cover' => "1.jpg",
         'companyType_id' => $faker->numberBetween($min = 1, $max = 30),
     ];
 });
+
+// products
 
 $factory->define(App\ProductMenu::class, function (Faker\Generator $faker) {
     return [
@@ -59,12 +62,46 @@ $factory->define(App\ProductType::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\ProductSubType::class, function (Faker\Generator $faker) {
+    return [
+        'name' => 'sub' . $faker->name,
+        'position' => $faker->numberBetween($min = 1, $max = 20),
+        'producttype_id' => $faker->numberBetween($min = 1, $max = 30),
+    ];
+});
+
 $factory->define(App\Product::class, function (Faker\Generator $faker) {
     return [
         'name' => 'prod' . $faker->name,
         'photo' =>  '1.jpg',
         'description' =>  $faker->paragraph,
         'company_id' => $faker->numberBetween($min = 1, $max = 100),
-        'producttype_id' => $faker->numberBetween($min = 1, $max = 30),
+        'productsubtype_id' => $faker->numberBetween($min = 1, $max = 100),
+    ];
+});
+
+// Places
+
+$factory->define(App\PlaceMenu::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'position' => $faker->numberBetween($min = 1, $max = 20)
+    ];
+});
+
+$factory->define(App\PlaceType::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'position' => $faker->numberBetween($min = 1, $max = 20),
+        'placeMenu_id' => $faker->numberBetween($min = 1, $max = 10),
+    ];
+});
+
+$factory->define(App\Place::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'url' => $faker->word,
+        'cover' => "1.jpg",
+        'placeType_id' => $faker->numberBetween($min = 1, $max = 30),
     ];
 });

@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
-use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
+use App\Role;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Validator;
 
 class AuthController extends Controller
 {
@@ -62,11 +63,39 @@ class AuthController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {
-        return User::create([
+    {   
+        $regular = Role::where('name', 'regular')->first();
+
+        if($regular){
+
+        $user = new User([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'password' => ($data['password']),
+            'birth' => ($data['birth']),
+
         ]);
+
+        $regular->users()->save($user);
+
+        return $user;
+
+        }else{
+            $regular = Role::create([
+                'name' => 'regular'
+            ]);
+
+            $user = new User([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => ($data['password']),
+                'birth' => ($data['birth']),
+            ]);
+
+            $regular->users()->save($user);
+
+            return $user;
+        }
+
     }
 }

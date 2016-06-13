@@ -21,7 +21,7 @@ return array(
 	 *
 	 *  @type array
 	 */
-	'middleware' => array('web'),
+	'middleware' => array('web', 'admin'),
 
 	/**
 	 * Page title
@@ -65,11 +65,16 @@ return array(
 	 * 		'Analytics' => array('E-Commerce' => 'page.ecommerce.analytics'),
 	 *	)
 	 */
+	
 	'menu' => array(
 	    'User Role' => array('users','roles',),
         'Company menu' => array('menu', 'company_types', 'companies'),
-        'Product menu' => array('productmenus', 'product_types', 'products', 'productimages', 'galleries'),
-        'Banners' => array('banners', 'subbanners'),
+        'Place menu' => array('place_menus', 'place_types', 'places'),
+        'Product menu' => array('productmenus', 'product_types','product_subtypes', 'products', 'productimages', 'galleries', 'brands', 'colors', 'sizes', 'ages'),
+        'Banners' => array('banners', 'subbanners', 'topbanners', 'middlebanners', 'bottombanners'),
+        'Мэдээ' => array('tags', 'news'),
+        'Блог' => array('tagposts', 'posts'),
+        'Зар' => array('ads', 'adstags', 'adslocation'),
 
     ),
 

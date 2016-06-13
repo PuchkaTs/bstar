@@ -11,11 +11,11 @@
 @stop
 
 @section('content')
-
+    <div class="placeholder50"></div>
     @include('layouts.partials.reklam')
     @include('layouts.partials.special')
     @include('layouts.partials.best')
-
+    @include('layouts.partials.news')
 
 @stop
 

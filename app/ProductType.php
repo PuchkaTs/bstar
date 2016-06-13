@@ -19,28 +19,28 @@ class ProductType extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'position', 'product_number'];
+    protected $fillable = ['name', 'position', 'subtype_number'];
 
     public function productmenu(){
         return $this->belongsTo('App\ProductMenu');
     }
 
-    public function products(){
-        return $this->hasMany('App\Product', 'productType_id');
+    public function subtypes(){
+        return $this->hasMany('App\ProductSubType', 'producttype_id');
     }
 
-    public function productsInMenu(){
-        $listedProducts = '';
+    public function subTypesInMenu(){
+        $listedSubTypes = '';
         $count = 0;
-        $limit = $this->product_number;
+        $limit = $this->subtypenumber;
       
-        foreach ($this->products as $product){
-            $listedProducts .= '<li class="">' . link_to_route('product_path', $product->name, $product->id)  . '</li>';
+        foreach ($this->subtypes as $subtype){
+            $listedSubTypes .= '<li class="">' . link_to_route('subtype_path', $subtype->name, $subtype->id)  . '</li>';
             $count++;
             if ($count == $limit) {
                 break;
             }
         }
-        return $listedProducts;
+        return $listedSubTypes;
     }
 }

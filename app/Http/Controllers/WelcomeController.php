@@ -2,9 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Age;
+use App\Brand;
 use App\Company;
 use App\Http\Requests;
+use App\Menu;
+use App\Place;
+use App\PlaceMenu;
 use App\Product;
+use App\ProductMenu;
+use App\ProductSubType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -21,10 +28,60 @@ class WelcomeController extends Controller
 
 	public function product($id)
 	{
-        $product = Product::with('images')->find($id);
 
-		return view('pages.product')->with(compact('product'));
+		$productType = Product::find($id)->productSubType->productType;
+
+		$productSubTypes = $productType->subtypes;
+
+        $product = Product::with('images', 'brand', 'colors', 'sizes')->find($id);
+
+		return view('pages.product')->with(compact('product', 'productSubTypes', 'productType'));
 	}
+
+	public function subType($id)
+	{
+
+		$productType = ProductSubType::with('products')->find($id);
+
+		$products = $productType->products()->paginate(20);
+
+		$type = $productType->producttype;
+
+		$subtypes = $type->subtypes;
+
+		$arrayOfId = array_pluck($productType->products, 'brand_id');	
+
+		$brands = Brand::whereIn("id", $arrayOfId)->get();
+
+		$subTypeName = $productType->name;
+
+		$ages = Age::latest()->get();
+
+		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages'));
+	}
+
+	public function menu($id)
+	{
+
+		$productMenu = ProductMenu::with('productTypes.subtypes')->find($id);
+
+		$menuName = $productMenu->name;
+
+		return view('pages.menu')->with(compact('productMenu', 'menuName', 'ages'));
+	}
+
+	public function brand($id)
+	{
+		$brand = Brand::with('products')->find($id);
+
+		$brands = Brand::latest()->get();
+
+		$products = $brand->products;
+
+		$brandName = $brand->name;
+
+		return view('pages.brand')->with(compact('products', 'brandName', 'brands'));
+	}	
 
 	public function cart()
 	{
@@ -48,6 +105,36 @@ class WelcomeController extends Controller
 
         $company = Company::where('url', '=', $companyUrl)->with('products')->first();
 
-		return view('pages.store')->with(compact('company'));
+        $products = $company->products()->paginate(20);
+
+		return view('pages.store')->with(compact('company', 'products'));
 	}
+
+	public function store_menu($id)
+	{
+
+		$companyMenu = Menu::with('companyTypes.companies')->find($id);
+
+		$menuName = $companyMenu->name;
+
+		return view('pages.storemenu')->with(compact('companyMenu', 'menuName', 'ages'));
+	}	
+
+	public function place_show($companyUrl)
+	{
+
+        $place = Place::where('url', '=', $companyUrl)->first();
+
+		return view('pages.place')->with(compact('place'));
+	}	
+
+	public function place_menu($id)
+	{
+
+        $placeMenu = PlaceMenu::with('placeTypes.places')->find($id);
+
+        $menuName = $placeMenu->name;
+
+		return view('pages.placemenu')->with(compact('placeMenu', 'menuName'));
+	}		
 }

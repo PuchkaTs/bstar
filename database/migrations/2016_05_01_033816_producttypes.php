@@ -17,7 +17,7 @@ class Producttypes extends Migration
             $table->string('name');
             $table->smallInteger('position')->unsigned();
             $table->integer('productmenu_id');
-            $table->integer('product_number');   //how many companies to show in menu
+            $table->integer('subtype_number');   //how many companies to show in menu
             $table->timestamps();
         });
     }

@@ -31,13 +31,78 @@ Route::get('/success', [
     'as'=>'success_path',
     'uses'=>'WelcomeController@success'
 ]);
-Route::get('/stores/{id}', [
+Route::get('/stores/{companyUrl}', [
     'as'=>'store_path',
     'uses'=>'WelcomeController@store_show'
 ]);
-Route::get('@{companyUrl}', [
-    'as' => 'store_path',
-    'uses'=>'WelcomeController@store_show'
+
+Route::get('/stores-in-menu/{id}', [
+    'as' => 'store_menu_path',
+    'uses'=>'WelcomeController@store_menu'
+]);
+Route::get('/news', [
+    'as' => 'news_path',
+    'uses'=>'NewsController@index'
+]);
+Route::get('/news/{id}', [
+    'as' => 'news_show_path',
+    'uses'=>'NewsController@show'
+]);
+Route::get('/blogs', [
+    'as' => 'posts_path',
+    'uses'=>'NewsController@posts_index'
+]);
+Route::post('/blogs', [
+    'as' => 'posts_path',
+    'uses'=>'NewsController@post_store'
+]);
+Route::get('/blogs/{id}', [
+    'as' => 'post_show_path',
+    'uses'=>'NewsController@post_show'
+]);
+Route::get('/subtype/{id}', [
+    'as' => 'subtype_path',
+    'uses'=>'WelcomeController@subType'
+]);
+Route::get('/brand/{id}', [
+    'as' => 'brand_path',
+    'uses'=>'WelcomeController@brand'
+]);
+Route::get('/places/@{companyUrl}', [
+    'as'=>'place_path',
+    'uses'=>'WelcomeController@place_show'
+]);
+Route::get('/places-in-menu/{id}', [
+    'as'=>'place_menu_path',
+    'uses'=>'WelcomeController@place_menu'
+]);
+Route::get('/ads', [
+    'as'=>'ads_path',
+    'uses'=>'AdsController@index'
+]);
+Route::get('/ads/{id}', [
+    'as'=>'ads_show_path',
+    'uses'=>'AdsController@show'
+]);
+Route::get('/createad', [
+    'as'=>'createad_path',
+    'uses'=>'AdsController@create'
+]);
+Route::post('/createad', [
+    'as'=>'createad_path',
+    'uses'=>'AdsController@store'
+]);
+Route::post('/ads/photos', [
+    'as'=>'save_photo_path',
+    'uses'=>'AdsController@photos'
+]);
+Route::get('/menu/{id}', [
+    'as'=>'menu_path',
+    'uses'=>'WelcomeController@menu'
+]);
+Route::get('/type/{id}', [
+    'as'=>'type_path',
+    'uses'=>'WelcomeController@type'
 ]);
 
 Route::auth();

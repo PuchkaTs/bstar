@@ -1,0 +1,40 @@
+@extends('layouts.default_min')
+
+@section('body')
+<div class="placeholder100 row" style="margin-top: 50px;">
+    <div class="col-md-8 col-lg-6 col-lg-offset-2 gheader">
+        <header>
+            <h3>{{ $title }}</h3>
+        </header>
+
+    </div>
+</div>
+<div class="row" id="projects" style="min-height: 500px">
+    <div class="col-md-8 col-lg-6 col-lg-offset-2">
+            <div class="col-md-12 white_background" style="padding: 35px 20px; margin-bottom: 45px;">
+                    @foreach($news as $anews)
+                        <article class="col-md-6">
+                            <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
+                            <figcaption>
+                                <h4>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
+
+                                <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
+                            </figcaption>
+                        </article>
+
+                    @endforeach
+                    <div style="text-align: center"></div>
+            </div>
+    </div>
+
+    <div class="col-md-4 col-lg-2">
+        <h5 class="item_name">Ангилал:</h5>
+        <ul class="list-group">
+            @foreach($tags as $tag)
+            <li class="list-group-item">{!!link_to_route('news_path', $tag->title, ['tag'=>$tag->id])!!}</li>
+            @endforeach     
+        </ul> 
+    </div>
+
+</div>
+@stop

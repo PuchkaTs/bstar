@@ -12,7 +12,8 @@ return array(
     'columns' => array(
         'id',
         'name',
-        'email'
+        'email',
+        'birth'
     ),
     /**
      * The filter set

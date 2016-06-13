@@ -29,11 +29,12 @@ class ProductMenu extends Model
         $menus = Self::with(['productTypes' => function ($query)
         {
             $query->orderBy('name', 'asc');
-        }, 'productTypes.products'         => function ($query)
+        }, 'productTypes.subtypes'         => function ($query)
         {
             $query->orderBy('position', 'desc');
         }
         ])->get();
+
         return $menus;
 
     }

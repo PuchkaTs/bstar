@@ -9,7 +9,8 @@
             <h5>Нийт <strong class="simpleCart_total"></strong></h5>
                 <div class="minicart_bottom">
                     <p>Таны захиалга нийт <strong class="simpleCart_total"></strong> төгрөг боллоо</p>
-                    <a href="{{ route('cart_path') }}" ><button type="button" class="btn btn-success"><i class="fa fa-shopping-cart"></i>Сагс шалгах</button></a>
+                    <a href="{{ route('cart_path') }}" ><button type="button" class="btn btn-success"><i class="fa fa-shopping-cart"></i>Сагс</button></a>
+                    <a href="{{ route('cart_path') }}" ><button type="button" class="btn btn-info">Шууд авах</button></a>
 
                 </div>
         </div>

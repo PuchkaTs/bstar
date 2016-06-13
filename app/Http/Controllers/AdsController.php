@@ -1,0 +1,112 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Ads;
+use App\Adsimage;
+use App\Adslocation;
+use App\Adstag;
+use App\Age;
+use App\Http\Requests;
+use App\Http\Requests\CreateAdsRequest;
+use Illuminate\Http\Request;
+
+class AdsController extends Controller
+{
+    public function index()
+    {
+        $ads = Ads::latest()->get();
+
+        $adstags = Adstag::latest()->get();
+
+        $ages = Age::latest()->get();
+
+        $locations = Adslocation::lists('name', 'name');
+
+		return view('pages.ads_index')->with(compact('ads', 'adstags', 'ages', 'locations'));
+    }
+
+    public function create()
+    {
+    	$tagnames = Adstag::lists('name', 'name');
+
+    	$ages = Age::lists('title', 'title');
+
+    	$locations = Adslocation::lists('name', 'name');
+
+		return view('pages.createad')->with(compact('tagnames', 'ages', 'locations'));
+    } 
+
+    public function store(CreateAdsRequest $request)
+    {
+        $ip = $request->ip();
+
+        $photos = Adsimage::where('ip', $ip)->latest()->limit(4)->get();
+
+    	$tagname = $request->input('adstag');
+
+    	$locationname = $request->input('location');
+
+    	$agetitle = $request->input('age');
+
+    	$tag = Adstag::where('name', $tagname)->first();
+
+    	$age = Age::where('title', $agetitle)->first();
+
+    	$location = Adslocation::where('name', $locationname)->first();
+
+    	$newads = Ads::create($request->all());
+
+        foreach ($photos as $photo)
+        {
+            $newads->images()->save($photo);
+        }        
+        foreach ($photos as $photo)
+        {
+            $photo->ip = "";
+            $photo->save();
+        }
+
+    	$tag->ads()->save($newads);
+
+    	$age->ads()->save($newads);
+
+    	$location->ads()->save($newads);
+
+        $ads = Ads::latest()->get();
+
+        return redirect()->route('ads_path');
+    }   
+
+    public function show($id){
+
+        $ads = Ads::with('location', 'adsage', 'adstag', 'images')->find($id);
+
+        $adstags = Adstag::latest()->get();
+
+        $ages = Age::latest()->get();
+
+        $locations = Adslocation::lists('name', 'name');        
+
+        return view('pages.ads_show')->with(compact('ads', 'adstags', 'ages', 'locations'));
+    }   
+
+    public function photos(Request $request){
+
+        $ip = $request->ip();
+
+        $file = $request->file('file');
+
+        $name = time() . $file->getClientOriginalName();
+
+        $file->move('assets/ads', $name);
+
+        Adsimage::create([
+            'ip'=>$ip,
+            'image' => $name
+        ]);
+
+        return $ip;
+
+    }   
+}

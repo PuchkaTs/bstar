@@ -9,11 +9,11 @@
             @endif()
         </div>
     </div>
-    <div class="row" style="background-color: white;">
+    <div class="" style="background-color: white;">
         <div class="container">
         <h1>{{$company->name}}</h1>
             <div class="row">
-                @foreach($company->products as $product)
+                @foreach($products as $product)
                     <div class="simpleCart_shelfItem col-md-3 col-xs-6 textcenter">
                         <div class="product-card">                        
                             <div>
@@ -45,6 +45,11 @@
                     </div>
                 @endforeach
             </div>
+                                <div class="textcenter">
+                                {!! $products->links() !!}                                
+                                </div>                            
+                            @include('layouts.partials.middlebanner')
+                            @include('layouts.partials.bottombanner')            
         </div>
     </div>
 </div>

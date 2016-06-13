@@ -24,25 +24,29 @@ class Subbanner extends Model
     }
 
     // remove files 
-	public function removeFile(){
+	public function removeFile($newphoto){
 	    
 	    $file_name = Self::where('id', $this->id)->first()->image;
 
-		$filepath = "assets/banners/subbanners/" . $file_name;
+        if ($newphoto != $file_name){        
 
-		$filepath_thumb = "assets/banners/subbanners/thumbs/" . $file_name;
+    		$filepath = "assets/banners/subbanners/" . $file_name;
 
-		if (File::exists($filepath)){
+    		$filepath_thumb = "assets/banners/subbanners/thumbs/" . $file_name;
 
-			File::delete($filepath);
+    		if (File::exists($filepath)){
 
-		}
+    			File::delete($filepath);
 
-		if (File::exists($filepath_thumb)){
+    		}
 
-			File::delete($filepath_thumb);
+    		if (File::exists($filepath_thumb)){
 
-		}
+    			File::delete($filepath_thumb);
+
+    		}
+        }
+        return true;        
 	}
 
     public function delete()
@@ -58,7 +62,7 @@ class Subbanner extends Model
     public function save(array $options = [])
     {
     	if ($this->exists) {
-			$this->removeFile();
+			$this->removeFile($this->image);
         }
 
         $query = $this->newQueryWithoutScopes();

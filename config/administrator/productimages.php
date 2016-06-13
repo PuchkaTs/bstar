@@ -23,6 +23,10 @@ return array(
             'select' => '(:table).name', //what column or accessor on the other table you want to use to represent this object
         ),
         'position',
+        'color' => array(
+            'type' => 'bool',
+            'title' => 'Өнгө',
+        ),
     ),
     /**
      * The filter set
@@ -55,8 +59,12 @@ return array(
             'title' => 'Belongs to a project',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
+        'color' => array(
+            'type' => 'bool',
+            'title' => 'Өнгө',
+        ),        
         'image' => array(
-            'title' => 'Image 900x450',
+            'title' => 'Image 560x560',
             'type' => 'image',
             'location' => public_path() . '/assets/products/',
             'naming' => 'random',

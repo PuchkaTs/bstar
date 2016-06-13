@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -12,7 +13,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'birth',
     ];
 
     /**
@@ -29,9 +30,23 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
+    public function setBirthAttribute($date)
+    {
+        $this->attributes['birth'] = Carbon::parse($date);
+    }
+
     public function role()
     {
         return $this->belongsTo('App\Role', 'role_id');
+    }
+
+    public function isAdmin()
+    {
+        if ($this->role->name == 'super_admin'){
+
+            return true;
+        }  
+        return false;
     }
 
     public function hasRole($name)
@@ -43,4 +58,9 @@ class User extends Authenticatable
         
         return false;
     }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post', 'user_id');
+    } 
 }

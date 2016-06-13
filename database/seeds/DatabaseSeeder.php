@@ -22,9 +22,17 @@ class DatabaseSeeder extends Seeder
 
     	$this->call('ProductMenuSeeder');
 
-    	$this->call('ProductTypeSeeder');
+        $this->call('ProductTypeSeeder');
+
+    	$this->call('ProductSubTypeSeeder');
 
     	$this->call('ProductSeeder');
+
+        $this->call('PlaceMenuSeeder');
+
+        $this->call('PlaceTypeSeeder');
+
+        $this->call('PlaceSeeder');        
 
     }
 }

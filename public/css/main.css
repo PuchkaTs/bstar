@@ -84,7 +84,9 @@ header.mainheader {
 .secondary-nav .secondary-nav--left > li > a {
   padding: 10px 20px;
   display: block;
-  font-size: 14px; }
+  font-size: 14px; 
+  line-height: 20px;
+}
 
 .secondary-nav--left > li > a:hover, .secondary-nav--left > li > a:focus {
   color: #000000;
@@ -386,13 +388,48 @@ a.none {
 
 .footer-contact {
   padding: 20px 0px; }
-
+.footer ul.social li{
+  color: white;
+  float: left;
+  height: 100px;
+  width: 50%;
+}
+ul.social .fa{
+  color: white;
+  font-size: 3em;
+}
+ul.social li:nth-child(3) .fa{
+  color: red;
+}
+ul.social li:nth-child(1) {
+    background: #3A579E;
+}
+ul.social li:nth-child(2) {
+    background: #22A9E0;
+}
+ul.social li:nth-child(3) {
+    background: #FFFFFF;
+}
+ul.social li:nth-child(4) {
+    background: #5380A4;
+}
 #copyright {
-  background-color: #BF0022;
   padding: 10px 20px;
   color: white;
   margin-top: 20px; }
-
+.legalBanner{
+  margin-top: 30px;
+  background-color: #BF0022;
+    padding: 25px 0;
+    height: 20px;  
+}
+.legalBanner a{
+  color: white;
+  padding-right: 25px;
+}
+.legalBanner a:hover{
+text-decoration: none;
+}
 textarea:focus {
   border-color: rgba(200, 200, 200, 0.8);
   box-shadow: none;
@@ -516,6 +553,11 @@ p.subdate {
 .form-inline .fa-search {
   margin-left: 20px; }
 
+.product_details .color .fa{
+  margin-left: 10px;
+  margin-right: 0px;
+}  
+
 .secondary-nav .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -623,6 +665,10 @@ li.ads{
 }
 .secondary-nav>div>ul>li>a{
   color: white;
+  font-weight: 400;
+}
+.secondary-nav>div>ul.black>li>a{
+  color: black;
   font-weight: 400;
 }
 .secondary-nav li.product>a:after{

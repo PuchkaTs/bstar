@@ -101,6 +101,8 @@
 						{ view: "decrement", label: false },
 						{ attr: "quantity", label: "Тоо" },
 						{ view: "increment", label: false },
+						{ view: "color", label: "Өнгө", attr: "color" },
+						{ view: "colors", label: false, attr: "colors" },
 						{ attr: "total", label: "Нийт", view: 'currency' },
 						{ view: "remove", text: "Хасах", label: false }
 					],
@@ -584,7 +586,34 @@
 
 				increment: function (item, column) {
 					return "<a href='javascript:;' class='" + namespace + "_increment'>" + (column.text || "+") + "</a>";
-				},
+				},	
+
+				colors: function (item, column) {
+					var clrs = [];
+
+					var selected = item.get('color');
+
+					var clrs = item.get(column.attr).split(',');
+
+					var i;
+
+					var innertext="";
+
+					for (i = 0; i < clrs.length; i++) { 
+
+						if (selected == (clrs[i].trim())) {
+
+							innertext += "<option data-color='" + clrs[i] + "' selected>" + clrs[i] + "</option>";
+
+						} else {
+
+					    	innertext += "<option data-color=" + clrs[i] + ">" + clrs[i] + "</option>";
+
+						}
+					};
+
+					return "<select class='colorsselect'>" +  innertext + "</select>";
+				},						
 
 				image: function (item, column) {
 					return "<img src='" + item.get(column.attr) + "'/>";
@@ -1692,6 +1721,8 @@
 
 			// bind the input and output events
 			simpleCart.ready(function () {
+
+
 				simpleCart.bindOutlets({
 					total: function () {
 						return simpleCart.toCurrency(simpleCart.total());

@@ -12,9 +12,9 @@ return array(
     'columns' => array(
         'id',
         'name',
-        'productType' => array(
+        'productSubType' => array(
             'title' => 'Бүтээгэдхүүний төрөл',
-            'relationship' => 'productType',//model
+            'relationship' => 'productSubType',//model
             'select' => '(:table).name',
         ),
         'gallery' => array(
@@ -25,6 +25,11 @@ return array(
         'company' => array(
             'title' => 'Компани',
             'relationship' => 'company',
+            'select' => '(:table).name',
+        ),
+        'brand' => array(
+            'title' => 'Брэнд',
+            'relationship' => 'brand',          
             'select' => '(:table).name',
         ),
         'photo' => array(
@@ -41,14 +46,23 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
-        'productType' => array(
+        'stars' => array(
+            'title' => 'Од',
+            'type'  => 'number',
+        ),   
+        'gender' => array(
+            'type' => 'enum',
+            'title' => 'Gender:',
+            'options' => array('Хүү', 'Охин'), //must be an array
+        ),                
+        'productSubType' => array(
             'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
         'gallery' => array(
             'type' => 'relationship',
-            'title' => 'Бүтээгэдхүүний төрөл',
+            'title' => 'Галлерей',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
         'company' => array(
@@ -56,6 +70,11 @@ return array(
             'title' => 'Компани',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
+        'brand' => array(
+            'type' => 'relationship',
+            'title' => 'Брэнд',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),        
     ),
     /**
      * The editable fields
@@ -69,7 +88,7 @@ return array(
             'title' => 'Description:',
             'type' => 'wysiwyg',
         ),
-        'productType' => array(
+        'productSubType' => array(
             'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
@@ -79,17 +98,46 @@ return array(
             'title' => 'Галлерей',
             'name_field' => 'name',
         ),
+        'colors' => array(
+            'type' => 'relationship',
+            'title' => 'Өнгө',
+            'name_field' => 'name',
+        ),     
+        'sizes' => array(
+            'type' => 'relationship',
+            'title' => 'Хэмжээ',
+            'name_field' => 'name',
+        ),   
+        'ages' => array(
+            'type' => 'relationship',
+            'title' => 'Нас',
+            'name_field' => 'title',
+        ),                   
         'company' => array(
             'type' => 'relationship',
             'title' => 'Компани',
             'name_field' => 'name',
         ),
+        'brand' => array(
+            'type' => 'relationship',
+            'title' => 'Брэнд',
+            'name_field' => 'name',
+        ),        
         'price' => array(
             'type'  => 'number',
             'title'  => 'Үнэ',
         ),
+        'stars' => array(
+            'type'  => 'number',
+            'title'  => 'Од:',
+        ), 
+        'gender' => array(
+            'type' => 'enum',
+            'title' => 'Gender:',
+            'options' => array('Хүү', 'Охин'), //must be an array
+        ),               
         'photo' => array(
-            'title' => 'Image 900x450',
+            'title' => 'Image 140x140',
             'type' => 'image',
             'location' => public_path() . '/assets/products/thumbs/',
             'naming' => 'random',

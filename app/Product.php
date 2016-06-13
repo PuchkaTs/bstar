@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 
 class Product extends Model {
 
-    protected $fillable = ['name', 'description', 'photo', 'price'];
+    protected $fillable = ['name', 'description', 'photo', 'price', 'stars', 'gender'];
 
     public function images(){
         return $this->hasMany('App\Productimage', 'product_id');
@@ -26,8 +26,8 @@ class Product extends Model {
         return $this->belongsTo('App\Company');
     }
 
-    public function productType(){
-        return $this->belongsTo('App\ProductType', 'productType_id');
+    public function productSubType(){
+        return $this->belongsTo('App\ProductSubType', 'productSubType_id');
     }
 
     public function gallery()
@@ -35,20 +35,45 @@ class Product extends Model {
         return $this->belongsToMany('App\Gallery');
     }
 
+    public function brand()
+    {
+        return $this->belongsTo('App\Brand');
+    }    
+
+    public function colors()
+    {
+        return $this->belongsToMany('App\Color');
+    }
+
+    public function sizes()
+    {
+        return $this->belongsToMany('App\Size');
+    }
+
+    public function ages()
+    {
+        return $this->belongsToMany('App\Age');
+    }
+
+
 // remove files
 
-    public function removeFile(){
+    public function removeFile($newphoto){
         
         $file_name = Self::where('id', $this->id)->first()->photo;
 
-        $filepath = "assets/products/thumbs/" . $file_name;
+        if ($newphoto != $file_name){
 
-        if (File::exists($filepath)){
+            $filepath = "assets/products/thumbs/" . $file_name;
 
-            File::delete($filepath);
+            if (File::exists($filepath)){
 
+                File::delete($filepath);
+
+            }
         }
 
+        return true;
     }
 
     public function delete()
@@ -64,7 +89,7 @@ class Product extends Model {
     public function save(array $options = [])
     {
         if ($this->exists) {
-            $this->removeFile();
+            $this->removeFile($this->photo);
         }
 
         $query = $this->newQueryWithoutScopes();
