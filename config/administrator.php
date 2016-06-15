@@ -21,7 +21,8 @@ return array(
 	 *
 	 *  @type array
 	 */
-	'middleware' => array('web', 'admin'),
+	// 'middleware' => array('web', 'admin'),
+	'middleware' => array('web'),
 
 	/**
 	 * Page title
@@ -75,6 +76,8 @@ return array(
         'Мэдээ' => array('tags', 'news'),
         'Блог' => array('tagposts', 'posts'),
         'Зар' => array('ads', 'adstags', 'adslocation'),
+        'orders',
+        'articles',
 
     ),
 

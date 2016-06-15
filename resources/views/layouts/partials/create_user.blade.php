@@ -34,6 +34,6 @@
             </div>               
             <!-- Submit form input -->
             <div class="form-group">    
-                {!! Form::submit('Бүргүүлээд блог бичих', ['class' => 'btn btn-primary btn-block'])!!}
+                {!! Form::submit('Бүртгүүлээд блог бичих', ['class' => 'btn btn-primary btn-block'])!!}
             </div>            
         {!! Form::close() !!}

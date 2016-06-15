@@ -17,7 +17,7 @@
             </div>   
 
             <div class="col-md-9">   
-                <div class="row" style="background-color: white;">
+                <div class="row">
                         <div class="menu-list-container">
                         <h1>{{$menuName}}</h1>
                         @include('layouts.partials.topbanner')

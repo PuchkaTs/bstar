@@ -8,20 +8,8 @@
 <div class="simpleCart_shelfItem">
  
     <div class="row">
-        <div class="col-md-3">
-            <section class="card" style="margin-top:116px;">
-                <h5 class="item_name">{{ $productType->name }}</h5>
-                <ul class="list-group">
-                    @foreach($productSubTypes as $type)
-                    <li class="list-group-item">{!!link_to_route('subtype_path', $type->name, $type->id)!!}</li>
-                    @endforeach
-                </ul>    
-            </section>
-        </div>   
-        <div class="col-md-9">    
-            <div class="col-md-8">
                 <div class="row">
-                    <div class="col-md-12 gheader">
+                    <div class="col-md-9 col-md-offset-3 gheader">
                         <header>
                             <h3 class="item_name">{{ $product->name }}</h3>
                             <h5>ID: {{sprintf('%06d', $product->id)}}
@@ -37,7 +25,20 @@
                             </h5>
                         </header>
                     </div>
-                </div>
+                </div>    
+        <div class="col-md-3">
+            <section class="card">
+                <h5 class="item_name">{{ $productType->name }}</h5>
+                <ul class="list-group">
+                    @foreach($productSubTypes as $type)
+                    <li class="list-group-item">{!!link_to_route('subtype_path', $type->name, $type->id)!!}</li>
+                    @endforeach
+                </ul>    
+            </section>
+        </div>   
+        <div class="col-md-9">    
+            <div class="col-md-8 product-content">
+
                     <div class="col-md-12" id="project_by_id">
                         @if($product->images()->count())
                             <div id="slider" class="flexslider">
@@ -107,10 +108,21 @@
                                 @endforeach                                  
                             </section>      
                         </div>
-                        <div class="size">Хэмжээ: 
-                            @foreach($product->sizes as $size)
-                                <span> {{$size->size}}</span>
-                            @endforeach
+
+                        <div class="size width50">Хэмжээ: 
+                            <select class="form-control item_size">
+                                @foreach($product->sizes as $size)
+                                    <option>{{$size->name}}</option>                                
+                                    
+                                @endforeach  
+                            </select> 
+                            <!-- save sizes in select                            -->
+                                <select class="form-control display-none">
+                                    @foreach($product->sizes as $size)
+                                        <option class="item_sizes">{{$size->name}}</option>                                
+                                        
+                                    @endforeach  
+                                </select>                              
                         </div>                                                         
                     <div class="list-group width50">
 

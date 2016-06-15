@@ -30,6 +30,10 @@
         </div>          
         
         <!-- Submit form input -->
+        <div class="form-group">
+            {!! Form::label('file', 'Ковер зураг сонгох:') !!}
+            {!! Form::file('photo'); !!}
+        </div>          
 
 
         <div class="form-group">    

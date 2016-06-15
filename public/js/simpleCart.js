@@ -96,13 +96,13 @@
 					cartColumns			: [
 						{view:'image' , attr:'thumb', label: false},
 						{ attr: "name", label: "Нэр" },
-						{view:'link' , label: 'Дэлгэрэнгүй' , attr: 'pagelink' , text: '' },	
+						{view:'link' , label: false , attr: 'pagelink' , text: '' },	
 						{ attr: "price", label: "Үнэ", view: 'currency' },
 						{ view: "decrement", label: false },
 						{ attr: "quantity", label: "Тоо" },
 						{ view: "increment", label: false },
 						{ view: "color", label: "Өнгө", attr: "color" },
-						{ view: "colors", label: false, attr: "colors" },
+						{ view: "colors", label: "Өнгө", attr: "colors" },
 						{ attr: "total", label: "Нийт", view: 'currency' },
 						{ view: "remove", text: "Хасах", label: false }
 					],
@@ -592,27 +592,32 @@
 					var clrs = [];
 
 					var selected = item.get('color');
-
-					var clrs = item.get(column.attr).split(',');
+					if (item.get(column.attr)) {
+						var clrs = item.get(column.attr).split(',');
+					};
 
 					var i;
 
 					var innertext="";
 
-					for (i = 0; i < clrs.length; i++) { 
+					if (clrs) {
+						for (i = 0; i < clrs.length; i++) { 
 
-						if (selected == (clrs[i].trim())) {
+							if (selected == (clrs[i].trim())) {
 
-							innertext += "<option data-color='" + clrs[i] + "' selected>" + clrs[i] + "</option>";
+								innertext += "<option data-color='" + clrs[i] + "' selected>" + clrs[i] + "</option>";
 
-						} else {
+							} else {
 
-					    	innertext += "<option data-color=" + clrs[i] + ">" + clrs[i] + "</option>";
+						    	innertext += "<option data-color=" + clrs[i] + ">" + clrs[i] + "</option>";
 
-						}
+							}
+						};
+					return "<select class='colorsselect'>" +  innertext + "</select>";
+
 					};
 
-					return "<select class='colorsselect'>" +  innertext + "</select>";
+					return "өнгө";
 				},						
 
 				image: function (item, column) {

@@ -55,7 +55,7 @@ return array(
             'name_field' => 'title', //what column or accessor on the other table you want to use to represent this object
         ),        
         'photo' => array(
-            'title' => 'Image 430x200',
+            'title' => 'Image 900x400',
             'type' => 'image',
             'location' => public_path() . '/assets/news/',
             'naming' => 'random',

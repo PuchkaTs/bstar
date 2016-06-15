@@ -34,5 +34,9 @@ class Ads extends Model
 
         return $string;
 
-    }        
+    }       
+    public function firstimage(){
+        $image = $this->images()->first()->image;
+        return $image;
+    } 
 }

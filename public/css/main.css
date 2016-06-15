@@ -1,3 +1,9 @@
+p, ul{
+  font-size: 1.1em;
+}
+body{
+color: #555;
+}
 .simpleCart_shelfItem{margin-top: 20px;}
 .quick-access {
   background: #ab0112;
@@ -383,7 +389,7 @@ a.none {
   color: white;
   width: 100%;
   border-top: 1px solid #e7e7e7;
-  background-color: #dd042b;
+  background-color: #00b7c0;
   padding-top: 35px; }
 
 .footer-contact {
@@ -419,7 +425,7 @@ ul.social li:nth-child(4) {
   margin-top: 20px; }
 .legalBanner{
   margin-top: 30px;
-  background-color: #BF0022;
+  background-color: #00858c;
     padding: 25px 0;
     height: 20px;  
 }
@@ -519,7 +525,7 @@ p.subdate {
   margin-top: 0px; }
 
 #project_by_id {
-  background-color: #fff;
+  /*background-color: #fff;*/
   padding-left: 0px;
   padding-right: 0px;
   margin-bottom: 40px; }
@@ -533,7 +539,7 @@ p.subdate {
 #project_by_id article h3 {
   margin-top: 0px; }
 .info .small-text{
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 .more {
   color: #aaa;
@@ -718,11 +724,15 @@ li.ads{
   border-bottom: 1px solid #dd042b; }
 
 body {
-  background-color: #fff;
-  font-family: Roboto, Helvetica, Arial, sans-serif; }
+  background-color: rgb(214, 255, 249);
+  font-family: 'Comfortaa', cursive; }
 
 .fa {
-  color: #dd042b;
+  color: #f08d58;
+  margin-right: 10px; }
+
+.footer .fa {
+  color: #58f07a;
   margin-right: 10px; }
 button .fa{
   color: white;
@@ -757,7 +767,7 @@ button .fa{
     color: white; }
 
 .separator{
-  min-height: 45px;
+  min-height: 96px;
 }
 .underlined {
   margin-bottom: 40px;
@@ -799,6 +809,10 @@ a {
   color: #333;
   text-decoration: none; }
 
+.footer a{
+  color: white;
+}
+
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   background-color: #dd042b;
   color: #ffffff; }
@@ -823,6 +837,27 @@ h1, h2, h3, h4, h5, h6 {
 footer ul li{
   text-decoration: none;
   list-style: none;
+}
+.subbanner img{
+
+}
+.paddingtop0{
+  padding-top: 0px;
+}
+.img100 img{
+  width: 100%;
+}
+.media-left{
+  width: 130px;
+  height: 90px;
+}
+.media-left a{
+  display: block;
+  width: 130px;
+  height: 90px;
+}
+.subbanner li{
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=main.css.map */

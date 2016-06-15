@@ -26,13 +26,13 @@ class NewsController extends Controller
 		{
 		    $tag = Tag::find($request->input('tag'));
 
-		    $news = $tag->contents;
+		    $news = $tag->contents()->paginate(20);
 
 		    $title = $tag->title;
 
 		} else {
 
-			$news = Content::latest()->get();
+			$news = Content::latest()->paginate(20);
 
 			$title = 'Мэдээлэл, зөвлөгөө';
 
@@ -74,7 +74,7 @@ class NewsController extends Controller
 	public function posts_index()
 	{
 
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->paginate(2);
 
         $posttags = Tagpost::all();
         

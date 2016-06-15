@@ -104,7 +104,14 @@ Route::get('/type/{id}', [
     'as'=>'type_path',
     'uses'=>'WelcomeController@type'
 ]);
-
+Route::get('/content/{url}', [
+    'as'=>'content_path',
+    'uses'=>'WelcomeController@article'
+]);
+Route::get('/search', [
+    'as'=>'search_path',
+    'uses'=>'WelcomeController@search'
+]);
 Route::auth();
 
 // Route::get('/home', 'HomeController@index');

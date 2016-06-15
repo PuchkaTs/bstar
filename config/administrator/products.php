@@ -74,7 +74,15 @@ return array(
             'type' => 'relationship',
             'title' => 'Брэнд',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
-        ),        
+        ),  
+        'sale' => array(
+            'title' => 'Хямдарсан',
+            'type'  => 'bool',
+        ),   
+        'new' => array(
+            'title' => 'шинэ',
+            'type'  => 'bool',
+        ),                           
     ),
     /**
      * The editable fields
@@ -93,6 +101,7 @@ return array(
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
+
         'gallery' => array(
             'type' => 'relationship',
             'title' => 'Галлерей',
@@ -131,6 +140,18 @@ return array(
             'type'  => 'number',
             'title'  => 'Од:',
         ), 
+        'sale' => array(
+            'title' => 'хямдарсан:',
+            'type' => 'bool',
+        ),  
+        'oldprice' => array(
+            'type'  => 'number',
+            'title'  => 'Хуучин үнэ',
+        ),          
+        'new' => array(
+            'title' => 'шинэ:',
+            'type' => 'bool',
+        ),                
         'gender' => array(
             'type' => 'enum',
             'title' => 'Gender:',

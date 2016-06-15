@@ -3,15 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Age;
+use App\Article;
 use App\Brand;
 use App\Company;
 use App\Http\Requests;
 use App\Menu;
+use App\Order;
 use App\Place;
 use App\PlaceMenu;
 use App\Product;
 use App\ProductMenu;
 use App\ProductSubType;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -21,7 +24,7 @@ class WelcomeController extends Controller
     public function index(Request $request)
 	{
 
-        $products = Product::with('images')->limit(10)->latest()->get();
+        $products = Product::with('images', 'colors')->limit(10)->latest()->get();
 
 		return view('pages.home')->with(compact('map', 'menus', 'products'));
 	}
@@ -85,14 +88,69 @@ class WelcomeController extends Controller
 
 	public function cart()
 	{
-		return view('pages.cart');
+		$date = Carbon::now();
+
+		$transactionNumber = $date->day . $date->hour . $date->minute . $date->second;
+
+		return view('pages.cart')->with(compact('transactionNumber'));
 	}
 
 	public function checkout(Request $request)
 	{
+		$this->validate($request, [
+	        'phone' => 'required',
+	        'address' => 'required',
+	    ]);
+
 		$cart=$request->request->all();
 
+		$order = Order::create($request->all());	
+		$grandTotal = 0;
+		$body = "";
+
+		for($i=1; $i < $cart['itemCount'] + 1; $i++) {
+		$name = 'item_name_'.$i;
+		$options = 'item_options_'.$i;
+		$quantity = 'item_quantity_'.$i;
+		$price = 'item_price_'.$i;
+		$total = $cart[$quantity] * $cart[$price];
+		$grandTotal += $total;
+
+		$others = $this->calculateParams($cart[$options]);
+
+		$body .= 'Захиалга #'.$i.': '.$cart[$name].' --- Тоо x '
+		.$cart[$quantity].' --- нгж үнэ ₮'
+		.number_format($cart[$price], 2, '.', '') 
+		.' --- Нийт $'.number_format($total, 2, '.', '')."</br>"
+		.$others."</br>";
+		$body .= '========================================================'."</br>";
+		}
+
+		$body .= 'Нийт дүн : ₮<b>' . number_format($grandTotal, 2, '.', '') . '</b>';
+
+		$order->body = $body;
+
+		$order->save();
+		if(Auth::user()){
+			Auth::user()->orders()->save($order);
+		}
+
 		return Redirect::route('success_path');
+	}
+	public function calculateParams($string){
+		$returnedOptions = "";
+		$string = str_replace(' ', '', $string);		
+		$myArray = explode(',', $string);
+		foreach ($myArray as $value) {
+			if (0 === strpos($value, 'color:')) {
+				$returnedOptions .= "--- Өнгө/" . $value;
+			}
+			if (0 === strpos($value, 'size:')) {
+				$returnedOptions .= "--- Хэмжээ/" . $value;
+
+			}			
+		}
+		return $returnedOptions;
 	}
 
 	public function success()
@@ -137,4 +195,20 @@ class WelcomeController extends Controller
 
 		return view('pages.placemenu')->with(compact('placeMenu', 'menuName'));
 	}		
+
+	public function article($url)
+	{
+		$article = Article::where('url', $url)->first();
+
+		return view('pages.article')->with(compact('article'));
+	}
+
+	public function search()
+	{
+		$products = Product::where('name', 'LIKE', '%'.$search.'%')->paginate(20);
+
+		var_dump($products);
+
+		return view('pages.search')->with(compact('products'));
+	}
 }

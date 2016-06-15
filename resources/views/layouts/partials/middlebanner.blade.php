@@ -1,6 +1,6 @@
 
 
-<div class="subbanner textcenter">
+<div class="subbanner textcenter img100">
 @inject('topbanner', 'App\MiddleBanner')
 
 <div class="subbanner-container swiper-container">

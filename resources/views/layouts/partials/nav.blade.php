@@ -9,7 +9,7 @@
             <!-- <h1 class="logo"><a class="white" href="/">BabyStar</a></h1> -->
             <h1 class="logo"><a href="/"><img src="/assets/common/logo.png"></a></h1>
             <div class="Navigation__search">
-                    {!!Form::open(['method'=>'GET', 'route'=>'home_path', 'class'=>'form-inline'])!!}
+                    {!!Form::open(['method'=>'GET', 'route'=>'search_path', 'class'=>'form-inline'])!!}
                     {!!Form::input('search', 'q', null, ['placeholder' => 'Хайх', 'class'=>'simplebox', 'autofocus'])!!}
                     <i><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i>
                     {!!Form::close()!!}   
@@ -26,7 +26,7 @@
             @else
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Нэвтрэх</a></li>
             @endif
-                <li><a href="/logout">Тусламж</a></li>
+                <li><a href="/content/help">Тусламж</a></li>
                 <li class="cartButton"><a href="{{ route('cart_path') }}" class=""><span id="cartItemCountId" class="simpleCart_quantity cartItemCount"></span></a>
                     @include('layouts.partials.minicart')
                 </li>            
@@ -166,7 +166,7 @@
                         </li>
                          <!-- zuvluguu  clas recomend-->
                         <li id="navbar-link--work" class="recomend">
-                            <a class="navbar-link" href="/news">Одун</a>
+                            <a class="navbar-link" href="/content/odun">Одун</a>
                         </li>                         
                         <!-- BLog -->
                         <li id="navbar-link--work" class="blog">
@@ -183,27 +183,27 @@
                 <ul class="zeroed secondary-nav--left black">
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="/register" target="_blank"><i class="fa fa-child"></i>Хүүхдийн бүртгэл</a>
+                        <a class="navbar-link" href="/register"><i class="fa fa-child"></i>Хүүхдийн бүртгэл</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="https://larajobs.com?partner=36" target="_blank"><i class="fa fa-credit-card"></i>Бэлгийн карт</a>
+                        <a class="navbar-link" href="/content/card"><i class="fa fa-credit-card"></i>Бэлгийн карт</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="https://larajobs.com?partner=36" target="_blank"><i class="fa fa-gift"></i>Бэлэгний багц</a>
+                        <a class="navbar-link" href="/content/present"><i class="fa fa-gift"></i>Бэлэгний багц</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="https://larajobs.com?partner=36" target="_blank"><i class="fa fa-heart"></i>Хүслийг жагсаалт</a>
+                        <a class="navbar-link" href="/content/wishlist"><i class="fa fa-heart"></i>Хүслийг жагсаалт</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="https://larajobs.com?partner=36" target="_blank"><i class="fa fa-leaf"></i>Хөнгөлөлтийн карт</a>
+                        <a class="navbar-link" href="/content/loyalty"><i class="fa fa-leaf"></i>Хөнгөлөлтийн карт</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="https://larajobs.com?partner=36" target="_blank"><i class="fa fa-thumbs-up"></i>Сайн дурын</a>
+                        <a class="navbar-link" href="/content/willing"><i class="fa fa-thumbs-up"></i>Сайн дурын</a>
                     </li>
 
                 </ul>

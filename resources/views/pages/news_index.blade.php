@@ -11,7 +11,7 @@
 </div>
 <div class="row" id="projects" style="min-height: 500px">
     <div class="col-md-8 col-lg-6 col-lg-offset-2">
-            <div class="col-md-12 white_background" style="padding: 35px 20px; margin-bottom: 45px;">
+            <div class="col-md-12" style="padding: 35px 20px; margin-bottom: 45px;">
                     @foreach($news as $anews)
                         <article class="col-md-6">
                             <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
@@ -24,6 +24,10 @@
 
                     @endforeach
                     <div style="text-align: center"></div>
+                                <div class="textcenter">
+                                {!! $news->links() !!}                                
+                                </div>                              
+
             </div>
     </div>
 

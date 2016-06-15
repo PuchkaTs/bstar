@@ -52,13 +52,14 @@
             <h3 style="padding:15px;">Үнэгүй зар</h3>
             <a href="/createad" class="btn btn-primary pull-right" role="button">Зар оруулах</a>
         </header>
-        <div class="col-md-10 white_background">
+        <div class="col-md-10 ads-list">
 
                 @foreach($ads as $aads)
                     <div class="media ads">
                       <div class="media-left">
-                        @if($aads->photo)
-                            <a href="{{ route('ads_show_path', $aads->id) }}" >{!! Html::image("assets/ads/thumbs/$aads->photo", null, ['class'=>'width100']) !!}</a>
+                        @if($aads->images()->count())
+                            <a href="{{ route('ads_show_path', $aads->id) }}" >{!! Html::image("assets/ads/" . $aads->firstimage(), null, ['class'=>'width100']) !!}</a>
+                        
                         @else
                             <a href="{{ route('ads_show_path', $aads->id) }}" >{!! Html::image("assets/ads/thumbs/130x90.jpg", null, []) !!}</a>
                         @endif
@@ -77,13 +78,17 @@
 
 
                 @endforeach
-                <div style="text-align: center"></div>
-                <div class="placeholder100"></div>
+                            <div class="textcenter">
+                                {!! $ads->links() !!}         
+                            </div>
         </div>
 
 
     </div>
+
 </div>
+                <div class="placeholder100"></div>
+
 @stop
 
 @section('script')

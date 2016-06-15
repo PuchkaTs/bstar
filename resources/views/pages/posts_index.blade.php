@@ -2,8 +2,15 @@
 
 @section('content')
 <div class="row">
+        <div class="placeholder100 row" style="margin-top: 50px;">
+            <div class="col-md-8 col-lg-6 col-md-offset-3">
+                <header>
+                    <h3>Мэдээлэл</h3>
+                </header>
+            </div>
+        </div>
     <div class="col-md-3">
-        <section class="card" style="margin-top:86px;">
+        <section class="card">
             <h5 class="item_name">Ангилал:</h5>
             <ul class="list-group">
                 @foreach($posttags as $posttag)
@@ -22,13 +29,7 @@
     <div class="col-md-9">
 
 
-        <div class="placeholder100 row" style="margin-top: 50px;">
-            <div class="col-md-8 col-lg-6">
-                <header>
-                    <h3>Мэдээлэл</h3>
-                </header>
-            </div>
-        </div>
+
         <div class="row" id="projects" style="min-height: 500px">
             <div class="">
                             @foreach($posts as $aposts)
@@ -42,7 +43,9 @@
                                 </article>
 
                             @endforeach
-                            <div style="text-align: center"></div>
+                            <div class="textcenter">
+                                {!! $posts->links() !!}         
+                            </div>
             </div>
 
         </div>        

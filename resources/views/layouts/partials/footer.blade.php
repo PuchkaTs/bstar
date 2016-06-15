@@ -1,52 +1,92 @@
 <footer class="footer">
     <div class="container-fluid">
-        <div class="">
+        <div class="colororange">
             <div class="col-md-2 col-md-offset-1 col-sm-3 col-xs-6">
-                <h4><span class="glyphicon glyphicon-map-marker"></span>Бидний тухай</h4>
+                <h4><i class="fa fa-users" aria-hidden="true"></i>Бидний тухай</h4>
                 <ul>
-                    <li>Түүх</li>
-                    <li>Танилцуулга</li>
-                    <li>Ажлын байр </li>
-                    <li>Давуу тал</li>
-                    <li>Хамтран ажиллах</li>
-                    <li>Холбоос барих</li>
+                    <li>
+                        <a href="/content/willing">Түүх</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Танилцуулга</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Ажлын байр</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Давуу тал</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Хамтран ажиллах</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Холбоос барих</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6">
-                <h4><span class="glyphicon glyphicon-map-marker"></span>Тусламж</h4>
+                <h4><i class="fa fa-bell" aria-hidden="true"></i>Тусламж</h4>
                 <ul>
-                    <li>Онлайн чат</li>
-                    <li>Худалдан авалт</li>
-                    <li>Хүргэлт</li>
-                    <li>Буцаалт</li>
-                    <li>Төлбөрийн нөхцөл</li>
-                    <li>Нууцлал</li>
-                    <li>Үйлчилгээний нөхцөл</li>
+                    <li>
+                        <a href="/content/willing">Онлайн чат</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Худалдан авалт</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Хүргэлт</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Буцаалт</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Төлбөрийн нөхцөл</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Нууцлал</a>
+                    </li>                      
+                    <li>
+                        <a href="/content/willing">Үйлчилгээний нөхцөл</a>
+                    </li>                
                 </ul>
             </div> 
             <div class="col-md-2 col-sm-3 col-xs-6">
-                <h4><span class="glyphicon glyphicon-map-marker"></span>Хэрэглэгч</h4>
+                <h4><i class="fa fa-eye" aria-hidden="true"></i>Хэрэглэгч</h4>
                 <ul>
-                    <li>Хамтран ажиллах</li>
-                    <li>Дэлгүүр нээх</li>
-                    <li>Нууцлалын бодлого</li>
+                    <li>
+                        <a href="/content/willing">Хамтран ажиллах</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Дэлгүүр нээх</a>
+                    </li>                      
+                    <li>
+                        <a href="/content/willing">Нууцлалын бодлого</a>
+                    </li>                 
                 </ul>
             </div>
             <div class="col-md-2 col-sm-3 col-xs-6">
-                <h4><span class="glyphicon glyphicon-map-marker"></span>Бэлэг</h4>
+                <h4><i class="fa fa-gift" aria-hidden="true"></i>Бэлэг</h4>
                 <ul>
-                    <li>Бэлэгний карт</li>
-                    <li>Бэлэгний санаанууд</li>
-                    <li>Хөнгөлөлтийн карт</li>
-                    <li>Хүслийн жагсаалт</li>
+                    <li>
+                        <a href="/content/willing">Бэлэгний карт</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Бэлэгний санаанууд</a>
+                    </li>
+                    <li>
+                        <a href="/content/willing">Хөнгөлөлтийн карт</a>
+                    </li>                      
+                    <li>
+                        <a href="/content/willing">Хүслийн жагсаалт</a>
+                    </li>                  
                 </ul>
             </div>        <div class="col-md-2 col-sm-3">
-                <h4><span class="glyphicon glyphicon-map-marker"></span>Холбоо</h4>
+                <h4><i class="fa fa-share-alt" aria-hidden="true"></i>Холбоо</h4>
                 <ul class="social ">
-                    <li class="flexcenter"><a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                    <li class="flexcenter"><a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                    <li class="flexcenter"><a href=""><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
-                    <li class="flexcenter"><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <li class="flexcenter"><a href="https://www.facebook.com/babystar.mn.mongolia" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                    <li class="flexcenter"><a href="https://twitter.com/BabyStarMn" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li class="flexcenter"><a href="https://www.instagram.com/babystar.mn/" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+                    <li class="flexcenter"><a href="https://www.instagram.com/babystar.mn/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
     

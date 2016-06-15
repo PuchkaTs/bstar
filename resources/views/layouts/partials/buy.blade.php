@@ -22,7 +22,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>
-        <button type="button" class="btn btn-primary">Захиалга хийх</button>
+        <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>   
       </div>
     </div>
   </div>
@@ -42,16 +42,16 @@
                 {!! Form::text('card', null, ['class' => 'form-control']) !!}
             </div>
 
-            <!-- Хаяг form input -->
+            <!-- Нууцлал form input -->
             <div class="form-group">
-                {!! Form::label('address', 'Хаяг:') !!}
-                {!! Form::text('address', null, ['class' => 'form-control']) !!}
+                {!! Form::label('secret', 'Нууцлал:') !!}
+                {!! Form::text('secret', null, ['class' => 'form-control']) !!}
             </div>
         {!! Form::close() !!}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>
-        <button type="button" class="btn btn-primary">Захиалга хийх</button>
+        <a class="btn btn-primary" href="/checkout" role="button">Захиалга хийх</a>
       </div>
     </div>
   </div>
@@ -75,7 +75,7 @@
         </tr>
         <tr>
           <td>Гүйлгээний дугаар</td>
-          <td>1234</td>
+          <td>{{$transactionNumber}}</td>
         </tr>
       </table>
 

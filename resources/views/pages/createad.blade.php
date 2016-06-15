@@ -87,11 +87,12 @@
                     {!! Form::submit('Оруулах', ['class' => 'btn btn-primary btn-block'])!!}
                 </div>                        
             {!! Form::close() !!}
-<form action="/ads/photos"
-      class="dropzone"
-      id="my-awesome-dropzone">
-{{csrf_field()}}
-</form>
+            <h2>Зураг оруулах</h2>
+            <form action="/ads/photos"
+                  class="dropzone"
+                  id="my-awesome-dropzone">
+            {{csrf_field()}}
+            </form>
             <div>
                 <h4 style="padding:15px;">Үйлчилгээний нөхцөл</h4>
             

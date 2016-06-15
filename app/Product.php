@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\File;
 
 class Product extends Model {
 
-    protected $fillable = ['name', 'description', 'photo', 'price', 'stars', 'gender'];
+    protected $fillable = ['name', 'description', 'photo', 'price', 'stars', 'gender', 'sale', 'oldprice', 'new'];
 
     public function images(){
         return $this->hasMany('App\Productimage', 'product_id');

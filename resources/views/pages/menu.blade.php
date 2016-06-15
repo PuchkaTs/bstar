@@ -17,9 +17,11 @@
             </div>   
 
             <div class="col-md-9">   
-                <div class="row" style="background-color: white;">
+                <div class="row">
                         <div class="menu-list-container">
                         <h1>{{$menuName}}</h1>
+                        @include('layouts.partials.topbanner')
+
                             <div class="menu-list">
                             @foreach($productMenu->productTypes->chunk(4) as $fourtype)
                                 <div class="row">
@@ -35,6 +37,9 @@
                                 </div>
                             @endforeach
                             </div>
+                            @include('layouts.partials.middlebanner')
+                            @include('layouts.partials.reklam')
+                            @include('layouts.partials.bottombanner')                            
                         </div>
                     </div>
             </div>

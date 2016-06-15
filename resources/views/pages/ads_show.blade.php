@@ -4,8 +4,16 @@
 @stop
 @section('content')
 <div class="row" style="">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-9 gheader">
+            <header>
+                <h3 class="item_name">{!! link_to_route('ads_show_path', $ads->title, $ads->id)!!}</h3>                
+            </header>
+        </div>
+    </div>
+
     <div class="col-md-3">
-        <section class="card" style="margin-top:116px;">
+        <section class="card">
             <a href="/createad" class="btn btn-primary btn-block" role="button">Зар оруулах</a>    
             <h5 class="item_name">Ангилал:</h5>
             <ul class="list-group">
@@ -52,18 +60,11 @@
 
     <div class="col-md-9" id="ads" style="min-height: 500px">
         <div class="col-md-8">
-            <header>
-                <h3 style="padding:15px;">Үнэгүй зар</h3>
 
-            </header>
             <div class="">
-                <div class="media ads">
+                <div class="ads">
 
-                  <div class="media-body" style="padding-left:10px;">
-                    <div class="flex">
-                        <h4 class="media-heading">{!! link_to_route('ads_show_path', $ads->title, $ads->id)!!}
-                        </h4>
-                    </div>
+                  <div class="ads-description">
                     {{$ads->description}}
                   </div>
 
@@ -96,7 +97,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <aside  style="margin-top: 20px;">
+            <aside>
                 <article class="product_details">
                     <h1><strong class="item_price">{{$ads->price}} ₮</strong></h1>
 

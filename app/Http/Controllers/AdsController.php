@@ -15,7 +15,7 @@ class AdsController extends Controller
 {
     public function index()
     {
-        $ads = Ads::latest()->get();
+        $ads = Ads::latest()->paginate(10);
 
         $adstags = Adstag::latest()->get();
 
@@ -92,6 +92,10 @@ class AdsController extends Controller
     }   
 
     public function photos(Request $request){
+
+        $this->validate($request, [
+            'photo' => 'require|mimes:jpg, jpeg, png, bmp'
+        ]);
 
         $ip = $request->ip();
 

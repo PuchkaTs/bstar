@@ -111,16 +111,16 @@
     margin-right: 10px;
 }
 .headercenter{
-    height: 134px;
-    background-color: #dd042b;
+    height: 199px;
+    background-color: #00b7c0;
 }
 .headercenter .main{
     position: absolute;
     left: 50%;
-    width: 1000px;
+    width: 930px;
     margin-left: -500px;
-    height: 134px;
-    background: url(../assets/common/skyline02-bg2.png) 50px -45px no-repeat;
+    height: 199px;
+    background: url(../assets/common/skyline02-bg2.png) 50px 0px no-repeat;
 }
 .Navigation__top .logo {
     color: #fff;
@@ -231,7 +231,7 @@
     max-height: 350px;
     overflow-y: scroll;
 }
-.minicart_container .item-increment, .minicart_container .item-decrement, .minicart_container .item-price{
+.minicart_container .item-increment, .minicart_container .item-decrement, .minicart_container .item-price, .minicart_container .item-colors{
     display: none;
 }
 .item_Quantity{
@@ -276,17 +276,20 @@
 /*cart items list on nav end*/
 
 /*cart items list on cart page begin*/
-.cart_table .itemRow{
+.cart_table tr.itemRow{
     padding: 0 18px 18px;
     min-height: 90px;
+}
+.cart_table{
     position: relative;
+}
+.cart_table .item-pagelink {
 }
 .cart_table .item-pagelink a{
     content: '';
     display: block;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 20px;
     width: 80px;
     height: 80px;
 }
@@ -315,7 +318,7 @@
     height: 80px;
 }
 .cart_table th.item-pagelink, .cart_table td.item-pagelink {
-    display: none;
+    
 }
 .cart_table th.item-price, .cart_table td.item-price {
     text-align: right;
@@ -375,6 +378,7 @@ input[type=search]+i {
    outline: none !important;
 }
 .product-card{
+    background-color: #fff;
     padding: 10px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 1px;
@@ -399,6 +403,7 @@ input[type=search]+i {
     cursor: pointer;
 }
 #projects article{
+    background-color: #fff;
     min-height: 350px;
     margin-bottom: 50px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -417,6 +422,7 @@ input[type=search]+i {
     margin-top: 30px;
 }
 .news_section article{
+    background-color: #fff;
     padding: 15px;
     height: 180px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -448,7 +454,7 @@ input[type=search]+i {
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 2px;
     padding: 15px;
-    background-color: #E1FFD7;
+    background-color: #fff;
 }
 .rating{
     margin-top: 1em;
@@ -476,7 +482,8 @@ input[type=search]+i {
 .ads a:hover{
     text-decoration: none;
 }
-.menu-list{
+.menu-list{   
+    background-color: white; 
     margin-top: 30px;
 }
 .menu-list-container{
@@ -490,4 +497,84 @@ input[type=search]+i {
 }
 .colored_pictures{
     display: relative;
+}
+.odun{
+    position: fixed;
+    bottom: 2em;
+    left: 2em;
+    background: transparent url('../assets/common/Odunsmile.png') no-repeat;
+    z-index: 999;
+    height: 300px;
+    width: 200px;
+}
+.odunright{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    background: transparent url('../assets/common/Odunsmile_r.png') no-repeat;
+    z-index: 999;
+    height: 300px;
+    width: 200px;
+}
+.row{
+    margin: 0px;
+}
+.item_name{
+    height: 40px;
+}
+.ads-list{
+    padding: 20px;
+    background-color: white;
+}
+.cart{
+    background-color: white;
+    padding: 20px;
+}
+.cart td.item-colors, .cart th.item-colors{
+    display: none;
+}
+.product-sale{
+    position:  absolute;
+}
+.product-new{
+    position: absolute;
+    right: 0px;
+}
+.color, .size{
+    text-align: left;
+    margin-top: 5px;
+}
+.button-add{
+    margin-top: 20px;
+    position: absolute;
+    width: 100%;
+    padding: 0 20px;
+    bottom: 20px;
+    left: 0px;
+}
+.margin15{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ads{
+    background-color: white;
+}
+.product-content{
+    background-color: white;
+}
+.ads-description{
+    padding: 20px 10px;
+}
+.colororange{
+    line-height: 1.8em;    
+    color: white;
+}
+.articlephoto img{
+    width: 100%;
+    margin-bottom: 4em;
+}
+.art_bottom_ph img{
+    width: 100%;
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
