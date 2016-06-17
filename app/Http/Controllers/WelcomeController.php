@@ -24,6 +24,9 @@ class WelcomeController extends Controller
     public function index(Request $request)
 	{
 
+		if(! Auth::user()){
+			return Redirect::to('login');
+		}
         $products = Product::with('images', 'colors')->limit(10)->latest()->get();
 
 		return view('pages.home')->with(compact('map', 'menus', 'products'));
