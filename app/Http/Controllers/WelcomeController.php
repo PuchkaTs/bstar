@@ -206,11 +206,11 @@ class WelcomeController extends Controller
 		return view('pages.article')->with(compact('article'));
 	}
 
-	public function search()
+	public function search(Request $request)
 	{
-		$products = Product::where('name', 'LIKE', '%'.$search.'%')->paginate(20);
+		$search = $request->request->get('q');
 
-		var_dump($products);
+		$products = Product::where('name', 'LIKE', '%'.$search.'%')->paginate(20);
 
 		return view('pages.search')->with(compact('products'));
 	}

@@ -15,6 +15,10 @@ Route::get('/', [
     'as'=>'home_path',
     'uses'=>'WelcomeController@index'
 ]);
+Route::get('/search', [
+    'as'=>'search_path',
+    'uses'=>'WelcomeController@search'
+]);
 Route::get('/product/{id}', [
     'as'=>'product_path',
     'uses'=>'WelcomeController@product'

@@ -9,7 +9,7 @@
             <!-- <h1 class="logo"><a class="white" href="/">BabyStar</a></h1> -->
             <h1 class="logo"><a href="/"><img src="/assets/common/logo.png"></a></h1>
             <div class="Navigation__search">
-                    {!!Form::open(['method'=>'GET', 'route'=>'home_path', 'class'=>'form-inline'])!!}
+                    {!!Form::open(['method'=>'GET', 'route'=>'search_path', 'class'=>'form-inline'])!!}
                     {!!Form::input('search', 'q', null, ['placeholder' => 'Хайх', 'class'=>'simplebox', 'autofocus'])!!}
                     <i><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i>
                     {!!Form::close()!!}   

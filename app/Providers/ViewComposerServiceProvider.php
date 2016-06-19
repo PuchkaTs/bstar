@@ -33,7 +33,8 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function shareMenus()
     {
         $views = ['company.show', 'pages.home', 'pages.cart', 'pages.success', 'pages.store', 'pages.storemenu', 'pages.place', 'pages.placemenu', 'pages.subtype', 'pages.menu', 'pages.posts_index', 'pages.post_show',
-        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register', 'pages.article'];
+        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register',
+        'pages.article', 'pages.search'];
         foreach($views as $aview){
             view()->composer($aview, function ($view)
             {
@@ -53,7 +54,8 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function shareCurrentUser()
     {
         $views = ['company.show', 'pages.home', 'pages.cart', 'pages.success', 'pages.store', 'pages.storemenu', 'pages.place', 'pages.placemenu', 'pages.subtype', 'pages.menu',  'pages.posts_index', 'pages.post_show',
-        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register', 'pages.article'];
+        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register', 
+        'pages.article', 'pages.search'];
         foreach($views as $aview){
             view()->composer($aview, function ($view)
             {
