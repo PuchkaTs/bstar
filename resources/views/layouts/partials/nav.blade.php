@@ -191,7 +191,7 @@
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="/content/present"><i class="fa fa-gift"></i>Бэлэгний багц</a>
+                        <a class="navbar-link" href="/content/present"><i class="fa fa-gift"></i>Бэлгийн багц</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>

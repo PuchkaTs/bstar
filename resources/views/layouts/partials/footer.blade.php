@@ -5,22 +5,22 @@
                 <h4><i class="fa fa-users" aria-hidden="true"></i>Бидний тухай</h4>
                 <ul>
                     <li>
-                        <a href="/content/willing">Түүх</a>
+                        <a href="/content/history">Түүх</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Танилцуулга</a>
+                        <a href="/content/about">Танилцуулга</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Ажлын байр</a>
+                        <a href="/content/career">Ажлын байр</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Давуу тал</a>
+                        <a href="/content/advantage">Давуу тал</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Хамтран ажиллах</a>
+                        <a href="/content/cooperate">Хамтран ажиллах</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Холбоос барих</a>
+                        <a href="/content/contact">Холбоос барих</a>
                     </li>
                 </ul>
             </div>
@@ -28,25 +28,25 @@
                 <h4><i class="fa fa-bell" aria-hidden="true"></i>Тусламж</h4>
                 <ul>
                     <li>
-                        <a href="/content/willing">Онлайн чат</a>
+                        <a href="/content/chat">Онлайн чат</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Худалдан авалт</a>
+                        <a href="/content/buy">Худалдан авалт</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Хүргэлт</a>
+                        <a href="/content/delivery">Хүргэлт</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Буцаалт</a>
+                        <a href="/content/return">Буцаалт</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Төлбөрийн нөхцөл</a>
+                        <a href="/content/payment-term">Төлбөрийн нөхцөл</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Нууцлал</a>
+                        <a href="/content/confidentiality">Нууцлал</a>
                     </li>                      
                     <li>
-                        <a href="/content/willing">Үйлчилгээний нөхцөл</a>
+                        <a href="/content/service-condition">Үйлчилгээний нөхцөл</a>
                     </li>                
                 </ul>
             </div> 
@@ -54,13 +54,13 @@
                 <h4><i class="fa fa-eye" aria-hidden="true"></i>Хэрэглэгч</h4>
                 <ul>
                     <li>
-                        <a href="/content/willing">Хамтран ажиллах</a>
+                        <a href="/content/cooperate">Хамтран ажиллах</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Дэлгүүр нээх</a>
+                        <a href="/content/open-store">Дэлгүүр нээх</a>
                     </li>                      
                     <li>
-                        <a href="/content/willing">Нууцлалын бодлого</a>
+                        <a href="/content/confidentiality-policy">Нууцлалын бодлого</a>
                     </li>                 
                 </ul>
             </div>
@@ -68,16 +68,16 @@
                 <h4><i class="fa fa-gift" aria-hidden="true"></i>Бэлэг</h4>
                 <ul>
                     <li>
-                        <a href="/content/willing">Бэлэгний карт</a>
+                        <a href="/content/card">Бэлгийн карт</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Бэлэгний санаанууд</a>
+                        <a href="/content/ideas">Бэлэгний санаанууд</a>
                     </li>
                     <li>
-                        <a href="/content/willing">Хөнгөлөлтийн карт</a>
+                        <a href="/content/discount-card">Хөнгөлөлтийн карт</a>
                     </li>                      
                     <li>
-                        <a href="/content/willing">Хүслийн жагсаалт</a>
+                        <a href="/content/wishlist">Хүслийн жагсаалт</a>
                     </li>                  
                 </ul>
             </div>        <div class="col-md-2 col-sm-3">
