@@ -51,7 +51,9 @@ class Banner extends Model
 
     public function delete()
 	{
-		$this->removeFile();
+        if ($this->exists) {
+            $this->removeFile('delete');
+        }        
 
 	    Self::where('id', $this->id)->delete();
 
