@@ -814,7 +814,7 @@ a {
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  background-color: #dd042b;
+  background-color: #00b7c0;
   color: #ffffff; }
 
 .policy {
@@ -859,5 +859,10 @@ footer ul li{
 .subbanner li{
   list-style-type: none;
 }
-
+.nav-tabs>li{
+  background-color: white;
+}
+.tab-pane{
+  padding: 2em;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,69 +1,58 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="">Бэлэнээр</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2" data-whatever="">Картаар</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3" data-whatever="">Дансаар</button>
+<div>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Бэлнээр захиалах</h4>
+  <!-- Nav tabs -->
+  <ul id="paymentTabs" class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Бэлнээр</a></li>
+    <li role="presentation"><a href="#paybycard" aria-controls="paybycard" role="tab" data-toggle="tab">Картаар</a></li>
+    <li role="presentation"><a href="#payincash" aria-controls="payincash" role="tab" data-toggle="tab">Дансаар</a></li>
+  </ul>
 
-      </div>
-      <div class="modal-body">
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">
+      <h4>ЕРӨНХИЙ ЗААЛТ</h4>
         <p>
-          ЕРӨНХИЙ ЗААЛТ
-
 Цахим худалдааны төв нь “Эй Пи Эм” ХХК-ны албан ёсны вэбсайт бөгөөд энэхүү үйлчилгээний нөхцөл нь уг онлайн салбараар үйлчлүүлэх, худалдан авалт хийхтэй холбоотой үүсэх харилцааг зохицуулахад оршино.
 
 Хэрэглэгч худалдан авалт хийх, вэбсайтаар үйлчлүүлэхээсээ өмнө хүлээн зөвшөөрч баталгаажуулсны үндсэн дээр хэрэгжинэ.
 2.  Энэхүү үйлчилгээний нөхцөлийн хэрэгжилтэнд “Эй Пи Эм” ХХК /цаашид байгууллага гэх/ болон хэрэглэгч /цаашид хэрэглэгч гэх/ хамтран хяналт тавина.
 3.  apm.mn вэбсайт нь зөвхөн насанд хүрэгчдэд үйлчлэх ба насанд хүрээгүй хүүхэд эцэг эхийн хамт үйлчилгээний нөхцлийн дагуу худалдаа, үйлчилгээ авах боломжтой
-        </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>
+      </p>
         <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>   
-      </div>
     </div>
-  </div>
-</div>
-
-<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Картаар захиалах</h4>
-      </div>
-      <div class="modal-body">
-        {!! Form::open(['url' => '/buy']) !!}
-            <!-- card number form input -->
+    <div role="tabpanel" class="tab-pane" id="paybycard">
+        {!! Form::open(['url' => '/test']) !!}
+            <!-- textfield number form input -->
             <div class="form-group">
-                {!! Form::label('card', 'Картын дугаар:') !!}
-                {!! Form::text('card', null, ['class' => 'form-control']) !!}
+                {!! Form::label('textfield', 'Картын дугаар:') !!}
+                {!! Form::text('textfield', null, ['class' => 'form-control']) !!}
             </div>
+
+            <!-- MerchantID number form input -->
+            <div class="form-group">
+                {!! Form::label('MerchantID', 'Картын дугаар:') !!}
+                {!! Form::text('MerchantID', null, ['class' => 'form-control']) !!}
+            </div>     
+            
+            <!-- username number form input -->
+            <div class="form-group">
+                {!! Form::label('username', 'Картын дугаар:') !!}
+                {!! Form::text('username', null, ['class' => 'form-control']) !!}
+            </div>                               
 
             <!-- Нууцлал form input -->
             <div class="form-group">
-                {!! Form::label('secret', 'Нууцлал:') !!}
-                {!! Form::text('secret', null, ['class' => 'form-control']) !!}
+                {!! Form::label('password', 'Нууцлал:') !!}
+                {!! Form::text('password', null, ['class' => 'form-control']) !!}
+            </div>
+
+            <!-- Submit form input -->
+            <div class="form-group">    
+                {!! Form::submit('VALUE', ['class' => 'btn btn-primary btn-block'])!!}
             </div>
         {!! Form::close() !!}
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>
-        <a class="btn btn-primary" href="/checkout" role="button">Захиалга хийх</a>
-      </div>
     </div>
-  </div>
-</div>
-
-<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="exampleModalLabel">Дансаар захиалах</h4>
-      </div>
-      <div class="modal-body">
+    <div role="tabpanel" class="tab-pane" id="payincash">
       <table class="table table-hover table-bordered">
         <tr>
           <td>Дансны дугаар</td>
@@ -77,13 +66,8 @@
           <td>Гүйлгээний дугаар</td>
           <td>{{$transactionNumber}}</td>
         </tr>
-      </table>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>
-        <button type="button" class="btn btn-primary">Захиалга хийх</button>
-      </div>
+      </table>      
     </div>
   </div>
+
 </div>

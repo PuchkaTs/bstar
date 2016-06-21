@@ -118,6 +118,14 @@ Route::get('/search', [
 ]);
 Route::auth();
 
+Route::post('/test', [
+    'as' => 'test_path',
+    'uses' => 'CardController@post'
+]);
+Route::post('/bankExec', [
+    'as' => 'test_path',
+    'uses' => 'CardController@post'
+]);
 // Route::get('/home', 'HomeController@index');
 
 /**
