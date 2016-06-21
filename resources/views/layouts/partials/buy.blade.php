@@ -21,34 +21,23 @@
         <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>   
     </div>
     <div role="tabpanel" class="tab-pane" id="paybycard">
-        {!! Form::open(['url' => '/test']) !!}
-            <!-- textfield number form input -->
-            <div class="form-group">
-                {!! Form::label('textfield', 'Картын дугаар:') !!}
-                {!! Form::text('textfield', null, ['class' => 'form-control']) !!}
-            </div>
-
-            <!-- MerchantID number form input -->
-            <div class="form-group">
-                {!! Form::label('MerchantID', 'Картын дугаар:') !!}
-                {!! Form::text('MerchantID', null, ['class' => 'form-control']) !!}
-            </div>     
+        {!! Form::open(['url' => '/test']) !!}    
             
             <!-- username number form input -->
             <div class="form-group">
-                {!! Form::label('username', 'Картын дугаар:') !!}
+                {!! Form::label('username', 'Нэр:') !!}
                 {!! Form::text('username', null, ['class' => 'form-control']) !!}
             </div>                               
 
             <!-- Нууцлал form input -->
             <div class="form-group">
-                {!! Form::label('password', 'Нууцлал:') !!}
+                {!! Form::label('password', 'Нууц үг:') !!}
                 {!! Form::text('password', null, ['class' => 'form-control']) !!}
             </div>
 
             <!-- Submit form input -->
             <div class="form-group">    
-                {!! Form::submit('VALUE', ['class' => 'btn btn-primary btn-block'])!!}
+                {!! Form::submit('Үргэлжлүүлэх', ['class' => 'btn btn-primary btn-block'])!!}
             </div>
         {!! Form::close() !!}
     </div>

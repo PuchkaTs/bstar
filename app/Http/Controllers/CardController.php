@@ -18,21 +18,22 @@ class CardController extends Controller
 		   <Language>EN</Language>
 		   <Order>
 		     <Merchant>TESTECOM</Merchant>
-		     <Amount>".$_REQUEST['textfield']."</Amount>
+		     <Amount>1230</Amount>
 		     <Currency>496</Currency>
 		     <Description>Description</Description>
-		     <ApproveURL>www.babystar.mn</ApproveURL>
-		     <CancelURL>www.babystar.mn</CancelURL>
-		      <DeclineURL>www.babystar.mn</DeclineURL>
+		     <ApproveURL>https://www.babystar.mn</ApproveURL>
+		     <CancelURL>https://www.babystar.mn</CancelURL>
+		      <DeclineURL>https://www.babystar.mn</DeclineURL>
 		      <AddParams>
 		        <p1>p1 Value<h2>hhh</h2></p1>
 		        <p2>p2 Value</p2>
-					</AddParams>
+			  </AddParams>
 		    </Order>
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),$_REQUEST['username'],$_REQUEST['password']);
 
+		  return redirect($xml);
     }
 
 	public function httpsPost($Url, $strRequest,$user,$pwd)
@@ -65,7 +66,6 @@ class CardController extends Controller
 		// execute the connexion
 		$ret = curl_exec($ch);
 
-		dd($ret);
 		//$result = curl_exec($ch);
 		if ($ret === FALSE) {
 			printf("cUrl error (#%d): %s<br>\n", curl_errno($ch),
@@ -75,40 +75,15 @@ class CardController extends Controller
 			$xml = simplexml_load_string($ret); 
 			if ($xml->Response->Status == "00")
 			{
-				$myUrl="Location: ".$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
-				header($myUrl); 
+				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
+
+				return $myUrl;
+
 			}
 			else 
 				echo 'The Error! Status ->'.$xml->Response->Status;
 		}   
 		return $xml;
 	}
-
-	public function bankexec(Request $request)
-	{
-
-		$re = "<?xml version=”1.0” encoding=”UTF-8”?>
-
-		<TKKPG>
-
-		<Response>
-
-		<Operation>CreateOrder</Operation>
-
-		<Status>NN</Status>
-
-		<Order>
-
-		<OrderID>OrderID</OrderID>
-
-		<SessionID>SessionID</SessionID>
-
-		<URL>PayGateURL</URL>
-
-		</Order>
-
-		</Response>";
-
-		return $request;
-	}     
+    
 }
