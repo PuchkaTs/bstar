@@ -20,7 +20,7 @@ return array(
         'gallery' => array(
             'title' => 'Галлерей',
             'relationship' => 'gallery',
-            'select' => '(:table).name',
+            'select' => "GROUP_CONCAT((:table).name SEPARATOR ', ')",
         ),
         'company' => array(
             'title' => 'Компани',

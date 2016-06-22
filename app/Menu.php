@@ -21,4 +21,9 @@ class Menu extends Model {
     public function companyTypes(){
         return $this->hasMany('App\CompanyType');
     }
+
+    public function promotions()
+    {
+        return $this->belongsToMany('App\Promotion', 'menu_promotion', 'menu_id', 'promotion_id');
+    }      
 }

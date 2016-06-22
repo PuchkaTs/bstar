@@ -49,7 +49,7 @@
                                 <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                     <div class="flipside-menu">
                                         <div class="row">
-                                             <ul class="col-md-8 row">
+                                             <ul class="col-md-10 row">
 
                                              @foreach($menu->productTypes->chunk(3) as $items)
                                                 <div class="row">
@@ -65,10 +65,13 @@
                                                 </div>
                                                 @endforeach
                                              </ul>
-                                             <section class="col-md-4">
+                                             <section class="col-md-2">
                                                 <div class="row">
-                                                    <div class="col-md-4 zeroed" style="border-right: 1px solid #555">zurag</div>
-                                                    <div class="col-md-8 zeroed">bas zurag</div>
+                                                    <div class="col-md-12 zeroed">
+                                                        @foreach($menu->promotions as $promotion)
+                                                            <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
+                                                        @endforeach                                                        
+                                                    </div>
                                                 </div>
 
                                              </section>
@@ -90,7 +93,7 @@
                                 <li class="side-menu"><a href="{{ route('store_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                     <div class="flipside-menu">
                                         <div class="row">
-                                             <ul class="col-md-8">
+                                             <ul class="col-md-10">
                                              @foreach($menu->companyTypes->chunk(3) as $items)
                                                 <div class="row">                                             
                                                 @foreach($items as $type)
@@ -103,12 +106,15 @@
                                                         </li>
                                                 @endforeach
                                                 </div>
-                                                @endforeach                                                
+                                            @endforeach                                                
                                              </ul>
-                                             <section class="col-md-4">
+                                             <section class="col-md-2">
                                                 <div class="row">
-                                                    <div class="col-md-4 zeroed" style="border-right: 1px solid #555">zurag</div>
-                                                    <div class="col-md-8 zeroed">bas zurag</div>
+                                                    <div class="col-md-12 zeroed">
+                                                        @foreach($menu->promotions as $promotion)
+                                                            <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
+                                                        @endforeach
+                                                    </div>
                                                 </div>
 
                                              </section>
@@ -131,7 +137,7 @@
                                 <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                     <div class="flipside-menu">
                                         <div class="row">
-                                             <ul class="col-md-8">
+                                             <ul class="col-md-10">
                                              @foreach($menu->placeTypes->chunk(3) as $items)
                                                 <div class="row">                                             
                                                 @foreach($items as $type)
@@ -146,10 +152,13 @@
                                                 </div>
                                                 @endforeach                                                
                                              </ul>
-                                             <section class="col-md-4">
+                                             <section class="col-md-2">
                                                 <div class="row">
-                                                    <div class="col-md-4 zeroed" style="border-right: 1px solid #555">zurag</div>
-                                                    <div class="col-md-8 zeroed">bas zurag</div>
+                                                    <div class="col-md-12 zeroed">
+                                                        @foreach($menu->promotions as $promotion)
+                                                            <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
+                                                        @endforeach                                                        
+                                                    </div>
                                                 </div>
 
                                              </section>

@@ -78,6 +78,7 @@ return array(
         'Зар' => array('ads', 'adstags', 'adslocation'),
         'orders',
         'articles',
+        'promotions',
 
     ),
 

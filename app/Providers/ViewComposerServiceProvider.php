@@ -38,12 +38,15 @@ class ViewComposerServiceProvider extends ServiceProvider
         foreach($views as $aview){
             view()->composer($aview, function ($view)
             {
-                $menus = Menu::orderBy('position', 'asc')->with(['companyTypes' => function ($query)
+                $menus = Menu::orderBy('position', 'asc')->with(['promotions' => function ($query)
                 {
-                    $query->orderBy('name', 'asc');
+                    $query->orderBy('position', 'asc');
+                }, 'companyTypes' => function ($query)
+                {
+                    $query->orderBy('position', 'asc');
                 }, 'companyTypes.companies'         => function ($query)
                 {
-                    $query->orderBy('position', 'desc');
+                    $query->orderBy('position', 'asc');
                 }
                 ])->get();
                 $view->with('menus', $menus);

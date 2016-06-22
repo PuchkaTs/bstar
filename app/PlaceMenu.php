@@ -24,14 +24,21 @@ class PlaceMenu extends Model
         return $this->hasMany('App\PlaceType', 'placeMenu_id');
     }
 
+    public function promotions(){
+        return $this->belongsToMany('App\Promotion', 'placemenu_promotion', 'placemenu_id', 'promotion_id');
+    } 
+
     public function getListForMenu(){
 
-        $menus = Self::with(['placeTypes' => function ($query)
+        $menus = Self::orderBy('position', 'asc')->with(['promotions' => function ($query)
         {
-            $query->orderBy('name', 'asc');
+            $query->orderBy('position', 'asc');
+        }, 'placeTypes' => function ($query)
+        {
+            $query->orderBy('position', 'asc');
         }, 'placeTypes.places'         => function ($query)
         {
-            $query->orderBy('position', 'desc');
+            $query->orderBy('position', 'asc');
         }
         ])->get();
 
