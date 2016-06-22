@@ -5,7 +5,7 @@
     <div class="company_header">
         <div class="company_cover">
             @if($place->cover)
-                {!! Html::image('assets/stores/cover/' . $place->cover, null, ['class' => 'center_cover']) !!}
+                {!! Html::image('assets/places/cover/' . $place->cover, null, ['class' => 'center_cover']) !!}
             @endif()
         </div>
     </div>
