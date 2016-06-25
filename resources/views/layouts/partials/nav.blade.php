@@ -23,10 +23,17 @@
                     <li><a href="/logout"><i class="fa fa-sign-out"></i> Гарах</a></li>
                   </ul>
                 </li>                           
-            @else
+            @else            
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Нэвтрэх</a></li>
             @endif
-                <li><a href="/content/help">Тусламж</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Тусламж <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="/content/help-buying"><i class="fa fa-user"></i>Худалдан авалт</a></li>
+                    <li><a href="/content/help-courier"><i class="fa fa-user"></i>Хүргэлт</a></li>
+                    <li><a href="/content/help-return"><i class="fa fa-user"></i>Буцаалт</a></li>
+                  </ul>
+                </li>            
                 <li class="cartButton"><a href="{{ route('cart_path') }}" class=""><span id="cartItemCountId" class="simpleCart_quantity cartItemCount"></span></a>
                     @include('layouts.partials.minicart')
                 </li>            
@@ -49,7 +56,7 @@
                                 <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                     <div class="flipside-menu">
                                         <div class="row">
-                                             <ul class="col-md-10 row">
+                                             <ul class="col-md-9 row">
 
                                              @foreach($menu->productTypes->chunk(3) as $items)
                                                 <div class="row">
@@ -65,7 +72,7 @@
                                                 </div>
                                                 @endforeach
                                              </ul>
-                                             <section class="col-md-2">
+                                             <section class="col-md-3">
                                                 <div class="row">
                                                     <div class="col-md-12 zeroed">
                                                         @foreach($menu->promotions as $promotion)
@@ -137,7 +144,7 @@
                                 <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                     <div class="flipside-menu">
                                         <div class="row">
-                                             <ul class="col-md-10">
+                                             <ul class="col-md-9">
                                              @foreach($menu->placeTypes->chunk(3) as $items)
                                                 <div class="row">                                             
                                                 @foreach($items as $type)
@@ -152,7 +159,7 @@
                                                 </div>
                                                 @endforeach                                                
                                              </ul>
-                                             <section class="col-md-2">
+                                             <section class="col-md-3">
                                                 <div class="row">
                                                     <div class="col-md-12 zeroed">
                                                         @foreach($menu->promotions as $promotion)

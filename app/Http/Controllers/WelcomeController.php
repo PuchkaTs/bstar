@@ -103,6 +103,7 @@ class WelcomeController extends Controller
 		$this->validate($request, [
 	        'phone' => 'required',
 	        'address' => 'required',
+	        'agreement' => 'size:4',
 	    ]);
 
 		$cart=$request->request->all();

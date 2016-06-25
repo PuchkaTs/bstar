@@ -378,6 +378,7 @@ input[type=search]+i {
    outline: none !important;
 }
 .product-card{
+    position: relative;
     background-color: #fff;
     padding: 10px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
@@ -535,10 +536,13 @@ input[type=search]+i {
 }
 .product-sale{
     position:  absolute;
+    top: 0px;
+    left: 0px;
 }
 .product-new{
     position: absolute;
     right: 0px;
+    top: 0px;    
 }
 .color, .size{
     text-align: left;
@@ -580,4 +584,7 @@ input[type=search]+i {
 }
 img.promotion{
     margin-bottom: 10px;
+}
+.filter_item{
+    margin-top: 2em;
 }

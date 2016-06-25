@@ -94,7 +94,7 @@ return array(
             'sizes' => array(
 //                    array(65, 57, 'landscape', public_path() . '/uploads/banner/thumbs/small/', 100),
 //                    array(220, 138, 'fit', public_path() . '/uploads/products/thumbs/medium/', 100),
-                array(120, 50, 'crop', public_path() . '/assets/banners/promotions/', 100),
+                array(200, 90, 'crop', public_path() . '/assets/banners/promotions/', 100),
             )
         )
     ),

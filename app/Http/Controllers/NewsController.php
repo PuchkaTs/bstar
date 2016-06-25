@@ -26,13 +26,13 @@ class NewsController extends Controller
 		{
 		    $tag = Tag::find($request->input('tag'));
 
-		    $news = $tag->contents()->paginate(20);
+		    $news = $tag->contents()->orderBy('position', 'dcs')->paginate(20);
 
 		    $title = $tag->title;
 
 		} else {
 
-			$news = Content::latest()->paginate(20);
+			$news = Content::orderBy('position', 'dcs')->paginate(20);
 
 			$title = 'Мэдээлэл, зөвлөгөө';
 

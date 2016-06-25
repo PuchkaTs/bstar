@@ -72,7 +72,7 @@ Route::get('/brand/{id}', [
     'as' => 'brand_path',
     'uses'=>'WelcomeController@brand'
 ]);
-Route::get('/places/@{companyUrl}', [
+Route::get('/places/{companyUrl}', [
     'as'=>'place_path',
     'uses'=>'WelcomeController@place_show'
 ]);
@@ -124,7 +124,7 @@ Route::post('/test', [
 ]);
 Route::post('/bankExec', [
     'as' => 'test_path',
-    'uses' => 'CardController@post'
+    'uses' => 'CardController@bankexec'
 ]);
 // Route::get('/home', 'HomeController@index');
 

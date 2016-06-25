@@ -10,17 +10,17 @@
         </div>
             <div class="col-md-3">
                 <section class="card">
-                    <h5 class="item_name">Ангилал:</h5>
+                    <h5 class="filter_item">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($subtypes as $subtype)
                         <li class="list-group-item">{!!link_to_route('subtype_path', $subtype->name, $subtype->id)!!}</li>
                         @endforeach     
                     </ul>  
-                    <h5 class="item_name">Үнэ ₮:</h5>                      
+                    <h5 class="filter_item">Үнэ ₮:</h5>                      
                     <input id="ex2" type="text" class="span2" value="" data-slider-min="5000" data-slider-max="100000" data-slider-step="20" data-slider-value="[5000,50000]"/> 
                    
 
-                    <h5 class="item_name">Брэнд:</h5>
+                    <h5 class="filter_item">Брэнд:</h5>
                     @foreach($brands as $brand)
                     <div class="checkbox">
                       <label>
@@ -30,7 +30,7 @@
                     </div>                    
                     @endforeach
 
-                    <h5 class="item_name">Нас:</h5>
+                    <h5 class="filter_item">Нас:</h5>
                     @foreach($ages as $age)
                     <div class="checkbox">
                       <label>
@@ -40,7 +40,7 @@
                     </div>                    
                     @endforeach  
 
-                    <h5 class="item_name">Хүйс:</h5>
+                    <h5 class="filter_item">Хүйс:</h5>
                     <div class="checkbox">
                       <label>
                         <input type="checkbox" name="gender" id="gender1" value="option1">
@@ -68,6 +68,8 @@
                             <div class="row">
                                 @foreach($products as $product)
                                     <div class="simpleCart_shelfItem col-md-3 col-xs-6 textcenter">
+                                   
+                                        <div class="product-card subbanner-thumb">    
                                     @if($product->sale)
                                         <div class="product-sale">
                                             <img src="/assets/common/sale.png">
@@ -77,8 +79,7 @@
                                         <div class="product-new">
                                             <img src="/assets/common/new.png">
                                         </div>  
-                                    @endif                                    
-                                        <div class="product-card subbanner-thumb">                        
+                                    @endif                                                             
                                             <div>
                                                 <div style="display:none" class="item_pageLink">{{route('product_path', $product->id)}}</div>
                                                 <a href="{{route('product_path', $product->id)}}" class="item-thumb">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          

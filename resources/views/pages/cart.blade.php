@@ -29,20 +29,32 @@
 			{!! Form::open(['url' => 'foo/bar']) !!}
 			    <!-- Утас form input -->
 			    <div class="form-group">
-			        {!! Form::label('phone', 'Утас:') !!}
+			        {!! Form::label('phone', 'Утас:*') !!}
 			        {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'phone']) !!}
 			    </div>
 			    <!-- Message form input -->
-			    <div class="form-group">
-			        {!! Form::label('address', 'Хаяг:') !!}
+			    <div class="form-group">			    
+			        {!! Form::label('address', 'Хаяг:*') !!}
 			        {!! Form::textarea('address', null, ['class' => 'form-control', 'id' => 'address']) !!}
 			    </div>
+				<h3>Төлбөрийн нөхцөл:</h3>
+<p>
+1. Цахим худалдааны төв нь “Эй Пи Эм” ХХК-ны албан ёсны вэбсайт бөгөөд энэхүү үйлчилгээний нөхцөл нь уг онлайн салбараар үйлчлүүлэх, худалдан авалт хийхтэй холбоотой үүсэх харилцааг зохицуулахад оршино.
+Хэрэглэгч худалдан авалт хийх, вэбсайтаар үйлчлүүлэхээсээ өмнө хүлээн зөвшөөрч баталгаажуулсны үндсэн дээр хэрэгжинэ.</p>
+<p>2. Энэхүү үйлчилгээний нөхцөлийн хэрэгжилтэнд “Эй Пи Эм” ХХК /цаашид байгууллага
+гэх/ болон хэрэглэгч /цаашид хэрэглэгч гэх/ хамтран хяналт тавина.</p>
+<p>3. apm.mn вэбсайт нь зөвхөн насанд хүрэгчдэд үйлчлэх ба насанд хүрээгүй хүүхэд эцэг эхийн хамт үйлчилгээний нөхцлийн дагуу худалдаа, үйлчилгээ авах боломжтой
+</p>					
+			    <!-- agreement form input -->
+			    <div class="form-group">
+			        {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!}
+			        {!! Form::checkbox('agreement', 'true', null); !!}
+			    </div>		    
 			{!! Form::close() !!}			
 			</div>			
 		</div>
 		<div class="row margin15">
 			<div class="col-md-6">
-				<h3>Төлбөрийн нөхцөл:</h3>
 				<p>Таны захиалгын дугаар <div id="tnumber">{{ $transactionNumber }}</div></p>	
 		    	@include('layouts.partials.buy')			
 			</div>			
@@ -75,9 +87,11 @@ simpleCart.bind( 'beforeCheckout' , function( data ){
 	var phone = document.getElementById('phone').value;
 	var address = document.getElementById('address').value;
 	var tnumber = document.getElementById('tnumber').innerHTML;
+	var agreement = document.getElementById('agreement').checked;
 	  data.phone = phone;
 	  data.address = address;
 	  data.transactionNumber = tnumber;	  
+	  data.agreement = agreement;	  
 	  data.totalPrice = simpleCart.total();
 	  data.totalItems = simpleCart.quantity();
 });	  

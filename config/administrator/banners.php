@@ -40,7 +40,7 @@ return array(
             'type'  => 'number',
         ),
         'image' => array(
-            'title' => 'Image 1200x400',
+            'title' => 'Image 2100x700',
             'type' => 'image',
             'location' => public_path() . '/assets/banners/mainbanners/',
             'naming' => 'random',
@@ -49,7 +49,7 @@ return array(
             'sizes' => array(
 //                    array(65, 57, 'crop', public_path() . '/uploads/banner/thumbs/small/', 100),
 //                    array(220, 138, 'fit', public_path() . '/uploads/products/thumbs/medium/', 100),
-                array(1200, 400, 'crop', public_path() . '/assets/banners/mainbanners/', 100),
+                array(2100, 700, 'crop', public_path() . '/assets/banners/mainbanners/', 100),
                 array(300, 100, 'landscape', public_path() . '/assets/banners/mainbanners/thumbs/', 100)
             )
         )

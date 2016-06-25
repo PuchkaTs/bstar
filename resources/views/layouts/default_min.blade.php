@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="/fav.ico">    
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Leave those next 4 lines if you care about users using IE8 -->

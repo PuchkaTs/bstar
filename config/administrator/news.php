@@ -42,7 +42,7 @@ return array(
             'type' => 'text',
         ),
         'position' => array(
-            'title' => 'Position:',
+            'title' => 'Байршил/их нь дээрээ/:',
             'type' => 'number',
         ),      
         'body' => array(
