@@ -76,14 +76,14 @@ return array(
             )
         ),        
         'cover' => array(
-            'title' => 'Image 1200x400',
+            'title' => 'Image 2000x650',
             'type' => 'image',
             'location' => public_path() . '/assets/stores/cover/',
             'naming' => 'random',
             'length' => 20,
             'size_limit' => 2,
             'sizes' => array(
-                array(1200, 400, 'crop', public_path() . '/assets/stores/cover/', 100),
+                array(2000, 650, 'crop', public_path() . '/assets/stores/cover/', 100),
             )
         )
 
