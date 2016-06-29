@@ -167,7 +167,7 @@ class WelcomeController extends Controller
 	{
 		$companies = Company::orderBy('position', 'asc')->paginate(100);
 
-		$companyTypes = CompanyType::orderBy('position', 'asc')->get();
+		$companyTypes = CompanyType::orderBy('position', 'asc')->with('menu')->get();
 
 		return view('pages.store_index')->with(compact('companies', 'companyTypes'));
 	}

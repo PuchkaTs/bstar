@@ -10,7 +10,8 @@
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($companyTypes as $type)
-                        <li class="list-group-item">{{$type->name}}</li>
+                        <li class="list-group-item"><a href="{{ route('store_menu_path', $type->menu->id) }}">{{$type->name}}</a>
+
                         @endforeach     
                     </ul>                                                                                   
                 </section>
@@ -30,7 +31,7 @@
                                         <div class="company-logo">
                                             <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
                                         <h3>{{$company->name}}</h3>
-                                        <h5>{!! link_to_route('store_path', $company->name, $company->url)!!}</h5>
+                                        <h5>{!! link_to_route('store_path', $company->shorten(), $company->url)!!}</h5>
                                 </section>
                                 @endforeach
                                 </div>

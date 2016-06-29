@@ -34,4 +34,13 @@ class Company extends Model {
     public function maps(){
         return $this->belongsTo('App\Map');
     }
+
+    public function shorten($num = 50){
+
+        $string = strip_tags($this->about);
+
+        $string = str_limit($string, $limit = $num, $end = '...');
+
+        return $string;
+    }    
 }
