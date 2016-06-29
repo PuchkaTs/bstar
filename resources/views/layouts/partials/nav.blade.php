@@ -89,6 +89,10 @@
                             @endforeach
                         </ul>
                     </li>
+                    <!-- Buh delguur -->
+                    <li id="navbar-link--work" class="news">
+                        <a class="navbar-link" href="/stores">Бүх дэлгүүр</a>
+                    </li>                    
                     <!-- Browse -->
                     <li class="dropdown stores" style="width: 160px;">
                         <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">

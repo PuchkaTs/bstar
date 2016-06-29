@@ -588,3 +588,6 @@ img.promotion{
 .filter_item{
     margin-top: 2em;
 }
+.company-logo img{
+    width: 100%;
+}

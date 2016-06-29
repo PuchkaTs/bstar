@@ -6,6 +6,7 @@ use App\Age;
 use App\Article;
 use App\Brand;
 use App\Company;
+use App\CompanyType;
 use App\Http\Requests;
 use App\Menu;
 use App\Order;
@@ -160,6 +161,15 @@ class WelcomeController extends Controller
 	public function success()
 	{
 		return view('pages.success');
+	}
+
+	public function store_index()
+	{
+		$companies = Company::orderBy('position', 'asc')->paginate(100);
+
+		$companyTypes = CompanyType::orderBy('position', 'asc')->get();
+
+		return view('pages.store_index')->with(compact('companies', 'companyTypes'));
 	}
 
 	public function store_show($companyUrl)

@@ -35,6 +35,12 @@ Route::get('/success', [
     'as'=>'success_path',
     'uses'=>'WelcomeController@success'
 ]);
+
+Route::get('/stores', [
+    'as'=>'store_index_path',
+    'uses'=>'WelcomeController@store_index'
+]);
+
 Route::get('/stores/{companyUrl}', [
     'as'=>'store_path',
     'uses'=>'WelcomeController@store_show'
