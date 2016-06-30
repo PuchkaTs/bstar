@@ -19,6 +19,5 @@
 			@endforeach		
 		</section>
 	</div>
-	
 </div>
 <div class="placeholder100"></div>
