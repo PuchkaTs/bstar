@@ -29,9 +29,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Тусламж <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/content/help-buying"><i class="fa fa-user"></i>Худалдан авалт</a></li>
-                    <li><a href="/content/help-courier"><i class="fa fa-user"></i>Хүргэлт</a></li>
-                    <li><a href="/content/help-return"><i class="fa fa-user"></i>Буцаалт</a></li>
+                    <li><a href="/content/buy"><i class="fa fa-user"></i>Худалдан авалт</a></li>
+                    <li><a href="/content/delivery"><i class="fa fa-user"></i>Хүргэлт</a></li>
+                    <li><a href="/content/return"><i class="fa fa-user"></i>Буцаалт</a></li>
                   </ul>
                 </li>            
                 <li class="cartButton"><a href="{{ route('cart_path') }}" class=""><span id="cartItemCountId" class="simpleCart_quantity cartItemCount"></span></a>
