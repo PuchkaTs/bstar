@@ -591,3 +591,16 @@ img.promotion{
 .company-logo img{
     width: 100%;
 }
+.menu-sale{
+    background: url("/assets/common/menu-sale.png") no-repeat right;
+}
+.menu-new{
+    background: url("/assets/common/menu-new.png") no-repeat right;
+
+}
+li.menu-sale>a:hover {
+     background-color: transparent; 
+}
+li.menu-new>a:hover {
+     background-color: transparent; 
+}

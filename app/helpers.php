@@ -29,3 +29,16 @@ function weburl($url)
 function allow_new_line($string){
     return strip_tags(nl2br($string), '<br><br/>');
 }
+
+function flash($title = null, $message = null){
+
+	$flash = app('App\Http\Flash');
+
+	if (func_num_args() == 0){
+		return $flash;
+	}
+
+	return $flash->message($title, $message);
+
+
+}

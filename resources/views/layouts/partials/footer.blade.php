@@ -20,7 +20,7 @@
                         <a href="/content/cooperate">Хамтран ажиллах</a>
                     </li>
                     <li>
-                        <a href="/content/contact">Холбоос барих</a>
+                        <a href="/content/contact">Холбоо барих</a>
                     </li>
                 </ul>
             </div>
@@ -57,7 +57,7 @@
                         <a href="/content/cooperate">Хамтран ажиллах</a>
                     </li>
                     <li>
-                        <a href="/content/open-store">Дэлгүүр нээх</a>
+                        <a href="/open-store">Дэлгүүр нээх</a>
                     </li>                      
                     <li>
                         <a href="/content/confidentiality-policy">Нууцлалын бодлого</a>
@@ -107,8 +107,8 @@
                     <img src="/img/cards/pay-union.png" width="38" height="23">
                 </span>
             </a>
-            <a href="delivery-information.irs">Хаяг</a>            
-            <a href="delivery-information.irs">Утас</a>            
+            <a href="delivery-information.irs">Хаяг: ЧД, 3-р хороо, 2-р 40 мянгат, 29-45.</a>            
+            <a href="delivery-information.irs">Утас: 76103080</a>            
         </div>
     </div>
 

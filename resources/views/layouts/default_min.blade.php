@@ -12,6 +12,7 @@
     <link href='https://fonts.googleapis.com/css?family=Comfortaa:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>    
     <link rel="stylesheet" href="/css/idangerous.swiper.css">
     <link rel="stylesheet" href="/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="/css/sweetalert.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="/fav.ico">    
@@ -29,6 +30,15 @@
     _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
     $.src="//v2.zopim.com/?40sqRWFK7giblbbpciqTlMLwjt99yN2C";z.t=+new Date;$.
     type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+
+      $zopim(function() {
+        $zopim.livechat.setGreetings({
+            'online': 'Ich bin online. Schreiben Sie doch.',
+            'offline': 'Sie haben eine Frage? Her damit.'
+            });
+            $zopim.livechat.setLanguage('en');
+            $zopim.livechat.concierge.setTitle('Wie kann ich helfen?');
+    });    
     </script>
     <!--End of Zopim Live Chat Script-->    
 </head>
@@ -52,8 +62,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="/js/idangerous.swiper.js"></script>
 <script src="/js/bootstrap-slider.min.js"></script>
+<script src="/js/sweetalert.min.js"></script>
 <script src="/js/simpleCart.js"></script>
 
 @yield('script')
+@include('layouts.flash')
 </body>
 </html>

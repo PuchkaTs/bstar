@@ -29,9 +29,9 @@
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Тусламж <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li><a href="/content/buy"><i class="fa fa-user"></i>Худалдан авалт</a></li>
-                    <li><a href="/content/delivery"><i class="fa fa-user"></i>Хүргэлт</a></li>
-                    <li><a href="/content/return"><i class="fa fa-user"></i>Буцаалт</a></li>
+                    <li><a href="/content/buy"><i class="fa fa-share" aria-hidden="true"></i>Худалдан авалт</a></li>
+                    <li><a href="/content/delivery"><i class="fa fa-truck" aria-hidden="true"></i>Хүргэлт</a></li>
+                    <li><a href="/content/return"><i class="fa fa-exchange" aria-hidden="true"></i></i>Буцаалт</a></li>
                   </ul>
                 </li>            
                 <li class="cartButton"><a href="{{ route('cart_path') }}" class=""><span id="cartItemCountId" class="simpleCart_quantity cartItemCount"></span></a>
@@ -50,7 +50,11 @@
                         </a>
 
                         <ul class="dropdown-menu">
-   
+                            <!-- special 2 menus -->
+                                <li class="side-menu menu-new"><a href="{{ route('menu_path', 1) }}">Шинэ бараа </a></li>
+                                <li class="side-menu menu-sale"><a href="{{ route('menu_path', 2) }}">Хямдрал</a> </li>
+                                <li role="separator" class="divider"></li>
+                            <!-- end of special 2 menus -->
                             @foreach( $pmenus->getListForMenu() as $menu)
 
                                 <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
@@ -215,7 +219,7 @@
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="/content/wishlist"><i class="fa fa-heart"></i>Хүслийг жагсаалт</a>
+                        <a class="navbar-link" href="/content/wishlist"><i class="fa fa-heart"></i>Хүслийн жагсаалт</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>

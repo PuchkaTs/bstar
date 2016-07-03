@@ -118,6 +118,14 @@ Route::get('/content/{url}', [
     'as'=>'content_path',
     'uses'=>'WelcomeController@article'
 ]);
+Route::get('/open-store', [
+    'as'=>'open_store_path',
+    'uses'=>'StoresController@show'
+]);
+Route::post('/open-store', [
+    'as'=>'open_store_path',
+    'uses'=>'StoresController@store'
+]);
 Route::get('/search', [
     'as'=>'search_path',
     'uses'=>'WelcomeController@search'

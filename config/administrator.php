@@ -79,6 +79,7 @@ return array(
         'orders',
         'articles',
         'promotions',
+        'messages',
 
     ),
 
