@@ -130,6 +130,14 @@ Route::get('/search', [
     'as'=>'search_path',
     'uses'=>'WelcomeController@search'
 ]);
+Route::get('/sale-products', [
+    'as'=>'sale_products_path',
+    'uses'=>'WelcomeController@saleProducts'
+]);
+Route::get('/new-products', [
+    'as'=>'new_products_path',
+    'uses'=>'WelcomeController@newProducts'
+]);
 Route::auth();
 
 Route::post('/test', [

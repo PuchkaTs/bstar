@@ -219,10 +219,30 @@ class WelcomeController extends Controller
 
 	public function search(Request $request)
 	{
+		$title = "Хайлт";
+
 		$search = $request->request->get('q');
 
 		$products = Product::where('name', 'LIKE', '%'.$search.'%')->paginate(20);
 
-		return view('pages.search')->with(compact('products'));
+		return view('pages.search')->with(compact('products', 'title'));
 	}
+
+	public function saleProducts()
+	{
+		$title = "Хямдарсан бараа";
+
+		$products = Product::where('sale', true)->paginate(20);
+
+		return view('pages.search')->with(compact('products', 'title'));
+	}
+
+	public function newProducts()
+	{
+		$title = "Шинэ бараа";
+
+		$products = Product::where('new', true)->paginate(20);
+
+		return view('pages.search')->with(compact('products', 'title'));
+	}		
 }

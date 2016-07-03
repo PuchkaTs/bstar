@@ -15,6 +15,8 @@
         <div class="row" id="projects" style="min-height: 500px">
             <div class="">
                 <section class="row">
+                    <h5>Утас: 76103080</h5>
+                    <h5>Ц-Шуудан: info@babystar.mn</h5>
                 {!! Form::open(['url' => '/open-store']) !!}
                     <!-- Нэр form input -->
                     <div class="form-group">
