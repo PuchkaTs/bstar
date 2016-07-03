@@ -20,6 +20,6 @@ class StoresController extends Controller
 
     	flash()->success('Амжилттай илгээгдлээ!', 'Баярлалаа');
 
-    	return view('pages.open-store');
+    	return redirect()->back();
     }
 }
