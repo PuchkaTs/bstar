@@ -9,7 +9,7 @@
                 <div class="col-md-4">
                     <li class="swiper-slide subbanner_item">
                         <div style="display:none" class="">{{route('product_path', $banner->id)}}</div>
-                        <a class="" href="{{$banner->url}}">
+                        <a class="" href="{{$banner->url}}" target="_blank">
                                 {!! Html::image("assets/banners/subbanners/$banner->image", '', ['class'=>''])!!}                        
                             <div class="subbanner_title">
                                 <p>{{$banner->title}}</p><span>{{$banner->description}}</span>

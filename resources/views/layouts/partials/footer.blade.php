@@ -28,9 +28,6 @@
                 <h4><i class="fa fa-bell" aria-hidden="true"></i>Тусламж</h4>
                 <ul>
                     <li>
-                        <a href="/content/chat">Онлайн чат</a>
-                    </li>
-                    <li>
                         <a href="/content/buy">Худалдан авалт</a>
                     </li>
                     <li>

@@ -24,7 +24,7 @@
                                 <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
                             </figcaption>
                         </article>                            
-                        @endif
+                        @else
                         <article class="col-md-6">
                             <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
                             <figcaption>
@@ -33,7 +33,7 @@
                                 <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
                             </figcaption>
                         </article>
-
+                        @endif
                     @endforeach
                     <div style="text-align: center"></div>
                                 <div class="textcenter">
