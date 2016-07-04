@@ -34,13 +34,15 @@ class NewsController extends Controller
 
 			$news = Content::orderBy('position', 'dcs')->paginate(20);
 
-			$title = 'Мэдээлэл, зөвлөгөө';
+			$title = 'Мэдээлэл & зөвлөгөө';
 
 		}
 
         $tags = Tag::latest()->get();
+
+        $latestId = Content::latest()->first()->id;
         
-		return view('pages.news_index')->with(compact('news', 'tags', 'title'));
+		return view('pages.news_index')->with(compact('news', 'tags', 'title', "latestId"));
 	}
 
 	public function post_show($id)
