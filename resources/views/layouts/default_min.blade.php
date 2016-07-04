@@ -33,11 +33,11 @@
 
       $zopim(function() {
         $zopim.livechat.setGreetings({
-            'online': 'Ich bin online. Schreiben Sie doch.',
-            'offline': 'Sie haben eine Frage? Her damit.'
+            'online': 'Танд туслахад бэлэн байна.',
+            'offline': 'Та бидэнд мэссэж үлдээнэ үү.'
             });
             $zopim.livechat.setLanguage('en');
-            $zopim.livechat.concierge.setTitle('Wie kann ich helfen?');
+            $zopim.livechat.concierge.setTitle('Танд тусламж хэрэгтэй юу?');
     });    
     </script>
     <!--End of Zopim Live Chat Script-->    
