@@ -8,6 +8,18 @@ use App\Http\Requests;
 
 class CardController extends Controller
 {
+	public function approve(){
+		return "approve";
+	}
+
+	public function cancel(){
+		return "cancel";
+	}
+
+	public function decline(){
+		return "decline";
+	}	
+
     public function post()
     {
 
@@ -21,9 +33,9 @@ class CardController extends Controller
 		     <Amount>1230</Amount>
 		     <Currency>496</Currency>
 		     <Description>Description</Description>
-		     <ApproveURL>https://www.babystar.mn</ApproveURL>
-		     <CancelURL>https://www.babystar.mn</CancelURL>
-		      <DeclineURL>https://www.babystar.mn</DeclineURL>
+		     <ApproveURL>https://www.babystar.mn/card/approve</ApproveURL>
+		     <CancelURL>https://www.babystar.mn/card/cancel</CancelURL>
+		      <DeclineURL>https://www.babystar.mn/card/decline</DeclineURL>
 		      <AddParams>
 		        <p1>p1 Value<h2>hhh</h2></p1>
 		        <p2>p2 Value</p2>

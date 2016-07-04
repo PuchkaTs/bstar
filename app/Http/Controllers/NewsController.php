@@ -56,9 +56,20 @@ class NewsController extends Controller
 	    $this->validate($request, [
 	        'title' => 'required',
 	        'body' => 'required',
+
 	    ]);
 
+        $file = $request->file('photo');
+
+        $name = time() . $file->getClientOriginalName();
+
+        $file->move('assets/posts', $name);
+
 		$post = Post::create($request->all());
+
+		$post->photo = $name;
+
+		$post->save();
 
    		$tagname = $request->input('tag');
 
@@ -68,13 +79,15 @@ class NewsController extends Controller
         
     	$tag->posts()->save($post);
 
+    	flash()->success('Таны нийтлэл амжилттай орлоо!', 'Баярлалаа');
+
 		return back();
 	}
 
 	public function posts_index()
 	{
 
-        $posts = Post::latest()->paginate(2);
+        $posts = Post::latest()->paginate(20);
 
         $posttags = Tagpost::all();
         

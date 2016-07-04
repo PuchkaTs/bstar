@@ -12,6 +12,8 @@
 <div class="row" id="projects" style="min-height: 500px">
     <div class="col-md-8 col-lg-6 col-lg-offset-2">
             <div class="col-md-12" style="padding: 35px 20px; margin-bottom: 45px;">
+                            @include('layouts.partials.topbanner')
+
                     @foreach($news as $anews)
                         <article class="col-md-6">
                             <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>

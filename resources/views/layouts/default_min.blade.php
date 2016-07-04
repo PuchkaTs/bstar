@@ -42,7 +42,7 @@
     </script>
     <!--End of Zopim Live Chat Script-->    
 </head>
-<body>
+<body id="app">
 
 
 @include('layouts.partials.nav')
@@ -64,6 +64,8 @@
 <script src="/js/bootstrap-slider.min.js"></script>
 <script src="/js/sweetalert.min.js"></script>
 <script src="/js/simpleCart.js"></script>
+<script src="js/vue.js"></script>
+
 
 @yield('script')
 @include('layouts.flash')

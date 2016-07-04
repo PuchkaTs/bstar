@@ -2,9 +2,9 @@
 
   <!-- Nav tabs -->
   <ul id="paymentTabs" class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Бэлнээр</a></li>
-    <li role="presentation"><a href="#paybycard" aria-controls="paybycard" role="tab" data-toggle="tab">Картаар</a></li>
-    <li role="presentation"><a href="#payincash" aria-controls="payincash" role="tab" data-toggle="tab">Дансаар</a></li>
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab" @click ="methodCash()">Бэлнээр</a></li>
+    <li role="presentation"><a href="#paybycard" aria-controls="paybycard" role="tab" data-toggle="tab" @click ="methodCard()">Картаар</a></li>
+    <li role="presentation"><a href="#payincash" aria-controls="payincash" role="tab" data-toggle="tab" @click ="methodAccount()">Дансаар</a></li>
   </ul>
 
   <!-- Tab panes -->
@@ -12,7 +12,7 @@
     <div role="tabpanel" class="tab-pane active" id="home">
         <p>Бэлнээр хэрхэн авах вэ?</p>
 
-        <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>   
+        <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Бэлнээр захиалга хийх</a>   
     </div>
     <div role="tabpanel" class="tab-pane" id="paybycard">
         {!! Form::open(['url' => '/test']) !!}    
@@ -31,7 +31,9 @@
 
             <!-- Submit form input -->
             <div class="form-group">    
-                {!! Form::submit('Үргэлжлүүлэх', ['class' => 'btn btn-primary btn-block'])!!}
+                <a id="bycard" href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>
+            
+                <!-- {!! Form::submit('Үргэлжлүүлэх', ['class' => 'btn btn-primary btn-block'])!!} -->
             </div>
         {!! Form::close() !!}
     </div>

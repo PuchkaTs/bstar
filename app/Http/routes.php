@@ -140,12 +140,25 @@ Route::get('/new-products', [
 ]);
 Route::auth();
 
-Route::post('/test', [
+Route::get('/test', [
     'as' => 'test_path',
     'uses' => 'CardController@post'
 ]);
-Route::post('/bankExec', [
+Route::get('/card/approve', [
     'as' => 'test_path',
+    'uses' => 'CardController@approve'
+]);
+Route::get('/card/cancel', [
+    'as' => 'test_path',
+    'uses' => 'CardController@cancel'
+]);
+Route::get('/card/decline', [
+    'as' => 'test_path',
+    'uses' => 'CardController@decline'
+]);
+
+Route::post('/bankExec', [
+    'as' => 'bank_path',
     'uses' => 'CardController@bankexec'
 ]);
 // Route::get('/home', 'HomeController@index');

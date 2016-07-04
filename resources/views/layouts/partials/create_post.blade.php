@@ -10,7 +10,7 @@
                     @endforeach
                 </ul>
             @endif            
-    {!! Form::open(['url' => '/blogs']) !!}
+    {!! Form::open(['url' => '/blogs', 'files'=> true]) !!}
 
         <!-- Гарчиг form input -->
         <div class="form-group">

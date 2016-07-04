@@ -75,6 +75,8 @@ class AdsController extends Controller
 
         $ads = Ads::latest()->get();
 
+        flash()->success('Таны зар амжилттай орлоо!', 'Баярлалаа');
+
         return redirect()->route('ads_path');
     }   
 

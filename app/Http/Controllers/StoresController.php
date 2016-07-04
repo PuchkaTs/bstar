@@ -16,6 +16,11 @@ class StoresController extends Controller
 
     public function store(Request $request){
 
+	    $this->validate($request, [
+	        'name' => 'required',
+	        'phone' => 'required',
+	    ]);
+
     	Message::create($request->all());
 
     	flash()->success('Амжилттай илгээгдлээ!', 'Баярлалаа');

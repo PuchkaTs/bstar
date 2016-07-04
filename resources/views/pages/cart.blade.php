@@ -56,6 +56,7 @@
 		<div class="row margin15">
 			<div class="col-md-6">
 				<p>Таны захиалгын дугаар <div id="tnumber">{{ $transactionNumber }}</div></p>	
+				<input type="hidden" v-model="method" id="method">
 		    	@include('layouts.partials.buy')			
 			</div>			
 		</div>
@@ -86,9 +87,11 @@
 simpleCart.bind( 'beforeCheckout' , function( data ){
 	var phone = document.getElementById('phone').value;
 	var address = document.getElementById('address').value;
+	var method = document.getElementById('method').value;
 	var tnumber = document.getElementById('tnumber').innerHTML;
 	var agreement = document.getElementById('agreement').checked;
 	  data.phone = phone;
+	  data.metod = method;
 	  data.address = address;
 	  data.transactionNumber = tnumber;	  
 	  data.agreement = agreement;	  
@@ -101,5 +104,28 @@ $('#paymentTabs a').click(function (e) {
   $(this).tab('show')
 })
 
+    new Vue({
+        el: '#app',
+        data: {
+        	method: 'cash'
+        },
+
+        methods: {
+        	methodCash: function(){
+                this.method = "cash";
+                console.log(this.method);
+            },
+        	methodCard: function(){
+                this.method = "card";
+                console.log(this.method);
+
+            },
+        	methodAccount: function(){
+                this.method = "account";
+                console.log(this.method);
+
+            },                        
+        }
+    });
 	</script>
 @stop

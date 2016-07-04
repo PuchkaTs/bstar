@@ -34,7 +34,7 @@
             <div class="">
                             @foreach($posts as $aposts)
                                 <article class="col-md-6">
-                                    <a href="{{ route('post_show_path', $aposts->id) }}" >{!! Html::image("assets/posts/thumbs/" . ($aposts->photo ? $aposts->photo : "1.jpg"), null, ['class'=>'width100']) !!}</a>
+                                    <a href="{{ route('post_show_path', $aposts->id) }}" >{!! Html::image("assets/posts/" . ($aposts->photo ? $aposts->photo : "1.jpg"), null, ['class'=>'width100']) !!}</a>
                                     <figcaption>
                                         <h4>{!! link_to_route('post_show_path', $aposts->title, $aposts->id)!!}</h4>
 

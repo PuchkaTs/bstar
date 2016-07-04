@@ -44,7 +44,7 @@ return array(
             'type'  => 'text',
         ),
         'image' => array(
-            'title' => 'Image 1000x180',
+            'title' => 'Image 1000x230',
             'type' => 'image',
             'location' => public_path() . '/assets/banners/subbanners/',
             'naming' => 'random',
@@ -53,7 +53,7 @@ return array(
             'sizes' => array(
 //                    array(65, 57, 'crop', public_path() . '/uploads/banner/thumbs/small/', 100),
 //                    array(220, 138, 'fit', public_path() . '/uploads/products/thumbs/medium/', 100),
-                array(1000, 184, 'crop', public_path() . '/assets/banners/subbanners/', 100),
+                array(1000, 230, 'crop', public_path() . '/assets/banners/subbanners/', 100),
                 array(540, 100, 'landscape', public_path() . '/assets/banners/subbanners/thumbs/', 100)
             )
         )

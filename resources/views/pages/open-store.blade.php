@@ -17,15 +17,16 @@
                 <section class="row">
                     <h5>Утас: 76103080</h5>
                     <h5>Ц-Шуудан: info@babystar.mn</h5>
+                    @include('layouts.partials.errors')
                 {!! Form::open(['url' => '/open-store']) !!}
                     <!-- Нэр form input -->
                     <div class="form-group">
-                        {!! Form::label('name', 'Нэр:') !!}
+                        {!! Form::label('name', 'Нэр:*') !!}
                         {!! Form::text('name', null, ['class' => 'form-control']) !!}
                     </div>
                     <!-- Утас form input -->
                     <div class="form-group">
-                        {!! Form::label('phone', 'Утас:') !!}
+                        {!! Form::label('phone', 'Утас:*') !!}
                         {!! Form::text('phone', null, ['class' => 'form-control']) !!}
                     </div>
                     <!-- Ц-Шуудан form input -->

@@ -106,7 +106,6 @@ class WelcomeController extends Controller
 	        'address' => 'required',
 	        'agreement' => 'size:4',
 	    ]);
-
 		$cart=$request->request->all();
 
 		$order = Order::create($request->all());	
@@ -138,6 +137,12 @@ class WelcomeController extends Controller
 		$order->save();
 		if(Auth::user()){
 			Auth::user()->orders()->save($order);
+		}
+
+    	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
+		if($request->metod == 'card'){
+			return Redirect::route('test_path');
+
 		}
 
 		return Redirect::route('success_path');
