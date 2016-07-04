@@ -29,7 +29,7 @@ Route::get('/cart', [
 ]);
 Route::get('/checkout', [
     'as'=>'checkout_path',
-    'uses'=>'WelcomeController@checkout'
+    'uses'=>'CardController@checkout'
 ]);
 Route::get('/success', [
     'as'=>'success_path',
@@ -140,7 +140,7 @@ Route::get('/new-products', [
 ]);
 Route::auth();
 
-Route::get('/test', [
+Route::post('/test', [
     'as' => 'test_path',
     'uses' => 'CardController@post'
 ]);

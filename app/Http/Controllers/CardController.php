@@ -2,14 +2,83 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
+use App\Order;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class CardController extends Controller
 {
+
+	public function checkout(Request $request)
+	{
+		$this->validate($request, [
+	        'phone' => 'required',
+	        'address' => 'required',
+	        'agreement' => 'size:4',
+	    ]);
+		$cart=$request->request->all();
+
+		$order = Order::create($request->all());	
+		$grandTotal = 0;
+		$body = "";
+
+		for($i=1; $i < $cart['itemCount'] + 1; $i++) {
+		$name = 'item_name_'.$i;
+		$options = 'item_options_'.$i;
+		$quantity = 'item_quantity_'.$i;
+		$price = 'item_price_'.$i;
+		$total = $cart[$quantity] * $cart[$price];
+		$grandTotal += $total;
+
+		$others = $this->calculateParams($cart[$options]);
+
+		$body .= 'Захиалга #'.$i.': '.$cart[$name].' --- Тоо x '
+		.$cart[$quantity].' --- нгж үнэ ₮'
+		.number_format($cart[$price], 2, '.', '') 
+		.' --- Нийт $'.number_format($total, 2, '.', '')."</br>"
+		.$others."</br>";
+		$body .= '========================================================'."</br>";
+		}
+
+		$body .= 'Нийт дүн : ₮<b>' . number_format($grandTotal, 2, '.', '') . '</b>';
+
+		$order->body = $body;
+
+		$order->save();
+		if(Auth::user()){
+			Auth::user()->orders()->save($order);
+		}
+
+    	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
+		if($request->metod == 'card'){
+			return $this->post();
+
+		}
+
+		return Redirect::route('success_path');
+	}
+	
+	public function calculateParams($string){
+		$returnedOptions = "";
+		$string = str_replace(' ', '', $string);		
+		$myArray = explode(',', $string);
+		foreach ($myArray as $value) {
+			if (0 === strpos($value, 'color:')) {
+				$returnedOptions .= "--- Өнгө/" . $value;
+			}
+			if (0 === strpos($value, 'size:')) {
+				$returnedOptions .= "--- Хэмжээ/" . $value;
+
+			}			
+		}
+		return $returnedOptions;
+	}
+
 	public function approve(){
-		return "approve";
+    	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
+		return Redirect::route('success_path');		
 	}
 
 	public function cancel(){
@@ -37,13 +106,13 @@ class CardController extends Controller
 		     <CancelURL>https://www.babystar.mn/card/cancel</CancelURL>
 		      <DeclineURL>https://www.babystar.mn/card/decline</DeclineURL>
 		      <AddParams>
-		        <p1>p1 Value<h2>hhh</h2></p1>
+		        <p1>p1 Value</p1>
 		        <p2>p2 Value</p2>
 			  </AddParams>
 		    </Order>
 		  </Request>
 		 </TKKPG>";
-		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),$_REQUEST['username'],$_REQUEST['password']);
+		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
 
 		  return redirect($xml);
     }
