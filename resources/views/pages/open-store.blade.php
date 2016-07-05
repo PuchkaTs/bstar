@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="row">
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-6 col-md-offset-3">
 
 
         <div class="placeholder100 row" style="margin-top: 50px;">
-            <div class="col-md-8 col-lg-6">
+            <div class="">
                 <header>
                     <h3>Бидэнтэй холбогдох</h3>
                 </header>
@@ -15,8 +15,9 @@
         <div class="row" id="projects" style="min-height: 500px">
             <div class="">
                 <section class="row">
-                    <h5>Утас: 76103080</h5>
+                    <h4>Утас: 76103080</h4>
                     <h5>Ц-Шуудан: info@babystar.mn</h5>
+                    <p>* хэсгийг заавал бөглөнө үү</p>
                     @include('layouts.partials.errors')
                 {!! Form::open(['url' => '/open-store']) !!}
                     <!-- Нэр form input -->
@@ -37,7 +38,7 @@
                     <!-- Message form input -->
                     <div class="form-group">
                         {!! Form::label('body', 'Захиа:') !!}
-                        {!! Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Бидэнтэй хамтран ажиллах']) !!}
+                        {!! Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Бидэнтэй хамтран ажиллах...']) !!}
                     </div>
                     <!-- Submit form input -->
                     <div class="form-group">    
@@ -45,13 +46,15 @@
                     </div>
                 {!! Form::close() !!}
                 </section>          
-            @include('layouts.partials.middlebanner')
-            @include('layouts.partials.bottombanner')
+
 
             </div>
 
-        </div>        
+        </div>  
+            @include('layouts.partials.middlebanner')
+            @include('layouts.partials.bottombanner')  
     </div>
+
 </div>
 
 @stop
