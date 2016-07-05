@@ -34,6 +34,11 @@
                         {!! Form::label('email', 'Ц-Шуудан:') !!}
                         {!! Form::email('email', null, ['class' => 'form-control']) !!}
                     </div>
+                    <!-- Message form input -->
+                    <div class="form-group">
+                        {!! Form::label('body', 'Захиа:') !!}
+                        {!! Form::textarea('body', null, ['class' => 'form-control', 'placeholder' => 'Бидэнтэй хамтран ажиллах']) !!}
+                    </div>
                     <!-- Submit form input -->
                     <div class="form-group">    
                         {!! Form::submit('Илгээх', ['class' => 'btn btn-primary btn-block'])!!}
