@@ -51,8 +51,8 @@
 
                         <ul class="dropdown-menu">
                             <!-- special 2 menus -->
-                                <li class="side-menu menu-new"><a href="{{ route('new_products_path') }}">Шинэ бараа </a></li>
-                                <li class="side-menu menu-sale"><a href="{{ route('sale_products_path') }}">Хямдрал</a> </li>
+                                <li class="side-menu menu-sale"><a href="{{ route('sale_products_path') }}" style="color:#eb1c24;">ХЯМДРАЛ</a> </li>                            
+                                <li class="side-menu menu-new"><a href="{{ route('new_products_path') }}" style="color:#eb1c24;">ШИНЭ БАРАА </a></li>
                                 <li role="separator" class="divider"></li>
                             <!-- end of special 2 menus -->
                             @foreach( $pmenus->getListForMenu() as $menu)
