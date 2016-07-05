@@ -601,6 +601,11 @@ p.subdate {
 .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
     background-color: #b6e0b1;
 }
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    color: #262626;
+    text-decoration: none;
+     background-color: transparent; 
+}
 .secondary-nav .flipside-menu {
   position: absolute;
   top: 0px;
