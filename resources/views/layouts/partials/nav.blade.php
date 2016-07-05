@@ -98,7 +98,7 @@
                         <a class="navbar-link" href="/stores">Бүх дэлгүүр</a>
                     </li>                    
                     <!-- Browse -->
-                    <li class="dropdown stores" style="width: 160px;">
+                    <!-- <li class="dropdown stores" style="width: 160px;">
                         <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">
                             Бүх дэлгүүр <b class="caret"></b>
                         </a>
@@ -139,7 +139,7 @@
                                 </li>
                             @endforeach
                         </ul>
-                    </li>
+                    </li> -->
 
                         <!-- uilchilgeenii gazruud -->
                     <li class="dropdown places">

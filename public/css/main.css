@@ -595,10 +595,12 @@ p.subdate {
     display: none;
     margin-right: 0px; }
 .secondary-nav .dropdown-menu > li:hover {
-  background-color: #f5f5f5; }
+  background-color: #b6e0b1; }
 .secondary-nav .dropdown-menu > li:hover .gurvaljin {
   display: inline-block; }
-
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    background-color: #b6e0b1;
+}
 .secondary-nav .flipside-menu {
   position: absolute;
   top: 0px;
@@ -638,6 +640,12 @@ p.subdate {
   list-style: none; }
   .companyList li{
     line-height: 2em;
+  }
+  .companyList li:hover{
+    background-color: #b6e0b1;
+  }
+  .companyList a:hover{
+    text-decoration: none;
   }
 .secondary-nav li.product>a{
   background-color: #5DC151;

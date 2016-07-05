@@ -99,69 +99,7 @@ class WelcomeController extends Controller
 		return view('pages.cart')->with(compact('transactionNumber'));
 	}
 
-	public function checkout(Request $request)
-	{
-		$this->validate($request, [
-	        'phone' => 'required',
-	        'address' => 'required',
-	        'agreement' => 'size:4',
-	    ]);
-		$cart=$request->request->all();
 
-		$order = Order::create($request->all());	
-		$grandTotal = 0;
-		$body = "";
-
-		for($i=1; $i < $cart['itemCount'] + 1; $i++) {
-		$name = 'item_name_'.$i;
-		$options = 'item_options_'.$i;
-		$quantity = 'item_quantity_'.$i;
-		$price = 'item_price_'.$i;
-		$total = $cart[$quantity] * $cart[$price];
-		$grandTotal += $total;
-
-		$others = $this->calculateParams($cart[$options]);
-
-		$body .= 'Захиалга #'.$i.': '.$cart[$name].' --- Тоо x '
-		.$cart[$quantity].' --- нгж үнэ ₮'
-		.number_format($cart[$price], 2, '.', '') 
-		.' --- Нийт $'.number_format($total, 2, '.', '')."</br>"
-		.$others."</br>";
-		$body .= '========================================================'."</br>";
-		}
-
-		$body .= 'Нийт дүн : ₮<b>' . number_format($grandTotal, 2, '.', '') . '</b>';
-
-		$order->body = $body;
-
-		$order->save();
-		if(Auth::user()){
-			Auth::user()->orders()->save($order);
-		}
-
-    	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
-		if($request->metod == 'card'){
-			return Redirect::route('test_path');
-
-		}
-
-		return Redirect::route('success_path');
-	}
-	public function calculateParams($string){
-		$returnedOptions = "";
-		$string = str_replace(' ', '', $string);		
-		$myArray = explode(',', $string);
-		foreach ($myArray as $value) {
-			if (0 === strpos($value, 'color:')) {
-				$returnedOptions .= "--- Өнгө/" . $value;
-			}
-			if (0 === strpos($value, 'size:')) {
-				$returnedOptions .= "--- Хэмжээ/" . $value;
-
-			}			
-		}
-		return $returnedOptions;
-	}
 
 	public function success()
 	{
@@ -221,6 +159,13 @@ class WelcomeController extends Controller
 
 		return view('pages.article')->with(compact('article'));
 	}
+
+	public function career()
+	{
+		$article = Article::where('url', 'career')->first();
+
+		return view('pages.career')->with(compact('article'));
+	}	
 
 	public function search(Request $request)
 	{

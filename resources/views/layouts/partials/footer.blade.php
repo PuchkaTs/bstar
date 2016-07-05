@@ -11,7 +11,7 @@
                         <a href="/content/about">Танилцуулга</a>
                     </li>
                     <li>
-                        <a href="/content/career">Ажлын байр</a>
+                        <a href="/career">Ажлын байр</a>
                     </li>
                     <li>
                         <a href="/content/advantage">Давуу тал</a>

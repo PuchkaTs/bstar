@@ -145,22 +145,24 @@ Route::post('/test', [
     'uses' => 'CardController@post'
 ]);
 Route::get('/card/approve', [
-    'as' => 'test_path',
+    'as' => 'approve_path',
     'uses' => 'CardController@approve'
 ]);
 Route::get('/card/cancel', [
-    'as' => 'test_path',
+    'as' => 'cancel_path',
     'uses' => 'CardController@cancel'
 ]);
 Route::get('/card/decline', [
-    'as' => 'test_path',
+    'as' => 'decline_path',
     'uses' => 'CardController@decline'
 ]);
-
-Route::post('/bankExec', [
-    'as' => 'bank_path',
-    'uses' => 'CardController@bankexec'
+Route::get('/career', [
+    'as' => 'career_path',
+    'uses' => 'WelcomeController@career'
 ]);
+Route::get('/downloads/anket', function(){
+    return response()->file('./assets/common/anket.docx');
+});
 // Route::get('/home', 'HomeController@index');
 
 /**

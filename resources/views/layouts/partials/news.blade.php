@@ -1,6 +1,6 @@
 @inject('news', 'App\Content')
 <div class="subbanner">
-<h1>Мэдээ мэдээлэл</h1>
+<h1>Мэдээлэл & Зөвлөгөө </h1>
 	<div class="news_section row">
 
 		<section class="col-md-6" style="height:100%;">
