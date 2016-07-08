@@ -12,8 +12,7 @@
         "fzaninotto/faker": "^1.6",
         "algolia/algoliasearch-client-php": "^1.9",
         "intervention/image": "^2.3",
-        "doctrine/dbal": "^2.5",
-        "captcha-com/laravel-captcha": "4.*"
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",

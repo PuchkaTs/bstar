@@ -76,10 +76,7 @@
                     {!! Form::label('location', 'Байршил:') !!}
                     {!! Form::select('location', $locations, 1, ['class'=>'form-control']); !!}
                 </div>    
-                <div class="form-group">
-                {!! captcha_image_html('ExampleCaptcha') !!}
-                <input type="text" id="CaptchaCode" name="CaptchaCode">
-                </div>   
+  
                 <!-- Submit form input -->
                 <div class="form-group">    
                     {!! Form::submit('Оруулах', ['class' => 'btn btn-primary btn-block'])!!}
