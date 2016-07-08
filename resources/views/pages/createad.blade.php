@@ -6,16 +6,13 @@
 
 @section('content')
 <div class="row" style="">
-    <div class="col-md-3">
-        <section class="card" style="margin-top:116px;">                                                                                             
-        </section>
-    </div> 
 
-    <div class="col-md-9" id="ads" style="min-height: 500px">
+
+    <div class="col-md-8 col-md-offset-2" id="ads" style="min-height: 500px">
         <header>
             <h3 style="padding:15px;">Зар оруулах</h3>
         </header>
-        <div class="col-md-10 white_background">
+        <div class="col-md-12 white_background">
             @if($errors->any())
                 <ul class="alert alert-danger">
                     @foreach($errors->all() as $error)
@@ -79,9 +76,10 @@
                     {!! Form::label('location', 'Байршил:') !!}
                     {!! Form::select('location', $locations, 1, ['class'=>'form-control']); !!}
                 </div>    
-
-
-
+                <div class="form-group">
+                {!! captcha_image_html('ExampleCaptcha') !!}
+                <input type="text" id="CaptchaCode" name="CaptchaCode">
+                </div>   
                 <!-- Submit form input -->
                 <div class="form-group">    
                     {!! Form::submit('Оруулах', ['class' => 'btn btn-primary btn-block'])!!}

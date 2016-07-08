@@ -27,7 +27,7 @@ class Flash {
 		session()->flash('flash_message', [
 			'title' => $title,
 			'message' => $message,
-			'level' => 'success'
+			'level' => 'error'
 		]);
 	}		
 }

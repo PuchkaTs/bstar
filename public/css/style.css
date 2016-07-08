@@ -604,3 +604,5 @@ li.menu-sale>a:hover {
 li.menu-new>a:hover {
      background-color: transparent; 
 }
+.grow { transition: all .2s ease-in-out; }
+.grow-small { transform: scale(0.5); }

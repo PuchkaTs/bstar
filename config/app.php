@@ -158,7 +158,8 @@ return [
         App\Providers\ViewComposerServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Frozennode\Administrator\AdministratorServiceProvider::class,
-        Intervention\Image\ImageServiceProvider::class,        
+        Intervention\Image\ImageServiceProvider::class, 
+        LaravelCaptcha\Providers\LaravelCaptchaServiceProvider::class,       
     ],
 
     /*

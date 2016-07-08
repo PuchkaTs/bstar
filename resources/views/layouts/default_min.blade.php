@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/sweetalert.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">    
     <link rel="icon" href="/fav.ico">    
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -49,7 +50,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 @include('layouts.partials.nav')
 
 @yield('body')
-<div class="odun"></div>
+<div class="odun grow" v-bind:class="[growsmall]" ></div>
 <!-- Page Content -->
 <div class="container">
   @yield('content')

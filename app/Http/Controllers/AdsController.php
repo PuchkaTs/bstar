@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Image;
 use App\Ads;
 use App\Adsimage;
 use App\Adslocation;
@@ -39,6 +40,12 @@ class AdsController extends Controller
 
     public function store(CreateAdsRequest $request)
     {
+        // validate the user-entered Captcha code when the form is submitted
+        $code = $request->input('CaptchaCode');
+        $isHuman = captcha_validate($code);
+
+        if ($isHuman) {
+
         $ip = $request->ip();
 
         $photos = Adsimage::where('ip', $ip)->latest()->limit(4)->get();
@@ -78,6 +85,14 @@ class AdsController extends Controller
         flash()->success('Таны зар амжилттай орлоо!', 'Баярлалаа');
 
         return redirect()->route('ads_path');
+        }
+        else {
+        // TODO: Captcha validation failed, show error message
+
+            flash()->error('Капча буруу байна!', 'Та дахин оролдоно уу');
+
+            return redirect()->back()->withInput();;
+        }        
     }   
 
     public function show($id){
@@ -92,7 +107,7 @@ class AdsController extends Controller
 
         return view('pages.ads_show')->with(compact('ads', 'adstags', 'ages', 'locations'));
     }   
-
+// store photos
     public function photos(Request $request){
 
         $this->validate($request, [
@@ -105,7 +120,20 @@ class AdsController extends Controller
 
         $name = time() . $file->getClientOriginalName();
 
+        $imagepath = 'assets/ads/' . $name;
+
+        $thumbpath = 'assets/ads/thumbs/' . $name;
+
         $file->move('assets/ads', $name);
+
+        Image::make($imagepath)->fit(100)->save($thumbpath);
+
+        $img = Image::make($imagepath);
+        // prevent possible upsizing
+        $img->resize(700, null, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        })->save($imagepath);
 
         Adsimage::create([
             'ip'=>$ip,
@@ -115,4 +143,5 @@ class AdsController extends Controller
         return $ip;
 
     }   
+
 }
