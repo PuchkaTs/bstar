@@ -40,11 +40,7 @@ class AdsController extends Controller
 
     public function store(CreateAdsRequest $request)
     {
-        // validate the user-entered Captcha code when the form is submitted
-        $code = $request->input('CaptchaCode');
-        $isHuman = captcha_validate($code);
 
-        if ($isHuman) {
 
         $ip = $request->ip();
 
@@ -85,14 +81,7 @@ class AdsController extends Controller
         flash()->success('Таны зар амжилттай орлоо!', 'Баярлалаа');
 
         return redirect()->route('ads_path');
-        }
-        else {
-        // TODO: Captcha validation failed, show error message
-
-            flash()->error('Капча буруу байна!', 'Та дахин оролдоно уу');
-
-            return redirect()->back()->withInput();;
-        }        
+        }       
     }   
 
     public function show($id){
