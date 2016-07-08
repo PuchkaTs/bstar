@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/css/sweetalert.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link href="{{ captcha_layout_stylesheet_url() }}" type="text/css" rel="stylesheet">    
     <link rel="icon" href="/fav.ico">    
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
