@@ -389,7 +389,6 @@ input[type=search]+i {
     transition: 0.2s ease-in-out;
     -ms-transition: 0.2s ease-in-out;
     -webkit-transition: 0.2s ease-in-out;
-    cursor: pointer;
 }
 .subbanner_item{
     margin-top: 20px;
@@ -603,6 +602,9 @@ li.menu-sale>a:hover {
 }
 li.menu-new>a:hover {
      background-color: transparent; 
+}
+.service-condition{
+    height:300px; overflow:scroll; background:white; padding:20px; margin-bottom:20px;
 }
 .grow { transition: all .2s ease-in-out; }
 .grow-small { transform: scale(0.5); }

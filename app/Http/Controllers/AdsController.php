@@ -18,7 +18,7 @@ class AdsController extends Controller
     {
         $ads = Ads::latest()->paginate(10);
 
-        $adstags = Adstag::latest()->get();
+        $adstags = Adstag::orderBy('position', 'asc')->get();
 
         $ages = Age::latest()->get();
 
@@ -60,6 +60,8 @@ class AdsController extends Controller
 
     	$newads = Ads::create($request->all());
 
+        $newads->price = (float)  str_replace('.','',$request->input('price'));
+
         foreach ($photos as $photo)
         {
             $newads->images()->save($photo);
@@ -81,7 +83,7 @@ class AdsController extends Controller
         flash()->success('Таны зар амжилттай орлоо!', 'Баярлалаа');
 
         return redirect()->route('ads_path');
-        }       
+        
     }   
 
     public function show($id){

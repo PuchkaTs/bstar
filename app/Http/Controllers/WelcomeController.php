@@ -94,9 +94,11 @@ class WelcomeController extends Controller
 	{
 		$date = Carbon::now();
 
+		$condition = Article::where('url', '=', 'service-condition')->first();
+
 		$transactionNumber = $date->day . $date->hour . $date->minute . $date->second;
 
-		return view('pages.cart')->with(compact('transactionNumber'));
+		return view('pages.cart')->with(compact('transactionNumber', 'condition'));
 	}
 
 
@@ -125,14 +127,16 @@ class WelcomeController extends Controller
 		return view('pages.store')->with(compact('company', 'products'));
 	}
 
-	public function store_menu($id)
+	public function store_type($id)
 	{
 
-		$companyMenu = Menu::with('companyTypes.companies')->find($id);
+		$companyType = CompanyType::with('companies')->find($id);
 
-		$menuName = $companyMenu->name;
+		$companyTypes = CompanyType::orderBy('position', 'asc')->get();
 
-		return view('pages.storemenu')->with(compact('companyMenu', 'menuName', 'ages'));
+		$menuName = $companyType->name;
+
+		return view('pages.storemenu')->with(compact('companyType', 'companyTypes', 'menuName', 'ages'));
 	}	
 
 	public function place_show($companyUrl)

@@ -10,9 +10,7 @@
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($companyTypes as $type)
-                            @if($type->menu) 
-                                <li class="list-group-item"><a href="{{ route('store_menu_path', $type->menu->id) }}">{{$type->name}}</a>
-                            @endif
+                                <li class="list-group-item"><a href="{{ route('store_type_path', $type->id) }}">{{$type->name}}</a>
                         @endforeach     
                     </ul>                                                                                   
                 </section>

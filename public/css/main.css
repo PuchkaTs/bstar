@@ -173,7 +173,7 @@ textarea.form-control:focus {
 .company_cover {
   background-image: url(/uploads/pattern/sativa.png);
   background-position: 0 0;
-  background-color: #6a7180;
+  /*background-color: #6a7180;*/
   overflow: hidden;
   position: absolute;
   top: 0;

@@ -46,9 +46,9 @@ Route::get('/stores/{companyUrl}', [
     'uses'=>'WelcomeController@store_show'
 ]);
 
-Route::get('/stores-in-menu/{id}', [
-    'as' => 'store_menu_path',
-    'uses'=>'WelcomeController@store_menu'
+Route::get('/stores-type/{id}', [
+    'as' => 'store_type_path',
+    'uses'=>'WelcomeController@store_type'
 ]);
 Route::get('/news', [
     'as' => 'news_path',

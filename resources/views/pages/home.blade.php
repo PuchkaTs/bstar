@@ -75,31 +75,6 @@
         cartStyle : "div"
       });
 
-      new Vue({
-        el: '#app',
-        data: {
-            growsmall: '',          
-        },
-
-        created: function(){
-            this.scrolltrigger();
-        },
-
-        methods: {
-            scrolltrigger: function(){
-                    var vm = this;
-                $( window ).scroll(function() {
-                    var scrollposition = $(this).scrollTop();
-                    console.log(scrollposition);                    
-                    if (scrollposition < (200)){
-                        vm.growsmall = '';
-                    } else {
-                        vm.growsmall = "grow-small";
-                    }
-                });
-            },                      
-        }
-    });
     </script>
 @stop
 

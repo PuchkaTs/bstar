@@ -13,7 +13,6 @@ return array(
         'id',
         'url',
         'title',
-        'body',
         'photo' => array(
             'title' => 'Зураг',
             'output' => '<img src="/assets/articles/thumbs/(:value)" height="100" />',

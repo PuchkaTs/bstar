@@ -2,16 +2,21 @@
 
 @section('body')
 <div style="z-index: 2;">
+    <div class="" style="background-color: white;">
+        <div class="container">
     <div class="company_header">
         <div class="company_cover">
             @if($company->cover)
                 {!! Html::image('assets/stores/cover/' . $company->cover, null, ['class' => 'center_cover']) !!}
             @endif()
         </div>
-    </div>
-    <div class="" style="background-color: white;">
-        <div class="container">
+    </div>        
         <h1>{{$company->name}}</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <article>{!! $company->about!!}</article>
+                </div>
+            </div>
             <div class="row">
                 @foreach($products as $product)
                     <div class="simpleCart_shelfItem col-md-3 col-xs-6 textcenter">

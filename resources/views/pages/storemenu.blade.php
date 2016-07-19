@@ -9,8 +9,8 @@
                 <section class="card" style="margin-top:90px;">
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
-                        @foreach($companyMenu->companyTypes as $type)
-                        <li class="list-group-item">{{$type->name}}</li>
+                        @foreach($companyTypes as $type)
+                            <li class="list-group-item"><a href="{{ route('store_type_path', $type->id) }}">{{$type->name}}</a>
                         @endforeach     
                     </ul>                                                                                   
                 </section>
@@ -21,17 +21,15 @@
                         <div class="menu-list-container">
                         <h1>{{$menuName}}</h1>
                         @include('layouts.partials.topbanner')
-
                             <div class="menu-list">
-                            @foreach($companyMenu->companyTypes->chunk(4) as $fourtype)
+                            @foreach($companyType->companies->chunk(4) as $fourtype)
                                 <div class="row">
-                                @foreach($fourtype as $type)
+                                @foreach($fourtype as $company)
                                 <section class="col-md-3 product-card">
-                                        <h3>{{$type->name}}</h3>
-                                        @foreach($type->companies as $company)
-                                            <h5>{!! link_to_route('store_path', $company->name, $company->url)!!}</h5>
-
-                                        @endforeach
+                                        <div class="company-logo">
+                                            <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
+                                        <h3>{{$company->name}}</h3>
+                                        <h5>{!! link_to_route('store_path', $company->shorten(), $company->url)!!}</h5>
                                 </section>
                                 @endforeach
                                 </div>

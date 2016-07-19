@@ -69,7 +69,7 @@ return array(
 	
 	'menu' => array(
 	    'User Role' => array('users','roles',),
-        'Company menu' => array('menu', 'company_types', 'companies'),
+        'Company menu' => array('company_types', 'companies'),
         'Place menu' => array('place_menus', 'place_types', 'places'),
         'Product menu' => array('productmenus', 'product_types','product_subtypes', 'products', 'productimages', 'galleries', 'brands', 'colors', 'sizes', 'ages'),
         'Banners' => array('banners', 'subbanners', 'topbanners', 'middlebanners', 'bottombanners'),

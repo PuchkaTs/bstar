@@ -96,50 +96,7 @@
                     <!-- Buh delguur -->
                     <li id="navbar-link--work" class="news">
                         <a class="navbar-link" href="/stores">Бүх дэлгүүр</a>
-                    </li>                    
-                    <!-- Browse -->
-                    <!-- <li class="dropdown stores" style="width: 160px;">
-                        <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">
-                            Бүх дэлгүүр <b class="caret"></b>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            @foreach( $menus as $menu)
-                                <li class="side-menu"><a href="{{ route('store_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
-                                    <div class="flipside-menu">
-                                        <div class="row">
-                                             <ul class="col-md-10">
-                                             @foreach($menu->companyTypes->chunk(3) as $items)
-                                                <div class="row">                                             
-                                                @foreach($items as $type)
-                                                        <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
-                                                            <ul class="companyList">
-                                                            {!! $type->companiesInMenu()!!}
-
-                                                            </ul>
-
-                                                        </li>
-                                                @endforeach
-                                                </div>
-                                            @endforeach                                                
-                                             </ul>
-                                             <section class="col-md-2">
-                                                <div class="row">
-                                                    <div class="col-md-12 zeroed">
-                                                        @foreach($menu->promotions as $promotion)
-                                                            <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-
-                                             </section>
-                                         </div>
-                                    </div>
-
-                                </li>
-                            @endforeach
-                        </ul>
-                    </li> -->
+                    </li>     
 
                         <!-- uilchilgeenii gazruud -->
                     <li class="dropdown places">

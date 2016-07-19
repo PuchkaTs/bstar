@@ -26,6 +26,15 @@
 		<div class="placeholder50"></div>
 		<div class="row margin15">
 			<div class="col-md-6">
+
+            @if($errors->any())
+                <ul class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                        <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            @endif
+
 			{!! Form::open(['url' => 'foo/bar']) !!}
 			    <!-- Утас form input -->
 			    <div class="form-group">
@@ -38,17 +47,18 @@
 			        {!! Form::textarea('address', null, ['class' => 'form-control', 'id' => 'address']) !!}
 			    </div>
 				<h3>Төлбөрийн нөхцөл:</h3>
-<p>
-1. Цахим худалдааны төв нь “Эй Пи Эм” ХХК-ны албан ёсны вэбсайт бөгөөд энэхүү үйлчилгээний нөхцөл нь уг онлайн салбараар үйлчлүүлэх, худалдан авалт хийхтэй холбоотой үүсэх харилцааг зохицуулахад оршино.
-Хэрэглэгч худалдан авалт хийх, вэбсайтаар үйлчлүүлэхээсээ өмнө хүлээн зөвшөөрч баталгаажуулсны үндсэн дээр хэрэгжинэ.</p>
-<p>2. Энэхүү үйлчилгээний нөхцөлийн хэрэгжилтэнд “Эй Пи Эм” ХХК /цаашид байгууллага
-гэх/ болон хэрэглэгч /цаашид хэрэглэгч гэх/ хамтран хяналт тавина.</p>
-<p>3. apm.mn вэбсайт нь зөвхөн насанд хүрэгчдэд үйлчлэх ба насанд хүрээгүй хүүхэд эцэг эхийн хамт үйлчилгээний нөхцлийн дагуу худалдаа, үйлчилгээ авах боломжтой
-</p>					
+				<article class="service-condition">
+					@if($condition)
+					{!! $condition->body!!}
+					@endif
+				</article>					
 			    <!-- agreement form input -->
 			    <div class="form-group">
-			        {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!}
-			        {!! Form::checkbox('agreement', 'true', null); !!}
+			        {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!}	
+			    	<span style="float:left; margin-right:10px;">
+			        	{!! Form::checkbox('agreement', 'true', 'null'); !!}
+			    	</span>
+
 			    </div>		    
 			{!! Form::close() !!}			
 			</div>			
@@ -71,7 +81,7 @@
 @stop
 
 @section('script')
-	<script>
+<script>
 	  simpleCart({
 	    checkout: {
 	      type: "SendForm",
@@ -103,29 +113,5 @@ $('#paymentTabs a').click(function (e) {
   e.preventDefault()
   $(this).tab('show')
 })
-
-    new Vue({
-        el: '#app',
-        data: {
-        	method: 'cash'
-        },
-
-        methods: {
-        	methodCash: function(){
-                this.method = "cash";
-                console.log(this.method);
-            },
-        	methodCard: function(){
-                this.method = "card";
-                console.log(this.method);
-
-            },
-        	methodAccount: function(){
-                this.method = "account";
-                console.log(this.method);
-
-            },                        
-        }
-    });
-	</script>
+</script>
 @stop
