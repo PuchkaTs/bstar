@@ -23,19 +23,38 @@
                         @include('layouts.partials.topbanner')
 
                             <div class="menu-list">
-                            @foreach($placeMenu->placeTypes->chunk(4) as $fourtype)
-                                <div class="row">
-                                @foreach($fourtype as $type)
-                                <section class="col-md-3 product-card">
-                                        <h3>{{$type->name}}</h3>
-                                        @foreach($type->places as $place)
-                                            <h5>{!! link_to_route('place_path', $place->name, $place->url)!!}</h5>
-
-                                        @endforeach
-                                </section>
+                            @if($placeMenu->deep == 1)
+                                <div class="menu-list">
+                                @foreach($placeMenu->places->chunk(4) as $fourtype)
+                                    <div class="row">
+                                    @foreach($fourtype as $company)
+                                    <section class="col-md-3 product-card">
+                                            <div class="company-logo">
+                                                <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
+                                            <h3>{{$company->name}}</h3>
+                                            <h5>{!! link_to_route('store_path', $company->shorten(), $company->url)!!}</h5>
+                                    </section>
+                                    @endforeach
+                                    </div>
                                 @endforeach
                                 </div>
-                            @endforeach
+                            @endif
+                            @if($placeMenu->deep != 1)
+                                @foreach($placeMenu->placeTypes->chunk(4) as $fourtype)
+                                    <div class="row">
+                                    @foreach($fourtype as $type)
+                                    <section class="col-md-3 product-card">
+                                            <h3>{{$type->name}}</h3>
+                                            @foreach($type->places as $place)
+
+                                                <h5>{!! link_to_route('place_path', $place->name, $place->url)!!}</h5>
+
+                                            @endforeach
+                                    </section>
+                                    @endforeach
+                                    </div>
+                                @endforeach
+                            @endif
                             </div>
                             @include('layouts.partials.middlebanner')
                             @include('layouts.partials.reklam')

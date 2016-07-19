@@ -16,6 +16,9 @@ return array(
         'position'     => array(
             'title' => 'Position',
         ),
+        'deep'     => array(
+            'title' => 'Гүн',
+        ),        
     ),
 
     /**
@@ -29,7 +32,11 @@ return array(
         'position' => array(
             'title' => 'Position',
             'type'  => 'number',
-        )
+        ),
+        'deep' => array(
+            'title' => 'Гүн 1, 2, 3',
+            'type'  => 'number',
+        )        
 
     ),
 

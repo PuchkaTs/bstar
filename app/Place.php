@@ -20,6 +20,14 @@ class Place extends Model
         return $this->belongsTo('App\PlaceType', 'placeType_id');
     }
 
+    public function placeSubType(){
+        return $this->belongsTo('App\PlaceSubType', 'placesubtype_id');
+    }
+
+    public function placeMenu(){
+        return $this->belongsTo('App\PlaceMenu', 'placemenu_id');
+    }        
+
     public function owner(){
         return $this->belongsTo('App\User', 'user_id');
     }
@@ -31,4 +39,14 @@ class Place extends Model
     public function maps(){
         return $this->belongsTo('App\Map');
     }
+
+
+    public function shorten($num = 50){
+
+        $string = strip_tags($this->about);
+
+        $string = str_limit($string, $limit = $num, $end = '...');
+
+        return $string;
+    }       
 }

@@ -23,6 +23,10 @@ class PlaceType extends Model
         return $this->hasMany('App\Place', 'placeType_id');
     }
 
+    public function placeSubTypes(){
+        return $this->hasMany('App\PlaceSubType', 'placetype_id');
+    }    
+
     public function placesInMenu(){
         $listedCompanies = '';
         $count = 0;
@@ -36,4 +40,17 @@ class PlaceType extends Model
         }
         return $listedCompanies;
     }
+    public function subTypesInMenu(){
+        $listedSubTypes = '';
+        $count = 0;
+        $limit = $this->comp_number;
+        foreach ($this->placeSubTypes as $subtype){
+            $listedSubTypes .= '<li class="">' .  link_to_route('placeSubType_path', $subtype->name, $subtype->id) . '</li>';
+            $count++;
+            if ($count == $limit) {
+                break;
+            }
+        }
+        return $listedSubTypes;
+    }    
 }

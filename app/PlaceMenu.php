@@ -18,7 +18,7 @@ class PlaceMenu extends Model
      *
      * @var array
      */
-    protected $fillable = ['name', 'position'];
+    protected $fillable = ['name', 'position', 'deep'];
 
     public function placeTypes(){
         return $this->hasMany('App\PlaceType', 'placeMenu_id');
@@ -27,6 +27,10 @@ class PlaceMenu extends Model
     public function promotions(){
         return $this->belongsToMany('App\Promotion', 'placemenu_promotion', 'placemenu_id', 'promotion_id');
     } 
+
+    public function places(){
+        return $this->hasMany('App\Place', 'placemenu_id');
+    }
 
     public function getListForMenu(){
 

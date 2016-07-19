@@ -12,11 +12,21 @@ return array(
     'columns' => array(
         'id',
         'name',
+        'placeMenu' => array(
+            'title' => 'Цэс',
+            'relationship' => 'placeMenu',
+            'select' => '(:table).name',
+        ),          
         'placeType' => array(
-            'title' => 'Type',
+            'title' => 'Төрөл',
             'relationship' => 'placeType',
             'select' => '(:table).name',
         ),
+        'placeSubType' => array(
+            'title' => 'Дэд төрөл',
+            'relationship' => 'placeSubType',
+            'select' => '(:table).name',
+        ),              
         'position',
     ),
     /**
@@ -28,44 +38,65 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
+        'placeMenu' => array(
+            'type' => 'relationship',
+            'title' => 'Цэс',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),         
         'placeType' => array(
             'type' => 'relationship',
-            'title' => 'Type',
+            'title' => 'Төрөл',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),
+        'placeSubType' => array(
+            'type' => 'relationship',
+            'title' => 'Дэд төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         )
+               
     ),
     /**
      * The editable fields
      */
     'edit_fields' => array(
         'name' => array(
-            'title' => 'place Name:',
+            'title' => 'Үйлчилгээний газрын нэр',
             'type' => 'text',
         ),
         'position' => array(
-            'title' => 'Position:',
+            'title' => 'Байрлал',
             'type' => 'number',
         ),
         'url' => array(
             'title' => 'URL:',
             'type' => 'text',
         ),
-        'placeType' => array(
+        'placeMenu' => array(
             'type' => 'relationship',
-            'title' => 'Type',
+            'title' => 'Цэс',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
+        'placeType' => array(
+            'type' => 'relationship',
+            'title' => 'Төрөл',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),
+        'placeSubType' => array(
+            'type' => 'relationship',
+            'title' => 'Дэд төрөл',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),                
         'owner' => array(
             'type' => 'relationship',
-            'title' => 'Owner',
+            'title' => 'Эзэмшигч',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
         'about' => array(
-            'title' => 'About:',
+            'title' => 'Тухай',
             'type' => 'wysiwyg',
         ),
         'cover' => array(
-            'title' => 'Image 1200x400',
+            'title' => 'Зураг 1200x400',
             'type' => 'image',
             'location' => public_path() . '/assets/places/cover/',
             'naming' => 'random',

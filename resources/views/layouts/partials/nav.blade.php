@@ -106,6 +106,11 @@
 
                         <ul class="dropdown-menu">
                             @foreach( $placemenus->getListForMenu() as $menu)
+                                @if($menu->deep == 1)
+                                <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}}</a>
+                                </li>
+                                @endif
+                                @if($menu->deep == 2)
                                 <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                     <div class="flipside-menu">
                                         <div class="row">
@@ -138,6 +143,41 @@
                                     </div>
 
                                 </li>
+                                @endif
+                                @if($menu->deep == 3)
+                                    <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
+                                        <div class="flipside-menu">
+                                            <div class="row">
+                                                 <ul class="col-md-9">
+                                                 @foreach($menu->placeTypes->chunk(3) as $items)
+                                                    <div class="row">                                             
+                                                    @foreach($items as $type)
+                                                            <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
+                                                                <ul class="companyList">
+                                                                {!! $type->subTypesInMenu()!!}
+
+                                                                </ul>
+
+                                                            </li>
+                                                    @endforeach
+                                                    </div>
+                                                    @endforeach                                                
+                                                 </ul>
+                                                 <section class="col-md-3">
+                                                    <div class="row">
+                                                        <div class="col-md-12 zeroed">
+                                                            @foreach($menu->promotions as $promotion)
+                                                                <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
+                                                            @endforeach                                                        
+                                                        </div>
+                                                    </div>
+
+                                                 </section>
+                                             </div>
+                                        </div>
+
+                                    </li>                                    
+                                @endif
                             @endforeach
                         </ul>
                     </li>      
