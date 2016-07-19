@@ -86,6 +86,10 @@ Route::get('/places-in-menu/{id}', [
     'as'=>'place_menu_path',
     'uses'=>'WelcomeController@place_menu'
 ]);
+Route::get('/places-in-type/{id}', [
+    'as'=>'placeSubType_path',
+    'uses'=>'WelcomeController@place_subtype'
+]);
 Route::get('/ads', [
     'as'=>'ads_path',
     'uses'=>'AdsController@index'

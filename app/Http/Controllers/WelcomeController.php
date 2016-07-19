@@ -12,6 +12,7 @@ use App\Menu;
 use App\Order;
 use App\Place;
 use App\PlaceMenu;
+use App\PlaceSubType;
 use App\Product;
 use App\ProductMenu;
 use App\ProductSubType;
@@ -155,7 +156,19 @@ class WelcomeController extends Controller
         $menuName = $placeMenu->name;
 
 		return view('pages.placemenu')->with(compact('placeMenu', 'menuName'));
-	}		
+	}	
+
+	public function place_subtype($id)
+	{
+
+        $placeSubType = PlaceSubType::with('places')->find($id);
+
+        $placeType = $placeSubType->placeType->with('placeSubTypes')->first();
+
+        $menuName = $placeSubType->name;
+
+		return view('pages.placesubtype')->with(compact('placeSubType', 'menuName', 'placeType'));
+	}			
 
 	public function article($url)
 	{
