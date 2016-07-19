@@ -95,6 +95,17 @@ return array(
             'title' => 'Тухай',
             'type' => 'wysiwyg',
         ),
+        'logo' => array(
+            'title' => 'logo 200x200',
+            'type' => 'image',
+            'location' => public_path() . '/assets/stores/logo/',
+            'naming' => 'random',
+            'length' => 20,
+            'size_limit' => 2,
+            'sizes' => array(
+                array(200, 200, 'crop', public_path() . '/assets/stores/logo/', 100),
+            )
+        ),          
         'cover' => array(
             'title' => 'Зураг 1200x400',
             'type' => 'image',
