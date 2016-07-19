@@ -65,7 +65,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 <script src="/js/bootstrap-slider.min.js"></script>
 <script src="/js/sweetalert.min.js"></script>
 <script src="/js/simpleCart.js"></script>
-<script src="js/vue.js"></script>
+<script src="/js/vue.js"></script>
 
 
 @yield('script')
