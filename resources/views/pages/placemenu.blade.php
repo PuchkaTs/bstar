@@ -39,7 +39,25 @@
                                 @endforeach
                                 </div>
                             @endif
-                            @if($placeMenu->deep != 1)
+                            @if($placeMenu->deep == 2)
+                                <div class="menu-list">
+                                @foreach($placeMenu->placeTypes as $type)                                
+                                    @foreach($type->places->chunk(4) as $fourtype)
+                                        <div class="row">
+                                        @foreach($fourtype as $company)
+                                        <section class="col-md-3 product-card">
+                                                <div class="company-logo">
+                                                    <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
+                                                <h3>{{$company->name}}</h3>
+                                                <h5>{!! link_to_route('store_path', $company->shorten(), $company->url)!!}</h5>
+                                        </section>
+                                        @endforeach
+                                        </div>
+                                    @endforeach
+                                @endforeach
+                                </div>
+                            @endif                            
+                            @if($placeMenu->deep > 2)
                                 @foreach($placeMenu->placeTypes->chunk(4) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $type)
