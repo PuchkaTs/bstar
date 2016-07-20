@@ -84,7 +84,7 @@ return array(
         'placeSubType' => array(
             'type' => 'relationship',
             'title' => 'Дэд төрөл',
-            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+            'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
         ),                
         'owner' => array(
             'type' => 'relationship',
