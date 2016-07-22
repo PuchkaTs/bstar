@@ -22,7 +22,7 @@
 
                             <div class="menu-list">
                                 <div class="menu-list">
-                                @foreach($placeSubType->places->chunk(4) as $fourtype)
+                                @foreach($placeSubType->places->chunk(3) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $company)
                                     <section class="col-md-4 col-xs-6">

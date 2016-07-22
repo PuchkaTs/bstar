@@ -25,7 +25,7 @@
                             <div class="menu-list">
                             @if($placeMenu->deep == 1)
                                 <div class="menu-list">
-                                @foreach($placeMenu->places->chunk(4) as $fourtype)
+                                @foreach($placeMenu->places->chunk(3) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $company)
                                     <section class="col-md-4 col-xs-6">
@@ -44,7 +44,7 @@
                             @if($placeMenu->deep == 2)
                                 <div class="menu-list">
                                 @foreach($placeMenu->placeTypes as $type)                                
-                                    @foreach($type->places->chunk(4) as $fourtype)
+                                    @foreach($type->places->chunk(3) as $fourtype)
                                         <div class="row">
                                         @foreach($fourtype as $company)
                                         <section class="col-md-4 col-xs-6">
@@ -63,7 +63,7 @@
                                 </div>
                             @endif                            
                             @if($placeMenu->deep > 2)
-                                @foreach($placeMenu->placeTypes->chunk(4) as $fourtype)
+                                @foreach($placeMenu->placeTypes->chunk(3) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $type)
                                     <section class="col-md-4 col-xs-6">
