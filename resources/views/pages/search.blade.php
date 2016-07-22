@@ -23,8 +23,6 @@
                                 <div class="row">
                                 @foreach($items as $product)
                                     <div class="simpleCart_shelfItem col-md-3 col-xs-6 textcenter">
-                                   
-                                        <div class="product-card subbanner-thumb">   
                                     @if($product->sale)
                                         <div class="product-sale">
                                             <img src="/assets/common/sale.png">
@@ -34,7 +32,9 @@
                                         <div class="product-new">
                                             <img src="/assets/common/new.png">
                                         </div>  
-                                    @endif                                                              
+                                    @endif                                   
+                                        <div class="product-card subbanner-thumb">   
+                                                              
                                             <div>
                                                 <div style="display:none" class="item_pageLink">{{route('product_path', $product->id)}}</div>
                                                 <a href="{{route('product_path', $product->id)}}" class="item-thumb">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          

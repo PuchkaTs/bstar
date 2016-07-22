@@ -190,7 +190,6 @@ Pagination Styles
 
 .subbanner .swiper-slide {
     text-align: center;
-    background: #fff;
     position: relative;
     /* Center slide text vertically */
 /*    display: -webkit-box;
@@ -207,9 +206,10 @@ Pagination Styles
     align-items: center;*/
 }
 .subbanner-thumb{
-	width: 100%;
+	background-color: white;
+	margin-right: 10px;
 	padding: 15px 25px;
-	border-right: 1px solid #ECECEC;
+	height: 100%;
 }
 .subbanner-thumb:last-of-type{
 	width: 100%;

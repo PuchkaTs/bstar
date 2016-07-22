@@ -28,11 +28,13 @@
                                 @foreach($placeMenu->places->chunk(4) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $company)
-                                    <section class="col-md-3 product-card">
+                                    <section class="col-md-4 col-xs-6">
+                                        <div class="product-card">
                                             <div class="company-logo">
                                                 <a href="{{ route('place_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
                                             <h3>{{$company->name}}</h3>
                                             <h5>{!! link_to_route('place_path', $company->shorten(), $company->url)!!}</h5>
+                                        </div>                                            
                                     </section>
                                     @endforeach
                                     </div>
@@ -45,11 +47,14 @@
                                     @foreach($type->places->chunk(4) as $fourtype)
                                         <div class="row">
                                         @foreach($fourtype as $company)
-                                        <section class="col-md-3 product-card">
+                                        <section class="col-md-4 col-xs-6">
+                                            <div class="product-card">
+
                                                 <div class="company-logo">
                                                     <a href="{{ route('place_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
                                                 <h3>{{$company->name}}</h3>
                                                 <h5>{!! link_to_route('place_path', $company->shorten(), $company->url)!!}</h5>
+                                            </div>                                            
                                         </section>
                                         @endforeach
                                         </div>
@@ -61,13 +66,17 @@
                                 @foreach($placeMenu->placeTypes->chunk(4) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $type)
-                                    <section class="col-md-3 product-card">
+                                    <section class="col-md-4 col-xs-6">
+                                        <div class="product-card">
+
                                             <h3>{{$type->name}}</h3>
                                             @foreach($type->places as $place)
 
                                                 <h5>{!! link_to_route('place_path', $place->name, $place->url)!!}</h5>
 
                                             @endforeach
+                                        </div>                                            
+
                                     </section>
                                     @endforeach
                                     </div>

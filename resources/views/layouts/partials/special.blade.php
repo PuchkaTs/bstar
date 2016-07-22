@@ -8,12 +8,12 @@
                 @foreach($gallery->getListForSpecial() as $product)
                 <div class="swiper-slide simpleCart_shelfItem">
                     @if($product->sale)
-                        <div class="product-sale">
+                        <div class="product-sale-home">
                             <img src="assets/common/sale.png">
                         </div>   
                     @endif
                     @if($product->new)
-                        <div class="product-new">
+                        <div class="product-new-home">
                             <img src="assets/common/new.png">
                         </div>  
                     @endif                
