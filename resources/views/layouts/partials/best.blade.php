@@ -1,4 +1,4 @@
-<div class="subbanner">
+<div class="subbanner hidden-xs">
 @inject('gallery', 'App\Gallery')
 @if($gallery->where('position',3)->first())
 <h1>{{$gallery->where('position',3)->first()->name}}</h1>

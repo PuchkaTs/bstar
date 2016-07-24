@@ -498,10 +498,16 @@ input[type=search]+i {
 .colored_pictures{
     display: relative;
 }
+.store-title{
+    height: 52px;
+}
+.store-card{
+    height: 405px;
+    margin-bottom: 20px;
+}
 .odun{
     position: fixed;
     bottom: 2em;
-    left: 2em;
     background: transparent url('../assets/common/Odunsmile.png') no-repeat;
     z-index: 999;
     height: 300px;

@@ -25,11 +25,13 @@
                             @foreach($companyType->companies->chunk(4) as $fourtype)
                                 <div class="row">
                                 @foreach($fourtype as $company)
-                                <section class="col-md-3 product-card">
+                                <section class="col-md-4 col-xs-6">
+                                    <div class="product-card store-card">
                                         <div class="company-logo">
                                             <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
-                                        <h3>{{$company->name}}</h3>
+                                        <h3 class="store-title">{{$company->name}}</h3>
                                         <h5>{!! link_to_route('store_path', $company->shorten(), $company->url)!!}</h5>
+                                    </div>
                                 </section>
                                 @endforeach
                                 </div>
