@@ -18,7 +18,7 @@
 
             <div class="col-md-9">   
                 <div class="row">
-                        <div class="menu-list-container">
+                    <div class="menu-list-container">
                         <h1>{{$menuName}}</h1>
                         @include('layouts.partials.topbanner')
 
@@ -28,7 +28,7 @@
                                 @foreach($companies->chunk(3) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $company)
-                                    <section class="col-md-4 col-xs-6">
+                                    <section class="col-md-4 col-xs-12">
                                         <div class="product-card store-card">
                                             <div class="company-logo">
                                                 <a href="{{ route('place_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
@@ -47,7 +47,7 @@
                                     @foreach($type->places->chunk(3) as $fourtype)
                                         <div class="row">
                                         @foreach($fourtype as $company)
-                                        <section class="col-md-4 col-xs-6">
+                                        <section class="col-md-4 col-xs-12">
                                             <div class="product-card store-card">
 
                                                 <div class="company-logo">
@@ -75,7 +75,7 @@
                                         @foreach($type->places->chunk(3) as $fourtype)
                                             <div class="row">
                                             @foreach($fourtype as $company)
-                                            <section class="col-md-4 col-xs-6">
+                                            <section class="col-md-4 col-xs-12">
                                                 <div class="product-card store-card">
 
                                                     <div class="company-logo">
