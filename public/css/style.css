@@ -500,6 +500,7 @@ input[type=search]+i {
 }
 .store-title{
     height: 52px;
+    overflow: hidden;
 }
 .store-card{
     height: 390px;
