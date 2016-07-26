@@ -9,7 +9,7 @@
         <nav class="Navigation__top row">
             <!-- <h1 class="logo"><a class="white" href="/">BabyStar</a></h1> -->
             <h1 class="logo"><a href="/"><img src="/assets/common/logo.png"></a></h1>
-            <div class="Navigation__search">
+            <div class="Navigation__search hidden-xs">
                     {!!Form::open(['method'=>'GET', 'route'=>'search_path', 'class'=>'form-inline'])!!}
                     {!!Form::input('search', 'q', null, ['placeholder' => 'Хайх', 'class'=>'simplebox', 'autofocus'])!!}
                     <i><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i>
@@ -42,129 +42,52 @@
         </nav>
     </div>
 
-        <nav class="secondary-nav">
+        <nav class="navbar-default secondary-nav navbar ">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                </div>
             <div class="flexcenter container">
-                <ul class="zeroed secondary-nav--left">
-                    <li class="dropdown product" style="width: 160px;">
-                        <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">
-                            Бүх бараа <b class="caret"></b>
-                        </a>
 
-                        <ul class="dropdown-menu">
-                            <!-- special 2 menus -->
-                                <li class="side-menu menu-sale"><a href="{{ route('sale_products_path') }}" style="color:#eb1c24;">ХЯМДРАЛ</a> </li>                            
-                                <li class="side-menu menu-new"><a href="{{ route('new_products_path') }}" style="color:#eb1c24;">ШИНЭ БАРАА </a></li>
-                                <li role="separator" class="divider"></li>
-                            <!-- end of special 2 menus -->
-                            @foreach( $pmenus->getListForMenu() as $menu)
+                <div id="navbar" class="collapse navbar-collapse">                
+                    <ul class="zeroed secondary-nav--left">
+                        <li class="dropdown product ">
+                            <a href="" class="navbar-link dropdown-toggle white-bold" data-toggle="dropdown" style="color:white;">
+                                Бүх бараа <b class="caret"></b>
+                            </a>
 
-                                <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
-                                    <div class="flipside-menu">
-                                        <div class="row">
-                                             <ul class="col-md-9 row">
+                            <ul class="dropdown-menu">
+                                <!-- special 2 menus -->
+                                    <li class="side-menu menu-sale"><a href="{{ route('sale_products_path') }}" style="color:#eb1c24;">ХЯМДРАЛ</a> </li>                            
+                                    <li class="side-menu menu-new"><a href="{{ route('new_products_path') }}" style="color:#eb1c24;">ШИНЭ БАРАА </a></li>
+                                    <li role="separator" class="divider"></li>
+                                <!-- end of special 2 menus -->
+                                @foreach( $pmenus->getListForMenu() as $menu)
 
-                                             @foreach($menu->productTypes->chunk(3) as $items)
-                                                <div class="row">
-                                                    @foreach($items as $type)
-                                                            <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
-                                                                <ul class="companyList">
-                                                                {!! $type->subTypesInMenu()!!}
-
-                                                                </ul>
-
-                                                            </li>
-                                                    @endforeach
-                                                </div>
-                                                @endforeach
-                                             </ul>
-                                             <section class="col-md-3">
-                                                <div class="row">
-                                                    <div class="col-md-12 zeroed">
-                                                        @foreach($menu->promotions as $promotion)
-                                                            <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
-                                                        @endforeach                                                        
-                                                    </div>
-                                                </div>
-
-                                             </section>
-                                         </div>
-                                    </div>
-
-                                </li>
-                            @endforeach
-                        </ul>
-                    </li>
-                    <!-- Buh delguur -->
-                    <li id="navbar-link--work" class="news">
-                        <a class="navbar-link" href="/stores">Бүх дэлгүүр</a>
-                    </li>     
-
-                        <!-- uilchilgeenii gazruud -->
-                    <li class="dropdown places">
-                        <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">
-                            Үйлчилгээний газар  <b class="caret"></b>
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            @foreach( $placemenus->getListForMenu() as $menu)
-                                @if($menu->deep == 1)
-                                <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}}</a>
-                                </li>
-                                @endif
-                                @if($menu->deep == 2)
-                                <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
-                                    <div class="flipside-menu width900">
-                                        <div class="row">
-                                             <ul class="col-md-9">
-                                             @foreach($menu->placeTypes->chunk(3) as $items)
-                                                <div class="row">                                             
-                                                @foreach($items as $type)
-                                                        <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
-                                                            <ul class="companyList">
-                                                            {!! $type->placesInMenu()!!}
-
-                                                            </ul>
-
-                                                        </li>
-                                                @endforeach
-                                                </div>
-                                                @endforeach                                                
-                                             </ul>
-                                             <section class="col-md-3">
-                                                <div class="row">
-                                                    <div class="col-md-12 zeroed">
-                                                        @foreach($menu->promotions as $promotion)
-                                                            <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
-                                                        @endforeach                                                        
-                                                    </div>
-                                                </div>
-
-                                             </section>
-                                         </div>
-                                    </div>
-
-                                </li>
-                                @endif
-                                @if($menu->deep == 3)
-                                    <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
+                                    <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                         <div class="flipside-menu">
                                             <div class="row">
-                                                 <ul class="col-md-8">
-                                                 @foreach($menu->placeTypes->chunk(2) as $items)
-                                                    <div class="row">                                             
-                                                    @foreach($items as $type)
-                                                            <li class="companyType col-md-6" style=""><h5>{{$type->name}}</h5>
-                                                                <ul class="companyList">
-                                                                {!! $type->subTypesInMenu()!!}
+                                                 <ul class="col-md-9 row">
 
-                                                                </ul>
+                                                 @foreach($menu->productTypes->chunk(3) as $items)
+                                                    <div class="row">
+                                                        @foreach($items as $type)
+                                                                <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
+                                                                    <ul class="companyList">
+                                                                    {!! $type->subTypesInMenu()!!}
 
-                                                            </li>
-                                                    @endforeach
+                                                                    </ul>
+
+                                                                </li>
+                                                        @endforeach
                                                     </div>
-                                                    @endforeach                                                
+                                                    @endforeach
                                                  </ul>
-                                                 <section class="col-md-4">
+                                                 <section class="col-md-3">
                                                     <div class="row">
                                                         <div class="col-md-12 zeroed">
                                                             @foreach($menu->promotions as $promotion)
@@ -177,37 +100,126 @@
                                              </div>
                                         </div>
 
-                                    </li>                                    
-                                @endif
-                            @endforeach
-                        </ul>
-                    </li>      
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>
+                        <!-- Buh delguur -->
+                        <li id="navbar-link--work" class="news">
+                            <a class="navbar-link " href="/stores" style="color:white;">Бүх дэлгүүр</a>
+                        </li>     
+
+                        <!-- uilchilgeenii gazruud -->
+                        <li class="dropdown places">
+                            <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown" style="color:white;">
+                                Үйлчилгээний газар  <b class="caret"></b>
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                @foreach( $placemenus->getListForMenu() as $menu)
+                                    @if($menu->deep == 1)
+                                    <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}}</a>
+                                    </li>
+                                    @endif
+                                    @if($menu->deep == 2)
+                                    <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
+                                        <div class="flipside-menu width900">
+                                            <div class="row">
+                                                 <ul class="col-md-9">
+                                                 @foreach($menu->placeTypes->chunk(3) as $items)
+                                                    <div class="row">                                             
+                                                    @foreach($items as $type)
+                                                            <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
+                                                                <ul class="companyList">
+                                                                {!! $type->placesInMenu()!!}
+
+                                                                </ul>
+
+                                                            </li>
+                                                    @endforeach
+                                                    </div>
+                                                    @endforeach                                                
+                                                 </ul>
+                                                 <section class="col-md-3">
+                                                    <div class="row">
+                                                        <div class="col-md-12 zeroed">
+                                                            @foreach($menu->promotions as $promotion)
+                                                                <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
+                                                            @endforeach                                                        
+                                                        </div>
+                                                    </div>
+
+                                                 </section>
+                                             </div>
+                                        </div>
+
+                                    </li>
+                                    @endif
+                                    @if($menu->deep == 3)
+                                        <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
+                                            <div class="flipside-menu">
+                                                <div class="row">
+                                                     <ul class="col-md-8">
+                                                     @foreach($menu->placeTypes->chunk(2) as $items)
+                                                        <div class="row">                                             
+                                                        @foreach($items as $type)
+                                                                <li class="companyType col-md-6" style=""><h5>{{$type->name}}</h5>
+                                                                    <ul class="companyList">
+                                                                    {!! $type->subTypesInMenu()!!}
+
+                                                                    </ul>
+
+                                                                </li>
+                                                        @endforeach
+                                                        </div>
+                                                        @endforeach                                                
+                                                     </ul>
+                                                     <section class="col-md-4">
+                                                        <div class="row">
+                                                            <div class="col-md-12 zeroed">
+                                                                @foreach($menu->promotions as $promotion)
+                                                                    <a href="/{{$promotion->url}}"><img class="promotion" src="/assets/banners/promotions/{{$promotion->image}}"></a>
+                                                                @endforeach                                                        
+                                                            </div>
+                                                        </div>
+
+                                                     </section>
+                                                 </div>
+                                            </div>
+
+                                        </li>                                    
+                                    @endif
+                                @endforeach
+                            </ul>   
+                        </li>
+                        <!-- uilchilgee duussan       -->
                         <!-- Medee medeelel -->
                         <li id="navbar-link--work" class="news">
-                            <a class="navbar-link" href="/news">Мэдээлэл & Зөвлөгөө</a>
+                            <a class="navbar-link" href="/news" style="color:white;">Мэдээлэл & Зөвлөгөө</a>
                         </li>
                         <!-- Oduni tses -->
                         <li class="dropdown recomend">
-                            <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">
+                            <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown" style="color:white;">
                                 Одун  <b class="caret"></b>
                             </a>
 
                             <ul class="dropdown-menu ">
                                 @foreach( $Odun->getListForMenu() as $menu)
-                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}">{{$menu->url}}</a>
+                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}" style="color:white;">{{$menu->url}}</a>
                                     </li>
                                 @endforeach
                             </ul>
                         </li>                        
                         <!-- BLog -->
                         <li id="navbar-link--work" class="blog">
-                            <a class="navbar-link" href="/blogs">Блог</a>
+                            <a class="navbar-link" href="/blogs" style="color:white;">Блог</a>
                         </li>
                         <!-- baiguullaga nemeh -->
                         <li id="navbar-link--work" class="ads">
-                            <a class="navbar-link" href="/ads"><i class="fa fa-plus"></i> Үнэгүй зар</a>
+                            <a class="navbar-link" href="/ads" style="color:white;"><i class="fa fa-plus"></i> Үнэгүй зар</a>
                         </li>
                 </ul>
+            </div>
             </div>
 
             <div class="flexcenter container">
@@ -239,10 +251,9 @@
 
                 </ul>
             </div>
+
         </nav>        
-
 </header>
-
 
 <!-- Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
