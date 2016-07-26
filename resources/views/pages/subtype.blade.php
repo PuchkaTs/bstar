@@ -59,7 +59,7 @@
             </div>   
 
             <div class="col-md-9">   
-                <div class="row" style="background-color: white;">
+                <div class="row">
                         <div class="">
 
 
@@ -67,7 +67,7 @@
 
                             <div class="row">
                                 @foreach($products as $product)
-                                    <div class="simpleCart_shelfItem col-md-3 col-xs-6 textcenter">
+                                    <div class="simpleCart_shelfItem col-md-4 col-xs-6 textcenter">
                                    
                                         <div class="product-card subbanner-thumb">    
                                     @if($product->sale)
