@@ -155,10 +155,25 @@ textarea.form-control:focus {
   color: #A7B3C2;
   font-size: 1.3em;
   width: 1.3em; }
+@media (max-width: 940px){
+  .secondary-nav .secondary-nav--left li {
+    width: 100%; }
 
+  .secondary-nav li.ads>a:after {
+      content: "";
+      position: absolute;
+      border-style: solid;
+      border-color: transparent;
+      border-width: 0;
+      top: 0;
+      right: -20px;
+      border-width: 0px 0px 0px 0px;
+      border-radius: 0px;
+      border-left-color: #008443;
+  }
+}
 @media (max-width: 767px) {
-  .secondary-nav .secondary-nav--left {
-    display: none; }
+
   .secondary-nav .secondary-nav--right {
     width: 100%; }
   #navbar-search-form {

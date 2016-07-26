@@ -8,14 +8,14 @@
     <div class="container">
         <nav class="Navigation__top row">
             <!-- <h1 class="logo"><a class="white" href="/">BabyStar</a></h1> -->
-            <h1 class="logo hidden-sm hidden-xs"><a href="/"><img src="/assets/common/logo.png"></a></h1>
+            <h1 class="logo"><a href="/"><img src="/assets/common/logo.png"></a></h1>
             <div class="Navigation__search">
                     {!!Form::open(['method'=>'GET', 'route'=>'search_path', 'class'=>'form-inline'])!!}
                     {!!Form::input('search', 'q', null, ['placeholder' => 'Хайх', 'class'=>'simplebox', 'autofocus'])!!}
                     <i><span class="glyphicon glyphicon-search" aria-hidden="true"></span></i>
                     {!!Form::close()!!}   
             </div>
-            <ul class="Navigation__account nav hidden-xs">
+            <ul class="Navigation__account nav">
             @if( $currentUser)
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ $currentUser->name }} <span class="caret"></span></a>
