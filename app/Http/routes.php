@@ -169,7 +169,7 @@ Route::get('/downloads/anket', function(){
 });
 Route::get('/odun/{id}', [
     'as' => 'odun_menu_path',
-    'uses' => 'WelcomeController@odun_show'
+    'uses' => 'OdunController@odun_show'
 ]);
 // Route::get('/home', 'HomeController@index');
 
