@@ -3,6 +3,10 @@ p, ul{
 }
 body{
 color: #555;
+min-width: 900px;
+}
+.container{
+  min-width: 900px;
 }
 .simpleCart_shelfItem{margin-top: 20px;}
 .quick-access {
