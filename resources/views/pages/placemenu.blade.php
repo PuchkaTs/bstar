@@ -63,23 +63,32 @@
                                 </div>
                             @endif                            
                             @if($placeMenu->deep > 2)
-                                @foreach($placeMenu->placeTypes->chunk(3) as $fourtype)
-                                    <div class="row">
-                                    @foreach($fourtype as $type)
-                                    <section class="col-md-4 col-xs-6">
-                                        <div class="product-card">
+                                @foreach($placeMenu->placeTypes as $type)
+                                <div class="menu-list">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <h3>{{$type->name}}</h3>
+                                                
+                                            </div>
+                                        </div>
+                                        @foreach($type->places->chunk(3) as $fourtype)
+                                            <div class="row">
+                                            @foreach($fourtype as $company)
+                                            <section class="col-md-4 col-xs-6">
+                                                <div class="product-card store-card">
 
-                                            <h3>{{$type->name}}</h3>
-                                            @foreach($type->places as $place)
-
-                                                <h5>{!! link_to_route('place_path', $place->name, $place->url)!!}</h5>
-
+                                                    <div class="company-logo">
+                                                        <a href="{{ route('place_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
+                                                    <h3>{{$company->name}}</h3>
+                                                    <h5>{!! link_to_route('place_path', $company->shorten(), $company->url)!!}</h5>
+                                                </div>                                            
+                                            </section>
                                             @endforeach
-                                        </div>                                            
-
-                                    </section>
-                                    @endforeach
+                                            </div>
+                                        @endforeach                                           
                                     </div>
+                                </div>
                                 @endforeach
                             @endif
                             </div>
