@@ -609,6 +609,7 @@ input[type=search]+i {
     margin-bottom: 4em;
 }
 img.promotion{
+    width: 100%;
     margin-bottom: 10px;
 }
 .filter_item{
