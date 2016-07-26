@@ -2,8 +2,10 @@
 @inject('gallery', 'App\Gallery')
 @if($gallery->where('position',3)->first())
 <h1>{{$gallery->where('position',3)->first()->name}}</h1>
-
-    <div class="best-container swiper-container">
+<div>
+    <a class="arrow-left" id="best-arrow-left" href="#"></a> 
+    <a class="arrow-right" id="best-arrow-right" href="#"></a>
+    <div class="best-container">
             <div class="swiper-wrapper left1px">
                 @foreach($gallery->getListForBest() as $product)
                 <div class="swiper-slide simpleCart_shelfItem">
@@ -107,8 +109,10 @@
                 </div>
                    @endforeach
             </div>
-            <!-- Add Pagination -->
-            <div class="subbanner-pagination"></div>
+
         </div>
+            <!-- Add Pagination -->
+    <div class="pagination" id="best-pagination"></div>        
+</div>        
 @endif        
 </div>

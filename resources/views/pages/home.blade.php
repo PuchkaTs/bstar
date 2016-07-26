@@ -30,11 +30,11 @@
       calculateHeight: true,
 
     })
-    $('.arrow-left').on('click', function(e){
+    $('#arrow-left').on('click', function(e){
       e.preventDefault()
       mySwiper.swipePrev()
     })
-    $('.arrow-right').on('click', function(e){
+    $('#arrow-right').on('click', function(e){
       e.preventDefault()
       mySwiper.swipeNext()
     })
@@ -47,7 +47,7 @@
         calculateHeight: true,
         slidesPerView: 4,
     });
-    var swiper = new Swiper('.ontslog-container', {
+    var specialswiper = new Swiper('.ontslog-container', {
         pagination: false,
         paginationClickable: true,
         spaceBetween: 30,
@@ -56,7 +56,18 @@
         calculateHeight: true,
         slidesPerView: 4,
     });
-    var swiper = new Swiper('.best-container', {
+
+    $('#special-arrow-left').on('click', function(e){
+      e.preventDefault()
+      specialswiper.swipePrev()
+    })
+
+    $('#special-arrow-right').on('click', function(e){
+      e.preventDefault()
+      specialswiper.swipeNext()
+    })     
+
+    var bestswiper = new Swiper('.best-container', {
         pagination: false,
         paginationClickable: true,
         spaceBetween: 30,
@@ -65,6 +76,14 @@
         calculateHeight: true,
         slidesPerView: 4,
     });
+    $('#best-arrow-left').on('click', function(e){
+      e.preventDefault()
+      bestswiper.swipePrev()
+    })
+    $('#best-arrow-right').on('click', function(e){
+      e.preventDefault()
+      bestswiper.swipeNext()
+    })    
     </script>
     <script>
       simpleCart({

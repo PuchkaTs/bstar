@@ -1,8 +1,9 @@
-<div class="subbanner hidden-xs">
+<div class="subbanner  hidden-xs">
 @inject('gallery', 'App\Gallery')
 @if($gallery->where('position',2)->first())
 <h1>{{$gallery->where('position',2)->first()->name}}</h1>
-
+    <a class="arrow-left" id="special-arrow-left" href="#"></a> 
+    <a class="arrow-right" id="special-arrow-right" href="#"></a>
     <div class="ontslog-container swiper-container">
             <div class="swiper-wrapper left1px">
                 @foreach($gallery->getListForSpecial() as $product)
@@ -104,8 +105,8 @@
                 </div>
                    @endforeach
             </div>
-            <!-- Add Pagination -->
-            <div class="subbanner-pagination"></div>
         </div>
+            <!-- Add Pagination -->
+    <div class="pagination" id="special-pagination"></div>         
 @endif
 </div>
