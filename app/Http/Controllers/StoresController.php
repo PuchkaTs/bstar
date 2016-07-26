@@ -59,7 +59,7 @@ class StoresController extends Controller
 
         $menuName = $placeMenu->name;
 
-        $paginate = false;
+        $AZ = false;
 
         $companies = $placeMenu->places;
 
@@ -69,12 +69,12 @@ class StoresController extends Controller
 
             $companies = Place::orderBy('name', 'asc')->paginate(50);
 
-            $paginate = 'true';
+            $AZ = 'true';
 
-            return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'companies' ,'paginate', 'placeMenus'));
+            return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'companies' ,'AZ', 'placeMenus'));
 
         }        
 
-        return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'paginate', 'companies', 'placeMenus'));
+        return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'AZ', 'companies', 'placeMenus'));
     }       
 }

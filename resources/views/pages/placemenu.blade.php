@@ -89,10 +89,11 @@
                                         @endforeach                                           
                                     </div>
                                 </div>
-                                @endforeach
+                                @endforeach                                 
                             @endif
                             </div>
-                            @if($paginate)
+                            
+                            @if($AZ)
                                 <div class="textcenter">
                                 {!! $companies->links() !!}                                
                                 </div>  
