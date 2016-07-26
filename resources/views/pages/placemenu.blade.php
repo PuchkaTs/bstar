@@ -25,7 +25,7 @@
                             <div class="menu-list">
                             @if($placeMenu->deep == 1)
                                 <div class="menu-list">
-                                @foreach($placeMenu->places->chunk(3) as $fourtype)
+                                @foreach($companies->chunk(3) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $company)
                                     <section class="col-md-4 col-xs-6">
@@ -83,6 +83,11 @@
                                 @endforeach
                             @endif
                             </div>
+                            @if($paginate)
+                                <div class="textcenter">
+                                {!! $companies->links() !!}                                
+                                </div>  
+                            @endif                            
                             @include('layouts.partials.middlebanner')
                             @include('layouts.partials.reklam')
                             @include('layouts.partials.bottombanner')                                

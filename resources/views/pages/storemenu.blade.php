@@ -22,7 +22,7 @@
                         <h1>{{$menuName}}</h1>
                         @include('layouts.partials.topbanner')
                             <div class="menu-list">
-                            @foreach($companyType->companies->chunk(4) as $fourtype)
+                            @foreach($companies->chunk(3) as $fourtype)
                                 <div class="row">
                                 @foreach($fourtype as $company)
                                 <section class="col-md-4 col-xs-6">
@@ -37,6 +37,11 @@
                                 </div>
                             @endforeach
                             </div>
+                            @if($companies->links())
+                                <div class="textcenter">
+                                {!! $companies->links() !!}                                
+                                </div>  
+                            @endif
                             @include('layouts.partials.middlebanner')
                             @include('layouts.partials.reklam')
                             @include('layouts.partials.bottombanner')                            

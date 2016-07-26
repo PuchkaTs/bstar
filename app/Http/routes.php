@@ -48,7 +48,7 @@ Route::get('/stores/{companyUrl}', [
 
 Route::get('/stores-type/{id}', [
     'as' => 'store_type_path',
-    'uses'=>'WelcomeController@store_type'
+    'uses'=>'StoresController@store_type'
 ]);
 Route::get('/news', [
     'as' => 'news_path',
@@ -84,7 +84,7 @@ Route::get('/places/{companyUrl}', [
 ]);
 Route::get('/places-in-menu/{id}', [
     'as'=>'place_menu_path',
-    'uses'=>'WelcomeController@place_menu'
+    'uses'=>'StoresController@place_menu'
 ]);
 Route::get('/places-in-type/{id}', [
     'as'=>'placeSubType_path',
