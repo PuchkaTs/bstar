@@ -1,5 +1,6 @@
 @inject('pmenus', 'App\ProductMenu')
 @inject('placemenus', 'App\PlaceMenu')
+@inject('Odun', 'App\Odun')
 <div class="headercenter">
     <div class="main"></div>
 </div>
@@ -185,10 +186,19 @@
                         <li id="navbar-link--work" class="news">
                             <a class="navbar-link" href="/news">Мэдээлэл & Зөвлөгөө</a>
                         </li>
-                         <!-- zuvluguu  clas recomend-->
-                        <li id="navbar-link--work" class="recomend">
-                            <a class="navbar-link" href="/content/odun">Одун</a>
-                        </li>                         
+                        <!-- Oduni tses -->
+                        <li class="dropdown recomend">
+                            <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown">
+                                Одун  <b class="caret"></b>
+                            </a>
+
+                            <ul class="dropdown-menu ">
+                                @foreach( $Odun->getListForMenu() as $menu)
+                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}">{{$menu->url}}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </li>                        
                         <!-- BLog -->
                         <li id="navbar-link--work" class="blog">
                             <a class="navbar-link" href="/blogs">Блог</a>

@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Products',
-    'single' => 'Product',
+    'title' => 'Бүтээгдэхүүн',
+    'single' => 'Бүтээгдэхүүн',
     'model' => 'App\Product',
     /**
      * The display columns

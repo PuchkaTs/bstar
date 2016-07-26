@@ -167,6 +167,10 @@ Route::get('/career', [
 Route::get('/downloads/anket', function(){
     return response()->file('./assets/common/anket.docx');
 });
+Route::get('/odun/{id}', [
+    'as' => 'odun_menu_path',
+    'uses' => 'WelcomeController@odun_show'
+]);
 // Route::get('/home', 'HomeController@index');
 
 /**

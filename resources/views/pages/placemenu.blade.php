@@ -48,7 +48,7 @@
                                         <div class="row">
                                         @foreach($fourtype as $company)
                                         <section class="col-md-4 col-xs-6">
-                                            <div class="product-card">
+                                            <div class="product-card store-card">
 
                                                 <div class="company-logo">
                                                     <a href="{{ route('place_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>

@@ -80,6 +80,7 @@ return array(
         'articles',
         'promotions',
         'messages',
+        'oduns',
 
     ),
 

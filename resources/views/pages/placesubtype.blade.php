@@ -9,7 +9,7 @@
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($placeType->placeSubTypes as $type)
-                        <li class="list-group-item">{{$type->name}}</li>
+                        <li class="list-group-item">{!! link_to_route('placeSubType_path', $type->name, $type->id)!!}</li>
                         @endforeach     
                     </ul>                                                                                   
                 </section>
@@ -26,7 +26,7 @@
                                     <div class="row">
                                     @foreach($fourtype as $company)
                                     <section class="col-md-4 col-xs-6">
-                                        <div class="product-card">
+                                        <div class="product-card store-card">
                                             <div class="company-logo">
                                                 <a href="{{ route('place_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
                                             <h3>{{$company->name}}</h3>
