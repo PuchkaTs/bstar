@@ -13,6 +13,7 @@ use App\Order;
 use App\Place;
 use App\PlaceMenu;
 use App\PlaceSubType;
+use App\PlaceType;
 use App\Product;
 use App\ProductMenu;
 use App\ProductSubType;
@@ -127,18 +128,7 @@ class WelcomeController extends Controller
 
 		return view('pages.store')->with(compact('company', 'products'));
 	}
-
-	public function store_type($id)
-	{
-
-		$companyType = CompanyType::with('companies')->find($id);
-
-		$companyTypes = CompanyType::orderBy('position', 'asc')->get();
-
-		$menuName = $companyType->name;
-
-		return view('pages.storemenu')->with(compact('companyType', 'companyTypes', 'menuName', 'ages'));
-	}	
+	
 
 	public function place_show($companyUrl)
 	{
@@ -148,22 +138,12 @@ class WelcomeController extends Controller
 		return view('pages.place')->with(compact('place'));
 	}	
 
-	public function place_menu($id)
-	{
-
-        $placeMenu = PlaceMenu::with('placeTypes.places')->find($id);
-
-        $menuName = $placeMenu->name;
-
-		return view('pages.placemenu')->with(compact('placeMenu', 'menuName'));
-	}	
-
 	public function place_subtype($id)
 	{
 
         $placeSubType = PlaceSubType::with('places')->find($id);
 
-        $placeType = $placeSubType->placeType->with('placeSubTypes')->first();
+        $placeType = PlaceType::where('id', '=', $placeSubType->placetype_id)->with('placeSubTypes')->first();
 
         $menuName = $placeSubType->name;
 
