@@ -611,7 +611,7 @@ p.subdate {
   top: 0px;
   left: 100%;
   z-index: 1000;
-  min-width: 900px;
+  min-width: 700px;
   min-height: 500px;
   padding: 20px;
   margin: 1px 0 0;
@@ -627,7 +627,9 @@ p.subdate {
     list-style: none; }
 .secondary-nav .flipside-menu li > a {
   border-bottom: 0px solid #dedede; }
-
+.width900{
+  width: 900px;
+}
 .companyType {
   font-weight: 500;
   float: left;
