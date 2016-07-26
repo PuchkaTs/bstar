@@ -63,16 +63,18 @@ class StoresController extends Controller
 
         $companies = $placeMenu->places;
 
+        $placeMenus = PlaceMenu::orderBy('position', 'asc')->get();
+
         if(PlaceMenu::where('name', 'LIKE', '%A-Z%')->first()->id == $placeMenu->id){
 
             $companies = Place::orderBy('name', 'asc')->paginate(50);
 
             $paginate = 'true';
 
-            return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'companies' ,'paginate'));
+            return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'companies' ,'paginate', 'placeMenus'));
 
         }        
 
-        return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'paginate', 'companies'));
+        return view('pages.placemenu')->with(compact('placeMenu', 'menuName', 'paginate', 'companies', 'placeMenus'));
     }       
 }

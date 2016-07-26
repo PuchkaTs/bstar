@@ -9,8 +9,8 @@
                 <section class="card" style="margin-top:90px;">
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
-                        @foreach($placeMenu->placeTypes as $type)
-                        <li class="list-group-item">{{$type->name}}</li>
+                        @foreach($placeMenus as $menu)
+                        <li class="list-group-item">{!! link_to_route('place_menu_path', $menu->name, $menu->id)!!}</li>
                         @endforeach     
                     </ul>                                                                                   
                 </section>
