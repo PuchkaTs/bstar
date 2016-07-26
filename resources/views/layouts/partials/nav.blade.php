@@ -149,7 +149,7 @@
                                     <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                         <div class="flipside-menu">
                                             <div class="row">
-                                                 <ul class="col-md-9">
+                                                 <ul class="col-md-8">
                                                  @foreach($menu->placeTypes->chunk(2) as $items)
                                                     <div class="row">                                             
                                                     @foreach($items as $type)
@@ -164,7 +164,7 @@
                                                     </div>
                                                     @endforeach                                                
                                                  </ul>
-                                                 <section class="col-md-3">
+                                                 <section class="col-md-4">
                                                     <div class="row">
                                                         <div class="col-md-12 zeroed">
                                                             @foreach($menu->promotions as $promotion)
