@@ -55,7 +55,9 @@ class StoresController extends Controller
     public function place_menu($id)
     {
 
-        $placeMenu = PlaceMenu::with('placeTypes.places')->find($id);
+        $placeMenu = PlaceMenu::with(['places'=>function($query){
+            $query->orderBy('position', 'asc');
+        }])->find($id);
 
         $menuName = $placeMenu->name;
 
