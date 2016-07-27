@@ -205,7 +205,7 @@
 
                             <ul class="dropdown-menu ">
                                 @foreach( $Odun->getListForMenu() as $menu)
-                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}" style="color:white;">{{$menu->url}}</a>
+                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}">{{$menu->url}}</a>
                                     </li>
                                 @endforeach
                             </ul>
