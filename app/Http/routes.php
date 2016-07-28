@@ -50,6 +50,14 @@ Route::get('/stores-type/{id}', [
     'as' => 'store_type_path',
     'uses'=>'StoresController@store_type'
 ]);
+Route::get('/stores-in-menu/{id}', [
+    'as'=>'company_menu_path',
+    'uses'=>'StoresController@place_menu'
+]);
+Route::get('/stores-in-type/{id}', [
+    'as'=>'companySubType_path',
+    'uses'=>'WelcomeController@place_subtype'
+]);
 Route::get('/news', [
     'as' => 'news_path',
     'uses'=>'NewsController@index'

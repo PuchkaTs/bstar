@@ -12,11 +12,21 @@ return array(
     'columns' => array(
         'id',
         'name',
+        'companyMenu' => array(
+            'title' => 'Цэс',
+            'relationship' => 'companyMenu',
+            'select' => '(:table).name',
+        ),           
         'companyType' => array(
             'title' => 'Type',
             'relationship' => 'companyType',
             'select' => '(:table).name',
         ),
+        'companySubType' => array(
+            'title' => 'Дэд төрөл',
+            'relationship' => 'companySubType',
+            'select' => '(:table).name',
+        ),         
         'position',
     ),
     /**
@@ -28,11 +38,21 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
+        'companyMenu' => array(
+            'type' => 'relationship',
+            'title' => 'Цэс',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),         
         'companyType' => array(
             'type' => 'relationship',
-            'title' => 'Type',
+            'title' => 'Төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
-        )
+        ),
+        'companySubType' => array(
+            'type' => 'relationship',
+            'title' => 'Дэд төрөл',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        )        
     ),
     /**
      * The editable fields
@@ -50,9 +70,19 @@ return array(
             'title' => 'URL:',
             'type' => 'text',
         ),
+        'companyMenu' => array(
+            'type' => 'relationship',
+            'title' => 'Цэс',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),
         'companyType' => array(
             'type' => 'relationship',
-            'title' => 'Type',
+            'title' => 'Төрөл',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),
+        'companySubType' => array(
+            'type' => 'relationship',
+            'title' => 'Дэд төрөл',
             'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
         ),
         'owner' => array(

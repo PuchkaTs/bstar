@@ -3,21 +3,21 @@
  * User model config
  */
 return array(
-    'title' => 'Company Type',
-    'single' => 'Company Type',
-    'model' => 'App\CompanyType',
+    'title' => 'Компаний дэд төрөл',
+    'single' => 'Компаний дэд төрөл',
+    'model' => 'App\CompanySubType',
     /**
      * The display columns
      */
     'columns' => array(
         'id',
         'name',
-        'menu' => array(
-            'title' => 'In menu',
-            'relationship' => 'menu',
+        'companytype' => array(
+            'title' => 'ямар төрөлд хамаарах',
+            'relationship' => 'companytype',
             'select' => '(:table).name',
-        ),        
-        'comp_number',
+        ),
+        'company_number',
     ),
     /**
      * The filter set
@@ -27,31 +27,31 @@ return array(
             'title' => 'name',
             'type'  => 'text',
         ),
-        'menu' => array(
+        'companytype' => array(
             'type' => 'relationship',
-            'title' => 'In menu',
+            'title' => 'ямар төрөлд хамаарах',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
-        )        
+        )
     ),
     /**
      * The editable fields
      */
     'edit_fields' => array(
         'name' => array(
-            'title' => 'Name:',
+            'title' => 'Нэр',
             'type' => 'text',
         ),
         'position' => array(
-            'title' => 'Position:',
+            'title' => 'Байрлал',
             'type' => 'number',
         ),
-        'menu' => array(
+        'companytype' => array(
             'type' => 'relationship',
-            'title' => 'In menu',
+            'title' => 'ямар төрөлд хамаарах',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
-        ),        
-        'comp_number' => array(
-            'title' => 'how many companies to show',
+        ),
+        'company_number' => array(
+            'title' => 'Хэр олон Ү-Газар харуулах',
             'type' => 'number',
         ),
 

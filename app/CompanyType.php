@@ -18,9 +18,14 @@ class CompanyType extends Model {
      */
     protected $fillable = ['name', 'position', 'comp_number'];
 
+
     public function menu(){
         return $this->belongsTo('App\Menu');
     }
+
+    public function companySubTypes(){
+        return $this->hasMany('App\CompanySubType', 'companytype_id');
+    } 
 
     public function companies(){
         return $this->hasMany('App\Company', 'companyType_id');
@@ -39,4 +44,17 @@ class CompanyType extends Model {
         }
         return $listedCompanies;
     }
+    public function subTypesInMenu(){
+        $listedSubTypes = '';
+        $count = 0;
+        $limit = $this->comp_number;
+        foreach ($this->companySubTypes as $subtype){
+            $listedSubTypes .= '<li class="">' .  link_to_route('companySubType_path', $subtype->name, $subtype->id) . '</li>';
+            $count++;
+            if ($count == $limit) {
+                break;
+            }
+        }
+        return $listedSubTypes;
+    }     
 }

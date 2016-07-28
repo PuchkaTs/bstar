@@ -23,6 +23,13 @@ class Company extends Model {
         return $this->belongsTo('App\CompanyType', 'companyType_id');
     }
 
+    public function companySubType(){
+        return $this->belongsTo('App\CompanySubType', 'companysubtype_id');
+    }
+
+    public function companyMenu(){
+        return $this->belongsTo('App\Menu', 'menu_id');
+    }
     public function owner(){
         return $this->belongsTo('App\User', 'user_id');
     }
