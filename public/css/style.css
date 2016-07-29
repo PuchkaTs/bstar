@@ -634,5 +634,8 @@ li.menu-new>a:hover {
 .service-condition{
     height:300px; overflow:scroll; background:white; padding:20px; margin-bottom:20px;
 }
+.justify{
+    text-align: justify;
+}
 .grow { transition: all .2s ease-in-out; }
 .grow-small { transform: scale(0.5); }

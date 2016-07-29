@@ -14,7 +14,7 @@
     <h1 class="">{{$place->name}}</h1>    
     <div class="row">
                 <div class="col-md-12">
-                    <article>
+                    <article class="justify">
                         {!!$place->about!!}
                     </article>
                      

@@ -14,7 +14,7 @@
         <h1>{{$company->name}}</h1>
             <div class="row">
                 <div class="col-md-12">
-                    <article>{!! $company->about!!}</article>
+                    <article class="justify">{!! $company->about!!}</article>
                 </div>
             </div>
             <div class="row">
