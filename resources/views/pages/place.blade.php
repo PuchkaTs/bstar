@@ -2,6 +2,8 @@
 
 @section('body')
 <div style="z-index: 2;">
+    <div class="" style="background-color: white;">
+        <div class="container">
     <div class="company_header">
         <div class="company_cover">
             @if($place->cover)
@@ -9,22 +11,18 @@
             @endif()
         </div>
     </div>
-    <div class="row" style="background-color: white;">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                        <div class="placeholder50"></div>
-                        <h1 class="">{{$place->name}}</h1>
+    <h1 class="">{{$place->name}}</h1>    
+    <div class="row">
+                <div class="col-md-12">
                     <article>
                         {!!$place->about!!}
                     </article>
+                     
+                </div> 
+    </div>
                             @include('layouts.partials.middlebanner')
-                            @include('layouts.partials.bottombanner')                      
-                </div>
-
-            </div>             
-        </div>
+                            @include('layouts.partials.bottombanner') 
+    </div>
     </div>
 </div>
 
