@@ -52,11 +52,11 @@ Route::get('/stores-type/{id}', [
 ]);
 Route::get('/stores-in-menu/{id}', [
     'as'=>'company_menu_path',
-    'uses'=>'StoresController@place_menu'
+    'uses'=>'StoresController@store_menu'
 ]);
 Route::get('/stores-in-type/{id}', [
     'as'=>'companySubType_path',
-    'uses'=>'WelcomeController@place_subtype'
+    'uses'=>'StoresController@store_subtype'
 ]);
 Route::get('/news', [
     'as' => 'news_path',
