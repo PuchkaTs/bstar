@@ -665,7 +665,7 @@ p.subdate {
   display: block;
   list-style: none; }
   .companyList li{
-    line-height: 2em;
+    margin-bottom: 1em;
   }
   .companyList li:hover{
     background-color: #b6e0b1;
