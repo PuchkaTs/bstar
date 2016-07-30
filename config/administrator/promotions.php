@@ -22,7 +22,7 @@ return array(
         'menus' => array(
             'relationship' => 'menus',
             'title' => 'Дэлгүүрийн цэсэнд',
-            'select' => '(:table).name', //what column or accessor on the other table you want to use to represent this object
+            'select' => "GROUP_CONCAT((:table).name SEPARATOR ', ')", //what column or accessor on the other table you want to use to represent this object
         ),
         'productmenus' => array(
             'relationship' => 'productmenus',
