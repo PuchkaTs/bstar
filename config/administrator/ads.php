@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Ads',
-    'single' => 'Ads',
+    'title' => 'Зар',
+    'single' => 'Зар',
     'model' => 'App\Ads',
     /**
      * The display columns

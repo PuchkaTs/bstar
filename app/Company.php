@@ -42,6 +42,10 @@ class Company extends Model {
         return $this->belongsTo('App\Map');
     }
 
+    public function images(){
+        return $this->hasMany('App\Companyimage', 'company_id');
+    }    
+
     public function shorten($num = 50){
 
         $string = strip_tags($this->about);

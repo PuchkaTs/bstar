@@ -3,9 +3,9 @@
  * User model config
  */
 return array(
-    'title' => 'Бүтээгдэхүүний зураг',
-    'single' => 'Бүтээгдэхүүний зураг',
-    'model' => 'App\Productimage',
+    'title' => 'Үйлчилгээний газрын зураг',
+    'single' => 'Үйлчилгээний газрын зураг',
+    'model' => 'App\Placeimage',
     /**
      * The display columns
      */
@@ -15,24 +15,21 @@ return array(
         'description',
         'image' => array(
             'title' => 'Image',
-            'output' => '<img src="/assets/products/(:value)" height="100" />',
+            'output' => '<img src="/assets/places/(:value)" height="100" />',
         ),
-        'product' => array(
-            'relationship' => 'product',
+        'place' => array(
+            'relationship' => 'place',
             'title' => 'Belongs to a project',
             'select' => '(:table).name', //what column or accessor on the other table you want to use to represent this object
         ),
         'position',
-        'color' => array(
-            'type' => 'bool',
-            'title' => 'Өнгө',
-        ),
+
     ),
     /**
      * The filter set
      */
     'filters' => array(
-        'product' => array(
+        'place' => array(
             'type' => 'relationship',
             'title' => 'belong to project',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
@@ -54,27 +51,23 @@ return array(
             'title' => 'Position',
             'type'  => 'number',
         ),
-        'product' => array(
+        'place' => array(
             'type' => 'relationship',
             'title' => 'Belongs to a project',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
-        ),
-        'color' => array(
-            'type' => 'bool',
-            'title' => 'Өнгө',
-        ),        
+        ),      
         'image' => array(
             'title' => 'Image 560x560',
             'type' => 'image',
-            'location' => public_path() . '/assets/products/',
+            'location' => public_path() . '/assets/places/',
             'naming' => 'random',
             'length' => 20,
             'size_limit' => 2,
             'sizes' => array(
 //                    array(65, 57, 'landscape', public_path() . '/assets/banner/thumbs/small/', 100),
-//                    array(220, 138, 'fit', public_path() . '/assets/products/thumbs/medium/', 100),
-                array(560, 560, 'crop', public_path() . '/assets/products/', 100),
-                array(100, 100, 'crop', public_path() . '/assets/products/100x100/', 100)
+//                    array(220, 138, 'fit', public_path() . '/assets/places/thumbs/medium/', 100),
+                array(560, 560, 'crop', public_path() . '/assets/places/', 100),
+                array(100, 100, 'crop', public_path() . '/assets/places/100x100/', 100)
             )
         )
     ),

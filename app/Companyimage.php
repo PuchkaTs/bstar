@@ -1,15 +1,17 @@
-<?php namespace App;
+<?php
+
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\File;
 
-class Productimage extends Model {
+class Companyimage extends Model
+{
+    protected $table = 'companyimages';
+    protected $fillable = ['name', 'description', 'image'];
 
-    protected $table = 'productimages';
-    protected $fillable = ['name', 'description', 'image', 'color'];
-
-    public function product(){
-        return $this->belongsTo('App\Product', 'product_id');
+    public function company(){
+        return $this->belongsTo('App\Company', 'company_id');
     }
 
 // remove files
@@ -20,11 +22,9 @@ class Productimage extends Model {
 
         if ($newphoto != $file_name){
 
-            $filepath = "assets/products/" . $file_name;
+            $filepath = "assets/stores/" . $file_name;
 
-    		$filepath_thumb = "assets/products/100x100/" . $file_name;
-
-    		$filepath_thumb2 = "assets/products/thumbs/" . $file_name;
+    		$filepath_thumb = "assets/stores/100x100/" . $file_name;
 
             if (File::exists($filepath)){
 
@@ -35,12 +35,7 @@ class Productimage extends Model {
 
                 File::delete($filepath_thumb);
 
-            }    
-            if (File::exists($filepath_thumb2)){
-
-                File::delete($filepath_thumb2);
-
-            }                     
+            }            
         }
 
         return true;
@@ -92,5 +87,5 @@ class Productimage extends Model {
         }
 
         return $saved;
-    }
+    }     
 }

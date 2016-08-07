@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'News images',
-    'single' => 'News image',
+    'title' => 'Мэдээний зураг',
+    'single' => 'Мэдээний зураг',
     'model' => 'App\Newsimage',
     /**
      * The display columns

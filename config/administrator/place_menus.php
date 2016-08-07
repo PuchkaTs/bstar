@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'PlaceMenu',
-    'single' => 'PlaceMenu',
+    'title' => 'Газрын цэс',
+    'single' => 'Газрын цэс',
     'model' => 'App\PlaceMenu',
     /**
      * The display columns

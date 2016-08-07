@@ -3,8 +3,8 @@
  * Tag model config
  */
 return array(
-    'title' => 'Tags',
-    'single' => 'Tag',
+    'title' => 'Блог таг',
+    'single' => 'Блог таг',
     'model' => 'App\Tagpost',
     /**
      * The display columns

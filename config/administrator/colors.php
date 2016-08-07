@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Color',
-    'single' => 'Color',
+    'title' => 'Өнгө',
+    'single' => 'Өнгө',
     'model' => 'App\Color',
     /**
      * The display columns

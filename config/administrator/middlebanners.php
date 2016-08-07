@@ -3,8 +3,10 @@
  * User model config
  */
 return array(
-    'title' => 'Middle banner',
-    'single' => 'Middle banner',
+    'title' => 'Дунд баннер
+    ',
+    'single' => 'Дунд баннер
+    ',
     'model' => 'App\MiddleBanner',
     /**
      * The display columns

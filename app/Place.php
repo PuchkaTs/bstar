@@ -32,6 +32,10 @@ class Place extends Model
         return $this->belongsTo('App\User', 'user_id');
     }
 
+    public function images(){
+        return $this->hasMany('App\Placeimage', 'place_id');
+    }  
+
     // public function products(){
     //     return $this->hasMany('App\Product');
     // }

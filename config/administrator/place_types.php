@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Place Type',
-    'single' => 'Place Type',
+    'title' => 'Газрын төрөл',
+    'single' => 'Газрын төрөл',
     'model' => 'App\PlaceType',
     /**
      * The display columns

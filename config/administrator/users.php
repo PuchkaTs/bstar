@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Users',
-    'single' => 'User',
+    'title' => 'Хэрэглэгч',
+    'single' => 'Хэрэглэгч',
     'model' => 'App\User',
     /**
      * The display columns

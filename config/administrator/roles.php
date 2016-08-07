@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Roles',
-    'single' => 'Role',
+    'title' => 'Эрх',
+    'single' => 'Эрх',
     'model' => 'App\Role',
     /**
      * The display columns

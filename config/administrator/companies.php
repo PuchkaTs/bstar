@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Companies',
-    'single' => 'Company',
+    'title' => 'Компани',
+    'single' => 'Компани',
     'model' => 'App\Company',
     /**
      * The display columns

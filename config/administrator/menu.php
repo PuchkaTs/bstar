@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Menu',
-    'single' => 'Menu',
+    'title' => 'Дэлгүүрийн цэс',
+    'single' => 'Дэлгүүрийн цэс',
     'model' => 'App\Menu',
     /**
      * The display columns

@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Компаний дэд төрөл',
-    'single' => 'Компаний дэд төрөл',
+    'title' => 'Дэлгүүрийн дэд төрөл',
+    'single' => 'Дэлгүүрийн дэд төрөл',
     'model' => 'App\CompanySubType',
     /**
      * The display columns

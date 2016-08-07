@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Places',
-    'single' => 'Place',
+    'title' => 'Үйлчилгээний газар',
+    'single' => 'Үйлчилгээний газар',
     'model' => 'App\Place',
     /**
      * The display columns

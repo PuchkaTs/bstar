@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Sizes',
-    'single' => 'Size',
+    'title' => 'Хэмжээ',
+    'single' => 'Хэмжээ',
     'model' => 'App\Size',
     /**
      * The display columns

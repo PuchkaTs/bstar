@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Gallery',
-    'single' => 'Gallery',
+    'title' => 'Галлерей',
+    'single' => 'Галлерей',
     'model' => 'App\Gallery',
     /**
      * The display columns
