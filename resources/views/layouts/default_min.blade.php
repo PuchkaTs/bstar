@@ -50,6 +50,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 @yield('body')
 <div class="odun grow hidden-sm hidden-xs" v-bind:class="[growsmall]" ></div>
+<div class="narun grow hidden-sm hidden-xs" v-bind:class="[growsmall]" ></div>
 <!-- Page Content -->
 <div class="container">
   @yield('content')

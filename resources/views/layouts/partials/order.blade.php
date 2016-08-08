@@ -1,28 +1,6 @@
-<div>
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Хүргэлтийн нөхцөл</a></li>
-    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Буцаан олгох нөхцөл</a></li>
-    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Бараа захиалах заавар</a></li>
-  </ul>
-
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="home">
-      <article class="order">
-        <img src="/assets/common/nuhcul.jpg">
-      </article>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="profile">
-      <article class="order">
-        <img src="/assets/common/nuhcul2.png">
-      </article>      
-    </div>
-    <div role="tabpanel" class="tab-pane" id="messages">
-      <article class="order">
-        <img src="/assets/common/nuhcul.jpg">
-      </article>      
-    </div>
-  </div>
-
+<div class="row">  
+  <div class="col-md-4 padding5"><a href="/content/buy" class="btn btn-primary btn-sm btn-block" role="button">Хүргэлтийн нөхцөл</a></div> 
+  <div class="col-md-4 padding5"><a href="/content/return" class="btn btn-primary btn-sm btn-block" role="button">Буцаан олгох нөхцөл</a></div> 
+  <div class="col-md-4 padding5"><a href="#" class="btn btn-primary btn-sm btn-block" role="button">Бараа захиалах заавар</a></div> 
 </div>
+<div class="placeholder50"></div>

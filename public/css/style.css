@@ -509,10 +509,22 @@ input[type=search]+i {
 }
 .news-card{
 }
+.padding5{
+    padding: 5px;
+}
 .odun{
     position: fixed;
     bottom: 2em;
     background: transparent url('../assets/common/Odunsmile.png') no-repeat;
+    z-index: 999;
+    height: 300px;
+    width: 200px;
+}
+.narun{
+    position: fixed;
+    bottom: 2em;
+    right: 0em;
+    background: transparent url('../assets/common/Narunsmile.png') no-repeat;
     z-index: 999;
     height: 300px;
     width: 200px;
