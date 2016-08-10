@@ -25,14 +25,16 @@
                             </figcaption>
                         </article>                            
                         @else
-                        <article class="col-md-6">
-                            <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
-                            <figcaption>
-                                <h4>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
+                        <div class="col-md-6">
+                            <article >
+                                <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
+                                <figcaption>
+                                    <h4>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
 
-                                <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
-                            </figcaption>
-                        </article>
+                                    <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
+                                </figcaption>
+                            </article>                            
+                        </div>
                         @endif
                     @endforeach
                     <div style="text-align: center"></div>

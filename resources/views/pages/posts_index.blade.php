@@ -30,7 +30,8 @@
         <div class="row posts" id="" style="min-height: 500px">
             <div class="">
                             @foreach($posts as $aposts)
-                                <article class="col-md-6">
+                            <div class="col-md-6">
+                                <article class="">
                                     <div class="post-thumb">
                                         <a href="{{ route('post_show_path', $aposts->id) }}" >{!! Html::image("assets/posts/" . ($aposts->photo ? $aposts->photo : "1.jpg"), null, ['class'=>'width100']) !!}</a>
                                     </div>
@@ -39,8 +40,8 @@
 
                                         <div><p>{{ $aposts->shorten(100)}} {!! link_to_route('post_show_path', 'Дэлгэрэнгүй', $aposts->id, ['class' => 'more'])!!}</p></div>
                                     </figcaption>
-                                </article>
-
+                                </article>                                
+                            </div>
                             @endforeach
                             <div class="textcenter">
                                 {!! $posts->links() !!}         

@@ -14,37 +14,39 @@
             @endif()
         </div>
     </div>
-    <h1 class="">{{$place->name}}</h1>    
+    <div class="placeholder50"></div>
+     <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            @if($place->images()->count())
+                <div id="slider" class="flexslider">
+                    <ul class="slides">
+                        @foreach($place->images()->orderBy('position', 'asc')->get() as $image)
+                        <li>
+                            {!! Html::image("/assets/places/$image->image") !!}
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+                 <div id="carousel" class="flexslider">
+                    <ul class="slides">
+                        @foreach($place->images()->orderBy('position', 'asc')->get() as $image)
+                        <li>
+                            {!! Html::image("/assets/places/100x100/$image->image") !!}
+                        </li>
+                        @endforeach
+                    </ul>
+                 </div>
+            @endif()                             
+        </div>
+     </div>      
+    <h1 class="">{{$place->name}}</h1>  
+
     <div class="row">
                 <div class="col-md-12">
                     <article class="justify">
                         {!!$place->about!!}
                     </article>
-                    <div class="placeholder50"></div>
-                     <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                            @if($place->images()->count())
-                                <div id="slider" class="flexslider">
-                                    <ul class="slides">
-                                        @foreach($place->images()->orderBy('position', 'asc')->get() as $image)
-                                        <li>
-                                            {!! Html::image("/assets/places/$image->image") !!}
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                                 <div id="carousel" class="flexslider">
-                                    <ul class="slides">
-                                        @foreach($place->images()->orderBy('position', 'asc')->get() as $image)
-                                        <li>
-                                            {!! Html::image("/assets/places/100x100/$image->image") !!}
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                 </div>
-                            @endif()                             
-                        </div>
-                     </div>
+
                 </div> 
     </div>
                             @include('layouts.partials.middlebanner')

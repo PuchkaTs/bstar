@@ -57,7 +57,7 @@ return array(
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),      
         'image' => array(
-            'title' => 'Image 560x560',
+            'title' => 'Image 600x400',
             'type' => 'image',
             'location' => public_path() . '/assets/places/',
             'naming' => 'random',
@@ -66,7 +66,7 @@ return array(
             'sizes' => array(
 //                    array(65, 57, 'landscape', public_path() . '/assets/banner/thumbs/small/', 100),
 //                    array(220, 138, 'fit', public_path() . '/assets/places/thumbs/medium/', 100),
-                array(560, 560, 'crop', public_path() . '/assets/places/', 100),
+                array(600, 400, 'crop', public_path() . '/assets/places/', 100),
                 array(100, 100, 'crop', public_path() . '/assets/places/100x100/', 100)
             )
         )
