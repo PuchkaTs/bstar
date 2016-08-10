@@ -37,7 +37,7 @@
                                     <figcaption>
                                         <h4>{!! link_to_route('post_show_path', $aposts->title, $aposts->id)!!}</h4>
 
-                                        <div><p>{{ $aposts->shorten(100)}} {!! link_to_route('post_show_path', 'Read more', $aposts->id, ['class' => 'more'])!!}</p></div>
+                                        <div><p>{{ $aposts->shorten(100)}} {!! link_to_route('post_show_path', 'Дэлгэрэнгүй', $aposts->id, ['class' => 'more'])!!}</p></div>
                                     </figcaption>
                                 </article>
 
