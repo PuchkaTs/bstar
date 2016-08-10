@@ -5,7 +5,7 @@
 <div>
     <a class="arrow-left" id="best-arrow-left" href="#"></a> 
     <a class="arrow-right" id="best-arrow-right" href="#"></a>
-    <div class="best-container">
+    <div class="best-container swiper-container">
             <div class="swiper-wrapper left1px">
                 @foreach($gallery->getListForBest() as $product)
                 <div class="swiper-slide simpleCart_shelfItem">
