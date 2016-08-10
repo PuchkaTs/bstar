@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Image;
 use App\Content;
 use App\Http\Requests;
 use App\Post;
@@ -58,6 +59,7 @@ class NewsController extends Controller
 	    $this->validate($request, [
 	        'title' => 'required',
 	        'body' => 'required',
+            'photo' => 'required'
 
 	    ]);
 
@@ -66,6 +68,17 @@ class NewsController extends Controller
         $name = time() . $file->getClientOriginalName();
 
         $file->move('assets/posts', $name);
+
+        $imagepath = 'assets/posts/' . $name;
+
+        $img = Image::make($imagepath);
+
+        $img->resize(900, 500, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        })->save($imagepath);        
+
+
 
 		$post = Post::create($request->all());
 

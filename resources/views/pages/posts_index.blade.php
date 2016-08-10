@@ -27,14 +27,13 @@
         </section>        
     </div>
     <div class="col-md-9">
-
-
-
-        <div class="row" id="projects" style="min-height: 500px">
+        <div class="row posts" id="" style="min-height: 500px">
             <div class="">
                             @foreach($posts as $aposts)
                                 <article class="col-md-6">
-                                    <a href="{{ route('post_show_path', $aposts->id) }}" >{!! Html::image("assets/posts/" . ($aposts->photo ? $aposts->photo : "1.jpg"), null, ['class'=>'width100']) !!}</a>
+                                    <div class="post-thumb">
+                                        <a href="{{ route('post_show_path', $aposts->id) }}" >{!! Html::image("assets/posts/" . ($aposts->photo ? $aposts->photo : "1.jpg"), null, ['class'=>'width100']) !!}</a>
+                                    </div>
                                     <figcaption>
                                         <h4>{!! link_to_route('post_show_path', $aposts->title, $aposts->id)!!}</h4>
 

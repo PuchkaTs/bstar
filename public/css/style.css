@@ -499,6 +499,8 @@ input[type=search]+i {
     display: relative;
 }
 .store-title{
+    color: #008443;
+    font-weight: 400;
     height: 52px;
     overflow: hidden;
 }
@@ -651,3 +653,18 @@ li.menu-new>a:hover {
 }
 .grow { transition: all .2s ease-in-out; }
 .grow-small { transform: scale(0.5); }
+.post-thumb{
+    height: 250px;
+    overflow: hidden;
+}
+.posts article{
+    background-color: #fff;
+    min-height: 400px;
+    margin-bottom: 50px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+    border-radius: 1px;
+}
+.posts article {
+    padding: 15px;
+    padding-bottom: 20px;
+}
