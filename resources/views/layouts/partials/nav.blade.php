@@ -5,11 +5,13 @@
 <div class="headercenter">
     <div class="main"></div>
 </div>
+<div class="visible-xs xs_logo"><img src="/assets/common/logo.png"></div>
+
 <header class="mainheader">
     <div class="container">
         <nav class="Navigation__top row">
             <!-- <h1 class="logo"><a class="white" href="/">BabyStar</a></h1> -->
-            <h1 class="logo"><a href="/"><img src="/assets/common/logo.png"></a></h1>
+            <h1 class="logo hidden-xs"><a href="/"><img src="/assets/common/logo.png"></a></h1>
             <div class="Navigation__search hidden-xs">
                     {!!Form::open(['method'=>'GET', 'route'=>'search_path', 'class'=>'form-inline'])!!}
                     {!!Form::input('search', 'q', null, ['placeholder' => 'Хайх', 'class'=>'simplebox', 'autofocus'])!!}
@@ -52,7 +54,7 @@
                     <span class="icon-bar"></span>
                   </button>
                 </div>
-            <div class="flexcenter container">
+            <div class="flexcenter ">
 
                 <div id="navbar" class="collapse navbar-collapse">                
                     <ul class="zeroed secondary-nav--left">
@@ -303,7 +305,7 @@
             </div>
             </div>
 
-            <div class="flexcenter container">
+            <div class="flexcenter">
                 <ul class="zeroed secondary-nav--left black">
                     <!-- huuhdin burtgel -->
                     <li>
