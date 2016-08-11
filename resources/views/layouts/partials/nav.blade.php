@@ -206,7 +206,7 @@
                                     @endif
                                     @if($menu->deep == 2)
                                     <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
-                                        <div class="flipside-menu width900">
+                                        <div class="flipside-menu">
                                             <div class="row">
                                                  <ul class="col-md-9">
                                                  @foreach($menu->placeTypes->chunk(3) as $items)
