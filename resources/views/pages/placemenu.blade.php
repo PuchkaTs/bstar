@@ -43,7 +43,8 @@
                             @endif
                             @if($placeMenu->deep == 2)
                                 <div class="menu-list">
-                                @foreach($placeMenu->placeTypes as $type)                                
+                                @foreach($placeMenu->placeTypes as $type)     
+                                <h4>{{$type->name}}</h4>                          
                                     @foreach($type->places->chunk(3) as $fourtype)
                                         <div class="row">
                                         @foreach($fourtype as $company)

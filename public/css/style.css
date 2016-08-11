@@ -1,3 +1,6 @@
+h4 {
+    font-size: 16px;
+}
 .textcenter{
     text-align: center;
 }
@@ -667,4 +670,8 @@ li.menu-new>a:hover {
 .posts article {
     padding: 15px;
     padding-bottom: 20px;
+}
+.news-title a{
+    color: #008443;
+    font-weight: 400;
 }

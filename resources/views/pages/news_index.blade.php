@@ -19,7 +19,7 @@
                         <article class="col-md-12">
                             <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/$anews->photo", null, ['class'=>'width100']) !!}</a>
                             <figcaption>
-                                <h4>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
+                                <h4 class="news-title">{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
 
                                 <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
                             </figcaption>
@@ -29,7 +29,7 @@
                             <article >
                                 <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
                                 <figcaption>
-                                    <h4>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
+                                    <h4 class="news-title">{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h4>
 
                                     <div><p>{{ $anews->shorten(100)}} {!! link_to_route('news_show_path', 'Дэлгэрэнгүй ', $anews->id, ['class' => 'more'])!!}</p></div>
                                 </figcaption>
