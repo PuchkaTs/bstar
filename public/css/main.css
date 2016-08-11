@@ -451,10 +451,9 @@ a.none {
 .footer-contact {
   padding: 20px 0px; }
 .footer ul.social li{
+  padding: 1em;
   color: white;
   float: left;
-  height: 100px;
-  width: 50%;
 }
 ul.social .fa{
   color: white;
