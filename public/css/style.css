@@ -684,3 +684,8 @@ li.menu-new>a:hover {
 p{
     text-align: justify;
 }
+.article-title{
+    font-weight: 400;
+    color: #008443;
+    font-size: 1.5em;
+}

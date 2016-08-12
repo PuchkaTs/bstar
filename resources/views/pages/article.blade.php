@@ -6,12 +6,12 @@
 
 
         <div class="placeholder100 row" style="margin-top: 50px;">
-            <div class="col-md-8 col-lg-6">
+            <div class="">
                 <header>
                     @if($article)
                     <h3>{{ $article->title ? $article->title : 'Гарчиг' }}</h3>
                     @else
-                        <h3>Гарчиг</h3>
+                        <h3 class="article-title">Гарчиг</h3>
                     @endif
                 </header>
             </div>
