@@ -681,3 +681,6 @@ li.menu-new>a:hover {
 .video-container{
     text-align: center;
 }
+p{
+    text-align: justify;
+}
