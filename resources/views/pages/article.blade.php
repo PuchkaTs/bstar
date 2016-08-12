@@ -9,7 +9,7 @@
             <div class="">
                 <header>
                     @if($article)
-                    <h3>{{ $article->title ? $article->title : 'Гарчиг' }}</h3>
+                    <h3 class="article-title">{{ $article->title ? $article->title : 'Гарчиг' }}</h3>
                     @else
                         <h3 class="article-title">Гарчиг</h3>
                     @endif

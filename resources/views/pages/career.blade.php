@@ -9,9 +9,9 @@
             <div class="col-md-8 col-lg-6">
                 <header>
                     @if($article)
-                    <h3>{{ $article->title ? $article->title : 'Ажлын байр' }}</h3>
+                    <h3 class="article-title">{{ $article->title ? $article->title : 'Ажлын байр' }}</h3>
                     @else
-                        <h3>Гарчиг</h3>
+                        <h3 class="article-title">Гарчиг</h3>
                     @endif
                 </header>
             </div>
