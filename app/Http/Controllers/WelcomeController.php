@@ -17,6 +17,7 @@ use App\PlaceType;
 use App\Product;
 use App\ProductMenu;
 use App\ProductSubType;
+use App\ProductType;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -191,5 +192,18 @@ class WelcomeController extends Controller
 		$products = Product::where('new', true)->paginate(20);
 
 		return view('pages.search')->with(compact('products', 'title'));
-	}		
+	}	
+
+	public function type($id){
+
+		$productType = ProductType::with('subtypes')->find($id);
+
+		$productTypes = ProductType::where('productmenu_id', '=', $productType->productmenu_id)->get();
+
+		$menuName = $productType->productmenu->name;
+
+		$typeName = $productType->name;
+
+		return view('pages.type')->with(compact('productType', 'menuName', 'productTypes', 'typeName'));
+	}	
 }
