@@ -87,6 +87,7 @@ header.mainheader {
   display: flex;
   align-items: center;
   justify-content: center;
+-webkit-align-items: center; /* Safari 7.0+ */  
 }
 
 .secondary-nav .secondary-nav--left > li {
