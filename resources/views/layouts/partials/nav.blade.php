@@ -208,11 +208,11 @@
                                     <li class="side-menu"><a href="{{ route('place_menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                         <div class="flipside-menu">
                                             <div class="row">
-                                                 <ul class="col-md-9">
+                                                 <ul class="col-md-8">
                                                  @foreach($menu->placeTypes->chunk(3) as $items)
                                                     <div class="row">                                             
                                                     @foreach($items as $type)
-                                                            <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
+                                                            <li class="companyType col-md-6" style=""><h5>{{$type->name}}</h5>
                                                                 <ul class="companyList">
                                                                 {!! $type->placesInMenu()!!}
 
@@ -223,7 +223,7 @@
                                                     </div>
                                                     @endforeach                                                
                                                  </ul>
-                                                 <section class="col-md-3">
+                                                 <section class="col-md-4">
                                                     <div class="row">
                                                         <div class="col-md-12 zeroed">
                                                             @foreach($menu->promotions as $promotion)
