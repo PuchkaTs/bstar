@@ -6,7 +6,7 @@
 <div class="subbanner-container swiper-container">
         <div class="swiper-wrapper left1px">
             	@foreach($subbanner->getBanners() as $banner)
-                <div class="col-md-4">
+                <div class="col-md-4 flexcenter">
                     <li class="swiper-slide subbanner_item">
                         <div style="display:none" class="">{{route('product_path', $banner->id)}}</div>
                         <a class="" href="{{$banner->url}}" target="_blank">
