@@ -646,8 +646,8 @@ li.menu-new>a:hover {
     text-align: justify;
 }
 .grow { 
-    -webkit-transition: all .2s ease-in-out;     transform: scale(0.7);
-    transition: all .2s ease-in-out;     transform: scale(0.7);}
+    -webkit-transition: all .2s ease-in-out;     transform: scale(0.5);
+    transition: all .2s ease-in-out;     transform: scale(0.5);}
 .grow-small { 
     transform: scale(0.4); 
     -ms-transform: scale(0.4); /* IE 9 */
