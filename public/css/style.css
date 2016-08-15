@@ -645,8 +645,14 @@ li.menu-new>a:hover {
 .justify{
     text-align: justify;
 }
-.grow { transition: all .2s ease-in-out;     transform: scale(0.7);}
-.grow-small { transform: scale(0.4); }
+.grow { 
+    -webkit-transition: all .2s ease-in-out;     transform: scale(0.7);
+    transition: all .2s ease-in-out;     transform: scale(0.7);}
+.grow-small { 
+    transform: scale(0.4); 
+    -ms-transform: scale(0.4); /* IE 9 */
+    -webkit-transform: scale(0.4); /* Chrome, Safari, Opera */
+}
 .post-thumb{
     height: 250px;
     overflow: hidden;
