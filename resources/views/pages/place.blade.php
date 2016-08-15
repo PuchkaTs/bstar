@@ -26,7 +26,9 @@
                     </ul>
                 </div>
             @endif() 
-     </div>      
+     </div>  
+    <div class="placeholder50"></div>
+
     <h1 class="store-title">{{$place->name}}</h1>  
 
     <div class="row">
