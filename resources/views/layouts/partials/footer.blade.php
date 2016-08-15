@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container-fluid">
-        <div class="colororange">
+        <div class="colororange row">
             <div class="col-md-2 col-md-offset-1 col-sm-3 col-xs-6">
                 <h4><i class="fa fa-users" aria-hidden="true"></i>Бидний тухай</h4>
                 <ul>
@@ -77,18 +77,18 @@
                         <a href="/content/wishlist">Хүслийн жагсаалт</a>
                     </li>                  
                 </ul>
-            </div>        
+            </div>     
+            <div class="clearfix visible-xs-block visible-sm-block"></div>               
             <div class="col-md-2 col-sm-3" style="min-width:370px;">
                 <h4><i class="fa fa-share-alt" aria-hidden="true"></i>Холбоо</h4>
                 <ul class="social ">
-                    <li class="flexcenter"><a href="https://www.facebook.com/babystar.mn.mongolia" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                    <li class="flexcenter"><a href="https://twitter.com/BabyStarMn" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                    <li class="flexcenter"><a href="https://www.instagram.com/babystar.mn/" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
-                    <li class="flexcenter"><a href="https://www.instagram.com/babystar.mn/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                    <a href="https://www.facebook.com/babystar.mn.mongolia" target="_blank"><li class="flexcenter"><i class="fa fa-facebook-square" aria-hidden="true"></i></li></a>
+                    <a href="https://twitter.com/BabyStarMn" target="_blank"><li class="flexcenter"><i class="fa fa-twitter-square" aria-hidden="true"></i></li></a>
+                    <a href="https://www.instagram.com/babystar.mn/" target="_blank"><li class="flexcenter"><i class="fa fa-youtube-square" aria-hidden="true"></i></li></a>
+                    <a href="https://www.instagram.com/babystar.mn/" target="_blank"><li class="flexcenter"><i class="fa fa-instagram" aria-hidden="true"></i></li></a>
                 </ul>
-            </div>
-    
-        </div>
+            </div> 
+        </div>        
     </div>
 
     <div class="legalBanner flexcenter">

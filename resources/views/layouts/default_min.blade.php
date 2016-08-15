@@ -49,8 +49,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 @include('layouts.partials.nav')
 
 @yield('body')
-<div class="odun grow hidden-sm hidden-xs" v-bind:class="[growsmall]" ></div>
-<div class="narun grow hidden-sm hidden-xs" v-bind:class="[growsmall]" ></div>
+<div class="odun grow hidden-xs" v-bind:class="[growsmall]" ></div>
+<div class="narun grow hidden-xs" v-bind:class="[growsmall]" ></div>
 <!-- Page Content -->
 <div class="container">
   @yield('content')

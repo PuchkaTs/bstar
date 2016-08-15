@@ -489,19 +489,19 @@ ul.social .fa{
   color: white;
   font-size: 3em;
 }
-ul.social li:nth-child(3) .fa{
+ul.social a:nth-child(3) .fa{
   color: red;
 }
-ul.social li:nth-child(1) {
+ul.social a:nth-child(1) li{
     background: #3A579E;
 }
-ul.social li:nth-child(2) {
+ul.social a:nth-child(2) li{
     background: #22A9E0;
 }
-ul.social li:nth-child(3) {
+ul.social a:nth-child(3) li{
     background: #FFFFFF;
 }
-ul.social li:nth-child(4) {
+ul.social a:nth-child(4) li{
     background: #5380A4;
 }
 #copyright {

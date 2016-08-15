@@ -26,7 +26,7 @@
 				<div class="col-md-3 col-sm-6">
 	                <article>
 		                    <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
-		                    <figcaption class="height50">
+		                    <figcaption class="height60">
 		                        <h5>{!! link_to_route('news_show_path', $anews->shortenTitle(70), $anews->id)!!}</h5>
 		                    </figcaption>
 	                </article>
