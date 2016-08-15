@@ -646,8 +646,12 @@ li.menu-new>a:hover {
     text-align: justify;
 }
 .grow { 
-    -webkit-transition: all .2s ease-in-out;     transform: scale(0.5);
-    transition: all .2s ease-in-out;     transform: scale(0.5);}
+    -webkit-transition: all .2s ease-in-out;     
+    transition: all .2s ease-in-out;     
+    transform: scale(0.5);
+    -ms-transform: scale(0.5); /* IE 9 */
+    -webkit-transform: scale(0.5); /* Chrome, Safari, Opera */    
+}
 .grow-small { 
     transform: scale(0.4); 
     -ms-transform: scale(0.4); /* IE 9 */
