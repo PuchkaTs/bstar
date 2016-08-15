@@ -627,7 +627,6 @@ input[type=search]+i {
     margin-bottom: 4em;
 }
 img.promotion{
-    width: 100%;
     margin-bottom: 10px;
 }
 .filter_item{
@@ -675,6 +674,7 @@ li.menu-new>a:hover {
     font-weight: 400;
 }
 .xs_logo{
+    padding-top: 10px;
     background-color: white;
     text-align: center;
 }
@@ -690,6 +690,10 @@ p{
     font-size: 1.5em;
 }
 .height50{
-    height: 50;
+    height: 50px;
     overflow: hidden;
+}
+.visible-sm {
+    display: block !important;
+    visibility: visible !important;
 }
