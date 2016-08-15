@@ -23,7 +23,17 @@ class Content extends Model
 
         return $string;
 
-    }    
+    }   
+
+    public function shortenTitle($num = 100){
+
+        $string = strip_tags($this->title);
+
+        $string = str_limit($string, $limit = $num, $end = '...');
+
+        return $string;
+
+    }       
 
     public function allow_new_line(){
 

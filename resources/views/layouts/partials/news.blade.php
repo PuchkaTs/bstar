@@ -11,7 +11,7 @@
 	                <article style="margin-top:0px; min-height:295px;">
 	                    <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
 	                    <figcaption>
-	                        <h5>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h5>
+	                        <h5>{!! link_to_route('news_show_path', $anews->shortenTitle(), $anews->id)!!}</h5>
 	                    </figcaption>
 	                </article>
 	                </div>
@@ -26,8 +26,8 @@
 				<div class="col-md-3 col-sm-6">
 	                <article>
 		                    <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
-		                    <figcaption>
-		                        <h5>{!! link_to_route('news_show_path', $anews->title, $anews->id)!!}</h5>
+		                    <figcaption class="height50">
+		                        <h5>{!! link_to_route('news_show_path', $anews->shortenTitle(70), $anews->id)!!}</h5>
 		                    </figcaption>
 	                </article>
                 </div>
