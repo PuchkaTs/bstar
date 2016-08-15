@@ -14,32 +14,20 @@
             @endif()
         </div>
     </div>
-    <div class="placeholder50"></div>
      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
             @if($place->images()->count())
                 <div id="slider" class="flexslider">
                     <ul class="slides">
                         @foreach($place->images()->orderBy('position', 'asc')->get() as $image)
-                        <li>
+                        <li style="margin: 5px;">
                             {!! Html::image("/assets/places/$image->image") !!}
                         </li>
                         @endforeach
                     </ul>
                 </div>
-                 <div id="carousel" class="flexslider">
-                    <ul class="slides">
-                        @foreach($place->images()->orderBy('position', 'asc')->get() as $image)
-                        <li>
-                            {!! Html::image("/assets/places/100x100/$image->image") !!}
-                        </li>
-                        @endforeach
-                    </ul>
-                 </div>
-            @endif()                             
-        </div>
+            @endif() 
      </div>      
-    <h1 class="">{{$place->name}}</h1>  
+    <h1 class="store-title">{{$place->name}}</h1>  
 
     <div class="row">
                 <div class="col-md-12">
@@ -63,23 +51,11 @@
 <script>
 
 $(window).load(function() {
-  // The slider being synced must be initialized first
-  $('#carousel').flexslider({
+  $('.flexslider').flexslider({
     animation: "slide",
-    controlNav: false,
     animationLoop: false,
-    slideshow: false,
-    itemWidth: 100,
+    itemWidth: 400,
     itemMargin: 5,
-    asNavFor: '#slider'
-  });
-
-  $('#slider').flexslider({
-    animation: "slide",
-    controlNav: false,
-    animationLoop: false,
-    slideshow: false,
-    sync: "#carousel"
   });
 });
 
