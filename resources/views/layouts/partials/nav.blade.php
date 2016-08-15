@@ -3,7 +3,9 @@
 @inject('companymenus', 'App\Menu')
 @inject('Odun', 'App\Odun')
 <div class="headercenter">
-    <div class="main"></div>
+    <div class="main">
+        <img src="/assets/common/skyline02-bg2.png">
+    </div>
 </div>
 <div class="xs_logo"><img src="/assets/common/logo.png"></div>
 
