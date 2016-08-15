@@ -170,6 +170,7 @@ textarea.form-control:focus {
     text-align: center;
     overflow: hidden;
 }
+
 .headercenter{
   width: 100%;
   overflow: hidden;
@@ -206,7 +207,9 @@ textarea.form-control:focus {
   }
 }
 @media (max-width: 767px) {
-  
+  .company-logo img{
+  width: 100%;
+}
   .secondary-nav .secondary-nav--left li {
     width: 100%; }
   .secondary-nav .secondary-nav--right {
@@ -330,6 +333,9 @@ textarea.form-control:focus {
     height: auto; } }
 
 @media (min-width: 1100px) {
+  .company-logo img{
+  width: 100%;
+}  
 .headercenter .main img{
   width: 930px;
   position: relative;
