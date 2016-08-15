@@ -77,7 +77,8 @@
                         <a href="/content/wishlist">Хүслийн жагсаалт</a>
                     </li>                  
                 </ul>
-            </div>        <div class="col-md-2 col-sm-3">
+            </div>        
+            <div class="col-md-2 col-sm-3" style="min-width:370px;">
                 <h4><i class="fa fa-share-alt" aria-hidden="true"></i>Холбоо</h4>
                 <ul class="social ">
                     <li class="flexcenter"><a href="https://www.facebook.com/babystar.mn.mongolia" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>

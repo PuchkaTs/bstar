@@ -165,6 +165,14 @@ textarea.form-control:focus {
     overflow: hidden;
 }
 @media (max-width: 940px){
+.headercenter .main{
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    margin-left: -500px;
+    height: 199px;
+    background: url(../assets/common/skyline02-bg2.png) 50px 0px no-repeat;
+}    
   .company-logo{
     text-align: center;
 }  
@@ -306,6 +314,14 @@ textarea.form-control:focus {
     height: auto; } }
 
 @media (min-width: 1100px) {
+.headercenter .main{
+    position: absolute;
+    left: 50%;
+    width: 930px;
+    margin-left: -500px;
+    height: 199px;
+    background: url(../assets/common/skyline02-bg2.png) 50px 0px no-repeat;
+}  
   .company-logo{
     width: 100%;
     text-align: center;
