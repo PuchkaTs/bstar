@@ -80,6 +80,10 @@ header.mainheader {
   margin: 0 !important;
   padding: 0 !important; }
 .flexcenter{
+  display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;      /* TWEENER - IE 10 */
+  display: -webkit-flex;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,16 +172,21 @@ textarea.form-control:focus {
   width: 100%;
   overflow: hidden;
 }
-.headercenter .main{
+/*.headercenter .main{
     position: absolute;
     left: 50%;
-    width: 930;
+    width: 930px;
     margin-left: -465px;
     height: 199px;
     background: url(../assets/common/skyline02-bg2.png) 50px 0px no-repeat;
-}  
+} */ 
 @media (max-width: 940px){
-  
+.headercenter .main img{
+  width: 100%;
+  position: relative;
+  left: 50%;
+  margin-left: -50%;
+}  
   .company-logo{
     text-align: center;
 }  
@@ -319,6 +328,12 @@ textarea.form-control:focus {
     height: auto; } }
 
 @media (min-width: 1100px) {
+.headercenter .main img{
+  width: 930px;
+  position: relative;
+  left: 50%;
+  margin-left: -465px;
+}  
   .company-logo{
     width: 100%;
     text-align: center;

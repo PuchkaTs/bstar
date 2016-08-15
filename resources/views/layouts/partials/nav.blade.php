@@ -7,7 +7,7 @@
         <img src="/assets/common/skyline02-bg2.png">
     </div>
 </div>
-<div class="xs_logo"><img src="/assets/common/logo.png"></div>
+<div class="xs_logo"><a href="/"><img src="/assets/common/logo.png"></a></div>
 
 <header class="mainheader">
     <div class="container">
