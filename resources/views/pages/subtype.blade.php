@@ -5,8 +5,8 @@
     <div class="simpleCart_shelfItem">
      
         <div class="row">
-        <div class="row">
-                                    <h1>{{$subTypeName}}</h1>
+        <div class="col-md-12">
+                                    <h2>{{$subTypeName}}</h2>
         </div>
             <div class="col-md-3">
                 <section class="card">
