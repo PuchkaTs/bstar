@@ -17,19 +17,18 @@
             </div>
         </div>
         <div class="row" id="projects" style="min-height: 500px">
-            <div class="">
             @if($article)
-                <section class="row">
+                <section class="col-md-12">
                     <div class="articlephoto">
                         @if($article->photo)
                             {!! Html::image("assets/articles/$article->photo", '', ['class'=>''])!!}    
                         @endif     
                     </div>
                 </section>
-                <section class="row">
+                <section class="col-md-12">
                     {!!$article->body!!}
                 </section>
-                <section class="row">
+                <section class="col-md-12">
                     <div class="art_bottom_ph">
                         @if($article->photobottom)
                             {!! Html::image("assets/articles/$article->photobottom", '', ['class'=>''])!!}    
@@ -37,13 +36,13 @@
                     </div>
                 </section>
             @endif    
-            
+            <div class="col-md-12">
             <a href="/downloads/anket" class="btn btn-info"><i class="fa fa-cloud-download" aria-hidden="true" style="color:white;"></i>Анкет татах</a>
+                
+            </div>
 
             @include('layouts.partials.middlebanner')
             @include('layouts.partials.bottombanner')
-
-            </div>
 
         </div>        
     </div>

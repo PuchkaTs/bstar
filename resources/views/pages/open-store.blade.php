@@ -5,7 +5,7 @@
     <div class="col-md-6 col-md-offset-3">
 
 
-        <div class="placeholder100 row" style="margin-top: 50px;">
+        <div class="placeholder100" style="margin-top: 50px;">
             <div class="">
                 <header>
                     <h3>Бидэнтэй холбогдох</h3>
@@ -13,8 +13,7 @@
             </div>
         </div>
         <div class="row" id="projects" style="min-height: 500px">
-            <div class="">
-                <section class="row">
+                <section class="col-md-12">
                     <h4>Утас: 76103080</h4>
                     <h5>Ц-Шуудан: info@babystar.mn</h5>
                     <p>* хэсгийг заавал бөглөнө үү</p>
@@ -46,9 +45,6 @@
                     </div>
                 {!! Form::close() !!}
                 </section>          
-
-
-            </div>
 
         </div>  
             @include('layouts.partials.middlebanner')
