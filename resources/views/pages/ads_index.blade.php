@@ -4,6 +4,9 @@
 <div class="row" style="">
     <div class="col-md-3">
         <section class="card" style="margin-top:116px;">
+        <div class="margin-bottom30">
+            <a href="/createad" class="btn btn-primary  btn-block" role="button">Зар оруулах</a>
+        </div>        
             <h5 class="item_name">Ангилал:</h5>
             <ul class="list-group">
                 @foreach($adstags as $tag)
@@ -50,7 +53,6 @@
     <div class="col-md-9" id="ads" style="min-height: 500px">
         <header>
             <h3 style="padding:15px;">Үнэгүй зар</h3>
-            <a href="/createad" class="btn btn-primary pull-right" role="button">Зар оруулах</a>
         </header>
         <div class="col-md-10 ads-list">
 
