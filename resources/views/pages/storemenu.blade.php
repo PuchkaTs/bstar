@@ -25,8 +25,8 @@
                             <div class="menu-list">
                             @if($companyMenu->deep == 1)
                                 <div class="menu-list">
+                                <div class="row">
                                 @foreach($companies->chunk(3) as $fourtype)
-                                    <div class="row">
                                     @foreach($fourtype as $company)
                                     <section class="col-md-4 col-sm-6">
                                         <div class="product-card store-card">
@@ -37,15 +37,21 @@
                                         </div>                                            
                                     </section>
                                     @endforeach
-                                    </div>
-                                @endforeach
+                                @endforeach                                    
+                                </div>
+
                                 </div>
                             @endif
                             @if($companyMenu->deep == 2)
                                 <div class="menu-list">
-                                @foreach($companyMenu->companyTypes as $type)                                
+                                @foreach($companyMenu->companyTypes as $type)   
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4>{{$type->name}}</h4>                         
+                                    </div>
+                                </div> 
+                                <div class="row">
                                     @foreach($type->companies->chunk(3) as $fourtype)
-                                        <div class="row">
                                         @foreach($fourtype as $company)
                                         <section class="col-md-4 col-sm-6">
                                             <div class="product-card store-card">
@@ -57,23 +63,22 @@
                                             </div>                                            
                                         </section>
                                         @endforeach
-                                        </div>
                                     @endforeach
-                                @endforeach
+                                @endforeach                                    
+                                </div>                                                             
+
                                 </div>
                             @endif                            
                             @if($companyMenu->deep > 2)
                                 @foreach($companyMenu->companyTypes as $type)
                                 <div class="menu-list">
-                                    <div class="col-md-12">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h3>{{$type->name}}</h3>
-                                                
-                                            </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h4>{{$type->name}}</h4>                                        
                                         </div>
+                                    </div>
+                                    <div class="row">
                                         @foreach($type->companies->chunk(3) as $fourtype)
-                                            <div class="row">
                                             @foreach($fourtype as $company)
                                             <section class="col-md-4 col-sm-6">
                                                 <div class="product-card store-card">
@@ -85,9 +90,9 @@
                                                 </div>                                            
                                             </section>
                                             @endforeach
-                                            </div>
-                                        @endforeach                                           
+                                        @endforeach                                         
                                     </div>
+  
                                 </div>
                                 @endforeach                                 
                             @endif
