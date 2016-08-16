@@ -79,7 +79,7 @@
                 </ul>
             </div>     
             <div class="clearfix visible-xs-block visible-sm-block"></div>               
-            <div class="col-md-2 col-sm-3" style="min-width:370px;">
+            <div class="col-md-2 col-sm-3" style="min-width:320px;">
                 <h4><i class="fa fa-share-alt" aria-hidden="true"></i>Холбоо</h4>
                 <ul class="social ">
                     <a href="https://www.facebook.com/babystar.mn.mongolia" target="_blank"><li class="flexcenter"><i class="fa fa-facebook-square" aria-hidden="true"></i></li></a>
