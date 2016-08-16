@@ -5,7 +5,7 @@
     <div class="col-md-10 col-md-offset-1">
 
 
-        <div class="placeholder100 row" style="margin-top: 50px;">
+        <div class="placeholder100" style="margin-top: 50px;">
             <div class="">
                 <header>
                     @if($article)
@@ -16,8 +16,7 @@
                 </header>
             </div>
         </div>
-        <div class="row" id="projects" style="min-height: 500px">
-            <div class="">
+        <div class="" id="projects" style="min-height: 500px">
             @if($article)
                 <section class="row">
                     <div class="articlephoto">
@@ -27,7 +26,9 @@
                     </div>
                 </section>
                 <section class="row">
-                    {!!$article->body!!}
+                    <div class="col-md-12">
+                        {!!$article->body!!}
+                    </div>
                 </section>
                 <section class="row">
                     <div class="art_bottom_ph">
@@ -39,8 +40,6 @@
             @endif            
             @include('layouts.partials.middlebanner')
             @include('layouts.partials.bottombanner')
-
-            </div>
 
         </div>        
     </div>
