@@ -28,7 +28,7 @@
                                 @foreach($companies->chunk(3) as $fourtype)
                                     <div class="row">
                                     @foreach($fourtype as $company)
-                                    <section class="col-md-4 col-xs-6">
+                                    <section class="col-md-4 col-sm-6">
                                         <div class="product-card store-card">
                                             <div class="company-logo">
                                                 <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
@@ -47,7 +47,7 @@
                                     @foreach($type->companies->chunk(3) as $fourtype)
                                         <div class="row">
                                         @foreach($fourtype as $company)
-                                        <section class="col-md-4 col-xs-6">
+                                        <section class="col-md-4 col-sm-6">
                                             <div class="product-card store-card">
 
                                                 <div class="company-logo">
@@ -75,7 +75,7 @@
                                         @foreach($type->companies->chunk(3) as $fourtype)
                                             <div class="row">
                                             @foreach($fourtype as $company)
-                                            <section class="col-md-4 col-xs-6">
+                                            <section class="col-md-4 col-sm-6">
                                                 <div class="product-card store-card">
 
                                                     <div class="company-logo">
