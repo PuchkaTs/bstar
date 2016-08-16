@@ -695,7 +695,13 @@ p{
 .news-title{
     font-weight: 400;
     font-size: 1.2em;
-    height: 2.5em;
+    min-height: 2.5em;
+    color: #008443;
+}
+.place-title{
+    font-weight: 400;
+    font-size: 1.2em;
+    min-height: 2.5em;
     color: #008443;
 }
 .height60{

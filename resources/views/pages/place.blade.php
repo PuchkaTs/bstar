@@ -29,7 +29,7 @@
      </div>  
     <div class="placeholder50"></div>
 
-    <h1 class="store-title">{{$place->name}}</h1>  
+    <h1 class="place-title">{{$place->name}}</h1>  
 
     <div class="row">
                 <div class="col-md-12">
