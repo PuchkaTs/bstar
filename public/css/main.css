@@ -207,9 +207,7 @@ textarea.form-control:focus {
   }
 }
 @media (max-width: 767px) {
-  .company-logo img{
-  width: 100%;
-}
+
   .secondary-nav .secondary-nav--left li {
     width: 100%; }
   .secondary-nav .secondary-nav--right {
