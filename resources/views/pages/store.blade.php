@@ -13,7 +13,7 @@
             @endif()
         </div>
     </div>        
-        <h1>{{$company->name}}</h1>
+        <h1 class="place-title">{{$company->name}}</h1>
             <div class="row">
                 <div class="col-md-12">
                     <article class="justify">{!! $company->about!!}</article>

@@ -496,6 +496,7 @@ input[type=search]+i {
     display: relative;
 }
 .store-title{
+    text-align: center;    
     color: #008443;
     font-weight: 400;
     height: 52px;
