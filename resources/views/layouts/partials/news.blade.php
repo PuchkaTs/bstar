@@ -7,7 +7,7 @@
 				@if($news->getLatestId() == $anews->id)
 				<div class="row">
 					<div class="col-md-6">
-	                <article style="margin-top:0px; min-height:295px;">
+	                <article style="margin-top:0px; min-height:295px; margin-bottom:20px;">
 	                    <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
 	                    <figcaption>
 	                        <h5>{!! link_to_route('news_show_path', $anews->shortenTitle(), $anews->id)!!}</h5>
