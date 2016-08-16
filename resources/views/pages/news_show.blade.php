@@ -1,11 +1,10 @@
 @extends('layouts/default_min')
 
 @section('content')
-    <div class="placeholder100 row" style="margin-top: 50px;">
+    <div class="row">
         <div class="col-md-12 col-lg-10 col-lg-offset-1 gheader">
             <header>
-                <h3>{{ $anews->title }}</h3>
-
+                <h3 class="news-title">{{ $anews->title }}</h3>
             </header>
 
         </div>

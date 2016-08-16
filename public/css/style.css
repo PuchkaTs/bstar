@@ -538,7 +538,7 @@ input[type=search]+i {
     width: 200px;
 }
 .row{
-    margin: 0px;
+    /*margin: 0px;*/
 }
 .item_name{
     height: 40px;
@@ -692,6 +692,11 @@ p{
     color: #008443;
     font-size: 1.5em;
 }
+.news-title{
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #008443;
+}
 .height60{
     height: 60px;
     overflow: hidden;
@@ -699,4 +704,22 @@ p{
 .visible-sm {
     display: block !important;
     visibility: visible !important;
+}
+.background-green{
+    color: white;
+    background-color: #008443;
+    padding: 10px;
+}
+.background-pink{
+    color: white;
+    background-color: #d03694;
+    padding: 10px;
+}
+.background-orange{
+    color: white;
+    background-color: #f07c05;
+    padding: 10px;
+}
+.margin-right10{
+    margin-right: 10px;
 }

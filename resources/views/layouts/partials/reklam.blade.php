@@ -3,8 +3,8 @@
 <div class="subbanner">
 @inject('subbanner', 'App\Subbanner')
 
-<div class="subbanner-container swiper-container">
-        <div class="swiper-wrapper left1px">
+<div class="swiper-container">
+        <div class="row">
             	@foreach($subbanner->getBanners() as $banner)
                 <div class="col-md-4 col-xs-4 flexcenter">
                     <li class="swiper-slide subbanner_item">

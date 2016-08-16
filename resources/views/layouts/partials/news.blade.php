@@ -1,8 +1,7 @@
 @inject('news', 'App\Content')
 <div class="subbanner">
-<h1>Мэдээлэл & Зөвлөгөө </h1>
+<h2 class="background-green">Мэдээлэл & Зөвлөгөө </h2>
 	<div class="news_section row">
-
 		<section class="col-md-12" style="height:100%;">
 			@foreach($news->getLatestNews() as $anews)
 				@if($news->getLatestId() == $anews->id)
@@ -23,14 +22,14 @@
 					</section>  
 				</div>              
 				@else
-				<div class="col-md-3 col-sm-6">
-	                <article>
-		                    <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
-		                    <figcaption class="height60">
-		                        <h5>{!! link_to_route('news_show_path', $anews->shortenTitle(70), $anews->id)!!}</h5>
-		                    </figcaption>
-	                </article>
-                </div>
+					<div class="col-md-3 col-sm-6">
+		                <article>
+			                    <a href="{{ route('news_show_path', $anews->id) }}" >{!! Html::image("assets/news/thumbs/$anews->photo", null, ['class'=>'width100']) !!}</a>
+			                    <figcaption class="height60">
+			                        <h5>{!! link_to_route('news_show_path', $anews->shortenTitle(70), $anews->id)!!}</h5>
+			                    </figcaption>
+		                </article>
+	                </div>
                 @endif
 			@endforeach		
 		</section>

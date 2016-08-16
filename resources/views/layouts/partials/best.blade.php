@@ -1,7 +1,7 @@
 @inject('gallery', 'App\Gallery')
 @if($gallery->where('position',3)->first())
 <div class="subbanner hidden-xs">
-<h1>{{$gallery->where('position',3)->first()->name}}</h1>
+<h2 class="background-orange">{{$gallery->where('position',3)->first()->name}}</h2>
 <div>
     <a class="arrow-left" id="best-arrow-left" href="#"></a> 
     <a class="arrow-right" id="best-arrow-right" href="#"></a>
@@ -118,7 +118,7 @@
 </div>
 
 <div class="subbanner visible-xs">
-<h1>{{$gallery->where('position',3)->first()->name}}</h1>
+<h3>{{$gallery->where('position',3)->first()->name}}</h3>
         <div class="row">
             @foreach($gallery->getListForBest() as $product)
                 <div class="simpleCart_shelfItem col-md-4 col-xs-12 textcenter">
