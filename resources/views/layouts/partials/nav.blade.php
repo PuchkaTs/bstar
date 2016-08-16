@@ -81,7 +81,7 @@
                                                  @foreach($menu->productTypes->chunk(3) as $items)
                                                     <div class="row">
                                                         @foreach($items as $type)
-                                                                <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
+                                                                <li class="companyType col-sm-4" style=""><h5>{{$type->name}}</h5>
                                                                     <ul class="companyList">
                                                                     {!! $type->subTypesInMenu()!!}
 
@@ -126,10 +126,10 @@
                                         <div class="flipside-menu width900">
                                             <div class="row">
                                                  <ul class="col-md-9">
-                                                 @foreach($menu->companyTypes->chunk(3) as $items)
+                                                 @foreach($menu->companyTypes->chunk(2) as $items)
                                                     <div class="row">                                             
                                                     @foreach($items as $type)
-                                                            <li class="companyType col-md-4" style=""><h5>{{$type->name}}</h5>
+                                                            <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
                                                                 <ul class="companyList">
                                                                 {!! $type->companiesInMenu()!!}
 
@@ -163,7 +163,7 @@
                                                      @foreach($menu->companyTypes->chunk(2) as $items)
                                                         <div class="row">                                             
                                                         @foreach($items as $type)
-                                                                <li class="companyType col-md-6" style=""><h5>{{$type->name}}</h5>
+                                                                <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
                                                                     <ul class="companyList">
                                                                     {!! $type->subTypesInMenu()!!}
 
@@ -211,10 +211,10 @@
                                         <div class="flipside-menu">
                                             <div class="row">
                                                  <ul class="col-md-8">
-                                                 @foreach($menu->placeTypes->chunk(3) as $items)
+                                                 @foreach($menu->placeTypes->chunk(2) as $items)
                                                     <div class="row">                                             
                                                     @foreach($items as $type)
-                                                            <li class="companyType col-md-6" style=""><h5>{{$type->name}}</h5>
+                                                            <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
                                                                 <ul class="companyList">
                                                                 {!! $type->placesInMenu()!!}
 
@@ -248,7 +248,7 @@
                                                      @foreach($menu->placeTypes->chunk(2) as $items)
                                                         <div class="row">                                             
                                                         @foreach($items as $type)
-                                                                <li class="companyType col-md-6" style=""><h5>{{$type->name}}</h5>
+                                                                <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
                                                                     <ul class="companyList">
                                                                     {!! $type->subTypesInMenu()!!}
 
