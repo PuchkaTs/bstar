@@ -734,7 +734,11 @@ p.subdate {
   /*margin: 3px 3px; */
 }
 
-.companyType h5{
+.companyType h6 a{
+  font-weight: bold;
+  color: #dd042b;
+}
+.companyType h6{
   font-weight: bold;
   color: #dd042b;
 }

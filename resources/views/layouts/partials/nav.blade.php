@@ -72,7 +72,6 @@
                                     <li role="separator" class="divider"></li>
                                 <!-- end of special 2 menus -->
                                 @foreach( $pmenus->getListForMenu() as $menu)
-
                                     <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                         <div class="flipside-menu">
                                             <div class="row">
@@ -81,7 +80,7 @@
                                                  @foreach($menu->productTypes->chunk(3) as $items)
                                                     <div class="row">
                                                         @foreach($items as $type)
-                                                                <li class="companyType col-sm-4" style=""><h5>{{$type->name}}</h5>
+                                                                <li class="companyType col-sm-4" style=""><h6><a href="{{ route('type_path', $type->id) }}">{{$type->name}}</a></h6>
                                                                     <ul class="companyList">
                                                                     {!! $type->subTypesInMenu()!!}
 
@@ -129,7 +128,7 @@
                                                  @foreach($menu->companyTypes->chunk(2) as $items)
                                                     <div class="row">                                             
                                                     @foreach($items as $type)
-                                                            <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
+                                                            <li class="companyType col-sm-6" style=""><h6>{{$type->name}}</h6>
                                                                 <ul class="companyList">
                                                                 {!! $type->companiesInMenu()!!}
 
@@ -163,7 +162,7 @@
                                                      @foreach($menu->companyTypes->chunk(2) as $items)
                                                         <div class="row">                                             
                                                         @foreach($items as $type)
-                                                                <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
+                                                                <li class="companyType col-sm-6" style=""><h6>{{$type->name}}</h6>
                                                                     <ul class="companyList">
                                                                     {!! $type->subTypesInMenu()!!}
 
@@ -214,7 +213,7 @@
                                                  @foreach($menu->placeTypes->chunk(2) as $items)
                                                     <div class="row">                                             
                                                     @foreach($items as $type)
-                                                            <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
+                                                            <li class="companyType col-sm-6" style=""><h6>{{$type->name}}</h6>
                                                                 <ul class="companyList">
                                                                 {!! $type->placesInMenu()!!}
 
@@ -248,7 +247,7 @@
                                                      @foreach($menu->placeTypes->chunk(2) as $items)
                                                         <div class="row">                                             
                                                         @foreach($items as $type)
-                                                                <li class="companyType col-sm-6" style=""><h5>{{$type->name}}</h5>
+                                                                <li class="companyType col-sm-6" style=""><h6>{{$type->name}}</h6>
                                                                     <ul class="companyList">
                                                                     {!! $type->subTypesInMenu()!!}
 

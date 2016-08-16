@@ -76,7 +76,20 @@
                     {!! Form::label('location', 'Байршил:') !!}
                     {!! Form::select('location', $locations, 1, ['class'=>'form-control']); !!}
                 </div>    
-  
+                <h3>Үйлчилгээний нөхцөл:</h3>
+                <article class="service-condition">
+                  @if($condition)
+                  {!! $condition->body!!}
+                  @endif
+                </article>          
+                  <!-- agreement form input -->
+                  <div class="form-group">
+                      {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!} 
+                    <span style="float:left; margin-right:10px;">
+                        {!! Form::checkbox('agreement', 'false', 'null'); !!}
+                    </span>
+                  </div>  
+
                 <!-- Submit form input -->
                 <div class="form-group">    
                     {!! Form::submit('Оруулах', ['class' => 'btn btn-primary btn-block'])!!}
@@ -88,10 +101,6 @@
                   id="my-awesome-dropzone">
             {{csrf_field()}}
             </form>
-            <div>
-                <h4 style="padding:15px;">Үйлчилгээний нөхцөл</h4>
-            
-            </div>
             <div class="placeholder100"></div>
 
         </div>

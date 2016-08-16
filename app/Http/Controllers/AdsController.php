@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use Image;
 use App\Ads;
 use App\Adsimage;
 use App\Adslocation;
 use App\Adstag;
 use App\Age;
+use App\Article;
 use App\Http\Requests;
 use App\Http\Requests\CreateAdsRequest;
 use Illuminate\Http\Request;
+use Image;
 
 class AdsController extends Controller
 {
@@ -31,16 +32,20 @@ class AdsController extends Controller
     {
     	$tagnames = Adstag::lists('name', 'name');
 
+        $condition = Article::where('url', '=', 'ads-service-condition')->first();
+
     	$ages = Age::lists('title', 'title');
 
     	$locations = Adslocation::lists('name', 'name');
 
-		return view('pages.createad')->with(compact('tagnames', 'ages', 'locations'));
+		return view('pages.createad')->with(compact('tagnames', 'ages', 'locations', 'condition'));
     } 
 
     public function store(CreateAdsRequest $request)
     {
-
+        $this->validate($request, [
+            'agreement' => 'size:4',
+        ]);
 
         $ip = $request->ip();
 
