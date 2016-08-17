@@ -1,6 +1,6 @@
 
 
-<div class="subbanner  margin-bottom90">
+<div class="subbanner  margin-bottom6em">
 @inject('subbanner', 'App\Subbanner')
 
 <div class="swiper-container">

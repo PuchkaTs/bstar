@@ -734,8 +734,8 @@ p{
 .margin-bottom30{
     margin-bottom: 30px;
 }
-.margin-bottom90{
-    margin-bottom: 90px;
+.margin-bottom6em{
+    margin-bottom: 6em;
 }
 #projects li{
     text-align: justify;
