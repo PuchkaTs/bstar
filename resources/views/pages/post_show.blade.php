@@ -10,7 +10,7 @@
 
         </div>
     </div>
-<div class="row" id="projects" style="min-height: 500px">
+<div class="" id="projects" style="min-height: 500px">
     <div class="col-md-8 col-lg-6 col-lg-offset-2">
             <div class="col-md-12" id="project_by_id">
                     <article>
