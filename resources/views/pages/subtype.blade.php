@@ -5,9 +5,13 @@
     <div class="simpleCart_shelfItem">
      
         <div class="row">
-        <div class="col-md-12">
-                                    <h2>{{$subTypeName}}</h2>
-        </div>
+        <div class="placeholder100">
+            <div class="col-md-8 col-lg-6 col-md-offset-3">
+                <header>
+                    <h3>{{$subTypeName}}</h3>
+                </header>
+            </div>
+        </div>    
             <div class="col-md-3">
                 <section class="card">
                     <h5 class="filter_item">Ангилал:</h5>
@@ -60,12 +64,9 @@
 
             <div class="col-md-9">   
                 <div class="row">
-                        <div class="">
-
-
+                        <div>
                         @include('layouts.partials.topbanner')
-
-                            <div class="row">
+                            <div class="row margin-bottom2em">
                                 @foreach($products as $product)
                                     <div class="simpleCart_shelfItem col-md-4 col-xs-6 textcenter">
                                    

@@ -5,8 +5,15 @@
     <div class="simpleCart_shelfItem">
      
         <div class="row">
+        <div class="placeholder100">
+            <div class="col-md-8 col-lg-6 col-md-offset-3">
+                <header>
+                    <h3>{{$menuName}}</h3>
+                </header>
+            </div>
+        </div>           
             <div class="col-md-3">
-                <section class="card" style="margin-top:90px;">
+                <section class="card" >
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($productTypes as $type)
@@ -19,19 +26,20 @@
             <div class="col-md-9">   
                 <div class="row">
                         <div class="menu-list-container">
-                        <h1>{{$menuName}}</h1>
                         @include('layouts.partials.topbanner')
 
                             <div class="menu-list">
                                 <div class="row">
-                                <section class="col-md-3 product-card">
+                                <section class="col-md-3">
+                                    <div class="product-card">
                                         <h3>{{$typeName}}</h3>
                                         @foreach($productType->subTypes as $subtype)
                                             <h5>{!! link_to_route('subtype_path', $subtype->name, $subtype->id)!!}</h5>
 
-                                        @endforeach
-                                </section>
-                                </div>
+                                        @endforeach                                        
+                                    </div>
+                                </section>                                    
+                                </div>                            
                             </div>
                             @include('layouts.partials.middlebanner')
                             @include('layouts.partials.reklam')
