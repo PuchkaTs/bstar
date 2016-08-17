@@ -714,16 +714,19 @@ p{
     visibility: visible !important;
 }
 .background-green{
+    margin-top: 0px;
     color: white;
     background-color: #008443;
     padding: 10px;
 }
 .background-pink{
+    margin-top: 0px;
     color: white;
     background-color: #d03694;
     padding: 10px;
 }
 .background-orange{
+    margin-top: 0px;
     color: white;
     background-color: #f07c05;
     padding: 10px;
@@ -734,8 +737,8 @@ p{
 .margin-bottom30{
     margin-bottom: 30px;
 }
-.margin-bottom6em{
-    margin-bottom: 6em;
+.margin-bottom4em{
+    margin-bottom: 4em;
 }
 #projects li{
     text-align: justify;
