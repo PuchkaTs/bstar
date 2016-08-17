@@ -1,7 +1,7 @@
 @extends('layouts.default_min')
 
 @section('body')
-<div class="placeholder100 row" style="margin-top: 50px;">
+<div class="placeholder100 row">
     <div class="col-md-8 col-lg-6 col-lg-offset-2 gheader">
         <header>
             <h3>{{ $title }}</h3>
@@ -11,7 +11,7 @@
 </div>
 <div class="row" id="projects" style="min-height: 500px">
     <div class="col-md-8 col-lg-6 col-lg-offset-2">
-            <div class="col-md-12" style="padding: 35px 20px; margin-bottom: 45px;">
+            <div class="col-md-12">
                             @include('layouts.partials.topbanner')
 
                     @foreach($news as $anews)

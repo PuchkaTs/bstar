@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
-        <div class="placeholder100 row" style="margin-top: 50px;">
+        <div class="placeholder100 row">
             <div class="col-md-8 col-lg-6">
                 <header>
                     @if($article)

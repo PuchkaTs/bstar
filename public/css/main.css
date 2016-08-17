@@ -5,7 +5,6 @@ body{
 color: #555;
 }
 .subbanner-container{
-  margin-top: 2em;
   margin-bottom: 2em;
 }
 .simpleCart_shelfItem{margin-top: 20px;}
@@ -921,7 +920,6 @@ aside article {
   height: 75px; }
 
 .gheader header {
-  color: #888;
   margin: 15px; }
 
 a:hover, a:focus {

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="row">
-        <div class="placeholder100 row" style="margin-top: 50px;">
+        <div class="placeholder100">
             <div class="col-md-8 col-lg-6 col-md-offset-3">
                 <header>
                     <h3>Мэдээлэл</h3>

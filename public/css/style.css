@@ -388,7 +388,6 @@ input[type=search]+i {
     -webkit-transition: 0.2s ease-in-out;
 }
 .subbanner_item{
-    margin-top: 20px;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 1px;
 }
@@ -481,7 +480,7 @@ input[type=search]+i {
     text-decoration: none;
 }
 .menu-list{   
-    /*margin-top: 30px;*/
+    margin-bottom: 2em;
 }
 .menu-list-container{
     padding-left: 20px;
@@ -739,6 +738,9 @@ p{
 }
 .margin-bottom4em{
     margin-bottom: 4em;
+}
+.margin-bottom2em{
+    margin-bottom: 2em;
 }
 #projects li{
     text-align: justify;

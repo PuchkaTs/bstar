@@ -6,7 +6,7 @@
      
         <div class="row">
             <div class="col-md-3">
-                <section class="card" style="margin-top:90px;">
+                <section class="card" style="margin-top:70px;">
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($companyMenus as $menu)

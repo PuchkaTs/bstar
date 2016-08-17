@@ -19,7 +19,7 @@
             <div class="col-md-9">   
                 <div class="row">
                         <div class="menu-list-container">
-                        <h1>Бүх дэлгүүрүүд</h1>
+                        <h3>Бүх дэлгүүрүүд</h3>
                         @include('layouts.partials.topbanner')
 
                             <div class="menu-list">

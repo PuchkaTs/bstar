@@ -6,7 +6,7 @@
      
         <div class="row">
             <div class="col-md-3">
-                <section class="card" style="margin-top:90px;">
+                <section class="card" style="margin-top:70px;">
                     <h5 class="item_name">Ангилал:</h5>
                     <ul class="list-group">
                         @foreach($productMenu->productTypes as $type)
@@ -19,19 +19,20 @@
             <div class="col-md-9">   
                 <div class="row">
                         <div class="menu-list-container">
-                        <h1>{{$menuName}}</h1>
+                        <h3>{{$menuName}}</h3>
                         @include('layouts.partials.topbanner')
 
                             <div class="menu-list">
                             @foreach($productMenu->productTypes->chunk(4) as $fourtype)
                                 <div class="row">
                                 @foreach($fourtype as $type)
-                                <section class="col-md-3 product-card">
+                                <section class="col-md-3">
+                                    <div class="product-card">
                                         <h3>{{$type->name}}</h3>
                                         @foreach($type->subtypes as $subtype)
                                             <h5>{!! link_to_route('subtype_path', $subtype->name, $subtype->id)!!}</h5>
-
-                                        @endforeach
+                                        @endforeach                                        
+                                    </div>
                                 </section>
                                 @endforeach
                                 </div>

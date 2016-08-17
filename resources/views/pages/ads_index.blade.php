@@ -1,9 +1,16 @@
 @extends('layouts.default_min')
 
 @section('content')
-<div class="row" style="">
+<div class="row">
+        <div class="placeholder100">
+            <div class="col-md-8 col-lg-6 col-md-offset-3">
+                <header>
+                    <h3>Үнэгүй зар</h3>
+                </header>
+            </div>
+        </div>
     <div class="col-md-3">
-        <section class="card" style="margin-top:116px;">
+        <section class="card">
         <div class="margin-bottom30">
             <a href="/createad" class="btn btn-primary  btn-block" role="button">Зар оруулах</a>
         </div>        
@@ -51,9 +58,6 @@
     </div> 
 
     <div class="col-md-9" id="ads" style="min-height: 500px">
-        <header>
-            <h3 style="padding:15px;">Үнэгүй зар</h3>
-        </header>
         <div class="col-md-10 ads-list">
 
                 @foreach($ads as $aads)
