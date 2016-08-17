@@ -43,10 +43,7 @@ class AdsController extends Controller
 
     public function store(CreateAdsRequest $request)
     {
-        $this->validate($request, [
-            'agreement' => 'size:4',
-        ]);
-
+        dd($request);
         $ip = $request->ip();
 
         $photos = Adsimage::where('ip', $ip)->latest()->limit(4)->get();

@@ -86,7 +86,7 @@
                   <div class="form-group">
                       {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!} 
                     <span style="float:left; margin-right:10px;">
-                        {!! Form::checkbox('agreement', 'false', 'null'); !!}
+                        {!! Form::checkbox('agreement', 'true', null); !!}
                     </span>
                   </div>  
 

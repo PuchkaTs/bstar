@@ -32,6 +32,7 @@ class CreateAdsRequest extends Request
             'phone' => 'required',
             'description' => 'required',
             'gender' => 'required',
+            'agreement' => 'size:4',
         ];
     }
 }
