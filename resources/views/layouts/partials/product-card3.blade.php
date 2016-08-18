@@ -1,18 +1,18 @@
-<div class="swiper-slide simpleCart_shelfItem">
-    @if($product->sale)
-        <div class="product-sale-home">
-            <img src="assets/common/sale.png">
-        </div>   
-    @endif
-    @if($product->new)
-        <div class="product-new-home">
-            <img src="assets/common/new.png">
-        </div>  
-    @endif
-    <div class="subbanner-thumb ">
+<div class="simpleCart_shelfItem col-md-4 col-sm-6 textcenter">
+@if($product->sale)
+    <div class="product-sale">
+        <img src="/assets/common/sale.png">
+    </div>   
+@endif
+@if($product->new)
+    <div class="product-new">
+        <img src="/assets/common/new.png">
+    </div>  
+@endif                                   
+    <div class="product-card subbanner-thumb card-height">   
         <div>
-            <a href="{{route('product_path', $product->id)}}">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          
-            
+            <div style="display:none" class="item_pageLink">{{route('product_path', $product->id)}}</div>
+            <a href="{{route('product_path', $product->id)}}" class="item-thumb">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          
         </div>
         <div class="info">
             <div class="row">
@@ -41,7 +41,6 @@
             <div class="clearfix">
             </div>
         </div>
-
         <!-- color information -->
         @if($product->colors->count())
         <div class="color">Өнгө: 
@@ -79,12 +78,14 @@
                 <select class="form-control display-none">
                     @foreach($product->sizes as $size)
                         <option class="item_sizes">{{$size->name}}</option>                                
+                        
                     @endforeach  
                 </select>     
         </div>
         @endif
-        <!-- end of size information -->                        
+        <!-- end of size information --> 
         <div class="placeholder50"></div>
+        
         <div class="button-add">
             <div class="row">
                 <div class="col-xs-6" style="padding-right:2px;">
@@ -96,8 +97,5 @@
                 
             </div>
         </div>
-
     </div>
-    
-    <div class="line-hor"></div>
 </div>

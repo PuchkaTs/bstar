@@ -745,3 +745,9 @@ p{
 #projects li{
     text-align: justify;
 }
+.card-height{
+    height: 449px;
+}
+.product-list{
+    margin-bottom: 2em;
+}
