@@ -94,7 +94,10 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                         vm.growsmall = "grow-small";
                     }
                 });
-            },                      
+            },  
+            gotocart: function(){
+                location.replace('/cart');
+            }                    
         }
     });
 </script>
