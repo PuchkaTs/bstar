@@ -130,7 +130,7 @@ Route::get('/content/{url}', [
     'as'=>'content_path',
     'uses'=>'WelcomeController@article'
 ]);
-Route::get('/open-store', [
+Route::get('/form/{type}', [
     'as'=>'open_store_path',
     'uses'=>'StoresController@show'
 ]);

@@ -17,7 +17,7 @@
                         <a href="/content/advantage">Давуу тал</a>
                     </li>
                     <li>
-                        <a href="/content/cooperate">Хамтран ажиллах</a>
+                        <a href="/form/cooperate">Хамтран ажиллах</a>
                     </li>
                     <li>
                         <a href="/content/contact">Холбоо барих</a>
@@ -51,10 +51,7 @@
                 <h4><i class="fa fa-eye" aria-hidden="true"></i>Хэрэглэгч</h4>
                 <ul>
                     <li>
-                        <a href="/content/cooperate">Хамтран ажиллах</a>
-                    </li>
-                    <li>
-                        <a href="/open-store">Дэлгүүр нээх</a>
+                        <a href="/form/open-store">Дэлгүүр нээх</a>
                     </li>                      
                     <li>
                         <a href="/content/confidentiality-policy">Нууцлалын бодлого</a>

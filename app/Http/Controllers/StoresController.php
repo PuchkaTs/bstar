@@ -14,7 +14,13 @@ use Illuminate\Http\Request;
 
 class StoresController extends Controller
 {
-    public function show(){
+    public function show($type){
+
+        if($type == ''){
+
+        }else{
+
+        }
 
 		return view('pages.open-store');
 

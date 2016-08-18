@@ -3,19 +3,17 @@
 @section('content')
 <div class="row">
     <div class="col-md-6 col-md-offset-3">
-
-
-        <div class="placeholder100" style="margin-top: 50px;">
-            <div class="">
+        <div>
                 <header>
                     <h3>Бидэнтэй холбогдох</h3>
                 </header>
-            </div>
         </div>
         <div class="row" id="projects" style="min-height: 500px">
                 <section class="col-md-12">
+                    <h4>Компани: Бэйби Стар ХХК /Baby Star LLC/</h4>
                     <h4>Утас: 76103080</h4>
-                    <h5>Ц-Шуудан: info@babystar.mn</h5>
+                    <h4>Хаяг: Чингэлтэй дүүрэг, 3-р хороо, 2-р 40 мянгат, 29-45 тоот. </h4>
+                    <h5>Мэйл: info@babystar.mn</h5>
                     <p>* хэсгийг заавал бөглөнө үү</p>
                     @include('layouts.partials.errors')
                 {!! Form::open(['url' => '/open-store']) !!}

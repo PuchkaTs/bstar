@@ -82,13 +82,10 @@
                   {!! $condition->body!!}
                   @endif
                 </article>          
-                  <!-- agreement form input -->
-                  <div class="form-group">
-                      {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!} 
-                    <span style="float:left; margin-right:10px;">
-                        {!! Form::checkbox('agreement', 'true', null); !!}
-                    </span>
-                  </div>  
+                <div class="form-group">
+                    {!! Form::label('agreement', 'ҮЙЛЧИЛГЭЭНИЙ НӨХЦӨЛИЙГ ЗӨВШӨӨРӨХ*') !!} 
+                    {!! Form::checkbox('agreement', 'true', 'false'); !!}
+                </div>                     
 
                 <!-- Submit form input -->
                 <div class="form-group">    
