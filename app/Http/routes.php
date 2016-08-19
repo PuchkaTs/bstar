@@ -156,15 +156,15 @@ Route::post('/test', [
     'as' => 'test_path',
     'uses' => 'CardController@post'
 ]);
-Route::get('/card/approve', [
+Route::post('/card/approve', [
     'as' => 'approve_path',
     'uses' => 'CardController@approve'
 ]);
-Route::get('/card/cancel', [
+Route::post('/card/cancel', [
     'as' => 'cancel_path',
     'uses' => 'CardController@cancel'
 ]);
-Route::get('/card/decline', [
+Route::post('/card/decline', [
     'as' => 'decline_path',
     'uses' => 'CardController@decline'
 ]);

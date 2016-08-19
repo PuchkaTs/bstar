@@ -75,7 +75,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     new Vue({
         el: '#app',
         data: {
-            growsmall: '',          
+            growsmall: '',   
+            method: 'cash',       
         },
 
         created: function(){
@@ -95,6 +96,18 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
                     }
                 });
             },  
+            methodCard:function(){
+                this.method = 'card';
+                console.log(this.method);
+            },
+            methodCash:function(){
+                this.method = 'cash';
+                console.log(this.method);
+            },  
+            methodAccount:function(){
+                this.method = 'account';
+                console.log(this.method);
+            },                       
             gotocart: function(){
                 location.replace('/cart');
             }                    

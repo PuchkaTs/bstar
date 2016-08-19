@@ -31,7 +31,7 @@
 
             <!-- Submit form input -->
             <div class="form-group">    
-                <a id="bycard" href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>
+                <a id="bycard" href="javascript:;" class="simpleCart_checkout btn btn-primary">Картаар захиалга хийх</a>
             
                 <!-- {!! Form::submit('Үргэлжлүүлэх', ['class' => 'btn btn-primary btn-block'])!!} -->
             </div>
@@ -54,7 +54,7 @@
       </table>  
           <p>Дансаар төлбөр хийх заавар</p>
 
-        <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Захиалга хийх</a>
+        <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Дансаар захиалга хийх</a>
     </div>
   </div>
 
