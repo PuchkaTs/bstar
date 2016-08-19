@@ -44,14 +44,15 @@
 
             </div>
     </div>
-
     <div class="col-md-4 col-lg-2">
+        <div class="col-md-12">
         <h5 class="item_name">Ангилал:</h5>
         <ul class="list-group">
             @foreach($tags as $tag)
             <li class="list-group-item">{!!link_to_route('news_path', $tag->title, ['tag'=>$tag->id])!!}</li>
             @endforeach     
-        </ul> 
+        </ul>             
+        </div>
     </div>
 
 </div>
