@@ -319,7 +319,9 @@ textarea.form-control:focus {
 .secondary-nav .flipside-menu {
   min-width: 500px;
 }  
-
+.social-container{
+  width: 200px;
+}
 .secondary-nav .secondary-nav--left > li > a {
   padding: 10px 10px;
   display: block;
@@ -342,6 +344,7 @@ textarea.form-control:focus {
     height: auto; } }
 
 @media (min-width: 1100px) {
+
 .item_add{
   font-size: 0.8em;
 }
@@ -369,6 +372,7 @@ textarea.form-control:focus {
     height: 300px; } }
 
 @media (min-width: 1200px) {
+
 .secondary-nav .secondary-nav--left > li > a {
   padding: 10px 20px;
   display: block;
@@ -382,6 +386,9 @@ textarea.form-control:focus {
     height: 320px; } }
 
 @media (min-width: 1370px) {
+.social-container{
+  width: 320px;
+}    
   nav a{
     font-size: 1em;
   }  
