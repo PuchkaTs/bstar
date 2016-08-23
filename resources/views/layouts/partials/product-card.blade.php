@@ -88,10 +88,10 @@
         <div class="button-add">
             <div class="row">
                 <div class="col-xs-6" style="padding-right:2px;">
-                    <button type="button" class="btn btn-default btn-sm btn-block item_add"> <i class="fa fa-shopping-cart"></i>Сагсанд хийх</button>
+                    <button type="button" class="btn btn-default btn-sm btn-block item_add"> <i class="fa fa-shopping-cart hidden-sm"></i>Сагсанд хийх</button>
                 </div>
                 <div class="col-xs-6" style="padding-left:2px;">
-                    <button type="button" class="btn btn-default btn-sm btn-block item_add" @click="gotocart()"> <i class="fa fa-paper-plane"></i>Шууд авах</button>
+                    <button type="button" class="btn btn-default btn-sm btn-block item_add" @click="gotocart()"> <i class="fa fa-paper-plane hidden-sm"></i>Шууд авах</button>
                 </div>
                 
             </div>

@@ -183,6 +183,7 @@ textarea.form-control:focus {
     background: url(../assets/common/skyline02-bg2.png) 50px 0px no-repeat;
 } */ 
 @media (max-width: 940px){
+
 .secondary-nav .flipside-menu {
   min-width: 500px;
 }
@@ -309,6 +310,11 @@ textarea.form-control:focus {
   background-color: #ffffff;
   padding: 15px; }
 
+.item_add{
+  font-size: 0.7em;
+  padding: 5px 0px;
+}
+
 @media (min-width: 767px) {
 .secondary-nav .flipside-menu {
   min-width: 500px;
@@ -336,6 +342,9 @@ textarea.form-control:focus {
     height: auto; } }
 
 @media (min-width: 1100px) {
+.item_add{
+  font-size: 0.8em;
+}
   .secondary-nav .flipside-menu {
   min-width: 700px;
 }
