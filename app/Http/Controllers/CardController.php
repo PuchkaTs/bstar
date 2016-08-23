@@ -99,7 +99,7 @@ class CardController extends Controller
 		   <Language>EN</Language>
 		   <Order>
 		     <Merchant>TESTECOM</Merchant>
-		     <Amount>1230</Amount>
+		     <Amount>150000</Amount>
 		     <Currency>496</Currency>
 		     <Description>Description</Description>
 		     <ApproveURL>https://www.babystar.mn/card/approve</ApproveURL>
