@@ -140,8 +140,8 @@ class CardController extends Controller
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
-		  substr($xml,62);
-		  dd($xml);
+		  $sessionID=substr($xml,62);
+		  dd($sessionID);
 		  return redirect($xml);
     }
 B1D01F0F8A617987A34960F03D02D85C
