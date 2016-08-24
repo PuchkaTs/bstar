@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 
 class CardController extends Controller
 {
-	$sessionID;
-	$orderID;
+	var $session_ID="";
+	var $order_ID="";
 
 	public function checkout(Request $request)
 	{
