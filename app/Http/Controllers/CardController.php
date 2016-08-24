@@ -136,6 +136,7 @@ class CardController extends Controller
 		    </Order>
 		  </Request>
 		 </TKKPG>";
+		 dd($request);
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password',$id);
 		  return redirect($xml);
     }
