@@ -136,11 +136,11 @@ class CardController extends Controller
 		    </Order>
 		  </Request>
 		 </TKKPG>";
-		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password',$id='null');
+		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password',$id);
 		  return redirect($xml);
     }
 
-	public function httpsPost($Url, $strRequest,$user,$pwd, $id)
+	public function httpsPost($Url, $strRequest,$user,$pwd, $id='null')
 	{ // Initialisation echo $Url;
 		//echo $Url."<br>";
 		$ch=curl_init();
