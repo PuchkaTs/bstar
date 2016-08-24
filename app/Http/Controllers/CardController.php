@@ -103,7 +103,7 @@ class CardController extends Controller
 		<Operation>GetOrderStatus</Operation>
 		<Language>EN</Language>
 		<Order>
-		<Merchant>ECOM</Merchant>
+		<Merchant>TESTECOM</Merchant>
 		<OrderID>".$orderID."</OrderID>
 		</Order>
 		<SessionID>".$sessionID."</SessionID>
