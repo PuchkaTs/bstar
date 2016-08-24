@@ -78,6 +78,8 @@ class CardController extends Controller
 	}
 
 	public function approve(Request $request){
+		
+				dd($this->sessionID);
 
 		$response = $request->request->all();
 		$orderID = simplexml_load_string($response['xmlmsg'])->OrderID;
@@ -184,7 +186,6 @@ class CardController extends Controller
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
 
 				$this->sessionID = $xml->Response->Order->SessionID;
-				dd($this->sessionID);
 				return $myUrl;
 
 			}
