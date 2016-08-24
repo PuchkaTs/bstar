@@ -80,6 +80,7 @@ class CardController extends Controller
 
 		$response = $request->request->all();
 		$orderID = simplexml_load_string($response['xmlmsg'])->OrderID;
+		dd(simplexml_load_string($response['xmlmsg']));
 		$sessionID = simplexml_load_string($response['xmlmsg'])->SessionID;
 		$xml = $this->butsaaj_shalgah($orderID, $sessionID);
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
