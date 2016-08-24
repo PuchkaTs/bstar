@@ -79,7 +79,8 @@ class CardController extends Controller
 	public function approve(Request $request){
 
 		// dd(simplexml_load_string($request->request->all()));
-		dd($request->request->all());
+		$response = $request->request->all();
+		dd($response['xmlmsg']);
 		$xml = $this->butsaaj_shalgah();
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		return Redirect::route('success_path');		
