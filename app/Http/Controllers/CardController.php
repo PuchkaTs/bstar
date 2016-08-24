@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Redirect;
 
 class CardController extends Controller
 {
-	var $session_ID="";
-	var $order_ID="";
 
 	public function checkout(Request $request)
 	{
@@ -79,7 +77,8 @@ class CardController extends Controller
 	}
 
 	public function approve(Request $request){
-		dd($request);
+
+		dd($request->request->xmlmsg->OrderID);
 		$xml = $this->butsaaj_shalgah();
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		return Redirect::route('success_path');		
@@ -182,8 +181,7 @@ class CardController extends Controller
 			if ($xml->Response->Status == "00")
 			{
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
-				$this->orderID=$xml->Response->Order->OrderID;
-				$this->sessionID=$xml->Response->Order->SessionID;
+
 				return $myUrl;
 
 			}
