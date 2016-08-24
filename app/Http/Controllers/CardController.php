@@ -142,9 +142,10 @@ class CardController extends Controller
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
 		  $order = Order::find($orderID);
 		  $sessionID=substr($xml,62);
-		  $orderID=substr($xml,57,61);
-		  dd($orderID);
+		  $orderID=substr($xml,47,4);
 		  $order = $order->sessionID = $sessionID;
+		  $order = $order->orderID = $orderID;
+		  $order->save();
 		  return redirect($xml);
     }
 
