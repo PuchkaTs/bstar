@@ -140,11 +140,14 @@ class CardController extends Controller
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
+		  $order = Order::find($orderID);
 		  $sessionID=substr($xml,62);
-		  dd($sessionID);
+		  $orderID=substr($xml,57,61);
+		  dd($orderID);
+		  $order = $order->sessionID = $sessionID;
 		  return redirect($xml);
     }
-B1D01F0F8A617987A34960F03D02D85C
+
 	public function httpsPost($Url, $strRequest,$user,$pwd)
 	{ // Initialisation echo $Url;
 		//echo $Url."<br>";
