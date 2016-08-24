@@ -54,7 +54,7 @@ class CardController extends Controller
 
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		if($request->metod == 'card'){
-			return $this->post();
+			return $this->post($order->id);
 
 		}
 
@@ -78,7 +78,7 @@ class CardController extends Controller
 	}
 
 	public function approve(Request $request){
-		
+
 				dd($this->sessionID);
 
 		$response = $request->request->all();
@@ -116,7 +116,7 @@ class CardController extends Controller
 		return redirect($xml);
 	}
 
-    public function post()
+    public function post($orderID)
     {
 
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
@@ -140,7 +140,7 @@ class CardController extends Controller
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
-
+		  dd($xml);
 		  return redirect($xml);
     }
 
