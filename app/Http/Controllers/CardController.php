@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class CardController extends Controller
 {
+	public $sessionID="";
 
 	public function checkout(Request $request)
 	{
@@ -80,9 +81,7 @@ class CardController extends Controller
 
 		$response = $request->request->all();
 		$orderID = simplexml_load_string($response['xmlmsg'])->OrderID;
-		dd(simplexml_load_string($response['xmlmsg']));
-		$sessionID = simplexml_load_string($response['xmlmsg'])->SessionID;
-		$xml = $this->butsaaj_shalgah($orderID, $sessionID);
+		$xml = $this->butsaaj_shalgah($orderID);
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		return Redirect::route('success_path');		
 	}
@@ -95,7 +94,7 @@ class CardController extends Controller
 		return "decline";
 	}	
 
-	public function butsaaj_shalgah($orderID, $sessionID){
+	public function butsaaj_shalgah($orderID){
 
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
 		<TKKPG>
@@ -106,7 +105,7 @@ class CardController extends Controller
 		<Merchant>TESTECOM</Merchant>
 		<OrderID>".$orderID."</OrderID>
 		</Order>
-		<SessionID>".$sessionID."</SessionID>
+		<SessionID>".$this->$sessionID."</SessionID>
 		</Request>
 		</TKKPG>";
 		dd($request);
@@ -183,7 +182,7 @@ class CardController extends Controller
 			if ($xml->Response->Status == "00")
 			{
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
-
+				$this->sessionID = $xml->Response->Order->SessionID;
 				return $myUrl;
 
 			}
