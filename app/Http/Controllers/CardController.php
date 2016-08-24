@@ -77,6 +77,7 @@ class CardController extends Controller
 	}
 
 	public function approve(){
+		$xml = $this->butsaaj_shalgah();
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		return Redirect::route('success_path');		
 	}
@@ -88,6 +89,41 @@ class CardController extends Controller
 	public function decline(){
 		return "decline";
 	}	
+	public function butsaaj_shalgah(){
+
+		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
+		<?xml version=”1.0” encoding=”UTF-8”?>
+		<TKKPG>
+		<Request>
+		<Operation>GetOrderStatus</Operation>
+		<Language>EN</Language>
+		<Order>
+		<Merchant> ECOM </Merchant>
+		<OrderID>OrderID</OrderID>
+		</Order>
+		<SessionID>SessionID</SessionID>
+		</Request>
+		</TKKPG>
+		Savings response:
+		<?xml version="1.0" encoding="UTF-8"?>
+		<TKKPG>
+		<Response>
+		<Operation>GetOrderStatus</Operation>
+		<Status>NN</Status>
+		<Order>
+		<OrderID>OrderID</OrderID>
+		<OrderStatus>STATUS</OrderStatus>
+		</Order>
+		<AdditionalInfo>
+		<Receipt>BASE64-encode-info</Receipt>
+		</AdditionalInfo>
+		</Response>
+		</TKKPG>";
+		
+		$xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
+		dd($xml);
+		return redirect($xml);
+	}
 
     public function post()
     {
