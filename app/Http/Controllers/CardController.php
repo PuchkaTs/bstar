@@ -116,7 +116,7 @@ class CardController extends Controller
 		return redirect($xml);
 	}
 
-    public function post($orderID)
+    public function post($id)
     {
 
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
@@ -140,11 +140,11 @@ class CardController extends Controller
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
-		  $order = Order::find($orderID);
+		  $order = Order::find($id);
 		  $sessionID=substr($xml,62);
 		  $orderID=substr($xml,47,4);
-		  $order = $order->sessionID = $sessionID;
-		  $order = $order->orderID = $orderID;
+		  $order->sessionID = $sessionID;
+		  $order->orderID = $orderID;
 		  $order->save();
 		  return redirect($xml);
     }
