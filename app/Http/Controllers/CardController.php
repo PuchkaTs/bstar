@@ -97,7 +97,6 @@ class CardController extends Controller
 	public function butsaaj_shalgah($orderID, $sessionID){
 
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
-		<?xml version=”1.0” encoding=”UTF-8”?>
 		<TKKPG>
 		<Request>
 		<Operation>GetOrderStatus</Operation>
