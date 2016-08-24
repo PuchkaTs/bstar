@@ -94,7 +94,7 @@ class CardController extends Controller
 	}	
 
 	public function butsaaj_shalgah($orderID){
-
+		dd($orderID);
 		$order = Order::where('orderID', '=', $orderID);
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
 		<TKKPG>
