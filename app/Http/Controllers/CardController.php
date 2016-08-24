@@ -140,10 +140,11 @@ class CardController extends Controller
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
+		  substr($xml,62);
 		  dd($xml);
 		  return redirect($xml);
     }
-
+B1D01F0F8A617987A34960F03D02D85C
 	public function httpsPost($Url, $strRequest,$user,$pwd)
 	{ // Initialisation echo $Url;
 		//echo $Url."<br>";
@@ -184,8 +185,6 @@ class CardController extends Controller
 			if ($xml->Response->Status == "00")
 			{
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
-
-				$this->sessionID = $xml->Response->Order->SessionID;
 				return $myUrl;
 
 			}
