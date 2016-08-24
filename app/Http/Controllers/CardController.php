@@ -105,7 +105,7 @@ class CardController extends Controller
 		<Merchant>TESTECOM</Merchant>
 		<OrderID>".$orderID."</OrderID>
 		</Order>
-		<SessionID>".$this->$sessionID."</SessionID>
+		<SessionID>".$this->sessionID."</SessionID>
 		</Request>
 		</TKKPG>";
 		dd($request);
