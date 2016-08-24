@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class CardController extends Controller
 {
-	public $sessionID="";
+	public $sessionID = "";
 
 	public function checkout(Request $request)
 	{
@@ -182,6 +182,7 @@ class CardController extends Controller
 			if ($xml->Response->Status == "00")
 			{
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
+				dd($xml->Response->Order->SessionID);
 				$this->sessionID = $xml->Response->Order->SessionID;
 				return $myUrl;
 
