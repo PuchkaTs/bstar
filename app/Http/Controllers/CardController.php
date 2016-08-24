@@ -94,7 +94,7 @@ class CardController extends Controller
 	}	
 
 	public function butsaaj_shalgah($orderID){
-		
+
 		$order = Order::where('orderID', '=', $orderID)->first();
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
 		<TKKPG>
@@ -138,12 +138,6 @@ class CardController extends Controller
 		  </Request>
 		 </TKKPG>";
 		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password',$id);
-		  // $order = Order::find($id);
-		  // $sessionID=substr($xml,62);
-		  // $orderID=substr($xml,47,4);
-		  // $order->sessionID = $sessionID;
-		  // $order->orderID = $orderID;
-		  // $order->save();
 		  return redirect($xml);
     }
 
