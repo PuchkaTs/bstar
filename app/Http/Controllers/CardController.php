@@ -78,9 +78,6 @@ class CardController extends Controller
 	}
 
 	public function approve(Request $request){
-
-				dd($this->sessionID);
-
 		$response = $request->request->all();
 		$orderID = simplexml_load_string($response['xmlmsg'])->OrderID;
 		$xml = $this->butsaaj_shalgah($orderID);
@@ -98,6 +95,7 @@ class CardController extends Controller
 
 	public function butsaaj_shalgah($orderID){
 
+		$order = Order::where('orderID', '=', $orderID);
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
 		<TKKPG>
 		<Request>
@@ -107,7 +105,7 @@ class CardController extends Controller
 		<Merchant>TESTECOM</Merchant>
 		<OrderID>".$orderID."</OrderID>
 		</Order>
-		<SessionID>".$this->sessionID."</SessionID>
+		<SessionID>".$order->sessionID."</SessionID>
 		</Request>
 		</TKKPG>";
 		dd($request);
