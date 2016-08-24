@@ -94,7 +94,7 @@ class CardController extends Controller
 	}	
 
 	public function butsaaj_shalgah($orderID){
-
+		
 		$order = Order::where('orderID', '=', $orderID)->first();
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>	
 		<TKKPG>
@@ -188,8 +188,8 @@ class CardController extends Controller
 			{
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
 				$order = Order::find($id);
-				$order->sessionID = $xml->Response->Order->OrderID;
-				$order->orderID = $xml->Response->Order->SessionID;
+				$order->sessionID = $xml->Response->Order->SessionID;
+				$order->orderID = $xml->Response->Order->OrderID;
 				$order->save();
 				return $myUrl;
 
