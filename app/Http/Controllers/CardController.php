@@ -141,7 +141,7 @@ class CardController extends Controller
 		  return redirect($xml);
     }
 
-	public function httpsPost($Url, $strRequest,$user,$pwd, $id='null')
+	public function httpsPost($Url, $strRequest,$user,$pwd, $id=NULL)
 	{ // Initialisation echo $Url;
 		//echo $Url."<br>";
 		$ch=curl_init();
