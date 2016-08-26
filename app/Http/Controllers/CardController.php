@@ -107,7 +107,8 @@ class CardController extends Controller
 		</Order>
 		<SessionID>".$order->sessionID."</SessionID>
 		</Request>
-		</TKKPG>";		
+		</TKKPG>";	
+		var_dump($request);	
 		$xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
 		dd($xml);
 		return redirect($xml);
