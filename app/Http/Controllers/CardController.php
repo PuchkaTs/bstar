@@ -115,7 +115,6 @@ class CardController extends Controller
 		</Request>
 		</TKKPG>";	
 		$xmlStatus = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
-		var_dump($xmlStatus);
 		return $xmlStatus;
 	}
 
