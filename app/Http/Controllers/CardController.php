@@ -80,9 +80,15 @@ class CardController extends Controller
 	public function approve(Request $request){
 		$response = $request->request->all();
 		$orderID = simplexml_load_string($response['xmlmsg'])->OrderID->__toString();
-		$xml = $this->butsaaj_shalgah($orderID);
-    	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
-		return Redirect::route('success_path');		
+		$xmlStatus = $this->butsaaj_shalgah($orderID);
+		if(intval($xmlStatus)==0){
+	    	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
+			return Redirect::route('success_path');				
+		}else{
+			flash()->error('Буцааж шалгахад алдаа гарлаа.');
+			return Redirect::route('success_path');	
+		}
+	
 	}
 
 	public function cancel(){
@@ -108,10 +114,9 @@ class CardController extends Controller
 		<SessionID>".$order->sessionID."</SessionID>
 		</Request>
 		</TKKPG>";	
-		var_dump($request);	
-		$xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
-		dd($xml);
-		return redirect($xml);
+		$xmlStatus = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
+		var_dump($xml);
+		return $xmlStatus;
 	}
 
     public function post($id)
@@ -186,6 +191,8 @@ class CardController extends Controller
 					$order->sessionID = $xml->Response->Order->SessionID;
 					$order->orderID = $xml->Response->Order->OrderID;
 					$order->save();
+				}else{
+					return $xml->Response->Status;
 				}
 				return $myUrl;
 
