@@ -183,7 +183,6 @@ class CardController extends Controller
 				$myUrl=$xml->Response->Order->URL."?ORDERID=".$xml->Response->Order->OrderID."&SESSIONID=".$xml->Response->Order->SessionID;
 				if($id){
 					$order = Order::find($id);
-					var_dump($xml->Response->Order->SessionID);
 					$order->sessionID = $xml->Response->Order->SessionID;
 					$order->orderID = $xml->Response->Order->OrderID;
 					$order->save();
