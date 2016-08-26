@@ -99,7 +99,7 @@ return array(
         'productSubType' => array(
             'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
-            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+            'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
         ),
 
         'gallery' => array(
