@@ -11,7 +11,8 @@
 @stop
 
 @section('content')
-    <div class="placeholder50"></div>
+    <div class="placeholder50 hidden-xs"></div>
+    <div class="placeholder20 visible-xs"></div>
     @include('layouts.partials.reklam')
     @include('layouts.partials.special')
     @include('layouts.partials.best')

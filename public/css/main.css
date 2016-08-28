@@ -208,9 +208,11 @@ textarea.form-control:focus {
       border-radius: 0px;
       border-left-color: #008443;
   }
+.company_header {
+  position: relative;
+  height: 280px; }  
 }
 @media (max-width: 767px) {
-
   .secondary-nav .secondary-nav--left li {
     width: 100%; }
   .secondary-nav .secondary-nav--right {
@@ -222,7 +224,7 @@ textarea.form-control:focus {
 
 .company_header {
   position: relative;
-  height: 280px; }
+  height: 100px; }
 
 .company_cover {
   background-image: url(/uploads/pattern/sativa.png);
@@ -539,8 +541,7 @@ ul.social a:nth-child(4) li{
 .legalBanner{
   margin-top: 30px;
   background-color: #00858c;
-    padding: 25px 0;
-    height: 20px;  
+    padding: 25px 0; 
 }
 .legalBanner a{
   color: white;

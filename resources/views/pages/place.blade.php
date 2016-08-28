@@ -7,7 +7,7 @@
 <div style="z-index: 2;">
     <div class="" style="background-color: white;">
         <div class="container">
-    <div class="company_header">
+    <div class="company_header hidden-xs">
         <div class="company_cover">
             @if($place->cover)
                 {!! Html::image('assets/places/cover/' . $place->cover, null, ['class' => 'center_cover']) !!}
