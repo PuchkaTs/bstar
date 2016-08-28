@@ -4,13 +4,20 @@
 <div style="z-index: 2;">
     <div class="simpleCart_shelfItem">
         <div class="row">
-        <div class="placeholder100">
+        <div class="placeholder100 hidden-xs">
             <div class="col-md-8 col-lg-6 col-md-offset-3">
                 <header>
                     <h3>{{$menuName}}</h3>
                 </header>
             </div>
-        </div>           
+        </div>   
+        <div class="visible-xs">
+            <div class="col-md-8 col-lg-6 col-md-offset-3">
+                <header>
+                    <h4>{{$menuName}}</h4>
+                </header>
+            </div>
+        </div>                 
             <div class="col-md-3">
                 <section class="card">
                     <h5 class="item_name">Ангилал:</h5>
