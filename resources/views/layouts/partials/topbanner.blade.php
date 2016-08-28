@@ -1,5 +1,5 @@
 
-
+<div class="placeholder20 visible-xs"></div>
 <div class="textcenter img100 paddingtop0">
 @inject('topbanner', 'App\TopBanner')
 
