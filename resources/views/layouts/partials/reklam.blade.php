@@ -23,3 +23,4 @@
         <div class="subbanner-pagination"></div>
     </div>
 </div>
+<div class="placeholder50 hidden-xs"></div>

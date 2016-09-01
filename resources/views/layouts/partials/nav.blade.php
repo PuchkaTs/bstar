@@ -109,7 +109,7 @@
                             </ul>
                         </li>   
                         <!-- buh delguur -->
-                        <li class="dropdown news">
+                        <li class="dropdown stores">
                             <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown" style="color:white;">
                                 Бүх дэлгүүр <b class="caret"></b>
                             </a>
