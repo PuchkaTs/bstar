@@ -775,8 +775,8 @@ p.subdate {
     text-decoration: none;
   }
 .secondary-nav li.product>a{
-  background-color: #5DC151;
-  border-left: #5DC151;
+  background-color: #334e9f;
+  border-left: #334e9f;
 
 }  
 .secondary-nav li.stores>a{
@@ -806,20 +806,20 @@ p.subdate {
 
 }  
 .secondary-nav li.stores>a{
-  background-color: #f97803;
+  background-color: #3cf110;
 
 } 
 .secondary-nav li.places>a{
-  background-color: #3cf110;
+  background-color: #f97803;
 } 
 .secondary-nav li.news>a{
-  background-color: #f14f36;
+  background-color: #c500ff;
 } 
 .secondary-nav li.recomend>a{
   background-color: #05833c;
 } 
 .secondary-nav li.blog>a{
-  background-color: #c500ff;
+  background-color: #f14f36;
 } 
 .secondary-nav li.ads>a{
   background-color: #0076cd;

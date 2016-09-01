@@ -81,7 +81,6 @@ return array(
         'promotions',
         'messages',
         'oduns',
-
     ),
 
 	/**
