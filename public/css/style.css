@@ -753,3 +753,6 @@ p{
 .product-list{
     margin-bottom: 2em;
 }
+.oldprice{
+    text-decoration: line-through;
+}
