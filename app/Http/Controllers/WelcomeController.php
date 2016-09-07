@@ -45,7 +45,11 @@ class WelcomeController extends Controller
 
         $product = Product::with('images', 'brand', 'colors', 'sizes')->find($id);
 
-		return view('pages.product')->with(compact('product', 'productSubTypes', 'productType'));
+        $productSubType = Product::find($id)->productSubType;
+
+        $sameProducts = $this->getRandomSameProducts($productSubType);
+
+		return view('pages.product')->with(compact('product', 'productSubTypes', 'productType', 'sameProducts'));
 	}
 
 	public function subType($id)
@@ -206,4 +210,33 @@ class WelcomeController extends Controller
 
 		return view('pages.type')->with(compact('productType', 'menuName', 'productTypes', 'typeName'));
 	}	
+
+	public function getRandomSameProducts($productSubType){
+
+		if($sameProducts = $productSubType->products->count() >= 6){
+
+	        return $productSubType->products->random(6);
+
+        }
+		if($sameProducts = $productSubType->products->count() >= 5){
+
+	        return $productSubType->products->random(5);
+
+        }  
+		if($sameProducts = $productSubType->products->count() >= 4){
+
+	        return $productSubType->products->random(4);
+
+        }              
+		if($sameProducts = $productSubType->products->count() >= 3){
+
+	        return $productSubType->products->random(3);
+
+        }
+		if($sameProducts = $productSubType->products->count() >= 2){
+
+	        return $productSubType->products->random(2);
+
+        }        
+	}
 }

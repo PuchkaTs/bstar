@@ -1,17 +1,17 @@
 <div class="swiper-slide simpleCart_shelfItem">
     @if($product->sale)
         <div class="product-sale-home">
-            <img src="assets/common/sale.png">
+            <img src="/assets/common/sale.png">
         </div>   
     @endif
     @if($product->new)
         <div class="product-new-home">
-            <img src="assets/common/new.png">
+            <img src="/assets/common/new.png">
         </div>  
     @endif
     <div class="subbanner-thumb ">
         <div>
-            <a href="{{route('product_path', $product->id)}}">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          
+            <a href="{{route('product_path', $product->id)}}">{!! Html::image("/assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          
             
         </div>
         <div class="info">

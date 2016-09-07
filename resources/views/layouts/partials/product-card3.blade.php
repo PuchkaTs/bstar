@@ -12,7 +12,7 @@
     <div class="product-card subbanner-thumb card-height">   
         <div>
             <div style="display:none" class="item_pageLink">{{route('product_path', $product->id)}}</div>
-            <a href="{{route('product_path', $product->id)}}" class="item-thumb">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          
+            <a href="{{route('product_path', $product->id)}}" class="item-thumb">{!! Html::image("/assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</a>                          
         </div>
         <div class="info">
             <div class="row">

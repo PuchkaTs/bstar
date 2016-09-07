@@ -69,7 +69,7 @@
                                 </div>
                             </article>
                     </div>
-               @include('layouts.partials.order')                     
+               @include('layouts.partials.order')                    
             </div>
 
         <!-- sidebar -->
@@ -147,11 +147,33 @@
 <div class="col-md-8 col-md-offset-2">
     <div class="placeholder50"></div>
     @include('layouts.partials.reklam')
+    @include('layouts.partials.sameProducts')
+
 </div>
 @stop
 @section('script')
 <script src="/js/flexslider/jquery.flexslider-min.js"></script>
 <script>
+    var bestswiper = new Swiper('.best-container', {
+        pagination: false,
+        paginationClickable: true,
+        spaceBetween: 30,
+        autoplay: false,
+        cssWidthAndHeight: false,
+        calculateHeight: true,
+        slidesPerView: 3,
+    });
+    $('#best-arrow-left').on('click', function(e){
+      e.preventDefault()
+      bestswiper.swipePrev()
+    });
+    $('#best-arrow-right').on('click', function(e){
+      e.preventDefault()
+      bestswiper.swipeNext()
+    });
+
+
+
 
 $(window).load(function() {
   // The slider being synced must be initialized first
