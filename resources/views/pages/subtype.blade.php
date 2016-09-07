@@ -57,6 +57,12 @@
                         Охин
                       </label>
                     </div>  
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" name="gender" id="gender3" value="option3">
+                        Хүү, Охин
+                      </label>
+                    </div>                      
 
                     <button type="submit" class="btn btn-primary btn-block">Хайх</button>                                                                                          
                 </section>

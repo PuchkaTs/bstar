@@ -53,7 +53,7 @@ return array(
         'gender' => array(
             'type' => 'enum',
             'title' => 'Gender:',
-            'options' => array('Хүү', 'Охин'), //must be an array
+            'options' => array('Хүү', 'Охин', 'Хүү, Охин'), //must be an array
         ),                
         'productSubType' => array(
             'type' => 'relationship',
@@ -155,7 +155,7 @@ return array(
         'gender' => array(
             'type' => 'enum',
             'title' => 'Gender:',
-            'options' => array('Хүү', 'Охин'), //must be an array
+            'options' => array('Хүү', 'Охин', 'Хүү, Охин'), //must be an array
         ),               
         'photo' => array(
             'title' => 'Image 140x140',
