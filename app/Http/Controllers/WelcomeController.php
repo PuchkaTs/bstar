@@ -237,6 +237,8 @@ class WelcomeController extends Controller
 
 	        return $productSubType->products->random(2);
 
-        }        
+        }    
+
+        return null;    
 	}
 }

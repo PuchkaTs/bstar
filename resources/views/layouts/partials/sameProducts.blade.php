@@ -1,3 +1,4 @@
+@if($sameProducts)
 <div class="subbanner hidden-xs">
 <h2 class="background-orange">Ижил төстэй бараанууд</h2>
 <div>
@@ -25,3 +26,4 @@
 
         </div>
 </div>
+@endif
