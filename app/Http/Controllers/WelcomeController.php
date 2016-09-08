@@ -198,6 +198,17 @@ class WelcomeController extends Controller
 		return view('pages.search')->with(compact('products', 'title'));
 	}	
 
+	public function otherProducts()
+	{
+		$title = "Бусад бараа";
+
+		$productSubType = ProductSubType::where('name', '=', 'Бусад бараа')->first();
+		
+		$products = $productSubType->products()->paginate(20);
+
+		return view('pages.search')->with(compact('products', 'title'));
+	}		
+
 	public function type($id){
 
 		$productType = ProductType::with('subtypes')->find($id);

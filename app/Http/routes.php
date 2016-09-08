@@ -150,6 +150,10 @@ Route::get('/new-products', [
     'as'=>'new_products_path',
     'uses'=>'WelcomeController@newProducts'
 ]);
+Route::get('/other-products', [
+    'as'=>'other_products_path',
+    'uses'=>'WelcomeController@otherProducts'
+]);
 Route::auth();
 
 Route::post('/test', [
