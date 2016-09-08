@@ -10,6 +10,7 @@ return array(
      * The display columns
      */
     'columns'     => array(
+        'id',
         'name'     => array(
             'title' => 'Name',
         ),
