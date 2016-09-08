@@ -48,7 +48,7 @@ return array(
         'productmenu' => array(
             'type' => 'relationship',
             'title' => 'In menu',
-            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+            'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
         ),
         'subtype_number' => array(
             'title' => 'how many companies to show',
