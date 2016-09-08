@@ -73,6 +73,7 @@
                                     <li role="separator" class="divider"></li>
                                 <!-- end of special 2 menus -->
                                 @foreach( $pmenus->getListForMenu() as $menu)
+                                    @if($menu->name != 'Бусад бараа')
                                     <li class="side-menu"><a href="{{ route('menu_path', $menu->id) }}">{{$menu->name}} <i class="fa fa-caret-left gurvaljin"></i></a>
                                         <div class="flipside-menu">
                                             <div class="row">
@@ -106,6 +107,7 @@
                                         </div>
 
                                     </li>
+                                    @endif
                                 @endforeach
                             </ul>
                         </li>   
