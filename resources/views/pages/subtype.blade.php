@@ -24,10 +24,10 @@
                     {!! Form::open(['route' => 'product_filter_path']) !!}
                     <h5 class="filter_item">Үнэ ₮:</h5>                      
                     <input id="ex2" type="text" class="span2" value="" data-slider-min="5000" data-slider-max="100000" data-slider-step="1000" data-slider-value="[5000,50000]"/> 
-                   <span id="ex6CurrentSliderValLabel">Хайх үнийн дүн: <span id="ex6SliderVal">3</span></span>
+                   <span id="ex6CurrentSliderValLabel">Хайх үнийн дүн: <span id="ex6SliderVal">5000, 100.000</span></span>
                     <!-- price form input -->
-                    <div class="form-group ">
-                        {!! Form::label('price', 'Subtype ID:') !!}
+                    <div class="form-group hidden">
+                        {!! Form::label('price', 'price:') !!}
                         {!! Form::text('price', null, ['class' => 'form-control', 'id' => 'price-slide']) !!}
                     </div>
 
@@ -117,6 +117,7 @@
     $("#ex2").slider({});  
     $("#ex2").on("slide", function(slideEvt) {
     $("#price-slide").val(slideEvt.value);
+    $("#ex6SliderVal").text(slideEvt.value);
 });
 
     simpleCart({
