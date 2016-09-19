@@ -194,8 +194,14 @@ class WelcomeController extends Controller
 
 		$brand = Brand::find($request->request->get('brand'));
 
+		$price = explode(',', $request->request->get('price'));
+
 		if($gender){
-			$genderIds = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%')->lists('id')->all();
+			if($gender == 'Хүү, Охин'){
+				$genderIds = $subtype->products()->lists('id')->all();		
+			}else{
+				$genderIds = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%')->lists('id')->all();
+			}
 		}else{
 			$genderIds = $subtype->products()->lists('id')->all();
 		}
@@ -208,13 +214,37 @@ class WelcomeController extends Controller
 
 		if($brand){
 			$brandIds = $brand->products->lists('id')->all();
+
 		}else{
 			$brandIds = Product::lists('id')->all();
 		}
 
-		$products = Product::whereIn('id', $genderIds)->whereIn('id', $ageIds)->whereIn('id', $brandIds)->paginate(20);
+		if($price){
+			$priceIds = Product::whereBetween('price', [$price])->lists('id')->all();			
+		}else{
+			$priceIds = Product::lists('id')->all();
+		}
 
-		return view('pages.search')->with(compact('products', 'title'));
+
+		$products = Product::whereIn('id', $genderIds)->whereIn('id', $ageIds)->whereIn('id', $brandIds)->whereIn('id', $priceIds)->paginate(20);
+
+		$id = $request->request->get('subtype_id');
+
+		$productType = ProductSubType::with('products')->find($id);
+
+		$type = $productType->producttype;
+
+		$subtypes = $type->subtypes;
+
+		$arrayOfId = array_pluck($productType->products, 'brand_id');	
+
+		$brands = Brand::whereIn("id", $arrayOfId)->get();
+
+		$subTypeName = $productType->name;
+
+		$ages = Age::latest()->get();
+
+		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id'));
 	}	
 
 	public function saleProducts()
