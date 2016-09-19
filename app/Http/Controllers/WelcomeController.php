@@ -186,20 +186,24 @@ class WelcomeController extends Controller
 
 		$title = "Хайлт";
 
-		$brand = $request->request->get('brand');
-
-		$age = $request->request->get('age');
-
 		$gender = $request->request->get('gender');
 
 		$subtype = ProductSubType::find($request->request->get('subtype_id'));
 
-		$products = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%');
+		$age = Age::find($request->request->get('age'));
 
-		$selected = Product::whereHas('ages', function($q) use ($age)
-		{
-		    $q->where('id', $age);
-		})->get();	
+		$brand = Brand::find($request->request->get('brand'));
+
+		$genderIds = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%')->lists('id')->all();
+
+
+		$ageIds = $age->products->lists('id')->all();
+
+		$brandIds = $brand->products->lists('id')->all();
+
+		var_dump($genderIds);
+
+		$products = Product::whereIn('id', $genderIds)->whereIn('id', $ageIds)->whereIn('id', $brandIds)->paginate(20);
 
 		return view('pages.search')->with(compact('products', 'title'));
 	}	

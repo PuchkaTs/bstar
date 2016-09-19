@@ -30,7 +30,7 @@
                     @foreach($brands as $brand)
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="brand" value="{{$brand->name}}">
+                        <input type="checkbox" name="brand" value="{{$brand->id}}">
                         {{$brand->name}}
                       </label>
                     </div>                    
