@@ -46,7 +46,7 @@ class UsersController extends Controller {
 
     public function registerBaby(){
 
-        $article = Article::where('url', 'register')->first();
+        $article = Article::where('url', 'registration-form')->first();
 
 
         return view('auth.register')->with(compact('article'));
