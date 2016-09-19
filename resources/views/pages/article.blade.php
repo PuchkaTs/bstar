@@ -4,18 +4,22 @@
 <div class="row">
     <div class="col-md-10 col-md-offset-1">
 
-
+    @if($article->title)
         <div class="placeholder100" style="margin-top: 50px;">
             <div class="">
                 <header>
                     @if($article)
-                    <h3 class="article-title">{{ $article->title ? $article->title : 'Гарчиг' }}</h3>
+                        <h3 class="article-title">{{ $article->title}}</h3>
                     @else
                         <h3 class="article-title">Гарчиг</h3>
                     @endif
                 </header>
             </div>
         </div>
+    @endif
+    @if(! $article->title)
+        <div class="placeholder50"></div>
+    @endif
         <div class="" id="projects" style="min-height: 500px">
             @if($article)
                 <section class="row">
