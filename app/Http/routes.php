@@ -189,6 +189,10 @@ Route::get('/registration-form', [
     'uses' => 'UsersController@registerBaby'
 ]);
 
+Route::post('/product-filter', [
+    'as' => 'product_filter_path',
+    'uses' => 'WelcomeController@filterProducts'
+]);
 // Route::get('/home', 'HomeController@index');
 
 /**

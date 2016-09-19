@@ -10,7 +10,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="home">
-        <p>Бэлнээр хэрхэн авах вэ?</p>
+        <p>Төлбөрөө бэлнээр хийх бол бараагаа хүлээж авахдаа хүргэлтийн ажилтанд төлбөрөө өгнө.</p>
 
         <a href="javascript:;" class="simpleCart_checkout btn btn-primary">Бэлнээр захиалга хийх</a>   
     </div>
@@ -31,7 +31,7 @@
       <table class="table table-hover table-bordered">
         <tr>
           <td>Дансны дугаар</td>
-          <td><p>Хаан банк 5003790996</p><p>Голомт банк 5003790996</p><p>ХХБ банк 5003790996</p></td>
+          <td><p>Голомт банк 2015101904</p><p>Төрийн банк 343200404535</p></td>
         </tr>
         <tr>
           <td>Хүлээн авагч</td>

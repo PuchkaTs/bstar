@@ -19,7 +19,9 @@
                         @foreach($subtypes as $subtype)
                         <li class="list-group-item">{!!link_to_route('subtype_path', $subtype->name, $subtype->id)!!}</li>
                         @endforeach     
-                    </ul>  
+                    </ul> 
+
+                    {!! Form::open(['route' => 'product_filter_path']) !!}
                     <h5 class="filter_item">Үнэ ₮:</h5>                      
                     <input id="ex2" type="text" class="span2" value="" data-slider-min="5000" data-slider-max="100000" data-slider-step="20" data-slider-value="[5000,50000]"/> 
                    
@@ -28,7 +30,7 @@
                     @foreach($brands as $brand)
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" name="age" value="option1">
+                        <input type="checkbox" name="brand" value="{{$brand->name}}">
                         {{$brand->name}}
                       </label>
                     </div>                    
@@ -36,35 +38,43 @@
 
                     <h5 class="filter_item">Нас:</h5>
                     @foreach($ages as $age)
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="age" value="option1">
+                        <input type="radio" name="age" value="{{$age->id}}">
                         {{$age->title}}
                       </label>
                     </div>                    
                     @endforeach  
 
                     <h5 class="filter_item">Хүйс:</h5>
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="gender" id="gender1" value="option1">
+                        <input type="radio" name="gender" id="gender1" value="Хүү">
                         Хүү
                       </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="gender" id="gender2" value="option2">
+                        <input type="radio" name="gender" id="gender2" value="Охин">
                         Охин
                       </label>
                     </div>  
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="gender" id="gender3" value="option3">
+                        <input type="radio" name="gender" id="gender3" value="Хүү, Охин">
                         Хүү, Охин
                       </label>
-                    </div>                      
-
-                    <button type="submit" class="btn btn-primary btn-block">Хайх</button>                                                                                          
+                    </div>                     
+                    <!-- Subtype ID form input -->
+                    <div class="form-group">
+                        {!! Form::label('subtype_id', 'Subtype ID:') !!}
+                        {!! Form::text('subtype_id', $id, ['class' => 'form-control']) !!}
+                    </div>
+                    <!-- Submit form input -->
+                     <div class="form-group">    
+                         {!! Form::submit('Хайх', ['class' => 'btn btn-primary btn-block'])!!}
+                     </div>                         
+                     {!! Form::close() !!}                                                                                        
                 </section>
             </div>   
 

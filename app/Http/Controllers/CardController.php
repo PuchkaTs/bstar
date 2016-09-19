@@ -14,6 +14,7 @@ class CardController extends Controller
 
 	public function checkout(Request $request)
 	{
+
 		$this->validate($request, [
 	        'phone' => 'required',
 	        'address' => 'required',
@@ -24,7 +25,7 @@ class CardController extends Controller
 		$order = Order::create($request->all());	
 		$grandTotal = 0;
 		$body = "";
-
+		$amount = $cart['totalPrice'] * 100;
 		for($i=1; $i < $cart['itemCount'] + 1; $i++) {
 		$name = 'item_name_'.$i;
 		$options = 'item_options_'.$i;
@@ -54,7 +55,7 @@ class CardController extends Controller
 
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		if($request->metod == 'card'){
-			return $this->post($order->id);
+			return $this->post($order->id, $amount);
 
 		}
 
@@ -118,7 +119,7 @@ class CardController extends Controller
 		return $xmlStatus;
 	}
 
-    public function post($id)
+    public function post($id, $amount = 0)
     {
 
 		$request = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>
@@ -128,7 +129,7 @@ class CardController extends Controller
 		   <Language>EN</Language>
 		   <Order>
 		     <Merchant>11070111</Merchant>
-		     <Amount>150000</Amount>
+		     <Amount>$amount</Amount>
 		     <Currency>496</Currency>
 		     <Description>Description</Description>
 		     <ApproveURL>https://www.babystar.mn/card/approve</ApproveURL>

@@ -21,6 +21,7 @@ use App\ProductType;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 
 class WelcomeController extends Controller
@@ -69,7 +70,7 @@ class WelcomeController extends Controller
 
 		$ages = Age::latest()->get();
 
-		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages'));
+		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id'));
 	}
 
 	public function menu($id)
@@ -179,6 +180,29 @@ class WelcomeController extends Controller
 
 		return view('pages.search')->with(compact('products', 'title', 'stores'));
 	}
+
+	public function filterProducts(Request $request)
+	{
+
+		$title = "Хайлт";
+
+		$brand = $request->request->get('brand');
+
+		$age = $request->request->get('age');
+
+		$gender = $request->request->get('gender');
+
+		$subtype = ProductSubType::find($request->request->get('subtype_id'));
+
+		$products = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%');
+
+		$selected = Product::whereHas('ages', function($q) use ($age)
+		{
+		    $q->where('id', $age);
+		})->get();	
+
+		return view('pages.search')->with(compact('products', 'title'));
+	}	
 
 	public function saleProducts()
 	{
