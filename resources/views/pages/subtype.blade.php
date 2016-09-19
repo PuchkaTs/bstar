@@ -28,9 +28,9 @@
 
                     <h5 class="filter_item">Брэнд:</h5>
                     @foreach($brands as $brand)
-                    <div class="checkbox">
+                    <div class="radio">
                       <label>
-                        <input type="checkbox" name="brand" value="{{$brand->id}}">
+                        <input type="radio" name="brand" value="{{$brand->id}}">
                         {{$brand->name}}
                       </label>
                     </div>                    
@@ -66,7 +66,7 @@
                       </label>
                     </div>                     
                     <!-- Subtype ID form input -->
-                    <div class="form-group">
+                    <div class="form-group hidden">
                         {!! Form::label('subtype_id', 'Subtype ID:') !!}
                         {!! Form::text('subtype_id', $id, ['class' => 'form-control']) !!}
                     </div>

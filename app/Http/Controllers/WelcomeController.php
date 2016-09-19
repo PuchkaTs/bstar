@@ -194,14 +194,23 @@ class WelcomeController extends Controller
 
 		$brand = Brand::find($request->request->get('brand'));
 
-		$genderIds = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%')->lists('id')->all();
+		if($gender){
+			$genderIds = $subtype->products()->where('gender', 'LIKE', '%'.$gender.'%')->lists('id')->all();
+		}else{
+			$genderIds = $subtype->products()->lists('id')->all();
+		}
 
+		if($age){
+			$ageIds = $age->products->lists('id')->all();
+		}else{
+			$ageIds = Product::lists('id')->all();
+		}
 
-		$ageIds = $age->products->lists('id')->all();
-
-		$brandIds = $brand->products->lists('id')->all();
-
-		var_dump($genderIds);
+		if($brand){
+			$brandIds = $brand->products->lists('id')->all();
+		}else{
+			$brandIds = Product::lists('id')->all();
+		}
 
 		$products = Product::whereIn('id', $genderIds)->whereIn('id', $ageIds)->whereIn('id', $brandIds)->paginate(20);
 
