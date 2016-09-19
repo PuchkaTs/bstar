@@ -15,7 +15,23 @@
             @endforeach
                 <div class="textcenter">
                 {!! $products->links() !!}                                
-                </div>                            
+                </div> 
+
+            @foreach($stores->chunk(4) as $fourtype)   
+                <div class="row">
+                @foreach($fourtype as $company)
+                <section class="col-md-3 col-sm-6">
+                    <div class="product-card store-card">
+                        <div class="company-logo">
+                            <a href="{{ route('store_path', $company->url ) }}"><img src="/assets/stores/logo/{{$company->logo}}"></a></div>
+                        <h3>{{$company->name}}</h3>
+                        <h5>{!! link_to_route('store_path', $company->shorten(), $company->url)!!}</h5>
+                    </div>
+                </section>
+                @endforeach
+                </div>    
+            @endforeach
+                                            
             @include('layouts.partials.middlebanner')
             @include('layouts.partials.reklam')
             @include('layouts.partials.bottombanner')

@@ -175,7 +175,9 @@ class WelcomeController extends Controller
 
 		$products = Product::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
 
-		return view('pages.search')->with(compact('products', 'title'));
+		$stores = Company::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
+
+		return view('pages.search')->with(compact('products', 'title', 'stores'));
 	}
 
 	public function saleProducts()

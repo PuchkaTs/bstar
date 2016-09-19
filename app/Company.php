@@ -17,7 +17,7 @@ class Company extends Model {
      * @var array
      */
     protected $fillable = ['name', 'url', 'year', 'cover', 'logo', 'about', 'address', 'phone', 'facebook',
-    'twitter', 'website', 'youtube'];
+    'twitter', 'website', 'youtube', 'searchWord'];
 
     public function companyType(){
         return $this->belongsTo('App\CompanyType', 'companyType_id');
