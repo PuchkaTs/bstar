@@ -5,9 +5,6 @@
                 <h4><i class="fa fa-users" aria-hidden="true"></i>Бидний тухай</h4>
                 <ul>
                     <li>
-                        <a href="/content/history">Түүх</a>
-                    </li>
-                    <li>
                         <a href="/content/about">Танилцуулга</a>
                     </li>
                     <li>
@@ -38,10 +35,7 @@
                     </li>
                     <li>
                         <a href="/content/payment-term">Төлбөрийн нөхцөл</a>
-                    </li>
-                    <li>
-                        <a href="/content/confidentiality">Нууцлал</a>
-                    </li>                      
+                    </li>                    
                     <li>
                         <a href="/content/service-condition">Үйлчилгээний нөхцөл</a>
                     </li>                

@@ -17,17 +17,7 @@
     <div role="tabpanel" class="tab-pane" id="paybycard">
         {!! Form::open(['url' => '/test']) !!}    
             
-            <!-- username number form input -->
-            <div class="form-group">
-                {!! Form::label('username', 'Нэр:') !!}
-                {!! Form::text('username', null, ['class' => 'form-control']) !!}
-            </div>                               
 
-            <!-- Нууцлал form input -->
-            <div class="form-group">
-                {!! Form::label('password', 'Нууц үг:') !!}
-                {!! Form::text('password', null, ['class' => 'form-control']) !!}
-            </div>
 
             <!-- Submit form input -->
             <div class="form-group">    

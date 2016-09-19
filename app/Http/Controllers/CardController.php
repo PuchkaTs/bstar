@@ -108,13 +108,13 @@ class CardController extends Controller
 		<Operation>GetOrderStatus</Operation>
 		<Language>EN</Language>
 		<Order>
-		<Merchant>TESTECOM</Merchant>
+		<Merchant>11070111</Merchant>
 		<OrderID>".$orderID."</OrderID>
 		</Order>
 		<SessionID>".$order->sessionID."</SessionID>
 		</Request>
 		</TKKPG>";	
-		$xmlStatus = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password');
+		$xmlStatus = $this->httpsPost("https://ecom.ibank.mn/Exec",($request),'name','password');
 		return $xmlStatus;
 	}
 
@@ -127,7 +127,7 @@ class CardController extends Controller
 		   <Operation>CreateOrder</Operation> 
 		   <Language>EN</Language>
 		   <Order>
-		     <Merchant>TESTECOM</Merchant>
+		     <Merchant>11070111</Merchant>
 		     <Amount>150000</Amount>
 		     <Currency>496</Currency>
 		     <Description>Description</Description>
@@ -141,7 +141,7 @@ class CardController extends Controller
 		    </Order>
 		  </Request>
 		 </TKKPG>";
-		  $xml = $this->httpsPost("https://202.131.225.149:2233/Exec",($request),'name','password',$id);
+		  $xml = $this->httpsPost("https://ecom.ibank.mn/Exec",($request),'name','password',$id);
 		  return redirect($xml);
     }
 
