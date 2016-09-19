@@ -894,7 +894,9 @@ li.ads{
 
 body {
   background-color: rgb(214, 255, 249);
-  font-family: 'Roboto', sans-serif;  
+  /*font-family: 'Roboto', sans-serif; */
+  font-family: 'PT Sans Narrow', sans-serif; 
+
   }
 
 .fa {
