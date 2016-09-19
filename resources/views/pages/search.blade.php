@@ -16,7 +16,7 @@
                 <div class="textcenter">
                 {!! $products->links() !!}                                
                 </div> 
-            @if($stores)
+            @if(isset($stores))
                 @foreach($stores->chunk(4) as $fourtype)   
                     <div class="row">
                     @foreach($fourtype as $company)
