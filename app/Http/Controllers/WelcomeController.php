@@ -173,7 +173,7 @@ class WelcomeController extends Controller
 
 		$search = $request->request->get('q');
 
-		$products = Product::where('name', 'LIKE', '%'.$search.'%')->paginate(20);
+		$products = Product::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
 
 		return view('pages.search')->with(compact('products', 'title'));
 	}

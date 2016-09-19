@@ -46,6 +46,10 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
+        'searchWord' => array(
+            'title' => 'Хайлтын үг:',
+            'type' => 'text',
+        ),          
         'stars' => array(
             'title' => 'Од',
             'type'  => 'number',
@@ -92,6 +96,10 @@ return array(
             'title' => 'Product name:',
             'type' => 'text',
         ),
+        'searchWord' => array(
+            'title' => 'Хайлтын үг:',
+            'type' => 'text',
+        ),        
         'description' => array(
             'title' => 'Description:',
             'type' => 'wysiwyg',
