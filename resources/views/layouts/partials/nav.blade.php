@@ -313,7 +313,7 @@
                 <ul class="zeroed secondary-nav--left black">
                     <!-- huuhdin burtgel -->
                     <li>
-                        <a class="navbar-link" href="/register"><i class="fa fa-child"></i>Хүүхдийн бүртгэл</a>
+                        <a class="navbar-link" href="/registration-form"><i class="fa fa-child"></i>Хүүхдийн бүртгэл</a>
                     </li>
                     <!-- huuhdin burtgel -->
                     <li>

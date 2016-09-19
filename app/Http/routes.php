@@ -183,6 +183,12 @@ Route::get('/odun/{id}', [
     'as' => 'odun_menu_path',
     'uses' => 'OdunController@odun_show'
 ]);
+
+Route::get('/registration-form', [
+    'as' => 'registration_path',
+    'uses' => 'UsersController@registerBaby'
+]);
+
 // Route::get('/home', 'HomeController@index');
 
 /**

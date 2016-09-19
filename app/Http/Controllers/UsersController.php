@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Article;
 use App\Http\Requests;
 use App\Role;
 use App\User;
@@ -41,6 +42,14 @@ class UsersController extends Controller {
         {
             return Redirect::home();
         }
+    }
+
+    public function registerBaby(){
+
+        $article = Article::where('url', 'register')->first();
+
+
+        return view('auth.register')->with(compact('article'));
     }
 
     public function index()
