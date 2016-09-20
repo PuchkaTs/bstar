@@ -218,11 +218,10 @@ class WelcomeController extends Controller
 		}else{
 			$brandIds = Product::lists('id')->all();
 		}
-
-		if($price){
-			$priceIds = Product::whereBetween('price', [$price])->lists('id')->all();			
-		}else{
+		if($price == null){
 			$priceIds = Product::lists('id')->all();
+		}else{
+			$priceIds = Product::whereBetween('price', [$price])->lists('id')->all();			
 		}
 
 

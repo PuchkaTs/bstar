@@ -28,7 +28,7 @@
                     <!-- price form input -->
                     <div class="form-group hidden">
                         {!! Form::label('price', 'price:') !!}
-                        {!! Form::text('price', null, ['class' => 'form-control', 'id' => 'price-slide']) !!}
+                        {!! Form::text('price', '0, 100000', ['class' => 'form-control', 'id' => 'price-slide']) !!}
                     </div>
 
 
