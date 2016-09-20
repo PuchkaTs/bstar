@@ -8,7 +8,7 @@
         <div class="placeholder100">
             <div class="col-md-8 col-lg-6 col-md-offset-3">
                 <header>
-                    <h3>{{$subTypeName}}</h3>
+                    <h3>{{$subTypeName}} {{ (($count) ? '(' . $count . " бараа байна)" : '(Бараа олдсонгүй)')}}</h3>
                 </header>
             </div>
         </div>    

@@ -58,6 +58,8 @@ class WelcomeController extends Controller
 
 		$products = $productType->products()->paginate(20);
 
+		$count = $products->count();
+
 		$type = $productType->producttype;
 
 		$subtypes = $type->subtypes;
@@ -70,7 +72,7 @@ class WelcomeController extends Controller
 
 		$ages = Age::latest()->get();
 
-		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id'));
+		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id', 'count'));
 	}
 
 	public function menu($id)
@@ -227,6 +229,8 @@ class WelcomeController extends Controller
 
 		$products = Product::whereIn('id', $genderIds)->whereIn('id', $ageIds)->whereIn('id', $brandIds)->whereIn('id', $priceIds)->paginate(20);
 
+		$count = $products->count();
+
 		$id = $request->request->get('subtype_id');
 
 		$productType = ProductSubType::with('products')->find($id);
@@ -243,7 +247,7 @@ class WelcomeController extends Controller
 
 		$ages = Age::latest()->get();
 
-		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id'));
+		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id', 'count'));
 	}	
 
 	public function saleProducts()
