@@ -43,4 +43,22 @@ return array(
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
     ),
+
+    /**
+     * Action permissions
+     */
+    'action_permissions'=> array(
+        'create' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        },
+        'update' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        },
+        'delete' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        }
+    ),    
 );

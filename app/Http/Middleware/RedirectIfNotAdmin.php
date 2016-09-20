@@ -15,11 +15,14 @@ class RedirectIfNotAdmin
      */
     public function handle($request, Closure $next)
     {
-        if ( ! $request->user()->isAdmin()){
+        if($request->user()){
+            if ( ! $request->user()->isAdmin()){
 
-            return redirect('/');
+                return redirect('/');
 
+            }            
         }
+
         return $next($request);
     }
 }

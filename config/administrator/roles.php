@@ -27,4 +27,22 @@ return array(
             'type' => 'text',
         )
     ),
+
+        /**
+     * Action permissions
+     */
+    'action_permissions'=> array(
+        'create' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        },
+        'update' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        },
+        'delete' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        }
+    ),    
 );

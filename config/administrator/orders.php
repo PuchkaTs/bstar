@@ -23,6 +23,8 @@ return array(
             'relationship' => 'owner',
             'select' => '(:table).name',
         ),
+        'oroldlogo',
+        'created_at',
     ),
     /**
      * The filter set
@@ -85,5 +87,22 @@ return array(
             'type' => 'wysiwyg',
         )
 
+    ),
+        /**
+     * Action permissions
+     */
+    'action_permissions'=> array(
+        'create' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        },
+        'update' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        },
+        'delete' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin']);
+        }
     ),
 );

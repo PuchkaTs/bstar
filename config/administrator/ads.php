@@ -104,4 +104,21 @@ return array(
         )
 
     ),
+        /**
+     * Action permissions
+     */
+    'action_permissions'=> array(
+        'create' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin', 'editor']);
+        },
+        'update' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin', 'editor']);
+        },
+        'delete' => function($model)
+        {
+            return Auth::user()->hasRole(['super_admin', 'editor']);
+        }
+    ),
 );
