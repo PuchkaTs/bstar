@@ -31,7 +31,7 @@
                         @endforeach
                     </ul>
                 @endif        
-                {!! Form::open(['url' => '/registerr']) !!}
+                {!! Form::open(['url' => '/register']) !!}
                     <!-- Birth date form input -->
                     <div class="form-group">
                         {!! Form::label('birth', 'Хүүхдийн төрсөн он сар:') !!}

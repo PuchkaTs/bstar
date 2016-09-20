@@ -22,7 +22,7 @@ return array(
 	 *  @type array
 	 */
 	// 'middleware' => array('web', 'admin'),
-	'middleware' => array('web'),
+	'middleware' => array('web', 'admin'),
 
 	/**
 	 * Page title
