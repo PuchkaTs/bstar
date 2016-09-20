@@ -81,7 +81,8 @@ return array(
                 array(1000, 100, 'landscape', public_path() . '/assets/oduns/', 100),
 
             )
-        ),  
+        ),
+    ),      
 
         /**
          * Action permissions
@@ -99,6 +100,5 @@ return array(
             {
                 return Auth::user()->hasRole(['super_admin', 'editor']);
             }
-        ),                      
-    ),
+        ), 
 );
