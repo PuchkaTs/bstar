@@ -113,7 +113,11 @@
                             </ul>
                         </li>   
                         <!-- buh delguur -->
-                        <li class="dropdown stores">
+                        <li id="navbar-link--work" class="stores">
+                            <a class="navbar-link" href="/stores" style="color:white;">Бүх дэлгүүр</a>
+                        </li>
+
+                        <li class="dropdown stores hidden">
                             <a href="" class="navbar-link dropdown-toggle" data-toggle="dropdown" style="color:white;">
                                 Бүх дэлгүүр <b class="caret"></b>
                             </a>

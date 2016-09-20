@@ -118,7 +118,7 @@ class WelcomeController extends Controller
 
 	public function store_index()
 	{
-		$companies = Company::orderBy('position', 'asc')->paginate(100);
+		$companies = Company::orderBy('name', 'asc')->paginate(100);
 
 		$companyTypes = CompanyType::orderBy('position', 'asc')->with('menu')->get();
 

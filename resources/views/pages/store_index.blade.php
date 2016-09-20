@@ -14,10 +14,10 @@
         </div>          
             <div class="col-md-3">
                 <section class="card">
-                    <h5 class="item_name">Ангилал:</h5>
+                    <h5 class="item_name">Дэлгүүрийн нэрс:</h5>
                     <ul class="list-group">
-                        @foreach($companyTypes as $type)
-                                <li class="list-group-item"><a href="{{ route('store_type_path', $type->id) }}">{{$type->name}}</a>
+                        @foreach($companies as $company)
+                                <li class="list-group-item">{!! link_to_route('store_path', $company->name, $company->url)!!}</li>
                         @endforeach     
                     </ul>                                                                                   
                 </section>
