@@ -94,7 +94,7 @@ class CardController extends Controller
 
 	public function cancel(){
 
-		flash()->error('Таны захиалга цуцлагдлаа.');
+		flash()->error('Уучлаарай.', 'Таны захиалга цуцлагдлаа.');
 
 		return Redirect::route('home_path');	
 	}
