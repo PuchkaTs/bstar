@@ -93,7 +93,10 @@ class CardController extends Controller
 	}
 
 	public function cancel(){
-		return "cancel";
+
+		flash()->error('Таны захиалга цуцлагдлаа.');
+
+		return Redirect::route('home_path');	
 	}
 
 	public function decline(){
