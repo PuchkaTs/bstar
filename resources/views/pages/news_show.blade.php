@@ -1,11 +1,15 @@
 @extends('layouts/default_min')
 @section('meta')
     <title>{{ $anews->title }}</title>
-    <meta property="og:url" content="{{Request::url()}}" />
-    <meta property="og:type" content="websitee" />
-    <meta property="og:title" content="Your Websitee Title" />
-    <meta property="og:description" content="Your description" />
-    <meta property="og:image" content="https://www.babystar.mn/assets/news/{{$anews->photo}}" />
+    <meta property="og:url" content="http://shiid.mn">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Намууд юу хийх вэ? Сонгууль 2016. Зөв Шийд ">
+    <meta property="og:site_name" content="Shiid.mn">
+    <meta property="og:description" content="Shiid.mn сайтын зорилго нь 2016 оны УИХ-ын сонгуулд нэр дэвшиж буй 
+                намуудын мөрийн хөтөлбөрүүдийг танилцуулах,
+                 улмаар хооронд нь харьцуулж иргэн таны сонголтыг
+                  мэргэн байлгахад оршино.">
+    <meta property="og:image" content="http://shiid.mn/assets/design/og_image_shiidmn.jpg">
 @stop
 @section('content')
     <div class="row">
