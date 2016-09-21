@@ -2,11 +2,6 @@
 
 @section('css')
     <title>btitle</title>
-    <meta property="og:url" content="https://babystar.mn">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="title">
-    <meta property="og:site_name" content="Babystar.mn">
-    <meta property="og:description" content="сайтын зорилго нь">
     <meta property="og:image" content="http://shiid.mn/assets/design/og_image_shiidmn.jpg">
 
 @stop
