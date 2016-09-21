@@ -44,7 +44,10 @@ class CardController extends Controller
 		$body .= '========================================================'."</br>";
 		}
 
-		$body .= 'Нийт дүн : ₮<b>' . number_format($grandTotal, 2, '.', '') . '</b>';
+		$body .= 'Нийт дүн : ₮<b>' . number_format($grandTotal, 2, '.', '') . '</b></br>';
+
+		$body .= 'Төлбөрийн хэлбэр : <b>' . $request->metod . '</b>';
+
 
 		$order->body = $body;
 
@@ -55,9 +58,16 @@ class CardController extends Controller
 
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		if($request->metod == 'card'){
+
+			$order->oroldlogo = true;
+
+			$order->save();
+
 			return $this->post($order->id, $amount);
 
 		}
+
+
 
 		return Redirect::route('success_path');
 	}
@@ -119,6 +129,10 @@ class CardController extends Controller
 		</Request>
 		</TKKPG>";	
 		$xmlStatus = $this->httpsPost("https://ecom.ibank.mn/Exec",($request),'name','password');
+		if(intval($xmlStatus)==0){
+			$order->oroldlogo = false;
+			$order->save();
+		}
 		return $xmlStatus;
 	}
 

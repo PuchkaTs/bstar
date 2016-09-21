@@ -530,6 +530,14 @@ input[type=search]+i {
     height: 300px;
     width: 200px;
 }
+.timetable{
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 1em;
+    right: 10px;
+    z-index: 999;
+    width: 291px;
+}
 .odunright{
     position: fixed;
     bottom: 2em;

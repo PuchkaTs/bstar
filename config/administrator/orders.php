@@ -14,8 +14,6 @@ return array(
         'transactionNumber',
         'totalPrice',
         'totalItems',
-        'phone',
-        'address',
         'delivered',
         'body',
         'owner' => array(
@@ -56,7 +54,15 @@ return array(
         'delivered' => array(
             'title' => 'хүргэгдсэн',
             'type'  => 'bool',
-        ),          
+        ),  
+        'oroldlogo' => array(
+            'title' => 'Оролдлого',
+            'type'  => 'bool',
+        ),         
+        'created_at' => array(
+            'title' => 'хүргэгдсэн',
+            'type'  => 'date',
+        ),                        
         'transactionNumber' => array(
             'title' => 'Захиалгын дугаар',
             'type' => 'text',
@@ -94,7 +100,8 @@ return array(
     'action_permissions'=> array(
         'create' => function($model)
         {
-            return Auth::user()->hasRole(['super_admin']);
+            return false;
+            // return Auth::user()->hasRole(['super_admin']);
         },
         'update' => function($model)
         {
@@ -102,7 +109,8 @@ return array(
         },
         'delete' => function($model)
         {
-            return Auth::user()->hasRole(['super_admin']);
+            return false;
+            // return Auth::user()->hasRole(['super_admin']);
         }
     ),
 );
