@@ -7,7 +7,7 @@
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Your Website Title" />
     <meta property="og:description"   content="Your description" />
-    <meta property="og:image"         content="http://www.babystar.mn/assets/news/{{$anews->photo}}" />
+    <meta property="og:image"         content="https://www.babystar.mn/assets/news/{{$anews->photo}}" />
 @stop
 @section('content')
     <div class="row">
