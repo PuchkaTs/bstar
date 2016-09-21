@@ -1,13 +1,11 @@
 @extends('layouts/default_min')
 @section('meta')
     <title>{{ $anews->title }}</title>
-    <!-- You can use Open Graph tags to customize link previews.
-    Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-    <meta property="og:url"           content="{{Request::url()}}" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Your Website Title" />
-    <meta property="og:description"   content="Your description" />
-    <meta property="og:image"         content="https://www.babystar.mn/assets/news/{{$anews->photo}}" />
+    <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:type" content="websitee" />
+    <meta property="og:title" content="Your Websitee Title" />
+    <meta property="og:description" content="Your description" />
+    <meta property="og:image" content="https://www.babystar.mn/assets/news/{{$anews->photo}}" />
 @stop
 @section('content')
     <div class="row">
@@ -30,7 +28,7 @@
                                 </section>
                             </div>
                         </div>
-                        <div class="fb-share-button" data-href="{{Request::url()}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>                        
+                    <div class="fb-share-button" data-href="{{Request::url()}}" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.babystar.mn%2F&amp;src=sdkpreparse">Share</a></div>                                         
                     </article>
             </div>
     </div>
