@@ -3,8 +3,6 @@
     <title>{{ $anews->title }}</title>
     <meta property="og:url" content="https://babystar.mn">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ $anews->title }}">
-    <meta property="og:site_name" content="Babystar.mn">
     <meta property="og:description" content="сайтын зорилго нь">
     <meta property="og:image" content="https://babystar.mn/assets/news/{{$anews->photo}}">
 @stop
