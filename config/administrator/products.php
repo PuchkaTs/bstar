@@ -15,7 +15,7 @@ return array(
         'productSubType' => array(
             'title' => 'Бүтээгэдхүүний төрөл',
             'relationship' => 'productSubType',//model
-            'select' => '(:table).name',
+            'select' => "GROUP_CONCAT((:table).name SEPARATOR ', ')",
         ),
         'gallery' => array(
             'title' => 'Галлерей',

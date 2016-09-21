@@ -27,7 +27,7 @@ class Product extends Model {
     }
 
     public function productSubType(){
-        return $this->belongsTo('App\ProductSubType', 'productSubType_id');
+        return $this->belongsToMany('App\ProductSubType', 'product_productsubtype', 'product_id', 'subtype_id');
     }
 
     public function gallery()

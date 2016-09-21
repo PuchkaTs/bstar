@@ -26,6 +26,6 @@ class ProductSubType extends Model
     }
 
     public function products(){
-        return $this->hasMany('App\Product', 'productSubType_id');
+        return $this->belongsToMany('App\Product', 'product_productsubtype', 'subtype_id', 'product_id');
     }
 }

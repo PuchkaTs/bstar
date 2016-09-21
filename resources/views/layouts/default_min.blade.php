@@ -52,12 +52,13 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 <div class="odun grow hidden-xs" v-bind:class="[growsmall]" ></div>
 <div class="narun grow hidden-xs" v-bind:class="[growsmall]" ></div>
 <div class="timetable">
-    <div class="alert alert-warning alert-dismissible fade in" role="alert"> 
+    <div class="alert alert-warning alert-dismissible fade in" role="alert" style="color:#015a00"> 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">×</span>
         </button> 
         <p>Ажлын өдрүүдэд: 10:00-19:00</p>
-        <p>Амралтын өдрүүдэд: 10:00-15:00</p> 
+        <p>Амралтын өдрүүдэд: 11:00-15:00</p> 
+        <p>Лавлах утас: 7610-3080</p> 
     </div>
 </div>
 <!-- Page Content -->
