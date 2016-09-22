@@ -28,13 +28,13 @@
                         <div class="menu-list-container">
                         @include('layouts.partials.topbanner')
 
-                            <div class="menu-list">
+                            <div class="menu-list menu-card">
                             @foreach($productMenu->productTypes->chunk(4) as $fourtype)
                                 <div class="row">
                                 @foreach($fourtype as $type)
                                 <section class="col-md-3">
-                                    <div class="product-card">
-                                        <h3>{{$type->name}}</h3>
+                                    <div class="">
+                                        <h4 class="menu-red-title">{{$type->name}}</h4>
                                         @foreach($type->subtypes as $subtype)
                                             <h5>{!! link_to_route('subtype_path', $subtype->name, $subtype->id)!!}</h5>
                                         @endforeach                                        

@@ -766,3 +766,12 @@ p{
     text-decoration: line-through;
     color: red;
 }
+.menu-card{
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: white;
+}
+.menu-red-title{
+    font-weight: bold;
+    color: #dd042b;
+}
