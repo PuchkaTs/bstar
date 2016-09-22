@@ -3,7 +3,7 @@
     <title>{{ $anews->title }}</title>
     <meta property="og:url" content="{{Request::url()}}" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Мэдээлэл" />
+    <meta property="og:description" content="{{ $anews->body }}" />
     <meta property="og:image" content="https://babystar.mn/assets/news/{{$anews->photo}}" />
 @stop
 @section('content')
