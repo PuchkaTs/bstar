@@ -37,6 +37,10 @@ return array(
             'title' => 'Утасны дугаар',
             'type'  => 'text',
         ),     
+        'phone2' => array(
+            'title' => 'Утасны дугаар 2',
+            'type'  => 'text',
+        ),         
         'delivered' => array(
             'title' => 'Хүргэгдсэн',
             'type'  => 'bool',
@@ -76,9 +80,13 @@ return array(
             'type' => 'number',
         ),        
         'phone' => array(
-            'title' => 'Утас:',
+            'title' => 'Утас',
             'type' => 'text',
         ),
+        'phone2' => array(
+            'title' => 'Утасны дугаар 2',
+            'type'  => 'text',
+        ),          
         'owner' => array(
             'type' => 'relationship',
             'title' => 'Захиалагч',

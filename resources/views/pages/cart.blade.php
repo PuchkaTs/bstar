@@ -41,6 +41,11 @@
 			        {!! Form::label('phone', 'Утас:*') !!}
 			        {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'phone']) !!}
 			    </div>
+			    <!-- Утас 2 form input -->
+			    <div class="form-group">
+			        {!! Form::label('phone2', 'Утас 2:*') !!}
+			        {!! Form::text('phone2', null, ['class' => 'form-control', 'id' => 'phone2']) !!}
+			    </div>			    
 			    <!-- Message form input -->
 			    <div class="form-group">			    
 			        {!! Form::label('address', 'Хаяг:*') !!}
@@ -96,11 +101,13 @@
 
 simpleCart.bind( 'beforeCheckout' , function( data ){
 	var phone = document.getElementById('phone').value;
+	var phone2 = document.getElementById('phone2').value;
 	var address = document.getElementById('address').value;
 	var method = document.getElementById('method').value;
 	var tnumber = document.getElementById('tnumber').innerHTML;
 	var agreement = document.getElementById('agreement').checked;
 	  data.phone = phone;
+	  data.phone2 = phone2;
 	  data.metod = method;
 	  data.address = address;
 	  data.transactionNumber = tnumber;	  

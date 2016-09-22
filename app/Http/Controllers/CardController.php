@@ -17,6 +17,7 @@ class CardController extends Controller
 
 		$this->validate($request, [
 	        'phone' => 'required',
+	        'phone2' => 'required',
 	        'address' => 'required',
 	        'agreement' => 'size:4',
 	    ]);
