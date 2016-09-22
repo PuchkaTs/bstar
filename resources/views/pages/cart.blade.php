@@ -38,12 +38,12 @@
 			{!! Form::open(['url' => 'foo/bar']) !!}
 			    <!-- Утас form input -->
 			    <div class="form-group">
-			        {!! Form::label('phone', 'Утас:*') !!}
+			        {!! Form::label('phone', 'Утас 1:*') !!}
 			        {!! Form::text('phone', null, ['class' => 'form-control', 'id' => 'phone']) !!}
 			    </div>
 			    <!-- Утас 2 form input -->
 			    <div class="form-group">
-			        {!! Form::label('phone2', 'Утас 2:*') !!}
+			        {!! Form::label('phone2', 'Утас 2:') !!}
 			        {!! Form::text('phone2', null, ['class' => 'form-control', 'id' => 'phone2']) !!}
 			    </div>			    
 			    <!-- Message form input -->
