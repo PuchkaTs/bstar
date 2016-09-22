@@ -1,8 +1,8 @@
 @extends('layouts/default_min')
 
 @section('meta')
-<meta property="og:title" content="Babystar.mn хүүхдийн сайт" />
-<meta property="og:type" content="Хүүхдийн бараа худалдааны сайт" />
+<meta property="og:title" content="Babystar.mn" />
+<meta property="og:type" content="Монголын анхны хүүхдийн бараа үйлчилгээ, зөвлөгөө мэдээллийн цогц сайт" />
 <meta property="og:url" content="https://www.babystar.mn" />
 <meta property="og:image" content="https://www.babystar.mn/assets/banners/mainbanners/d5RldL1nwS88ORi7osY4.jpg" />
 @stop

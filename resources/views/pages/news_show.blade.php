@@ -2,7 +2,7 @@
 @section('meta')
     <title>{{ $anews->title }}</title>
     <meta property="og:url" content="{{Request::url()}}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="Монголын анхны хүүхдийн бараа үйлчилгээ, зөвлөгөө мэдээллийн цогц сайт" />
     <meta property="og:description" content="{{ $anews->shorten(300) }}" />
     <meta property="og:image" content="https://babystar.mn/assets/news/{{$anews->photo}}" />
 @stop
