@@ -2,15 +2,11 @@
 <html prefix="og: http://ogp.me/ns#">
 <head>
 <title>Babystar.mn</title>
-<meta property="og:title" content="www.babystar.mn" />
-<meta property="og:type" content="Хүүхдийн бараа худалдааны сайт" />
-<meta property="og:url" content="https://www.babystar.mn" />
-<meta property="og:image" content="https://www.babystar.mn/assets/banners/mainbanners/d5RldL1nwS88ORi7osY4.jpg" />
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="Babystar.mn хүүхдийн сайт"/>
     @yield('meta')
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">

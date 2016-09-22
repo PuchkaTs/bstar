@@ -1,10 +1,10 @@
 @extends('layouts/default_min')
 @section('meta')
     <title>{{ $anews->title }}</title>
-    <meta property="og:url" content="https://babystar.mn">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="сайтын зорилго нь">
-    <meta property="og:image" content="https://babystar.mn/assets/news/{{$anews->photo}}">
+    <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Мэдээлэл" />
+    <meta property="og:image" content="https://babystar.mn/assets/news/{{$anews->photo}}" />
 @stop
 @section('content')
     <div class="row">
