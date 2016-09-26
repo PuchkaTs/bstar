@@ -530,6 +530,26 @@ input[type=search]+i {
     height: 300px;
     width: 200px;
 }
+.addedMessage{
+    background-color: #49dac0;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #31b59d;
+    position: fixed;
+    top: 2em;
+    right: -300px;
+    z-index: 999;
+    width: 276px;
+}
+.addedMessage p{
+    color: #015a00;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.added{
+    right: 0px;
+}
 .timetable{
     line-height: 0.9em;
     font-size: 0.9em;
@@ -537,7 +557,7 @@ input[type=search]+i {
     bottom: 1em;
     right: 10px;
     z-index: 999;
-    width: 291px;
+    width: 276;
 }
 .odunright{
     position: fixed;

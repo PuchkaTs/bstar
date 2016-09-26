@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet">    
-    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>    -->
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/idangerous.swiper.css">
     <link rel="stylesheet" href="/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="/css/sweetalert.css">
@@ -46,18 +46,14 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
     <!--End of Zopim Live Chat Script-->    
 </head>
 <body id="app">
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=844033775697860";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
+@include('layouts.partials.facebooksdk')
+@include('layouts.partials.analytics')
 @include('layouts.partials.nav')
 
 @yield('body')
+<div class="addedMessage" v-bind:class="[added, animation, animated]">
+    <p>Бараа нэмэгдлээ</p>
+</div>
 <div class="odun grow hidden-xs" v-bind:class="[growsmall]" ></div>
 <div class="narun grow hidden-xs" v-bind:class="[growsmall]" ></div>
 <div class="timetable">
@@ -95,7 +91,10 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         el: '#app',
         data: {
             growsmall: '',   
-            method: 'cash',       
+            method: 'cash',
+            added: '',
+            animation: '',
+            animated: ''    
         },
 
         created: function(){
@@ -129,7 +128,36 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
             },                       
             gotocart: function(){
                 location.replace('/cart');
-            }                    
+            },
+            productAdded: function(){
+
+                this.added = 'ended';
+                this.animation = '';
+                this.animated = '';                
+                setTimeout(function () {
+                
+                    vm.added = 'added';
+                    vm.animation = 'bounceInRight';
+                    vm.animated = 'animated';
+
+                    console.log(vm.added);
+
+                }, 250);                
+
+                var vm = this;
+
+                setTimeout(function () {
+                
+                    vm.added = 'ended';
+                    vm.animation = '';
+                    vm.animated = '';                     
+
+                    console.log(vm.added);
+
+                }, 5000);
+
+
+            },                                  
         }
     });
 </script>

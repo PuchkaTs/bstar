@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Company;
 use App\CompanySubType;
 use App\CompanyType;
@@ -16,13 +17,15 @@ class StoresController extends Controller
 {
     public function show($type){
 
+        $article = Article::where('url', $type)->first();
+
         if($type == ''){
 
         }else{
 
         }
 
-		return view('pages.open-store');
+		return view('pages.open-store')->with(compact('article'));
 
     }
 

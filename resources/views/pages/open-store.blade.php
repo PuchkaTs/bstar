@@ -2,6 +2,27 @@
 
 @section('content')
 <div class="row">
+            @if($article)
+                <section class="row">
+                    <div class="articlephoto">
+                        @if($article->photo)
+                            {!! Html::image("assets/articles/$article->photo", '', ['class'=>''])!!}    
+                        @endif     
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="col-md-12">
+                        {!!$article->body!!}
+                    </div>
+                </section>
+                <section class="row">
+                    <div class="art_bottom_ph">
+                        @if($article->photobottom)
+                            {!! Html::image("assets/articles/$article->photobottom", '', ['class'=>''])!!}    
+                        @endif     
+                    </div>
+                </section>
+            @endif  
     <div class="col-md-6 col-md-offset-3">
         <div>
                 <header>
@@ -9,6 +30,7 @@
                 </header>
         </div>
         <div class="row" id="projects" style="min-height: 500px">
+       
                 <section class="col-md-12">
                     <h4>Компани: Бэйби Стар ХХК /Baby Star LLC/</h4>
                     <h4>Утас: 76103080</h4>
