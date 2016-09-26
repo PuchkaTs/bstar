@@ -28,7 +28,7 @@
                 <div class="price">
                     <h4 class="item_name">{{$product->name}}</h4>
                     @if($product->sale)
-                        <h5 class="price-text-color item_price"><span class="oldprice">{{$product->oldprice}}₮</span> {{$product->price}}₮</h5>  
+                        <h5 class="price-text-color "><span class="oldprice">{{$product->oldprice}}₮</span> <span class="item_price">{{$product->price}}₮</span></h5>  
                     @else                    
                     <h5 class="price-text-color item_price">{{$product->price}}₮</h5>
                     @endif
