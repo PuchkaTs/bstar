@@ -12,14 +12,14 @@ return array(
     'columns'     => array(
         'id',
         'name'     => array(
-            'title' => 'Name',
+            'title' => 'Нэр',
         ),
         'color'=> array(
-            'title'=>'Color',
+            'title'=>'Өнгө',
             'output'=> '<div style="background-color:(:value); height:20px; width:100%;"></div>'
         ),      
         'position'     => array(
-            'title' => 'Position',
+            'title' => 'Байрлал',
         ),
     ),
 
@@ -28,15 +28,15 @@ return array(
      */
     'edit_fields' => array(
         'name'  => array(
-            'title' => 'Name',
+            'title' => 'Нэр',
             'type'  => 'text',
         ),
         'position' => array(
-            'title' => 'Position',
+            'title' => 'Байрлал',
             'type'  => 'number',
         ),
         'color' => array(
-            'title' => 'Position',
+            'title' => 'Өнгө',
             'type'  => 'color',
         )
 

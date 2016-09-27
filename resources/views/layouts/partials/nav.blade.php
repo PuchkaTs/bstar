@@ -83,8 +83,12 @@
                                                         @foreach($items as $type)
                                                                 <li class="companyType col-sm-4" style=""><h6><a href="{{ route('type_path', $type->id) }}">{{$type->name}}</a></h6>
                                                                     <ul class="companyList">
+                                                                    @if( $type->products->count() == 0 )
                                                                     {!! $type->subTypesInMenu()!!}
-
+                                                                    @endif
+                                                                    @if( $type->products->count() > 0 )
+                                                                    {!! $type->productsInType()!!}
+                                                                    @endif                                                                    
                                                                     </ul>
 
                                                                 </li>

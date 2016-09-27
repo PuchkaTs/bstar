@@ -19,7 +19,7 @@ return array(
         ),
         'product' => array(
             'relationship' => 'product',
-            'title' => 'Belongs to a project',
+            'title' => 'Хамааралтай бүтээгдэхүүн',
             'select' => '(:table).name', //what column or accessor on the other table you want to use to represent this object
         ),
         'position',
@@ -34,7 +34,7 @@ return array(
     'filters' => array(
         'product' => array(
             'type' => 'relationship',
-            'title' => 'belong to project',
+            'title' => 'Хамааралтай бүтээгдэхүүн',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
     ),
@@ -43,20 +43,20 @@ return array(
      */
     'edit_fields' => array(
         'name'  => array(
-            'title' => 'Title',
+            'title' => 'Нэр',
             'type'  => 'text',
         ),
         'description'  => array(
-            'title' => 'Description',
+            'title' => 'Тайлбар',
             'type'  => 'wysiwyg',
         ),
         'position' => array(
-            'title' => 'Position',
+            'title' => 'Байрлал',
             'type'  => 'number',
         ),
         'product' => array(
             'type' => 'relationship',
-            'title' => 'Belongs to a project',
+            'title' => 'Хамааралтай бүтээгдэхүүн',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
         'color' => array(

@@ -24,12 +24,12 @@ return array(
      */
     'filters' => array(
         'name' => array(
-            'title' => 'name',
+            'title' => 'Нэр',
             'type'  => 'text',
         ),
         'productmenu' => array(
             'type' => 'relationship',
-            'title' => 'In menu',
+            'title' => 'Хамааралтай цэс',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         )
     ),
@@ -38,20 +38,20 @@ return array(
      */
     'edit_fields' => array(
         'name' => array(
-            'title' => 'Name:',
+            'title' => 'Нэр',
             'type' => 'text',
         ),
         'position' => array(
-            'title' => 'Position:',
+            'title' => 'Байрлал',
             'type' => 'number',
         ),
         'productmenu' => array(
             'type' => 'relationship',
-            'title' => 'In menu',
+            'title' => 'Хамааралтай цэс',
             'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
         ),
         'subtype_number' => array(
-            'title' => 'how many companies to show',
+            'title' => 'Хэдэн дэд төрөл харуулах?',
             'type' => 'number',
         ),
 

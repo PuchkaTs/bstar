@@ -29,10 +29,14 @@ class ProductType extends Model
         return $this->hasMany('App\ProductSubType', 'producttype_id');
     }
 
+    public function products(){
+        return $this->belongsToMany('App\Product', 'product_producttype', 'type_id', 'product_id');
+    }
+
     public function subTypesInMenu(){
         $listedSubTypes = '';
         $count = 0;
-        $limit = $this->subtypenumber;
+        $limit = $this->subtype_number;
       
         foreach ($this->subtypes as $subtype){
             $listedSubTypes .= '<li class="">' . link_to_route('subtype_path', $subtype->name, $subtype->id)  . '</li>';
@@ -43,4 +47,18 @@ class ProductType extends Model
         }
         return $listedSubTypes;
     }
+    public function productsInType(){
+        $listedproducts = '';
+        $count = 0;
+        $limit = $this->subtype_number;
+      
+        foreach ($this->products as $product){
+            $listedproducts .= '<li class="">' . link_to_route('product_path', $product->name, $product->id)  . '</li>';
+            $count++;
+            if ($count == $limit) {
+                break;
+            }
+        }
+        return $listedproducts;
+    }    
 }

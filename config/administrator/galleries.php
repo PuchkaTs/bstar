@@ -12,10 +12,10 @@ return array(
     'columns'     => array(
         'id',
         'name'     => array(
-            'title' => 'Name',
+            'title' => 'Нэр',
         ),
         'position'     => array(
-            'title' => 'Position',
+            'title' => 'Байрлал',
         ),
     ),
 
@@ -24,11 +24,11 @@ return array(
      */
     'edit_fields' => array(
         'name'  => array(
-            'title' => 'Name',
+            'title' => 'Нэр',
             'type'  => 'text',
         ),
         'position' => array(
-            'title' => 'Position',
+            'title' => 'Байрлал',
             'type'  => 'number',
         )
 

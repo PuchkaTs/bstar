@@ -23,11 +23,11 @@ return array(
      */
     'filters' => array(
         'name' => array(
-            'title' => 'name',
+            'title' => 'Нэр',
             'type'  => 'text',
         ),
         'position' => array(
-            'title' => 'position',
+            'title' => 'Байрлал',
             'type'  => 'number',
         ),        
     ),
@@ -36,11 +36,11 @@ return array(
      */
     'edit_fields' => array(
         'name' => array(
-            'title' => 'Name:',
+            'title' => 'Нэр',
             'type' => 'text',
         ),
         'position' => array(
-            'title' => 'Position:',
+            'title' => 'Байрлал',
             'type' => 'number',
         ),
         'logo' => array(

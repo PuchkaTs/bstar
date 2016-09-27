@@ -13,10 +13,15 @@ return array(
         'id',
         'name',
         'productSubType' => array(
-            'title' => 'Бүтээгэдхүүний төрөл',
+            'title' => 'Бүтээгэдхүүний дэд төрөл',
             'relationship' => 'productSubType',//model
             'select' => "GROUP_CONCAT((:table).name SEPARATOR ', ')",
         ),
+        'productType' => array(
+            'title' => 'Бүтээгэдхүүний төрөл',
+            'relationship' => 'productType',//model
+            'select' => "GROUP_CONCAT((:table).name SEPARATOR ', ')",
+        ),        
         'gallery' => array(
             'title' => 'Галлерей',
             'relationship' => 'gallery',
@@ -43,11 +48,11 @@ return array(
     'form_width' => 500,
     'filters' => array(
         'name' => array(
-            'title' => 'Name',
+            'title' => 'Нэр',
             'type'  => 'text',
         ),
         'searchWord' => array(
-            'title' => 'Хайлтын үг:',
+            'title' => 'Хайлтын үг',
             'type' => 'text',
         ),          
         'stars' => array(
@@ -56,14 +61,19 @@ return array(
         ),   
         'gender' => array(
             'type' => 'enum',
-            'title' => 'Gender:',
+            'title' => 'Хүйс',
             'options' => array('Хүү', 'Охин', 'Хүү, Охин'), //must be an array
         ),                
         'productSubType' => array(
             'type' => 'relationship',
-            'title' => 'Бүтээгэдхүүний төрөл',
+            'title' => 'Бүтээгэдхүүний дэд төрөл',
             'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
         ),
+        'productType' => array(
+            'type' => 'relationship',
+            'title' => 'Бүтээгэдхүүний төрөл',
+            'name_field' => 'name', //what column or accessor on the other table you want to use to represent this object
+        ),        
         'gallery' => array(
             'type' => 'relationship',
             'title' => 'Галлерей',
@@ -93,23 +103,27 @@ return array(
      */
     'edit_fields' => array(
         'name' => array(
-            'title' => 'Product name:',
+            'title' => 'Бүтээгдэхүүний нэр',
             'type' => 'text',
         ),
         'searchWord' => array(
-            'title' => 'Хайлтын үг:',
+            'title' => 'Хайлтын үг',
             'type' => 'text',
         ),        
         'description' => array(
-            'title' => 'Description:',
+            'title' => 'Тайлбар',
             'type' => 'wysiwyg',
         ),
         'productSubType' => array(
             'type' => 'relationship',
+            'title' => 'Бүтээгэдхүүний дэд төрөл',
+            'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
+        ),
+        'productType' => array(
+            'type' => 'relationship',
             'title' => 'Бүтээгэдхүүний төрөл',
             'name_field' => 'id', //what column or accessor on the other table you want to use to represent this object
         ),
-
         'gallery' => array(
             'type' => 'relationship',
             'title' => 'Галлерей',
@@ -157,12 +171,12 @@ return array(
             'title'  => 'Хуучин үнэ',
         ),          
         'new' => array(
-            'title' => 'шинэ:',
+            'title' => 'шинэ',
             'type' => 'bool',
         ),                
         'gender' => array(
             'type' => 'enum',
-            'title' => 'Gender:',
+            'title' => 'Хүйс',
             'options' => array('Хүү', 'Охин', 'Хүү, Охин'), //must be an array
         ),               
         'photo' => array(

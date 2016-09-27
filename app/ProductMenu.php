@@ -39,6 +39,9 @@ class ProductMenu extends Model
         }, 'productTypes.subtypes'         => function ($query)
         {
             $query->orderBy('position', 'asc');
+        }, 'productTypes.products'         => function ($query)
+        {
+            $query->orderBy('name', 'asc');
         }
         ])->get();
 
