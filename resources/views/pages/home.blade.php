@@ -3,7 +3,6 @@
 @section('meta')
 <meta property="og:title" content="Babystar.mn" />
 <meta property="og:type" content="Монголын анхны хүүхдийн бараа үйлчилгээ, зөвлөгөө мэдээллийн цогц сайт" />
-<meta property="og:url" content="https://www.babystar.mn" />
 <meta property="og:image" content="https://www.babystar.mn/assets/banners/subbanners/PHihH5g6eFe6r7AdOHMd.jpg" />
 @stop
 
