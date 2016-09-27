@@ -63,7 +63,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         </button> 
         <p>Ажлын өдрүүдэд: 10:00-19:00</p>
         <p>Амралтын өдрүүдэд: 11:00-15:00</p> 
-        <p>Лавлах утас: 7610-3080</p> 
+        <p>Лавлах утас: 7610-3080, 80228033</p> 
     </div>
 </div>
 <!-- Page Content -->
