@@ -39,10 +39,11 @@ class WelcomeController extends Controller
 	{
 
 		$productSubType = Product::find($id)->productSubType()->first();
-
+		
 		$productType = $productSubType->producttype;
 
 		$productSubTypes = $productType->subtypes;
+
 
         $product = Product::with('images', 'brand', 'colors', 'sizes')->find($id);
 

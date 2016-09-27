@@ -17,11 +17,25 @@ class Subbanner extends Model
 
     public function getBanners(){
     	
-    	$banners = self::orderBy('position', 'asc')->limit(3)->get();
+    	$banners = self::orderBy('position', 'asc')->limit(2)->get();
 
     	return $banners;
 
     }
+
+    public function getRandomBanner(){
+        
+        $banners = self::where('position', '>', 2)->get();
+
+        if($banners->count() >=1){
+            $banner = $banners->random();
+        } else{
+            $banner = null;
+        }
+
+        return $banner;
+
+    }    
 
     // remove files 
 	public function removeFile($newphoto){

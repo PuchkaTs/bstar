@@ -3,8 +3,8 @@
  * User model config
  */
 return array(
-    'title' => 'Sub_banner',
-    'single' => 'Sub_banner',
+    'title' => 'Туслах баннер',
+    'single' => 'Туслах баннер',
     'model' => 'App\Subbanner',
     /**
      * The display columns
