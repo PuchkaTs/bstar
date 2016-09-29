@@ -72,10 +72,13 @@
                                 <div>
                                     <div style="display:none" class="item-thumb">{!! Html::image("assets/products/thumbs/$product->photo", '', ['class'=>'item_thumb'])!!}</div>
                                     <p>{!! $product->description!!}</p>
+                                    @include('layouts.partials.socialButtons')                                     
                                 </div>
                             </article>
                     </div>
-               @include('layouts.partials.order')                    
+
+               @include('layouts.partials.order')  
+
             </div>
 
         <!-- sidebar -->
@@ -138,8 +141,9 @@
                         </div>
 
                         <button type="button" class="btn btn-default btn-sm btn-block item_add"> <i class="fa fa-shopping-cart"></i>  нэмэх</button>
-                    </div>
+                    </div>                    
                 </article>
+
             </aside>
         </div>
 
