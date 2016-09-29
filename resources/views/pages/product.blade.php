@@ -1,5 +1,11 @@
 @extends('layouts/default_min')
-
+@section('meta')
+    <title>{{ $product->name }}</title>
+    <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="{{ $product->description }}" />
+    <meta property="og:image" content="https://babystar.mn/assets/products/thumbs/{{$product->photo}}" />
+@stop
 @section('css')
     <link rel="stylesheet" type="text/css" href="/css/flexslider/flexslider.css">
 @stop
