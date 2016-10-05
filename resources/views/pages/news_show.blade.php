@@ -1,7 +1,11 @@
 @extends('layouts/default_min')
 @section('meta')
-    <title>{{ $anews->title }}</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@BabyStarMn" />
+    <meta name="twitter:creator" content="@BabyStarMn" />
+
     <meta property="og:url" content="{{Request::url()}}" />
+    <meta property="og:title" content="{{ $anews->title }}" />
     <meta property="og:type" content="Монголын анхны хүүхдийн бараа үйлчилгээ, зөвлөгөө мэдээллийн цогц сайт" />
     <meta property="og:description" content="{{ $anews->shorten(300) }}" />
     <meta property="og:image" content="https://babystar.mn/assets/news/{{$anews->photo}}" />

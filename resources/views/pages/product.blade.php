@@ -1,6 +1,10 @@
 @extends('layouts/default_min')
 @section('meta')
-    <title>{{ $product->name }}</title>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@BabyStarMn" />
+    <meta name="twitter:creator" content="@BabyStarMn" />
+
+    <meta property="og:title" content="{{ $product->name }}" />
     <meta property="og:url" content="{{Request::url()}}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ $product->shorten(300) }}" />
