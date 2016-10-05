@@ -1,7 +1,7 @@
 @inject('pmenus', 'App\ProductMenu')
 @inject('placemenus', 'App\PlaceMenu')
 @inject('companymenus', 'App\Menu')
-@inject('Odun', 'App\Odun')
+@inject('Odun', 'App\Oduntag')
 <div class="headercenter">
     <div class="main">
         <img src="/assets/common/skyline02-bg2.png">
@@ -301,7 +301,7 @@
 
                             <ul class="dropdown-menu ">
                                 @foreach( $Odun->getListForMenu() as $menu)
-                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}">{{$menu->url}}</a>
+                                    <li class="side-menu"><a href="{{ route('odun_menu_path', $menu->id) }}">{{$menu->title}}</a>
                                     </li>
                                 @endforeach
                             </ul>

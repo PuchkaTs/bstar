@@ -81,6 +81,7 @@ return array(
         'promotions',
         'messages',
         'oduns',
+        'Одуны цэс 2' => array('oduncontents', 'oduntags'),
     ),
 
 	/**

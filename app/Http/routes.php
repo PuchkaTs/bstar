@@ -179,8 +179,12 @@ Route::get('/career', [
 Route::get('/downloads/anket', function(){
     return response()->file('./assets/common/anket.docx');
 });
-Route::get('/odun/{id}', [
+Route::get('/oduntag/{id}', [
     'as' => 'odun_menu_path',
+    'uses' => 'OdunController@odun_index'
+]);
+Route::get('/oduncontent/{id}', [
+    'as' => 'odun_content_path',
     'uses' => 'OdunController@odun_show'
 ]);
 
