@@ -30,7 +30,13 @@ class OdunController extends Controller
 
 		$title = $tag->title;
 
-        $latestId = $tag->contents()->latest()->first()->id;
+		if($tag->contents()->count()){
+
+        	$latestId = $tag->contents()->latest()->first()->id;
+
+		}else{
+			$latestId = 0;
+		}
 
 		return view('pages.odunarticle_index')->with(compact('news', 'title', 'latestId', 'tags'));
     }    
