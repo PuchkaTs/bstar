@@ -96,7 +96,7 @@
 					cartColumns			: [
 						{view:'image' , attr:'thumb', label: false},
 						{ attr: "name", label: "Нэр" },
-						{view:'link' , label: false , attr: 'pagelink' , text: '' },	
+						// {view:'link' , label: false , attr: 'pagelink' , text: '' },	
 						{ attr: "price", label: "Үнэ", view: 'currency' },
 						{ view: "decrement", label: false },
 						{ attr: "quantity", label: "Тоо" },
