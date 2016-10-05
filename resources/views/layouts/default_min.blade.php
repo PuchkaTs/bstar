@@ -103,10 +103,9 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
         methods: {
             scrolltrigger: function(){
-                    var vm = this;
+                    var vm = this;   
                 $( window ).scroll(function() {
-                    var scrollposition = $(this).scrollTop();
-                    console.log(scrollposition);                    
+                    var scrollposition = $(this).scrollTop();                
                     if (scrollposition < (200)){
                         vm.growsmall = '';
                     } else {
