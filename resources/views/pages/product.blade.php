@@ -8,6 +8,11 @@
     <meta property="og:url" content="{{Request::url()}}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="{{ $product->shorten(300) }}" />
+    @if($product->images()->count())
+        <meta property="og:image" content="https://babystar.mn/assets/products/{{$product->images()->first()->image}}" />
+    
+    @endif()
+
     <meta property="og:image" content="https://babystar.mn/assets/products/thumbs/{{$product->photo}}" />
 @stop
 @section('css')
