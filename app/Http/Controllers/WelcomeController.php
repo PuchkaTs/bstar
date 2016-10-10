@@ -28,7 +28,6 @@ class WelcomeController extends Controller
 {
     public function index(Request $request)
 	{
-
 		
         $products = Product::with('images', 'colors')->limit(10)->latest()->get();
 
@@ -71,7 +70,7 @@ class WelcomeController extends Controller
 
 		$subTypeName = $productType->name;
 
-		$ages = Age::latest()->get();
+		$ages = Age::orderBy('position', 'asc')->get();
 
 		return view('pages.subtype')->with(compact('products', 'brands', 'subTypeName', 'subtypes', 'ages', 'id', 'count'));
 	}
