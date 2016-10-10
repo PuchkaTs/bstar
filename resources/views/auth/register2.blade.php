@@ -8,7 +8,7 @@
         <div class="placeholder100 row" style="margin-top: 50px;">
             <div class="col-md-8 col-lg-6">
                 <header>
-                    <h3>{{ $article->title ? $article->title : 'Хүүхдийн бүртгэл' }}</h3>
+                    <h3>Бүртгэл</h3>
                 </header>
             </div>
         </div>
