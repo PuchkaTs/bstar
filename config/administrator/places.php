@@ -38,6 +38,10 @@ return array(
             'title' => 'Name',
             'type'  => 'text',
         ),
+        'searchWord' => array(
+            'title' => 'Хайлтын үг:',
+            'type' => 'text',
+        ),          
         'placeMenu' => array(
             'type' => 'relationship',
             'title' => 'Цэс',
@@ -63,6 +67,10 @@ return array(
             'title' => 'Үйлчилгээний газрын нэр',
             'type' => 'text',
         ),
+        'searchWord' => array(
+            'title' => 'Хайлтын үг:',
+            'type' => 'text',
+        ),         
         'position' => array(
             'title' => 'Байрлал',
             'type' => 'number',

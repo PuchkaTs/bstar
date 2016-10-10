@@ -180,7 +180,9 @@ class WelcomeController extends Controller
 
 		$stores = Company::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
 
-		return view('pages.search')->with(compact('products', 'title', 'stores'));
+		$places = Place::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
+
+		return view('pages.search')->with(compact('products', 'title', 'stores', 'places'));
 	}
 
 	public function filterProducts(Request $request)
