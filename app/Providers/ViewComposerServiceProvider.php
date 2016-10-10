@@ -33,7 +33,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function shareMenus()
     {
         $views = ['company.show', 'pages.home', 'pages.cart', 'pages.success', 'pages.store', 'pages.store_index', 'pages.storemenu', 'pages.place', 'pages.placemenu', 'pages.subtype', 'pages.menu', 'pages.posts_index', 'pages.post_show',
-        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register',
+        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register', 'auth.register2',
         'pages.article', 'pages.search', 'pages.open-store', 'pages.career', 'pages.placesubtype', 'pages.odunarticle', 'pages.odunarticle_index', 'pages.storesubtype', 'pages.type'];
         foreach($views as $aview){
             view()->composer($aview, function ($view)
@@ -57,7 +57,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function shareCurrentUser()
     {
         $views = ['company.show', 'pages.home', 'pages.cart', 'pages.success', 'pages.store', 'pages.store_index', 'pages.storemenu', 'pages.place', 'pages.placemenu', 'pages.subtype', 'pages.menu',  'pages.posts_index', 'pages.post_show',
-        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register', 
+        'pages.createad', 'pages.brand', 'pages.product', 'company.edit', 'company.create', 'pages.news_index', 'pages.news_show', 'admin.superAdmin', 'pages.ads_index', 'pages.ads_show', 'auth.register', 'auth.register2',
         'pages.article', 'pages.search', 'pages.open-store', 'pages.career', 'pages.placesubtype', 'pages.odunarticle', 'pages.odunarticle_index', 'pages.storesubtype', 'pages.type'];
         foreach($views as $aview){
             view()->composer($aview, function ($view)

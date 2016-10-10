@@ -117,8 +117,7 @@ return array(
         },
         'delete' => function($model)
         {
-            return false;
-            // return Auth::user()->hasRole(['super_admin']);
+            return Auth::user()->hasRole(['super_admin']);
         }
     ),
 );

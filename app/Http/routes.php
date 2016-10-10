@@ -193,6 +193,11 @@ Route::get('/registration-form', [
     'uses' => 'UsersController@registerBaby'
 ]);
 
+Route::get('/registration-form-2', [
+    'as' => 'registration_path_2',
+    'uses' => 'UsersController@registerUser'
+]);
+
 Route::post('/product-filter', [
     'as' => 'product_filter_path',
     'uses' => 'WelcomeController@filterProducts'

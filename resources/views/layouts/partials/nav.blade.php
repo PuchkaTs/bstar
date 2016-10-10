@@ -30,6 +30,7 @@
                   </ul>
                 </li>                           
             @else            
+                <li><a href="{{ route('registration_path_2') }}" data-toggle="" data-target="">Бүртгүүлэх</a></li>                
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Нэвтрэх</a></li>
             @endif
                 <li class="dropdown">
@@ -363,13 +364,13 @@
             {!! Form::open(['url' => '/login']) !!}
                 <!-- Mail form input -->
                 <div class="form-group">
-                    {!! Form::label('email', 'Email:') !!}
+                    {!! Form::label('email', 'Имэйл:') !!}
                     {!! Form::text('email', null, ['class' => 'form-control']) !!}
                 </div>
 
                 <!-- Password form input -->
                 <div class="form-group">
-                    {!! Form::label('password', 'Password:') !!}
+                    {!! Form::label('password', 'Нууц үг:') !!}
                     {!! Form::password('password', ['class' => 'form-control']) !!}
                 </div>
 
