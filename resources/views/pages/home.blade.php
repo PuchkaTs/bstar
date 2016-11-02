@@ -5,7 +5,7 @@
     <meta property="og:url" content="{{Request::url()}}" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Монголын анхны хүүхдийн бараа үйлчилгээ, зөвлөгөө мэдээллийн цогц сайт" />
-    <meta property="og:image" content="https://www.babystar.mn/assets/banners/subbanners/PHihH5g6eFe6r7AdOHMd.jpg" />
+    <meta property="og:image" content="https://www.babystar.mn/assets/banners/subbanners/main.jpg" />
 
 @stop
 
