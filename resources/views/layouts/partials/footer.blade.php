@@ -105,7 +105,7 @@
     </div>
 
     <div id="copyright">
-            <p class="center" style="font-size: 0.8em; margin: 30px auto; text-align: center">BabyStar.mn| <a href="http://airkreativ.com/" target="_blank" style="color: #ffffff;"> Copyright ©2015 </a>
+            <p class="center" style="font-size: 0.8em; margin: 30px auto; text-align: center">BabyStar.mn| <a href="http://airkreativ.com/" target="_blank" style="color: #ffffff;"> Copyright ©2016 </a>
                 | All Rights Reserved
             </p>
         </div>
