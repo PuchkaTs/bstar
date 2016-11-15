@@ -10,17 +10,22 @@
     @yield('meta')
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"> 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet">    
-    <link rel="stylesheet" href="/css/animate.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">  -->
+
     <link rel="stylesheet" href="/css/idangerous.swiper.css">
+
+    <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/bootstrap-slider.min.css">
     <link rel="stylesheet" href="/css/sweetalert.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet">   
+    <script src="/js/idangerous.swiper.js"></script>    
+
     <link rel="icon" href="/fav.ico">  
-<script src="/js/idangerous.swiper.js"></script>
-      
+
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Leave those next 4 lines if you care about users using IE8 -->
@@ -42,8 +47,8 @@
 <div class="addedMessage" v-bind:class="[added, animation, animated]">
     <p>Бараа нэмэгдлээ</p>
 </div>
-<div class="odun grow hidden-xs" v-bind:class="[growsmall]" ></div>
-<div class="narun grow hidden-xs" v-bind:class="[growsmall]" ></div>
+<div class="odun grow hidden-xs grow-small" v-bind:class="[growsmall]" ></div>
+<div class="narun grow hidden-xs grow-small" v-bind:class="[growsmall]" ></div>
 <div class="timetable">
     <div class="alert alert-warning alert-dismissible fade in" role="alert" style="color:#015a00"> 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -89,17 +94,17 @@
         },
 
         methods: {
-            scrolltrigger: function(){
-                    var vm = this;   
-                $( window ).scroll(function() {
-                    var scrollposition = $(this).scrollTop();                
-                    if (scrollposition < (200)){
-                        vm.growsmall = '';
-                    } else {
-                        vm.growsmall = "grow-small";
-                    }
-                });
-            },  
+            // scrolltrigger: function(){
+            //         var vm = this;   
+            //     $( window ).scroll(function() {
+            //         var scrollposition = $(this).scrollTop();                
+            //         if (scrollposition < (200)){
+            //             vm.growsmall = '';
+            //         } else {
+            //             vm.growsmall = "grow-small";
+            //         }
+            //     });
+            // },  
             methodCard:function(){
                 this.method = 'card';
                 console.log(this.method);
