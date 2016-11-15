@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="/css/sweetalert.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="icon" href="/fav.ico">    
+    <link rel="icon" href="/fav.ico">  
+<script src="/js/idangerous.swiper.js"></script>
+      
     @yield('css')
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Leave those next 4 lines if you care about users using IE8 -->
@@ -63,7 +65,6 @@
 <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="/js/idangerous.swiper.js"></script>
 <script src="/js/bootstrap-slider.min.js"></script>
 <script src="/js/sweetalert.min.js"></script>
 <script src="/js/simpleCart.js"></script>
