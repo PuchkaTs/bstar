@@ -150,6 +150,10 @@ Route::get('/new-products', [
     'as'=>'new_products_path',
     'uses'=>'WelcomeController@newProducts'
 ]);
+Route::get('/all-products', [
+    'as'=>'all_products_path',
+    'uses'=>'WelcomeController@allProducts'
+]);
 Route::get('/other-products', [
     'as'=>'other_products_path',
     'uses'=>'WelcomeController@otherProducts'

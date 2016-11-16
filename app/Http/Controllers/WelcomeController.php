@@ -270,6 +270,15 @@ class WelcomeController extends Controller
 		return view('pages.search')->with(compact('products', 'title'));
 	}	
 
+	public function allProducts()
+	{
+		$title = "Бүх бараа";
+
+		$products = Product::latest()->paginate(20);
+
+		return view('pages.search')->with(compact('products', 'title'));
+	}	
+
 	public function otherProducts()
 	{
 		$title = "Бусад бараа";
