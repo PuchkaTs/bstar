@@ -462,13 +462,7 @@ input[type=search]+i {
 }
 #projects .text-content{
     margin-top: 2em;
-    text-align: justify;    
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-    -moz-column-gap: 40px; /* Firefox */
-    column-gap: 40px;    
+    text-align: justify;      
 }
 #projects article{
     padding: 15px;
