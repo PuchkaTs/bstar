@@ -99,7 +99,7 @@
                     <img src="/img/cards/pay-union.png" width="38" height="23">
                 </span>
             </a>
-            <a href="delivery-information.irs">Хаяг: ЧД, 3-р хороо, 2-р 40 мянгат, 29-45.</a>            
+            <a href="delivery-information.irs">Хаяг: СБД, 6-р хороо, 44-р байр 1-р орц, 5 давхарт 16 тоот.</a>            
             <a href="delivery-information.irs">Утас: 76103080</a>            
         </div>
     </div>
