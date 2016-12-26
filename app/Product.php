@@ -59,6 +59,9 @@ class Product extends Model {
         return $this->belongsToMany('App\Age');
     }
 
+    public function products(){
+        return $this->hasMany('App\Orderedproduct');
+    }
 // remove files
 
     public function removeFile($newphoto){

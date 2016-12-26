@@ -76,4 +76,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Order', 'user_id');
     }     
+
+    public function orderedproducts()
+    {
+        return $this->hasMany('App\Orderedproduct', 'user_id');
+    }         
 }

@@ -206,6 +206,15 @@ Route::post('/product-filter', [
     'as' => 'product_filter_path',
     'uses' => 'WelcomeController@filterProducts'
 ]);
+
+Route::get('/reports', [
+    'as' => 'report_path',
+    'uses' => 'ReportsController@index'
+]);
+Route::post('/report_show', [
+    'as' => 'report_show_path',
+    'uses' => 'ReportsController@show'
+]);
 // Route::get('/home', 'HomeController@index');
 
 /**

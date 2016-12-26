@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Order;
+use App\Orderedproduct;
+use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -54,7 +56,23 @@ class CardController extends Controller
 		$order->save();
 		if(Auth::user()){
 			Auth::user()->orders()->save($order);
+
 		}
+
+		// end zahialagdsan buteegdehuunuudig hadgalna
+		// var_dump($cart);
+		for($i=1; $i < $cart['itemCount'] + 1; $i++) {
+			$orderedProduct = Orderedproduct::create();	
+			$name = $cart['item_name_'.$i];
+			$product = Product::where('name', $name)->first();
+			$id= $product->id;
+			$quantity = $cart['item_quantity_'.$i];
+			$orderedProduct->product_id= $id;
+			$orderedProduct->totalItems = $quantity;
+			$orderedProduct->save();
+		}
+
+		//hadgalah duusna
 
     	flash()->success('Таны захиалга бүртгэгдлээ!', 'Баярлалаа');
 		if($request->metod == 'card'){

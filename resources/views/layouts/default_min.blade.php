@@ -94,7 +94,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
         },
 
         created: function(){
-            this.scrolltrigger();
+            // this.scrolltrigger();
         },
 
         methods: {
