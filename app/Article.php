@@ -10,3 +10,4 @@ class Article extends Model
 
     protected $fillable = ['id', 'url', 'title', 'photo', 'photobottom', 'body'];
 }
+

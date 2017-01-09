@@ -29,7 +29,7 @@ class Gallery extends Model
     {
         $list = Self::where('position', 2)->first();
         if($list){
-            return $list->products()->orderBy('created_at', 'dsc')->get();
+            return $list->products()->limit(12)->orderBy('created_at', 'dsc')->get();
         }
         return false;
     }
@@ -37,7 +37,7 @@ class Gallery extends Model
     {
         $list = Self::where('position', 3)->first();
         if($list){
-            return $list->products()->orderBy('created_at', 'dsc')->get();
+            return $list->products()->limit(12)->orderBy('created_at', 'dsc')->get();
         }
         return false;
     }
