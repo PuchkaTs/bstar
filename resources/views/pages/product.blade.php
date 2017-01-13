@@ -43,7 +43,7 @@
                 </div>    
         <div class="col-md-3">
             <section class="card">
-                <h5 class="item_name">{{ $productType->name }}</h5>
+                <h5 class="">{{ $productType->name }}</h5>
                 <ul class="list-group">
                     @foreach($productSubTypes as $type)
                     <li class="list-group-item">{!!link_to_route('subtype_path', $type->name, $type->id)!!}</li>
