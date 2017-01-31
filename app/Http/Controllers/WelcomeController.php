@@ -265,7 +265,7 @@ class WelcomeController extends Controller
 	{
 		$title = "Шинэ бараа";
 
-		$products = Product::where('new', true)->paginate(20);
+		$products = Product::where('new', true)->latest()->paginate(20);
 
 		return view('pages.search')->with(compact('products', 'title'));
 	}	
