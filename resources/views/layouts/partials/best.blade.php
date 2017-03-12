@@ -19,7 +19,11 @@
 @endif        
 </div>
 
+
+@if($gallery->where('position',3)->first())
+
 <div class="subbanner visible-xs">
+
 <h3>{{$gallery->where('position',3)->first()->name}}</h3>
         <div class="row product-list">
             @foreach($gallery->getListForBest() as $product)
@@ -28,3 +32,4 @@
 
         </div>
 </div>
+@endif        

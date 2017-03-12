@@ -74,7 +74,7 @@
                 <div class="col-md-2 col-sm-3 social-container">
                     <h4><i class="fa fa-share-alt" aria-hidden="true"></i>Холбоо</h4>
                     <ul class="social ">
-                        <a href="https://www.facebook.com/babystar.mn.mongolia" target="_blank"><li class="flexcenter"><i class="fa fa-facebook-square" aria-hidden="true"></i></li></a>
+                        <a href="https://www.facebook.com/babystarmn" target="_blank"><li class="flexcenter"><i class="fa fa-facebook-square" aria-hidden="true"></i></li></a>
                         <a href="https://twitter.com/BabyStarMn" target="_blank"><li class="flexcenter"><i class="fa fa-twitter-square" aria-hidden="true"></i></li></a>
                         <a href="https://www.instagram.com/babystar.mn/" target="_blank"><li class="flexcenter"><i class="fa fa-youtube-square" aria-hidden="true"></i></li></a>
                         <a href="https://www.instagram.com/babystar.mn/" target="_blank"><li class="flexcenter"><i class="fa fa-instagram" aria-hidden="true"></i></li></a>

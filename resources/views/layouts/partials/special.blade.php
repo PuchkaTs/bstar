@@ -16,7 +16,10 @@
 @endif
 </div>
 
+@if($gallery->where('position',2)->first())
+
 <div class="subbanner visible-xs">
+
 <h3>{{$gallery->where('position',2)->first()->name}}</h3>
         <div class="row product-list">
             @foreach($gallery->getListForSpecial() as $product)
@@ -25,3 +28,4 @@
 
         </div>
 </div>
+@endif
