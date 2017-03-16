@@ -108,8 +108,7 @@ return array(
     'action_permissions'=> array(
         'create' => function($model)
         {
-            return false;
-            // return Auth::user()->hasRole(['super_admin']);
+            return true;
         },
         'update' => function($model)
         {
