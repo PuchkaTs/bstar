@@ -112,7 +112,7 @@ return array(
         },
         'update' => function($model)
         {
-            return Auth::user()->hasRole(['super_admin']);
+            return true;
         },
         'delete' => function($model)
         {
