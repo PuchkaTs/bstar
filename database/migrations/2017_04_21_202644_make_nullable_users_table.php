@@ -14,6 +14,7 @@ class MakeNullableUsersTable extends Migration
     {
         Schema::table('users', function ($table) {
             $table->integer('email')->nullable()->change();   
+            $table->dropUnique('users_email_unique');
 
         }); 
     }
