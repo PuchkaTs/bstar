@@ -21,9 +21,9 @@ class SocialAccountService
                 'provider' => 'facebook'
             ]);
 
-            $user = User::whereEmail($providerUser->getEmail())->first();
+            $user = User::where('email', =, $providerUser->getEmail())->first();
 
-
+dd($user);
             if (!$user) {
 
                 $role = Role::whereName([
