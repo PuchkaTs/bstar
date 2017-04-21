@@ -68,7 +68,7 @@ return array(
 	 */
 	
 	'menu' => array(
-	    'Хэрэглэгч' => array('users','roles', 'socialaccounts'),
+	    'Хэрэглэгч' => array('users','roles', 'socialaccounts', 'aztan'),
         'Дэлгүүр' => array('menu', 'company_types', 'company_subtypes', 'companies', 'companyimages'),
         'Үйлчилгээний газар' => array('place_menus', 'place_types', 'place_subtypes', 'places', 'placeimages'),
         'Бүтээгдэхүүн' => array('productmenus', 'product_types','product_subtypes', 'products', 'productimages', 'galleries', 'brands', 'colors', 'sizes', 'ages'),
