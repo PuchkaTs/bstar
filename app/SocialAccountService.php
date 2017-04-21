@@ -21,7 +21,7 @@ class SocialAccountService
                 'provider' => 'facebook'
             ]);
 
-            $user = User::where('email', ($providerUser->getEmail()))->get();
+            $user = User::where('email', '==', $providerUser->getEmail())->get();
 
 dd($user);
 
