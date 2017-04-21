@@ -21,7 +21,7 @@ class SocialAccountService
                 'provider' => 'facebook'
             ]);
 
-            $user = User::where('email', $providerUser->getEmail())->where('email', '<>', 0)->first();
+            $user = User::where('email', $providerUser->getEmail())->whereNotIn('email', [0])->first();
 
 
             if (!$user) {
