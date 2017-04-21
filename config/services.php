@@ -16,7 +16,7 @@ return [
     'facebook' => [
         'client_id' => env('FACEBOOK_ID'),
         'client_secret' => env('FACEBOOK_SECRET'),
-        'redirect' => 'http://localhost:8000/callback',
+        'redirect' => 'https://babystar.mn/callback',
     ],
     
     'mailgun' => [
