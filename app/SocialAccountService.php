@@ -35,9 +35,9 @@ class SocialAccountService
                     'name' => $providerUser->getName(),
                 ]);
 
-                $user->save();
 
                 $role->users()->save($user);
+                
                 dd('user saved');
 
 
