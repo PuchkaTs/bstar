@@ -23,6 +23,8 @@ class SocialAccountService
 
             $user = User::whereEmail($providerUser->getEmail())->first();
 
+            dd($providerUser->getEmail());
+
             if (!$user) {
 
                 $role = Role::whereName([
