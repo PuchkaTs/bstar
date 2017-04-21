@@ -37,8 +37,6 @@ class SocialAccountService
 
 
                 $role->users()->save($user);
-                
-                dd('user saved');
 
 
             }
