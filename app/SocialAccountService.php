@@ -27,7 +27,7 @@ class SocialAccountService
 
                 $role = Role::whereName([
                     'name' => 'regular'
-                ]);
+                ])->first();
 
                 $user = new User([
                     'email' => $providerUser->getEmail(),
