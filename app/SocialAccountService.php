@@ -21,7 +21,7 @@ class SocialAccountService
                 'provider' => 'facebook'
             ]);
 
-            $user = User::where('email', $providerUser->getEmail())->where('email', '<>', 0)->get();
+            $user = User::where('email', $providerUser->getEmail())->where('email', '<>', 0)->first();
 
 
             if (!$user) {
@@ -38,7 +38,7 @@ class SocialAccountService
                 $user->save();
 
                 $role->users()->save($user);
-
+                dd('user saved');
 
 
             }
