@@ -5,6 +5,8 @@ use App\Article;
 use App\Http\Requests;
 use App\Role;
 use App\User;
+use App\Aztan;
+use App\SocialAccount;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 
@@ -40,8 +42,31 @@ class UsersController extends Controller {
             return Redirect::to('/admin');
         } else
         {
-            return Redirect::home();
+            return Redirect::to('/');
         }
+    }
+
+    public function aztan()
+    {   
+        $accounts = SocialAccount::get();
+
+        if($accounts->count() >=1){
+            $account = $accounts->random();
+        } else{
+            $account = null;
+        }
+        
+        Aztan::create([
+            'social_id' => $account->user_id
+            ]);
+
+        return Redirect::to('/');
+    }
+
+    public function aztanDelete()
+    {
+        Aztan::latest()->delete();
+        return Redirect::to('/');
     }
 
     public function registerBaby(){

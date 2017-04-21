@@ -228,6 +228,15 @@ Route::post('ncst', [
     'as'   => 'ncst_path',
     'uses' => 'UsersController@ncst_store'
 ]);
+Route::get('aztan', [
+    'as'   => 'aztan_path',
+    'uses' => 'UsersController@aztan'
+]);
+Route::get('aztan-delete', [
+    'as'   => 'aztan_path',
+    'uses' => 'UsersController@aztanDelete'
+]);
+
 
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Age;
+use App\Aztan;
+use App\User;
 use App\Article;
 use App\Brand;
 use App\Company;
@@ -28,10 +30,14 @@ class WelcomeController extends Controller
 {
     public function index(Request $request)
 	{
+		if (Aztan::latest()->first()) {
+			$aztan = User::find(Aztan::latest()->first()->social_id);
+		}
 		
+
         $products = Product::with('images', 'colors')->limit(10)->latest()->get();
 
-		return view('pages.home')->with(compact('map', 'menus', 'products'));
+		return view('pages.home')->with(compact('map', 'menus', 'products', 'aztan'));
 	}
 
 	public function product($id)

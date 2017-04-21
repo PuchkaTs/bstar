@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="/css/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300" rel="stylesheet">   
-    <script src="/js/idangerous.swiper.js"></script>    
+    <script src="/js/idangerous.swiper.js"></script>   
 
     <link rel="icon" href="/fav.ico">  
 
@@ -43,11 +43,17 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 <!--End of Zendesk Chat Script-->  
 </head>
 <body id="app">
+
 @include('layouts.partials.facebooksdk')
 @include('layouts.partials.analytics')
+
+@if(isset($aztan))
+<div id="winner" style="text-align: center;"><h4>{{$aztan->name}} та азтанаар тодорлоо. Email: {{$aztan->email}}</h4> </div>
+@endif
 @include('layouts.partials.nav')
 
 @yield('body')
+
 <div class="addedMessage" v-bind:class="[added, animation, animated]">
     <p>Бараа нэмэгдлээ</p>
 </div>
@@ -73,6 +79,7 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 
 <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="/js/bootstrap-slider.min.js"></script>
 <script src="/js/sweetalert.min.js"></script>
