@@ -73,6 +73,7 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => ($data['password']),
             'birth' => ($data['birth']),
+            'phone' => ($data['phone']),
 
         ]);
 
@@ -90,6 +91,7 @@ class AuthController extends Controller
                 'email' => $data['email'],
                 'password' => ($data['password']),
                 'birth' => ($data['birth']),
+                'phone' => ($data['phone']),
             ]);
 
             $regular->users()->save($user);

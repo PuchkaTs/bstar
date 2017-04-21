@@ -47,6 +47,11 @@
                         {!! Form::label('email', 'Ц-шуудан:') !!}
                         {!! Form::email('email', null, ['class' => 'form-control', 'placeholder' => 'нэр@жишээ.com']) !!}
                     </div>
+                    <!-- Phone form input -->
+                    <div class="form-group">
+                        {!! Form::label('phone', 'Утас:') !!}
+                        {!! Form::text('phone', null, ['class' => 'form-control', 'placeholder' => '99887766']) !!}
+                    </div>                    
                     <!-- Password form input -->
                     <div class="form-group">
                         {!! Form::label('password', 'Нууц үг:') !!}
