@@ -30,7 +30,14 @@
                   </ul>
                 </li>                           
             @else            
-                <li><a href="{{ route('registration_path_2') }}" data-toggle="" data-target="">Бүртгүүлэх</a></li>                
+                <li>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Бүртгүүлэх <span class="caret"></span></a>                
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="{{ route('registration_path_2') }}"><i class="fa fa-plus" aria-hidden="true"></i>Бүртгүүлэх</a></li>
+                    <li><a href="redirect"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook хаягаар бүртгүүлэх</a></li>
+                  </ul>
+                </li>
+
                 <li><a href="#" data-toggle="modal" data-target="#loginModal">Нэвтрэх</a></li>
             @endif
                 <li class="dropdown">
@@ -380,7 +387,9 @@
                     {!! Form::submit('Нэвтрэх', ['class' => 'btn btn-primary btn-block'])!!}
                 </div>
                 
+
             {!! Form::close() !!}
+            <p><a class="btn btn-primary btn-block" style="background-color: #3b5998; border: 0px;" href="redirect" role="button">Facebook хаягаар нэвтрэх</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>

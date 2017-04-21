@@ -228,3 +228,6 @@ Route::post('ncst', [
     'as'   => 'ncst_path',
     'uses' => 'UsersController@ncst_store'
 ]);
+
+Route::get('/redirect', 'SocialAuthController@redirect');
+Route::get('/callback', 'SocialAuthController@callback');

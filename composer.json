@@ -12,11 +12,12 @@
         "fzaninotto/faker": "^1.6",
         "algolia/algoliasearch-client-php": "^1.9",
         "intervention/image": "^2.3",
-        "doctrine/dbal": "^2.5"
+        "doctrine/dbal": "^2.5",
+        "laravel/socialite": "~2.0"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~4.0",
+        "phpunit/phpunit": "4.8",
         "symfony/css-selector": "2.8.*|3.0.*",
         "symfony/dom-crawler": "2.8.*|3.0.*"
     },
