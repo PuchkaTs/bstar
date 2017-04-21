@@ -33,6 +33,7 @@ class SocialAccountService
                 $user = new User([
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
+                    'phone' => $providerUser->getPhone(),
                 ]);
 
 
