@@ -34,7 +34,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Бүртгүүлэх <span class="caret"></span></a>                
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="{{ route('registration_path_2') }}"><i class="fa fa-plus" aria-hidden="true"></i>Бүртгүүлэх</a></li>
-                    <!-- <li><a href="redirect"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook хаягаар бүртгүүлэх</a></li> -->
+                    <li><a href="redirect"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook хаягаар бүртгүүлэх</a></li>
                   </ul>
                 </li>
 
@@ -389,7 +389,7 @@
                 
 
             {!! Form::close() !!}
-<!--             <p><a class="btn btn-primary btn-block" style="background-color: #3b5998; border: 0px;" href="redirect" role="button">Facebook хаягаар нэвтрэх</a></p> -->
+            <p><a class="btn btn-primary btn-block" style="background-color: #3b5998; border: 0px;" href="redirect" role="button">Facebook хаягаар нэвтрэх</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Хаах</button>
