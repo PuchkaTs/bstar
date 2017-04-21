@@ -21,12 +21,33 @@
     @include('layouts.partials.special')
     @include('layouts.partials.best')
     @include('layouts.partials.news')
-
+    @if(!$currentUser)
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Та яг одоо facebook хаягаар нэвтрэн азтан болоорой</h4>
+          </div>
+          <div class="modal-body">
+            <p style="text-align: center;"><img src="/img/hou2017.png"></p>
+          </div>
+          <div class="modal-footer">
+<p><a class="btn btn-primary btn-block" style="background-color: #3b5998; border: 0px;" href="redirect" role="button">Facebook хаягаар нэвтрэх</a></p>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+    @endif
 @stop
 
 
 @section('script')
     <script>
+    $('#myModal').modal('show');
+
     var mySwiper = new Swiper('.swiper-container',{
       pagination: '.pagination',
       loop:true,
