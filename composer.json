@@ -5,14 +5,15 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=5.6",
         "laravel/framework": "5.2.*",
         "frozennode/administrator": " 5.*",
         "laravelcollective/html": "5.2.*",
         "fzaninotto/faker": "^1.6",
         "algolia/algoliasearch-client-php": "^1.9",
         "intervention/image": "^2.3",
-        "laravel/socialite": "~2.0"
+        "laravel/socialite": "~2.0",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
