@@ -48,7 +48,15 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 @include('layouts.partials.analytics')
 
 @if(isset($aztan))
-<div id="winner" style="text-align: center;"><h4>{{$aztan->name}} та азтанаар тодорлоо. Email: {{$aztan->email}}</h4> </div>
+<div id="winner" style="text-align: center;"><h4>
+        @foreach($aztan as $az)
+            {{$az->name}},
+        @endforeach
+ та азтанаар тодорлоо. Email: 
+        @foreach($aztan as $az)
+            {{$az->email}},
+        @endforeach
+ </h4> </div>
 @endif
 @include('layouts.partials.nav')
 

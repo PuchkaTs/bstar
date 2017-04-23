@@ -65,7 +65,7 @@ class UsersController extends Controller {
 
     public function aztanDelete()
     {
-        Aztan::latest()->delete();
+        Aztan::latest()->first()->delete();
         return Redirect::to('/');
     }
 

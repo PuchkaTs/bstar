@@ -31,7 +31,14 @@ class WelcomeController extends Controller
     public function index(Request $request)
 	{
 		if (Aztan::latest()->first()) {
-			$aztan = User::find(Aztan::latest()->first()->social_id);
+
+			$aztans = Aztan::latest()->limit(3)->get();
+
+			foreach ($aztans as $az) {
+
+				$aztan[] = User::find($az->social_id);
+			}
+			
 		}
 		
 
