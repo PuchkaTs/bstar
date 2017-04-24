@@ -28,10 +28,10 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Та яг одоо facebook хаягаар нэвтрэн азтан болоорой</h4>
+            <h4 class="modal-title" id="myModalLabel">Та манай сайтаар facebook хаягаараа нэвтрэн үйлчлүүлээрэй</h4>
           </div>
           <div class="modal-body">
-            <p style="text-align: center;"><img src="/img/hou2017.png"></p>
+            <p style="text-align: center;"><img src="/assets/common/logo.png"></p>
           </div>
           <div class="modal-footer">
 <p><a class="btn btn-primary btn-block" style="background-color: #3b5998; border: 0px;" href="redirect" role="button">Facebook хаягаар нэвтрэх</a></p>
