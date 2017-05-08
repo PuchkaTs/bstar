@@ -14,7 +14,7 @@
                 </div>
             @endforeach
                 <div class="textcenter">
-                {!! $products->links() !!}                                
+                {!! $products->appends(request()->input())->links() !!}                                
                 </div> 
             @if(isset($stores))
                 @foreach($stores->chunk(4) as $fourtype)   

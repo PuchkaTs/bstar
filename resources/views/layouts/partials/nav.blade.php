@@ -78,6 +78,11 @@
                                     <li class="side-menu menu-sale"><a href="{{ route('sale_products_path') }}" style="color:#eb1c24;">ХЯМДРАЛ</a> </li>                            
                                     <li class="side-menu menu-new"><a href="{{ route('new_products_path') }}" style="color:#eb1c24;">ШИНЭ БАРАА </a></li>
                                     <li class="side-menu"><a href="{{ route('all_products_path') }}" style="color:#eb1c24;">БҮХ БАРАА </a></li>
+                                @if($companymenus->getVoucherId())    
+                                    <li class="side-menu">
+                                        <a href="{{ route('company_menu_path', $companymenus->getVoucherId()) }}" style="color:#eb1c24;">Huggies ваучер </a>
+                                    </li> 
+                                @endif                                       
                                     <li role="separator" class="divider"></li>
                                 <!-- end of special 2 menus -->
                                 @foreach( $pmenus->getListForMenu() as $menu)

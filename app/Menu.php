@@ -47,5 +47,22 @@ class Menu extends Model {
 
         return $menus;
 
-    }        
+    }    
+
+    public function getVoucherId(){
+
+        $voucher = Self::where('name', 'LIKE', '%'.'Ваучер'.'%')->first();
+
+        if ($voucher) {
+
+            $voucherId = $voucher->id;
+
+            return $voucherId;
+
+        }
+
+
+        return null;
+
+    }      
 }
