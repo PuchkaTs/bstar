@@ -189,7 +189,7 @@ class WelcomeController extends Controller
 
 		$search = $request->request->get('q');
 
-		$products = Product::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(1);
+		$products = Product::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
 
 		$stores = Company::where('searchWord', 'LIKE', '%'.$search.'%')->paginate(20);
 
